@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 2026-09-05</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+/* masthead */
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+/* sections */
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+/* issue cards on index */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px;position:relative}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em;color:var(--ink)}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+/* archive */
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em}
+/* detail page */
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 5 日</h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美国 8 月非农新增 16.2 万远超预期,美联储 9 月加息押注升至约六成,美股周五集体回落;港股周五放量大涨收官 9 月首周,A股高开低走、成交重回 2 万亿上方。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美国8月非农新增16.2万远超预期,失业率维持4.1%,6、7月数据上修</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>美国劳工统计局公布,8月季调后非农就业新增16.2万人(3月以来新高),远超市场预期的5.6万,扭转今夏招聘放缓势头;失业率维持4.1%,平均时薪环比+0.3%、同比+3.1%。6月由+2.0万上修至+3.1万,7月由-2.3万上修至+2.1万。CME"美联储观察"显示9月加息25基点概率升至60.2%,按兵不动为39.8%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2474737" target="_blank" rel="noopener">财联社 · 美国8月非农录得16.2万大超预期 美联储9月加息押注升温</a>
+<span class="sep">·</span>
+<a href="https://xueqiu.com/2430471067/408178987" target="_blank" rel="noopener">雪球 · 2026年8月美国非农数据深度分析:超预期韧性重塑美联储政策路径</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美联储官员"数据依赖"表态:9月15-16日会议加息与否,看8月CPI</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>美联储理事沃勒(9月3日)称,若通胀持续向2%目标回落,倾向支持维持利率不变,若数据火热则考虑加息;芝加哥联储行长古尔斯比表示,仍需未来数月延续6月势头,才能确信物价稳步回归2%。"美联储传声筒"Timiraos点题:官员认为8月CPI是决议前最关键变量,强劲非农"至少消除了加息的一个障碍"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.jrj.com.cn/2026/09/04132458351310.shtml" target="_blank" rel="noopener">金融界 · 美国8月非农9月4日公布,通胀为美联储决策核心</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2474737" target="_blank" rel="noopener">财联社 · 美国8月非农录得16.2万大超预期</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>人民币兑美元中间价上调20个基点报6.7787,美元走弱人民币偏强</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>央行授权中国外汇交易中心公布,9月4日银行间外汇市场人民币兑美元中间价报6.7787,较前日升值20个基点;9月3日已升值22个基点报6.7807,连续两日走强。背景是美联储官员偏鸽表态令美元指数回落(9月3日收跌约0.56%至99附近),人民币汇率维持强势。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/money/forex/forexinfo/2026-09-04/doc-iniqrpra6305809.shtml" target="_blank" rel="noopener">新浪财经 · 今日汇市晨报:人民币兑美元中间价报6.7787</a>
+<span class="sep">·</span>
+<a href="https://www.52hrtt.com/ph/n/w/info/G1786948116762" target="_blank" rel="noopener">华人头条 · 9月4日人民币对美元中间价报6.7787 上调20个基点</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美股周五集体收跌:强劲非农反点燃9月加息担忧,周线基本走平</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>美东时间9月4日,三大指数在非农数据公布后回落:道指跌0.5%(271.86点)报53414.25,标普500跌0.4%报7718.60,纳指跌0.3%报26506.99;2年期美债收益率升至4.37%。就业报告意外强劲加大美联储本月加息可能。全周道指跌0.27%、标普涨0.09%、纳指涨0.4%,基本走平(9月3日三大指数曾齐涨逾1%)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://apnews.com/article/ebc11cfa2cf8baf4491bf3d4199c1d74" target="_blank" rel="noopener">AP News · How major US stock indexes fared Friday 9/4/2026</a>
+<span class="sep">·</span>
+<a href="http://stock.10jqka.com.cn/usstock/mgscfx_list/" target="_blank" rel="noopener">同花顺 · 美股市场分析(9月5日)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>港股9月首周先抑后扬:周五恒指大涨1.74%,MiniMax周涨超20%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>9月4日港股放量反弹:恒指收涨1.74%报25650.87点,恒生科技涨2.27%报4569.80点,国企指数涨2.02%报8555.03点;全周恒指累计+0.26%、科技指数-0.77%。MiniMax周内大涨超20%,易居企业控股获南向资金连续3日净买入;机构预计9月恒指运行区间24800-26500点。当日南向资金净卖出100.21亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2474328" target="_blank" rel="noopener">财联社 · 港股收盘:9月首周三大指数先抑后扬</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4173048.html" target="_blank" rel="noopener">证券时报 · 9月4日南向资金净卖出100.21亿港元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>A股9月首周收官:周五冲高回落放量至2万亿上方,主力资金连续4日净流出</h3></div>
+<span class="tag">🏷 市场数据/博主复盘</span>
+<p>9月4日A股高开后冲高回落,三大指数集体收跌,上证指数收报3930.12点(-0.30%);沪深京三市成交额约2.03-2.05万亿元,较前一交易日放量约2700亿元,交投回暖但资金分歧明显;主力资金已连续4个交易日净流出。板块方面猪肉概念逆市大涨、农业股活跃。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xueqiu.com/1672864898/408133879" target="_blank" rel="noopener">雪球 · 2026年9月4日中国A股收盘复盘</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-04/doc-iniqsens0876842.shtml" target="_blank" rel="noopener">新浪财经 · A股收盘快报:三大指数冲高回落 猪肉概念股逆市大涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>日本央行9月加息近乎"板上钉钉":市场完全计入25个基点,高盛前移预期</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>路透援引知情人士称日本央行最早或于9月17-18日会议加息,7月会议纪要显示至少三名委员认为加息可快于每年约两次的节奏;利率市场已完全计入本次加息25个基点(政策利率由1%升至1.25%),日元9月3日升至156一线。高盛将加息预期由2027年1月前移至9月,委员高田创并放风可能更大幅度、连续加息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.jrj.com.cn/2026/09/02225458336113.shtml" target="_blank" rel="noopener">金融界 · 日元突袭式拉升1.2%!日本央行9月加息&quot;箭在弦上&quot;</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3780306" target="_blank" rel="noopener">华尔街见闻 · 高盛也相信:为了救日元,日本9月将加息</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/wm/2026-09-03/doc-iniqpzps1032882.shtml" target="_blank" rel="noopener">第一财经(新浪) · 日本央行又出手了?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>大宗商品:非农夜金价短线跳水逾80美元一度失守4400,油价受美伊冲突支撑高位</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>非农公布后美元指数短线走高约40点,现货黄金自约4473美元/盎司(9月3日收涨1.96%)短线下跌逾80美元,一度失守4400美元关口;10年期美债收益率上行3.02个基点报4.792%。原油方面,美国再度空袭伊朗、以色列威胁德黑兰令供应担忧升温,油价徘徊在近六周高位附近。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xnews.jin10.com/details/229146" target="_blank" rel="noopener">金十数据 · 全球财经早餐 2026年9月4日</a>
+<span class="sep">·</span>
+<a href="https://news.qq.com/rain/a/20260904A0D7GH00" target="_blank" rel="noopener">腾讯新闻 · 美国8月非农远超预期!美联储9月加息预期上升,黄金失守4400美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>全球并购:SpaceX以600亿美元完成收购AI编程公司Cursor</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>SpaceX宣布正式完成对AI编程初创公司Cursor的收购,交易金额高达600亿美元,成为科技行业史上规模最大的并购案之一,标志马斯克在AI领域与Anthropic、OpenAI的竞争进入新阶段。Cursor是目前最热门的AI代码编辑器之一,其团队亦将获得SpaceX庞大的AI算力资源支持。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3779476" target="_blank" rel="noopener">华尔街见闻 · SpaceX完成对AI软件Cursor的并购,交易规模达600亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.moomoo.com/hans/news/post/74721131/60-billion-deal-sealed-spacex-spcxus-completes-acquisition-of-cursor" target="_blank" rel="noopener">Moomoo · 600亿美元交易落槌!SpaceX(SPCX.US)完成收购Cursor</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>财报透视:博通AI半导体收入暴增221%至167亿美元,股价为何"见光跌"?</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>博通2026财年第三财季(截至8月2日)总营收295.91亿美元、同比增长86%,其中AI半导体收入167亿美元,同比暴增221%、环比增长54%。市场却聚焦不及预期的第四财季营收指引与毛利率压力,财报公布后股价不涨反跌,盘后一度跌超6%,显示AI高预期已被充分定价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.fx168news.com/article/1087063" target="_blank" rel="noopener">FX168(TradingKey) · 博通股价预测:AI芯片收入暴增221%,股价不涨反跌</a>
+<span class="sep">·</span>
+<a href="https://x.stockstar.com/detail/20260903095652000055" target="_blank" rel="noopener">证券之星 · 【BT财报瞬析】AI收入暴增221%,博通盘后却一度大跌</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-04.html">← 2026-09-04</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-05 21:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
