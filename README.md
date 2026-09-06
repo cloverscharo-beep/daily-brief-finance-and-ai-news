@@ -36,8 +36,8 @@ A personal news site that updates itself daily: it scans global AI & finance hea
   Two editions in a newspaper-style layout; light/dark auto-adapt; mobile-friendly
 - **来源可溯** — 每条要闻标注出处,点击直达原文
   Every item is cited — click through to the original article
-- **自动流水线** — 20:50 采集成稿 → 21:00 重建并双平台上架,全程无人值守
-  Fully automated: 20:50 curate → 21:00 rebuild & publish to both platforms
+- **自动流水线** — 每天早晚双版:早间版 8:50 成稿 → 9:00 上线(隔夜要闻),晚间版 20:50 成稿 → 21:00 上线(当日要闻,不与早间重复),全程无人值守
+  Automated: two editions a day — morning (8:50 curate → 09:00 publish, overnight news) & evening (20:50 → 21:00, daytime news, no repeats)
 - **沉淀可检索** — 每天一期存成 Markdown 归档(Obsidian 知识库),网页为阅读版
   Each edition is archived as Markdown in an Obsidian vault; the web is the reading layer
 

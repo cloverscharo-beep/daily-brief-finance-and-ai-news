@@ -24,30 +24,32 @@ body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-heigh
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
-/* masthead */
 .mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
 .mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
 .mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
 .mast h1 .dot{color:var(--ai)}
 .mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
 .mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
-/* sections */
 h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
 .sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
-/* issue cards on index */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
-.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px;position:relative}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
 .issue:hover{border-color:var(--code)}
 .issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
 .issue .lbl .sw{width:9px;height:9px;border-radius:50%}
-.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
 .issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
 .issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
   border:1px dashed var(--line)}
 .issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
-.issue .go{font-family:var(--serif);letter-spacing:.1em;color:var(--ink)}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
 .issue:hover .go{text-decoration:underline;text-underline-offset:3px}
-/* archive */
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
 .arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
 .arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
   padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
@@ -55,8 +57,8 @@ h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:
 .arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
   font-size:14px}
 .arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
-.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em}
-/* detail page */
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
 .back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
 .back:hover{color:var(--ink);text-decoration:underline}
 .phead{margin:14px 0 8px}
@@ -94,21 +96,21 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:v
 <body>
 
 <div class="wrap">
-<header class="mast"><div class="rule"><h1>每日资讯<span class="dot">.</span>站</h1><span class="date">DAILY&nbsp;BRIEF&nbsp;·&nbsp;2026</span></div><div class="sub">AI 与财经 · 每天 10 条 · 官方披露与博主解读 · 原文出处归档</div></header>
+<header class="mast"><div class="rule"><h1>每日资讯<span class="dot">.</span>站</h1><span class="date">DAILY&nbsp;BRIEF</span></div><div class="sub">AI 与财经 · 早间版 09:00 / 晚间版 21:00 · 每天各 10 条 · 原文出处归档</div></header>
 <h2 class="sec">最新一期</h2>
 <div class="sec-note">THE LATEST ISSUES</div><div class="grid">
-<a class="issue" href="ai/2026-09-05.html" style="--c:#B4443C"><div class="lbl"><span class="sw" style="background:#B4443C"></span>📰&nbsp;AI 每日资讯</div><h3>2026 年 9 月 5 日</h3><div class="date">AI 要闻 · 官方披露 + 博主解读</div><div class="foc">OpenAI 再曝第二波&quot;智能体越狱&quot;丑闻,美议员火速推动立法;DeepSeek 被曝拟建 16 万颗昇腾芯片的国产算力大集群;陶哲轩警告 AI&quot;秒答&quot;数学难题反而可能&quot;污染&quot;数学。</div><div class="meta"><span>10 条 · 🏢 官方与公司动态 / 💬 解读与社区</span><span class="go">阅读本期 →</span></div></a>
-<a class="issue" href="finance/2026-09-05.html" style="--c:#1F6E5C"><div class="lbl"><span class="sw" style="background:#1F6E5C"></span>📊&nbsp;每日财经</div><h3>2026 年 9 月 5 日</h3><div class="date">财经要闻 · 政策披露 + 市场解读</div><div class="foc">美国 8 月非农新增 16.2 万远超预期,美联储 9 月加息押注升至约六成,美股周五集体回落;港股周五放量大涨收官 9 月首周,A股高开低走、成交重回 2 万亿上方。</div><div class="meta"><span>10 条 · 🏢 官方与政策披露 / 💬 市场与解读</span><span class="go">阅读本期 →</span></div></a>
+<a class="issue" href="ai/2026-09-05.html"><div class="lbl"><span class="sw" style="background:#B4443C"></span>📰&nbsp;AI 每日资讯</div><h3>2026 年 9 月 5 日</h3><div class="date">AI 要闻 · 官方披露 + 博主解读</div><div class="foc">OpenAI 再曝第二波&quot;智能体越狱&quot;丑闻,美议员火速推动立法;DeepSeek 被曝拟建 16 万颗昇腾芯片的国产算力大集群;陶哲轩警告 AI&quot;秒答&quot;数学难题反而可能&quot;污染&quot;数学。</div><div class="meta"><span>10 条 · 🏢 官方与公司动态 / 💬 解读与社区</span><span class="go">阅读本期 →</span></div></a>
+<a class="issue" href="finance/2026-09-05.html"><div class="lbl"><span class="sw" style="background:#1F6E5C"></span>📊&nbsp;每日财经</div><h3>2026 年 9 月 5 日</h3><div class="date">财经要闻 · 政策披露 + 市场解读</div><div class="foc">美国 8 月非农新增 16.2 万远超预期,美联储 9 月加息押注升至约六成,美股周五集体回落;港股周五放量大涨收官 9 月首周,A股高开低走、成交重回 2 万亿上方。</div><div class="meta"><span>10 条 · 🏢 官方与政策披露 / 💬 市场与解读</span><span class="go">阅读本期 →</span></div></a>
 </div>
 <h2 class="sec">全部期次</h2><div class="sec-note">ARCHIVE</div><div class="arch">
 <div class="col"><h3 style="color:#B4443C">📰 AI 每日资讯</h3><ul>
-<li><a href="ai/2026-09-05.html">2026-09-05</a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-04.html">2026-09-04</a><span class="n">10 条</span></li>
+<li><a href="ai/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li>
+<li><a href="ai/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li>
 </ul></div>
 <div class="col"><h3 style="color:#1F6E5C">📊 每日财经</h3><ul>
-<li><a href="finance/2026-09-05.html">2026-09-05</a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-04.html">2026-09-04</a><span class="n">10 条</span></li>
+<li><a href="finance/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li>
+<li><a href="finance/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li>
 </ul></div>
 </div>
-<footer><span>每日资讯站 · 由 Obsidian 笔记自动生成</span><span>生成时间 2026-09-05 21:00</span></footer>
+<footer><span>每日资讯站 · 由 Obsidian 笔记自动生成</span><span>生成时间 2026-09-06 13:52</span></footer>
 </div></body></html>
