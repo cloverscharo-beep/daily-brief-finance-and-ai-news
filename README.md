@@ -24,7 +24,7 @@ A personal news site that updates itself daily: it scans global AI & finance hea
 
 | Platform | URL |
 | --- | --- |
-| GitHub Pages | https://cloverscharo-beep.github.io/daily-brief-ten-finance-and-ai-news/ |
+| GitHub Pages | https://cloverscharo-beep.github.io/daily-brief-finance-and-ai-news/ |
 | Cloudflare Pages | https://daily-brief-4u7.pages.dev |
 
 > 两个平台互为备份,任一网络环境打不开时换另一个试试。
