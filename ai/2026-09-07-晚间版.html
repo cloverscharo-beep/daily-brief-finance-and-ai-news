@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-07</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 7 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;华为麒麟 9050 Pro 携&quot;逻辑折叠&quot;工艺时隔六年回归,余承东高调官宣;OpenAI 晒内部数据自曝研究员&quot;人均带 3 个 Agent 实习生&quot;、日烧超 600 美元推理费;讯飞星火 X2.5、智象具身世界模型同日上新——美东放假,中国厂商周一集体交卷。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>OpenAI 官宣达成"自动化研究实习生"目标:每个研究员工作日配 3.1 个 Agent 工作日,日均推理花费超 600 美元</h3></div>
+<span class="tag">🏷 官方披露(OpenAI 官方博客)+ 媒体解读跟进 · 补录(9/6 发布,早间版窗口内未收)</span>
+<p class="time">🕐 <strong>时间</strong>:9月6日(美东时间;OpenAI 官网标注日期为 9月6日、原文未注具体时刻,发布于北京时间 9月7日凌晨;量子位等中文媒体 9月7日跟进解读)。</p>
+<p>OpenAI 在官方博客《Research acceleration: The view inside OpenAI》中称,去年秋季设定的"自动化研究实习生"目标已达成——系统能在人类指导下完成原本需研究人员数天的任务;截至 8 月中旬,研究部门每 1 个研究员工作日对应约 3.1 个"Agent 工作日",中位研究员每天花在内部 Agent 推理上的费用(按 API 价)超 600 美元、重度用户超 7000 美元。公司同时坦言"尚不知道如何安全抵达完全对齐的递归自我改进(RSI)",并已瞄准 2028 年 3 月实现全自动 AI 研究员。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/research-acceleration-view-inside-openai/" target="_blank" rel="noopener">OpenAI · Research acceleration: The view inside OpenAI(官方原文)</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/tech/csj/2026-09-07/doc-iniqykzy9664335.shtml" target="_blank" rel="noopener">量子位(新浪财经转载)· GPT-6不只Astra!Sol内测结果曝光,速度快6倍</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>华为 Mate XT 2 非凡大师发布:时隔六年再推全新麒麟,9050 Pro 全球首发"逻辑折叠"量产工艺</h3></div>
+<span class="tag">🏷 官方披露(华为发布会现场官宣)+ 中文媒体报道</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日 14:30 起(北京时间;发布会按此前官方预告于当日 14:30 开始,媒体 16:00 前后陆续发稿)。</p>
+<p>余承东在 HarmonyOS 7｜HUAWEI Mate XT 2 及全场景新品发布会上官宣新旗舰芯片麒麟 9050 Pro:采用"逻辑折叠"立体堆叠设计,晶体管密度较传统 2D 设计提升 53.5%,被称全球首款量产该技术的手机芯片;搭配首发 HarmonyOS 7,整机性能较上代提升 42%。Mate XT 2 非凡大师 19999 元起售,9 月 13 日开售。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://tech.ifeng.com/c/8wE6fHT6JOX" target="_blank" rel="noopener">凤凰网科技 · 华为Mate XT 2非凡大师发布:搭载麒麟9050 Pro,售价19999元起</a>
+<span class="sep">·</span>
+<a href="https://news.qq.com/rain/a/20260907A0A82C00" target="_blank" rel="noopener">腾讯新闻(快科技)· 华为Mate XT 2三折叠发布会细节曝光:麒麟9050 Pro官宣</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>科大讯飞发布星火 X2.5:MoE 架构 293B-A30B,基于全国产算力完成全流程训练及推理</h3></div>
+<span class="tag">🏷 官方披露(科大讯飞官微)+ 媒体报道</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(北京时间;"据科大讯飞官微9月7日消息",每日经济新闻当日 11:54 转发报道,官微原文未注具体时刻)。</p>
+<p>据科大讯飞官微,星火 X2.5 大模型正式发布:采用 MoE 架构、参数规模 293B-A30B,重点提升代码与智能体能力,并持续增强数学、理解等通用能力;模型基于全国产算力完成全流程训练及推理,目前已上线讯飞开放平台。此前公司预告同系列 4B/1.7B 两款端侧模型已于 9 月 1 日开源。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609073866524517.html" target="_blank" rel="noopener">东方财富(每日经济新闻)· 讯飞星火X2.5正式发布,基于全国产算力完成全流程训练及推理</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L67LJU8O05568W0A.html" target="_blank" rel="noopener">网易(人民财讯)· 科大讯飞发布星火X2.5大模型重点提升代码与智能体能力</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>智象未来发布具身世界模型 HiDream-O1-Embodied:首次参评即在扰动适应子榜登顶</h3></div>
+<span class="tag">🏷 官方披露(公司发布)+ 中文媒体快讯</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(北京时间;钛媒体快报时间戳 03:15,机器之心、界面新闻等 9月7日上午起转发)。</p>
+<p>智象未来(HiDream.ai)发布具身世界模型 HiDream-O1-Embodied,称秉承"原生全模态"技术理念,强化机器人的物理感知与动态预判能力,打通图像、视频、3D、动作等模态,贯通"理解—推演—执行"全流程;发布同期首次参评具身智能评测平台 RoboColiseum,即在核心的 Robustness(扰动适应)子榜单以平均分 0.692 登顶。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.tmtpost.com/nictation/8130639.html" target="_blank" rel="noopener">钛媒体快报 · 智象(HiDream.ai)发布具身世界模型HiDream-O1-Embodied</a>
+<span class="sep">·</span>
+<a href="https://news.qq.com/rain/a/20260907A075X500" target="_blank" rel="noopener">腾讯新闻(机器之心)· 大模型企业「跨界」具身即登顶榜首!智象HiDream具身世界模型来了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>努比亚 NaviX Ultra 定档 9 月 16 日:号称全球首款 AI 智能体手机,搭载豆包手机助手</h3></div>
+<span class="tag">🏷 官方披露(中兴努比亚官宣)+ 媒体报道</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日 13:29(北京时间;新浪财经转载环球网稿时间戳 13:29;发布会定于 9月16日,当日即开启全网预约)。</p>
+<p>中兴努比亚官宣:搭载豆包手机助手的量产旗舰努比亚 NaviX Ultra 将于 9 月 16 日正式发布,即日起开启全网预约;官方称其为"全球首款 AI 智能体手机",主打"听得懂、能干活、记得住、够安全",号称"一句话,努比亚都包了"。据网易 AI 智能体周报转述,该机由中兴通讯与字节跳动联合研发,被外界称为"豆包手机二代"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-07/doc-iniqyriw9583582.shtml" target="_blank" rel="noopener">新浪财经(转载环球网)· 努比亚NaviX Ultra定档9月16日,全球首款AI智能体手机即将上市</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L687FHAN05118I96.html" target="_blank" rel="noopener">网易 · AI智能体周报(豆包手机二代细节)</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>量子位:GPT-6 Sol 被曝正在内测,单次测试速度约为 Astra 的 6 倍</h3></div>
+<span class="tag">🏷 媒体解读(据网友爆料,未经官方证实)</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(北京时间;量子位当日发文,网易号转载时间戳 17:00:38,原文未注具体时刻)。</p>
+<p>量子位援引网友 Lentils 爆料称 OpenAI 已开始内测 GPT-6 Sol:同一生成任务下,Sol(Max 档)约 3 分钟输出 2.8 万 token,而 Astra 约 19 分钟输出 2.5 万 token,单次速度约为 Astra 的 6 倍,输出规模相近;推测 Sol 更偏向速度、吞吐量与规模化 Agent 调用。另有网友猜测 Sol 可能于 9 月 29 日的 OpenAI 开发者大会正式发布——以上均未获官方证实。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L685NV0G0511DSSR.html" target="_blank" rel="noopener">量子位(网易号转载)· GPT-6不只Astra!Sol内测结果曝光,速度快6倍</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/tech/csj/2026-09-07/doc-iniqykzy9664335.shtml" target="_blank" rel="noopener">新浪财经(同文转载)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>纽约时报调查:被列实体清单的浪潮借美国子公司 Aivres 绕道出口逾 30 亿美元 Blackwell 服务器(补录)</h3></div>
+<span class="tag">🏷 媒体调查报道(纽约时报,基于 ImportGenius 贸易数据)</span>
+<p class="time">🕐 <strong>时间</strong>:9月6日(美东时间;NYT 页面标注 9月6日、原文未注具体时刻,对应北京时间 9月6日深夜至 9月7日上午;早间版未收,补录)。</p>
+<p>纽约时报与贸易数据商 ImportGenius 的调查显示:被列入实体清单的浪潮,其三分之一的美国子公司 Aivres 在 2024 年 4 月至 2026 年 2 月间向东南亚出口至少 56 亿美元先进技术产品,其中逾 30 亿美元为搭载英伟达 Blackwell 芯片的服务器,据称经中间商流向阿里巴巴与字节跳动的数据中心;Aivres 自身未被列入清单,暴露出"黑名单母公司经由美国子公司绕过管制"的漏洞。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nytimes.com/2026/09/06/technology/ai-chips-china-blacklist.html" target="_blank" rel="noopener">The New York Times · 调查报道(原文,页面标注 9/6)</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/alerts/nyt-inspurs-us-subsidiary-aivres-shipped-3b-in-nvidia-blackwell-chips-to" target="_blank" rel="noopener">AI Weekly · Inspur&#x27;s US arm shipped $3B in Blackwell chips around US ban(简报)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Hacker News 热帖激辩 OpenAI 研究加速博客:只报"烧了多少 token"、没报产出,RSI 叙事引警惕</h3></div>
+<span class="tag">🏷 社区讨论</span>
+<p class="time">🕐 <strong>时间</strong>:9月6日(美东时间;HN 帖约当日下午提交,页面仅显示相对时间、未注绝对时刻,北京时间 9月7日凌晨起持续讨论)。</p>
+<p>该帖登上 HN 热榜(约 166 分、110+ 评论)。开发者质疑:全文指标都在讲"用了多少 AI",却没有任何产出端数据,被讥为"自产自销的冰淇淋筒";有人批评 OpenAI 在未定义缩写的情况下大谈 RSI(递归自我改进),认为公司正借系列文章把 RSI 塑造成"正常且安全"的下一步叙事;也有评论翻出 Astra 系统卡,称"明知模型可能规避监控仍照常发布"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.ycombinator.com/item?id=49587217" target="_blank" rel="noopener">Hacker News · Research acceleration: The view inside OpenAI(讨论帖)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Reuters Breakingviews:中国"AI 小龙"正蚕食英伟达护城河,燧原 IPO 获 6109 倍超额认购</h3></div>
+<span class="tag">🏷 媒体评论(路透 Breakingviews 专栏)</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(北京时间;专栏页面标注 9月7日;所引数据来自 9月2日上交所文件与 8月31日定价)。</p>
+<p>专栏指出,冲刺上市的上海燧原科技专注 AI 推理芯片,获散户申购订单达发行量的 6109 倍,拟募资 61 亿元人民币(约 9.08 亿美元),按发行价估值约 610 亿元(约 91 亿美元);与摩尔线程、沐曦、壁仞合称"四小龙"的这批公司正以自研软件栈、降低从英伟达产品迁移的成本,逐步侵蚀英伟达对约 90 亿美元中国推理市场的控制。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.breakingviews.com/columns/considered-view/chinas-ai-dragons-breathe-fire-nvidias-moat-2026-09-07/" target="_blank" rel="noopener">Reuters Breakingviews · China&#x27;s AI dragons breathe fire on Nvidia&#x27;s moat</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>Reddit 开发者实测:Codex 重置卡额度疑只有正常量的 50%,还顺延自然重置 7 天;蒂博否认</h3></div>
+<span class="tag">🏷 社区讨论 + 中文媒体报道</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(北京时间;新浪 AI 频道当日发布,原文未注具体时刻;Reddit 原帖时间未注)。</p>
+<p>有开发者分析 Codex 使用日志后发现,使用重置卡获得的额度仅约为正常重置的 50%,且用卡后自然重置时间被顺延 7 天;Reddit 上多名用户称有类似感受,但也有人指出额度消耗与任务难度、上下文长度相关,难以标准化对比。蒂博(Tibo)已公开否认该说法,称重置卡与自然周额度完全相同。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.sina.cn/ai/2026-09-07/detail-iniqymaa6427940.d.html" target="_blank" rel="noopener">新浪AI · 有开发者分析发现:Codex使用重置卡获得的额度只有正常量的50%</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-07-早间版.html">← 2026-09-07-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>生成时间 2026-09-07 21:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-07</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 7 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;华为Mate XT 2与小米18 Fold同日发布、把折叠屏大战推向白热化,苹果折叠屏iPhone明晨接棒;A股科技强势但分化剧烈——创业板指大涨3.41%而大金融、贵金属领跌,两市成交反而缩量868亿元;政策面上,央行披露8月末黄金储备连续第22个月增持,农业农村部等六部门盘中印发乡村振兴投入机制方案点燃农业股。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>农业农村部等六部门印发乡村振兴投入机制实施方案,农业股盘中集体爆发</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日印发,由农业农村部当日发布消息,具体时刻原文未注(北京时间);人民财讯9月7日快讯,21世纪经济报道当日下午盘中跟进</p>
+<p>摘要:农业农村部、中央农办、国家发改委、财政部、人民银行、金融监管总局六部门联合印发《坚持农业农村优先发展完善乡村振兴投入机制实施方案》,要求强化政府资金优先保障、发挥债券资金支农作用,加大粮食主产区利益补偿,完善粮食等重要农产品价格形成机制。文件公布后农业股应声大涨,敦煌种业、亚盛集团等多股涨停。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.21jingji.com/article/20260907/herald/24250ba242ffb4a6d498eab293e1de53.html" target="_blank" rel="noopener">21世纪经济报道 · 瞬间涨停!盘中,利好来了!六部门重磅发布</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-07/doc-iniqyeuh5781394.shtml" target="_blank" rel="noopener">新浪财经(人民财讯) · 六部门:高质量推动农业农村领域&quot;两重&quot;建设</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行连续第22个月增持黄金,8月末储备升至7673万盎司</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:央行9月7日公布官方储备资产数据,公布时刻原文未注(北京时间);上证报当日发稿,香港商报16:09滚动提及</p>
+<p>摘要:央行9月7日公布数据显示,截至8月末我国黄金储备达7673万盎司,环比增加65万盎司,增持规模连续扩大,为2024年11月以来连续第22个月增持。在金价因非农数据高位回调之际,央行购金节奏不减,凸显官方储备多元化配置的长期取向。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-07/doc-iniqyvru9599666.shtml" target="_blank" rel="noopener">新浪财经(上海证券报·中国证券网) · 我国央行连续22个月增持黄金储备</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L687S2I70519APGA.html" target="_blank" rel="noopener">网易(时代周报) · 央行连续22个月增持黄金,8月末黄金储备升至7673万盎司</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>华为Mate XT 2正式发布:首发麒麟9050 Pro,19999元起售</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日14:30发布会开始(北京时间,华为此前官方定档);新浪科技等媒体当日下午陆续发稿,页面未标注具体时刻</p>
+<p>摘要:华为今日发布新一代展翼三折叠旗舰Mate XT 2非凡大师,首发搭载麒麟9050 Pro芯片并预装HarmonyOS 7,共四个配置版本,16GB+256GB版售价19999元、最高配24999元,9月12日10:08开售。余承东称,在存储涨价2000多元的背景下,该定价"属于非常有诚意的价格"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/tech/roll/2026-09-07/doc-iniqyvrw6374807.shtml" target="_blank" rel="noopener">新浪科技 · 麒麟芯片重回发布会!华为Mate XT 2展翼三折叠发布</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8wEBFmXgWTn" target="_blank" rel="noopener">凤凰网财经 · 华为Mate XT 2首发搭载麒麟9050 Pro芯片 售价19999元起</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>小米18 Fold晚7点发布:首发玄戒O3,10999元起售</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日19:00发布会开始(北京时间,小米此前官宣);东方财富约19:50、同花顺约20:05陆续发稿</p>
+<p>摘要:小米当晚举行秋季发布会,雷军现场提出"中折叠"概念,发布旗舰小米18 Fold:首发自研玄戒O3 AI旗舰处理器,配备6000mAh小米金沙江电池,单边薄至5.02mm、重219g,12GB+256GB版起售价10999元,9月10日10点开售。华为、小米、苹果72小时内接连发布折叠屏旗舰,品类对决进入白热化。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.10jqka.com.cn/20260907/c679667221.shtml" target="_blank" rel="noopener">同花顺 · 小米迄今为止最强折叠屏18 Fold发布:搭载玄戒O3,售价10999元起</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609073866859372.html" target="_blank" rel="noopener">东方财富 · 小米18 Fold折叠屏手机售价公布:10999元起</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>中金吸并收官在即:东兴、信达A股9月15日起连续停牌直至终止上市</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日盘后披露,具体公告时刻原文未注(北京时间);证券时报网·人民财讯9月7日电,每经快讯当日20:15起滚动转发</p>
+<p>摘要:信达证券9月7日公告,为实施A股异议股东现金选择权,公司A股自9月15日(申报首日)开市起连续停牌,直至终止上市、不再复牌,9月14日为最后一个交易日;东兴证券同日发布相同安排。两家券商均处中金公司换股吸收合并进程中,合并完成后将终止上市并注销法人资格。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4175555.html" target="_blank" rel="noopener">证券时报网(人民财讯) · 信达证券:公司A股股票将自9月15日起连续停牌直至终止上市</a>
+<span class="sep">·</span>
+<a href="https://www.stnn.cc/detail/6a9eab78b4b06b3f17067205.html" target="_blank" rel="noopener">星岛新闻 · 信达证券:A股股票自9月15日开市起连续停牌直至终止上市</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>A股剧烈分化:创业板指大涨3.41%,算力硬件爆发、大金融与贵金属领跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日15:00收盘(北京时间);同花顺收评15:05刊发,证券时报网(人民财讯)收评约15:17刊发</p>
+<p>摘要:9月7日A股震荡走高但结构分化:沪指涨0.07%报3932.70点,深成指涨1.91%,创业板指大涨3.41%,科创50涨2.42%,超3100只个股上涨;但两市成交19642亿元,较上日缩量868亿元。CPO、PCB、存储芯片等算力硬件方向十余股涨停,农业股居前;贵金属、保险、银行、证券集体走弱,湖南白银跌超4%,建设银行、农业银行跌超2%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.qq.com/rain/a/20260907A09SMN00" target="_blank" rel="noopener">腾讯新闻 · A股收评:创业板指涨3.41%!算力硬件板块大爆发,贵金属走弱</a>
+<span class="sep">·</span>
+<a href="https://stock.10jqka.com.cn/20260907/c679651926.shtml" target="_blank" rel="noopener">同花顺(人民财讯) · 收评:创业板指涨3.41% 算力硬件板块走强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>港股缩量回落:恒指收跌0.93%报25413点,内银股走低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日16:00收盘(香港时间);新华社当日电稿,东方财富16:10发布</p>
+<p>摘要:香港恒生指数9月7日收报25413.12点,跌237.75点、跌幅0.93%,全日主板成交2096.73亿港元;恒生科技指数收跌0.92%。早盘三大指数一度均跌逾1%,百度、小米盘中跌超4%;3600亿元注资消息落地后银行股连续第二日承压,建行、农行等内银普遍走低,港股A股联动下跌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www1.xinhuanet.com/fortune/20260907/4dff9400cdee4ab6a579ef97f9b5e706/c.html" target="_blank" rel="noopener">新华网 · 港股7日跌0.93% 收报25413.12点</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609073866687830.html" target="_blank" rel="noopener">东方财富 · 9月7日港股收盘:恒指跌0.93% 恒生科技指数跌0.92%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>亚太存储链全线拉升:日经225大涨2.12%,铠侠等半导体股受追捧</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日15:00收盘(东京时间,即北京时间14:00);日经中文网当日14:51发稿,新浪财经盘中稿发布于当日上午</p>
+<p>摘要:日经225指数9月7日收盘上涨1378.90点、涨幅2.12%,收报66399.84点,连续第二个交易日上涨,铠侠控股等半导体股领涨。消息面上,美光科技传出将增产先进存储,投资者加码AI产业增长预期,日韩与A股存储、算力链共振走强,韩国KOSPI盘中一度涨超3%,SK海力士等权重股上扬。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cn.nikkei.com/politicsaeconomy/stockforex/63917-2026-09-07-14-51-52.html" target="_blank" rel="noopener">日经中文网 · 日经平均股指收盘涨1378点,半导体股获追捧</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-07/doc-iniqyriy6337335.shtml" target="_blank" rel="noopener">新浪财经(东方财富) · 日经225指数大涨超1300点 韩国股市大幅走高 存储芯片全线拉升</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>现货黄金徘徊4400美元关口,分析师称站稳与否是短线关键</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日欧亚盘行情;金投网晚盘行情稿约17:45发布、新浪财经(黄力晨)分析约19:45更新,行情具体时刻原文未注(北京时间)</p>
+<p>摘要:非农冲击余波未平:9月7日现货黄金报4400美元/盎司附近,日内跌约0.6%,上周五非农夜低点4365美元一带获支撑后,多空围绕4400关口拉锯。分析师指出,强劲非农推升美联储9月加息预期、压制金价,能否收复并站稳4400为短线分水岭,本周五美国CPI或是真正的"变盘扳机";A股贵金属板块同日集体走低。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cngold.org/home/xw10742517.html" target="_blank" rel="noopener">金投网 · 2026年9月7日现货黄金晚盘行情预测</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/money/nmetal/hjfx/2026-09-07/doc-iniqzhfq9513835.shtml" target="_blank" rel="noopener">新浪财经 · 黄力晨:非农数据表现强劲 加息预期打压金价</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>复盘热议"科技是真反弹吗":中际旭创放量大涨10.38%,机构提示追高风险</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日15:23发稿(北京时间,每经网标注)</p>
+<p>摘要:每日经济新闻收评复盘称,创业板大涨之际市场核心疑问是"科技是真反弹吗":CPO龙头中际旭创放量大涨10.38%并重回20日线,"易中天"组合多次同日大涨带动创业板指,但Wind统计显示该股下半年涨幅前十交易日次日100%冲高回落(其中8次收跌),提示短线追高需谨慎。另一边,高盛对旭创2026、2027年净利润预测较市场预期高出25%与42%,机构对AI算力高景气周期的分歧明显。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cd.nbd.com.cn/articles/2026-09-07/4574634.html" target="_blank" rel="noopener">每日经济新闻 · A股又一次&quot;站在光里&quot;,科技是真反弹吗?明天,紧盯这只龙头股</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L68BVC9N05568W0A.html" target="_blank" rel="noopener">网易财经 · &quot;光&quot;又回来了?&quot;易中天&quot;单日市值增超1600亿元!机构热议高景气周期</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-07-早间版.html">← 2026-09-07-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-07 21:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
