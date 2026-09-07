@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-07</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 7 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;8家中央金融企业合计3600亿元增资落地、大型险企首度纳入定向注资,央行今日5000亿元买断式逆回购到期「等量续作」,为银行保险估值与A股情绪提供政策支撑;海外方面,非农「爆表」后美联储9月加息概率升至58.4%,金价承压而油价周涨约9%,苹果折叠屏iPhone定于北京时间10日凌晨1点首秀,与华为今日14:30发布的Mate XT 2正面「对垒」。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>8家中央金融企业拟合计增资3600亿元补充资本,大型国有险企首次纳入定向注资</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>工商银行、农业银行等8家中央金融企业9月6日相继披露增资安排,拟合计补充核心一级资本3600亿元,其中财政部出资3000亿元、中国烟草总公司及相关子公司出资600亿元;工行、农行拟向财政部及中国烟草系定向发行A股,募资分别不超过1000亿元、1600亿元。这是近年来金融体系规模最大的一次集中资本补充,今年定向注资首次纳入大型国有保险公司,机构称属「未雨绸缪」的前瞻性安排,有利于稳定银行保险板块估值、提振资本市场信心。</p>
+<p>🕐 <strong>时间</strong>:9月6日(各机构当日相继发布公告,公告具体时刻原文未注);新华社9月6日通稿汇总,证券日报等各大报9月7日头版集中解读(北京时间)</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnfin.com/hb-lb/detail/20260906/4465811_1.html" target="_blank" rel="noopener">新华财经 · 财政部统筹推进国有金融机构资本补充 八家机构合计获各类注资3600亿元</a>
+<span class="sep">·</span>
+<a href="http://m.zqrb.cn/jrjg/bank/2026-09-07/A1788702177009.html" target="_blank" rel="noopener">证券日报 · 8家中央金融企业拟增资3600亿元补充资本</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行今日开展5000亿元买断式逆回购,3个月期到期「等量续作」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>中国人民银行按9月4日公告,于今日(9月7日)以固定数量、利率招标、多重价位中标方式开展5000亿元买断式逆回购操作,期限3个月(89天),到期日为2026年12月5日(遇节假日顺延)。9月当月有5000亿元同期限操作到期,本月为等量续作,而此前两个月均为加量2000亿元;月初7天期逆回购曾现50亿元地量并连续三日零操作,机构解读为资金面「削峰填谷」式常态化调控。</p>
+<p>🕐 <strong>时间</strong>:央行9月4日发布预告公告(北京时间);9月7日为操作开展日,执行结果待当日稍后公布</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnr.cn/newscenter/kuaixun/20260905/t20260905_527805098.shtml" target="_blank" rel="noopener">央广网(转央视新闻) · 央行将开展5000亿元买断式逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://m.cls.cn/detail/2474733" target="_blank" rel="noopener">财联社 · 央行等量续作3个月期买断式逆回购 月初再现7天期逆回购「封零」 资金面迎多重扰动因素</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>美伊周末交火后「隔空喊话」再升级:革命卫队公开海峡监控画面,美防长威胁击沉伊油轮</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p>伊朗伊斯兰革命卫队6日称,已对一艘企图驶入霍尔木兹海峡伊方「保护区域」的美军海上无人艇实施打击,并首次公开此前未披露的海峡监控画面、宣称已「有效管控」海峡(新华社);美国国防部长赫格塞思警告,若伊朗向美方船只开火,美军将摧毁并击沉其油轮;伊朗议长卡利巴夫称美方应认识到「游戏规则已经改变」,武装部队总参谋长表示伊朗不会投降。</p>
+<p>🕐 <strong>时间</strong>:各声明发生于当地时间9月6日(周日)前后——革命卫队声明见诸新华社9月6日报道,其余各条具体时刻原文未注(美东时间);北京时间9月7日07:17 汇通财经「9月7日财经早餐」汇总播发</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/forex/whzx/2026-09-07/detail-iniqxyne9654001.d.html" target="_blank" rel="noopener">新浪财经(汇通财经) · 9月7日财经早餐:强劲非农引爆加息预期,金价承压徘徊,霍尔木兹海峡炮声再起,原油地缘溢价飙升</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609063866050824.html" target="_blank" rel="noopener">东方财富 · 伊朗军方称或对美进行更大规模打击</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">4</span><h3>折叠屏「72小时对决」开打:华为Mate XT 2今日14:30发布,苹果折叠屏iPhone明日凌晨首秀</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>华为今日14:30召开HarmonyOS 7 | HUAWEI Mate XT 2及全场景新品发布会,主角为第二代三折叠Mate XT 2非凡大师;小米当晚举行秋季旗舰发布会,推出「阔折叠」小米18 Fold;苹果将于美东时间9月9日13:00(北京时间9月10日凌晨1:00)带来首款折叠屏iPhone与iPhone 18 Pro系列,系新任CEO约翰·特努斯首场发布会。三大品牌72小时内同台竞技,在折叠屏品类诞生七年来尚属首次;TrendForce测算iPhone 18 Pro整机成本同比增近40%,定价策略与A股产业链表现受关注。</p>
+<p>🕐 <strong>时间</strong>:华为发布会北京时间9月7日14:30(华为8月25日官宣定档);小米发布会北京时间9月7日19:00;苹果发布会美东时间9月9日13:00(北京时间9月10日凌晨1:00);上海证券报9月7日头版以「72小时对决」报道</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609073866158729.html" target="_blank" rel="noopener">东方财富(上海证券报) · 华为、苹果正面交锋 折叠屏手机市场将迎「72小时对决」</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2475032" target="_blank" rel="noopener">财联社 · 环球下周看点:苹果折叠屏亮相 美联储9月加息悬念迎落槌时刻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股上周五全线收跌:非农16.2万「三倍超预期」推升9月加息概率至58.4%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>美国8月非农就业新增16.2万人,约为市场预期(5.6万人)的三倍,6、7月数据合计上修5.5万人,失业率持稳于4.1%;据芝商所FedWatch工具,市场对美联储9月加息概率已从上周四的49.4%升至58.4%。美东时间9月4日(上周五)美股三大指数收跌:道指跌0.51%、标普500跌0.38%、纳指跌0.29%,Lululemon下调全年业绩指引后急挫17.4%,Adobe因更换CEO跌6.7%,半导体板块逆势涨3.4%。美股周一因劳动节休市,本周四PPI、周五CPI将是加息与否的关键数据。</p>
+<p>🕐 <strong>时间</strong>:行情与非农数据为美东时间9月4日(上周五);北京时间9月7日07:17 汇通财经早餐汇总报道(报道时点)</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/forex/whzx/2026-09-07/detail-iniqxyne9654001.d.html" target="_blank" rel="noopener">新浪财经(汇通财经) · 9月7日财经早餐:强劲非农引爆加息预期,金价承压徘徊,霍尔木兹海峡炮声再起,原油地缘溢价飙升</a>
+<span class="sep">·</span>
+<a href="https://www.24k99.com/news/1088062" target="_blank" rel="noopener">24K99 · 非农「爆表」引发大跳水!黄金急跌超110美元、白银失守65美元,下一站在哪里?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>现货黄金「过山车」后弱势徘徊:周五急挫逾125美元,亚市早盘报4430美元附近</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>现货黄金美东时间9月4日(上周五)开盘4473美元,盘中冲高至4490.58美元后因非农超预期急挫逾125美元,最低4365.25美元,收报约4430美元/盎司、单日跌约1%;北京时间今晨亚市交投于4430.60美元附近。非农强化加息押注、美元走强令金价承压,分析师称除非本周CPI表现疲弱,否则9月加息可能性大增。世界黄金协会2026年央行调查显示,约19%央行过去12个月提高国内黄金储备占比或推动存放多元化(一年前约7%),为金价提供长线支撑。</p>
+<p>🕐 <strong>时间</strong>:行情为美东时间9月4日(上周五)盘中及收盘;北京时间9月7日早间亚市现货金报4430.60美元附近(汇通财经07:17报道);世界黄金协会调查发布时间原文未注</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cngold.org/c/2026-09-05/c10739016.html" target="_blank" rel="noopener">金投网 · 现货黄金昨夜发生了什么?125美元振幅且4460失守!</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/forex/whzx/2026-09-07/detail-iniqxyne9654001.d.html" target="_blank" rel="noopener">新浪财经(汇通财经) · 9月7日财经早餐</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>油价周线大涨:美油涨9.32%、布油涨8.59%,美国零售柴油均价创5.85美元历史新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>美东时间9月4日(上周五)收盘,美原油(WTI 10月合约)收报91.22美元/桶、布伦特收报95.83美元/桶,上周美油、布油周线分别大涨9.32%、8.59%;北京时间今晨亚市美油交投于92美元/桶附近。美伊在霍尔木兹海峡再度交火推升地缘溢价,初步航运数据显示上周四仅4艘大宗商品船通过海峡,远低于过去10天日均约15艘;美国零售柴油均价升至每加仑5.85美元的历史新高,花旗将三季度布伦特均价预测由80美元上调至86美元。</p>
+<p>🕐 <strong>时间</strong>:收盘价与周涨跌幅为美东时间9月4日(上周五,当周8月31日-9月4日);北京时间9月7日早间亚市报价及07:17早餐报道;海峡通航与柴油均价原始统计日期原文未注</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/forex/whzx/2026-09-07/detail-iniqxyne9654001.d.html" target="_blank" rel="noopener">新浪财经(汇通财经) · 9月7日财经早餐</a>
+<span class="sep">·</span>
+<a href="https://cn.investing.com/commodities/crude-oil" target="_blank" rel="noopener">英为财情 · WTI原油期货-2026年10月(OIL)行情页</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>日元逼近155.21干预警戒线:三村淳再警告「准备干预」,大摩警示空头平仓风险</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p>美元指数上周五(美东9月4日)收报99.14、涨0.16%;美元兑日元报156.24,日元上周整体大幅走强,正试探155.21——上月美日联合干预汇市后日元所及的高位,若有效突破将回到5月6日以来最强水平。日本最高外汇事务官员三村淳上周五继续警告,东京方面准备干预以遏制日元过度下跌;摩根大通认为,若16万亿至17万亿日元空头头寸被平仓,美元兑日元可能跌至142-146区间。</p>
+<p>🕐 <strong>时间</strong>:汇率为美东时间9月4日(上周五)收盘值,三村淳表态亦在该日;北京时间9月7日07:17 汇通财经早餐汇总报道(摩根大通观点发布时间原文未注)</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/forex/whzx/2026-09-07/detail-iniqxyne9654001.d.html" target="_blank" rel="noopener">新浪财经(汇通财经) · 9月7日财经早餐</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2473457" target="_blank" rel="noopener">财联社 · 日元连续大涨创一个月新高!日本干预疑云再起 9月加息预期升温</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>券商策略:A股缩量整理或临近尾声,机构看好9月中下旬反弹窗口</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>上海证券报9月7日头版梳理多家券商策略观点:中东地缘扰动再起、10年期美债收益率上扬压制科技板块,风格再平衡仍是市场主要特征;海外系统性风险总体可控,美债收益率波动与加息预期的反复博弈是短期波动主因。随着半年报验证A股盈利持续向好、科技板块拥挤度逐步消化,市场底部支撑正不断增强、进一步下行空间有限,9月中下旬或成为反弹的重要时间窗口。</p>
+<p>🕐 <strong>时间</strong>:报道刊发于9月7日上海证券报头版(具体时刻原文未注,北京时间);所汇整券商策略报告出具时间原文未注</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://stock.eastmoney.com/a/202609073866159327.html" target="_blank" rel="noopener">东方财富(上海证券报) · A股缩量整理或临近尾声 机构看好9月中下旬行情</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609073866168245.html" target="_blank" rel="noopener">东方财富 · 9月7日国内四大证券报纸、重要财经媒体头版头条内容精华摘要</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>复星医药拟不超10亿港元回购H股,出售Gland Pharma 6%股权套现约2.94亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p>复星医药9月6日晚间披露:基于对公司发展前景的信心,拟自2026年8月27日起12个月内回购H股股份,回购资金总额不超过10亿港元;旗下新加坡公司于印度时间9月4日通过大宗交易及集中竞价出售Gland Pharma共计989.7万股(约占其总股份6%),对价279.96亿印度卢比(折合约2.94亿美元),预计印度时间9月7日完成过户。交易完成后集团持股降至约45.76%,仍为控股股东并表;公司称出售所得将增厚净资产,媒体点评此举兼顾资产结构优化与股东回报,向市场传递信心。</p>
+<p>🕐 <strong>时间</strong>:公告发布于北京时间9月6日晚间;出售交易发生于印度时间9月4日,过户预计于印度时间9月7日;证券时报报道标注9月7日00:00,每日经济新闻「医药早参」9月7日晨刊发</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.ifeng.com/c/8wDQtHqVus9" target="_blank" rel="noopener">凤凰网(证券时报) · 复星医药拟最高10亿港元回购H股股份</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-06/4574104.html" target="_blank" rel="noopener">每日经济新闻 · 医药早参:2026年国家医保谈判在北京启动;珍视明回应滴眼液抽检不合格事件</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-06-晚间版.html">← 2026-09-06-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-07 09:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
