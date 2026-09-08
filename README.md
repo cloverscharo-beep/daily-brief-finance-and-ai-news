@@ -36,8 +36,8 @@ A personal news site that updates itself daily: it scans global AI & finance hea
   Two series (AI & finance) × two editions a day (morning/evening); newspaper-style layout; light/dark auto-adapt; mobile-friendly
 - **来源可溯、时效可查** — 每条要闻标注出处与发布时间(美东/北京等当地时区),点击直达原文
   Every item is cited with publish time (local timezone) — click through to the original article
-- **自动流水线** — 每天双版,全程无人值守:早间版 8:50 成稿 → 9:00 上线(按中国时间收前一日 21:00 后至当日 8:50 前的消息,海外部分自然为隔夜);晚间版 20:50 成稿 → 21:00 上线(收当日 8:50 后至 20:50 前的消息,不与早间重复)
-  Automated: morning edition curates 08:50 → publishes 09:00 (China-time window: after previous 21:00 up to 08:50; overseas items naturally appear as overnight); evening edition curates 20:50 → publishes 21:00 (window 08:50–20:50, no repeats from morning)
+- **自动流水线** — 每天双版,全程无人值守:早间版 8:40 成稿 → 9:00 上线(按中国时间收前一日 21:00 后至当日 8:40 前的消息,海外部分自然为隔夜);晚间版 20:40 成稿 → 21:00 上线(收当日 8:40 后至 20:40 前的消息,不与早间重复)
+  Automated: morning edition curates 08:40 → publishes 09:00 (China-time window: after previous 21:00 up to 08:40; overseas items naturally appear as overnight); evening edition curates 20:40 → publishes 21:00 (window 08:40–20:40, no repeats from morning)
 - **沉淀可检索** — 每版存成 Markdown 归档(Obsidian 知识库,按 `日期-早间版/晚间版` 命名),网页为阅读版
   Every edition is archived as Markdown in an Obsidian vault (named by date + edition); the web is the reading layer
 
@@ -45,7 +45,7 @@ A personal news site that updates itself daily: it scans global AI & finance hea
 
 ```
 Obsidian 知识库(每版一篇 Markdown:YYYY-MM-DD-早间版 / -晚间版)
-        │  定时任务(8:50 / 20:50):搜索 → 精选 10 条 → 成稿
+        │  定时任务(8:40 / 20:40):搜索 → 精选 10 条 → 成稿
         ▼
 digest_site.py(纯 Python 标准库静态站生成器)
         │  每日两次自动重建(09:00 / 21:00)
@@ -65,4 +65,4 @@ This is a digest of publicly available news for reference only and is **not inve
 
 ---
 
-*Made with ❤️ by ChaRo · 每日双版:早间 8:50 成稿 / 9:00 上线 · 晚间 20:50 成稿 / 21:00 上线*
+*Made with ❤️ by ChaRo · 每日双版:早间 8:40 成稿 / 9:00 上线 · 晚间 20:40 成稿 / 21:00 上线*
