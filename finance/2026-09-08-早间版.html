@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 8 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美伊海上对抗再度升级——美军通报已令94艘商船改变航向、伊朗亮出新型弹道导弹,布伦特原油应声升破98美元/桶;LME铜创历史新高、美元走弱而日元飙涨。国内方面,工信部9月7日晚间发布信息通信「十五五」规划,2030年智能算力目标9800 EFLOPS,算力与6G主线再获政策催化;美股今晚恢复交易,关注A股昨日大涨的算力硬件能否续攻。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>工信部发布信息通信行业「十五五」规划:2030年智能算力9800 EFLOPS、适时启动6G商用</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日工信部发布消息(北京时间;规划文件署期8月12日、文号工信部规〔2026〕188号,发布具体时刻原文未注);证券时报9月7日23:21发稿</p>
+<p>摘要:规划提出到2030年信息基础设施累计投资3.8万亿元、智能算力规模达9800 EFLOPS、5G(含5G-A)用户普及率95%,并「适时启动6G商用」;部署加快全国一体化算力网、建设万卡级智算集群并适配国产算力芯片,共26项重点任务,被解读为算力与6G产业链的重大政策利好。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4175701.html" target="_blank" rel="noopener">证券时报 · 算力,再迎利好!6G商用,要来了</a>
+<span class="sep">·</span>
+<a href="https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_456511e63be14508aa5b0d113af559fe.html" target="_blank" rel="noopener">工业和信息化部 · 关于印发《信息通信行业发展「十五五」规划》的通知</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美军中央司令部:对伊朗海上封锁累计已要求94艘商船改变航向</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:当地时间9月7日美军中央司令部通报(美东时间;财联社北京时间9月8日06:00「隔夜全球要闻」汇编,通报具体时刻原文未注)</p>
+<p>摘要:美军中央司令部表示,截至当地时间9月7日,美军对伊朗的海上封锁行动已累计要求94艘商船改变航向,其中3艘丧失航行能力,并登船检查2艘。美伊在霍尔木兹海峡方向的对峙持续升级,为高位运行的油价提供地缘支撑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476427" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻(9月8日06:00)</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/subject/10986" target="_blank" rel="noopener">财联社 · 中东冲突专题电报</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>伊朗公布新型「卡西姆·巴希尔」弹道导弹,称从被动威慑转向主动威慑</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:当地时间9月7日伊朗公布(德黑兰时间);央视新闻于北京时间9月8日01:08发快讯,每经网05:16转载</p>
+<p>摘要:伊朗称该导弹射程更远、精度更高,采用固体燃料、光电制导与半吨重弹头,亮相系国防战略「里程碑」,标志从被动威慑转向主动威慑,被普遍视为对美军海上封锁的直接回应,中东局势不确定性上升。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://view.inews.qq.com/a/20260908A00X3J00" target="_blank" rel="noopener">央视新闻(腾讯新闻) · 伊朗公布一款新型导弹</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-08/4575229.html" target="_blank" rel="noopener">每日经济新闻 · 伊朗公布一款新型导弹</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美股劳动节休市一日:道指期货收跌0.62%、纳指100期指涨0.13%,今晚(北京时间)复市</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(周一)为美国劳动节,美股休市一天(美东时间,证券时报·人民财讯9月7日21:26报道);美股于9月8日(周二)恢复交易</p>
+<p>摘要:隔夜美股无交易。假期交易时段结束时期指分化:道琼斯指数期货跌0.62%,标普500股指期货跌0.17%,纳斯达克100股指期货涨0.13%。上周五非农远超预期后,本周美国CPI与美联储官员表态将是复市后市场方向的关键变量。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476427" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4175634.html" target="_blank" rel="noopener">证券时报(人民财讯) · 受假期影响 美国股市9月7日休市一日</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>欧股周一收盘涨跌不一:CAC40涨0.35%、DAX30跌0.25%,泛欧STOXX600微涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日收盘(欧洲中部夏令时间17:30前后,即北京时间9月7日23:30前后);财联社9月8日06:00汇编,新浪财经7x24当日深夜滚动播报</p>
+<p>摘要:在美股休市背景下,欧洲股市周一窄幅震荡:法国CAC40涨0.35%、意大利富时MIB涨0.21%,德国DAX30跌0.25%、英国富时100跌0.12%;泛欧STOXX600指数初步收涨0.06%,报650.28点,欧元区STOXX50指数涨0.14%报6401.86点。涨跌幅均有限,交投清淡。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476427" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/7x24/2026-09-07/doc-iniqznpn9534959.shtml" target="_blank" rel="noopener">新浪财经7x24 · 欧洲STOXX600指数初步收涨0.06%,报650.28点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>LME期铜盘中创历史新高:收涨94美元报14510美元/吨,亚市早盘一度升破14530美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日LME收盘(伦敦时间,财联社北京时间9月8日06:00汇编);9月8日亚市早盘(北京时间8时前)行情,新浪财经08:00晨间汇总</p>
+<p>摘要:LME三个月期铜周一收涨94美元、报14510美元/吨,盘中创历史新高;周二亚市早盘一度升破14530美元/吨。同日LME期铝涨18美元报3312美元/吨、期锌涨38美元报3984美元/吨。美元走弱与需求前景改善共同推升基本金属,期铜年内涨幅已接近17%(上观新闻)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476427" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/headline/2026-09-08/doc-iniraite6025966.shtml" target="_blank" rel="noopener">新浪财经 · 今日A股市场重要快讯汇总｜2026年9月8日</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>现货黄金收报4404.30美元/盎司、跌0.58%,今日亚市早盘反弹站上4420美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日纽约市场尾盘行情(美东时间,财联社9月8日06:00汇编);9月8日亚市早盘(北京时间8时前)反弹</p>
+<p>摘要:强非农余波继续压制贵金属:现货黄金周一收报4404.30美元/盎司、跌0.58%,现货白银报66.17美元/盎司、跌0.06%;周二亚市早盘金价反弹,现货金站上4420美元/盎司,纽约期金一度回升突破4470美元、日内跌幅收窄至约0.15%。金价在4400美元关口附近的拉锯仍在延续。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476427" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/headline/2026-09-08/doc-iniraite6025966.shtml" target="_blank" rel="noopener">新浪财经 · 今日A股市场重要快讯汇总｜2026年9月8日</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>汇市:美元指数收跌0.27%报98.914;日元飙至2月以来最强,一度触及154.06</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美元指数9月7日纽约汇市尾市收于98.914(美东时间;新华社9月8日发稿,尾市具体时刻原文未注);日元急涨发生在9月7日伦敦交易时段(伦敦当地时间,上观新闻9月8日早读收录,原文未注具体时刻)</p>
+<p>摘要:美元指数7日下跌0.27%,纽约汇市尾市收于98.914,1欧元兑1.1624美元、高于前一交易日。日元表现更猛:伦敦时段一度涨超1.4%,突破155后最高报1美元兑154.06日元,为2月23日以来最强,市场押注日本央行临近加息并猜测GPIF调整资产配置;假期低流动性放大了波动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/world/20260908/065ec8ab6b78479aa48b1fe057612dd7/c.html" target="_blank" rel="noopener">新华网 · 美元指数7日下跌</a>
+<span class="sep">·</span>
+<a href="https://www.jfdaily.com/news/detail?id=1172769" target="_blank" rel="noopener">上观新闻(解放日报) · 早读:折叠手机齐上新,首款逻辑折叠芯片应用</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>地缘消息推动油价走高:布伦特亚市早盘升破98美元/桶,WTI站稳92美元上方</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日亚市早盘行情(北京时间约8时;新浪财经当日08:00晨间汇总,涨跌幅为当日盘内相对前收口径)</p>
+<p>摘要:美军对伊海上封锁升级、伊朗公布新型弹道导弹等地缘消息提振风险溢价,原油周二亚洲早盘走强:布伦特原油升破98美元/桶、日内涨幅1.81%,WTI站稳92美元/桶上方。若美伊对峙持续,霍尔木兹海峡航运风险与油价供应溢价难消。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/headline/2026-09-08/doc-iniraite6025966.shtml" target="_blank" rel="noopener">新浪财经 · 今日A股市场重要快讯汇总｜2026年9月8日</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>欧洲四大电信巨头拟组联盟竞标卫星频谱、提供直连手机服务,正面挑战星链</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:财联社9月8日03:45发布快讯(北京时间);消息称各方磋商尚处初步阶段,事件发生具体时刻原文未注</p>
+<p>摘要:德国电信、Orange、沃达丰和西班牙电信拟组建联盟,联合竞标卫星频谱并提供直连手机服务,挑战星链;欧盟并拟为欧洲企业预留约三分之一频谱。此举被视作欧洲构建本土卫星通信能力的关键一步,联盟与竞标均未最终敲定。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2476408" target="_blank" rel="noopener">财联社 · 欧洲四大电信巨头密谋组团 拟竞标卫星频谱挑战马斯克星链</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609083867183155.html" target="_blank" rel="noopener">东方财富(转界面新闻) · 欧洲四大电信运营商据悉拟组建联盟 竞标卫星频谱挑战星链</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-07-晚间版.html">← 2026-09-07-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-08 17:05 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
