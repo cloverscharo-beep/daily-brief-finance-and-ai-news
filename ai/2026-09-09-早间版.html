@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 9 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;OpenAI 官宣未发布的新一代模型与约 1 万个 AI 智能体协作、88 小时攻克千禧年难题 Navier–Stokes,旋即引爆与 NYU/Anthropic 数学家之间「闻风抢跑、数据外泄」之争,陶哲轩既点赞又担忧;同日 OpenAI 还发布 ChatGPT Images 2.5,Mistral 完成三星领投的 30 亿欧元 D 轮,DeepSeek 预告 Flash 系列全线降价。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>OpenAI 官宣:约 1 万个 AI 智能体协作 88 小时,给出 Navier–Stokes 千禧年难题的解答</h3></div>
+<span class="tag">🏷 官方披露(OpenAI 官方公告;IT之家中文跟进;争议与学界反应见第 6、10 条)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;OpenAI 官方 X 与官网动态约 13:37 同步上线,官方页面仅标注 9月8日、未注时刻;对应北京时间 9月9日 01:37 前后)。</p>
+<p>OpenAI 称,能力显著强于 GPT-6 Astra 的未公开模型由约 1 万个并发智能体协作,自 9/1 启动、约 88 小时后(9/5)得出 Navier–Stokes 存在性与光滑性问题的解答:初始光滑的流体可在有限时间内发展出奇点;官方还称其 Euler 情形结果与两位数学家的证明路径和结论均不同。公司同步公开分析证明文稿与 Lean 形式化验证(IT之家称验证由 GPT-6 Astra 在约 17 小时内完成),验证代码在 GitHub 开源;官方明确「不打算申领」该问题 100 万美元千禧年奖,并声明研究过程未访问任何特定用户数据、但「无法排除」去标识化数据帮助改进了模型(自述)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/navier-stokes-solution/" target="_blank" rel="noopener">OpenAI · On the Navier–Stokes Millennium Prize Problem</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/0/999/959.htm" target="_blank" rel="noopener">IT之家 · 继 Claude 尝试攻克黎曼猜想后:OpenAI 宣布用 10000 个 AI 智能体 88 小时攻克千禧年大奖难题,陶哲轩既点赞又担忧</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>同场加映:OpenAI 发布 ChatGPT Images 2.5,生成延迟最高降低 50%</h3></div>
+<span class="tag">🏷 官方披露(OpenAI 官方博客;9to5Mac 跟进)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;官方帮助中心标注 9月8日,博客页面未注时刻;聚合源收录约 14:43,对应北京时间 9月9日 02:43 前后)。</p>
+<p>ChatGPT Images 2.5 主打更锐利细节、更快生成与更稳的多轮编辑一致性,延迟较 Images 2.0 最高降 50%,并新增 Sketch 涂鸦参照、模板、图上评论与提示词共享等工具,覆盖 ChatGPT、ChatGPT Work 与 Codex 的全平台全档位。API 端同步推出 GPT-Image-2.5 Flare(默认,同质更快)与 GPT-Image-2.5 Sunburst(精细创作)两模型;官方称其图像产品每周生成超 30 亿张图像。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/introducing-chatgpt-images-2-5/" target="_blank" rel="noopener">OpenAI · Introducing ChatGPT Images 2.5</a>
+<span class="sep">·</span>
+<a href="https://9to5mac.com/2026/09/08/openai-releases-chatgpt-images-2-5-with-sharper-details-and-more-precise-editing" target="_blank" rel="noopener">9to5Mac · OpenAI releases ChatGPT Images 2.5 with sharper details and more precise editing</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>Mistral 官宣 30 亿欧元 D 轮:三星领投,估值超 210 亿欧元(补录)</h3></div>
+<span class="tag">🏷 官方披露(Mistral 官方声明;CNBC、Quartz 等报道)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(欧洲中部夏令时间;公司当日发布声明,原文未注具体时刻;北京时间 9/8 中午起陆续见报)。⚠️ 补录:9/8 晚间版未生成。</p>
+<p>法国 AI 公司 Mistral 宣布完成 30 亿欧元(约合 35 亿美元)D 轮融资,由三星电子领投,欧盟支持的 Scaleup Europe Fund(EQT 管理)与老股东 PSG Equity 参与,投后估值超 210 亿欧元(约合 240 亿美元),公司称这是欧洲科技企业史上最大的一笔股权融资。资金将投向模型研发与自建算力、数据中心;CEO Mensch 称将与三星复制其与 ASML 的深度集成模式,并预计 2026 年经常性收入「跑赢」此前 10 亿美元的目标(自述)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnbc.com/2026/09/08/mistral-ai-funding-valuation-samsung.html" target="_blank" rel="noopener">CNBC · OpenAI rival Mistral valued at $24 billion as Samsung leads funding</a>
+<span class="sep">·</span>
+<a href="https://qz.com/mistral-ai-samsung-series-d-funding-valuation-090826" target="_blank" rel="noopener">Quartz · Mistral AI raises €3 billion in Samsung-led Series D round</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Cognition 官宣超 20 亿美元 E 轮、估值 480 亿美元:AI 编程智能体 Devin 狂奔</h3></div>
+<span class="tag">🏷 官方披露(Cognition 公司公告;Unite.AI、Dealroom 等报道)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;公司当日官宣,报道未注具体时刻;聚合源约 17:27 收录,对应北京时间 9/9 05:27)。</p>
+<p>AI 软件工程师 Devin 开发商 Cognition 宣布完成超 20 亿美元 E 轮融资,Andreessen Horowitz 与 Accel 领投,Founders Fund、General Catalyst、Avenir 及英伟达等参投,估值 480 亿美元——较 5 月 D 轮(260 亿美元估值、融资超 10 亿美元)约四个月近乎翻倍。公司称年化经常性收入已从约 4.92 亿美元增至近 9 亿美元,Devin 现用于英伟达芯片设计、GE Aerospace、花旗、奔驰等工程团队,并新推 Auto-Triage、Security Swarm、Automations 等工具,自述迎来「自动驾驶软件时代」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.unite.ai/cognition-raises-over-2b-series-e-at-48b-valuation-to-scale-devin-agents/" target="_blank" rel="noopener">Unite.AI · Cognition Raises Over $2B Series E at $48B Valuation to Scale Devin Agents</a>
+<span class="sep">·</span>
+<a href="https://app.dealroom.co/news/note/cognition-raises-2b-series-e-at-48b-valuation-to-scale-devin" target="_blank" rel="noopener">Dealroom · Cognition raises $2B Series E at $48B valuation to scale Devin</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>DeepSeek 双响:V4.1 Flash 中间版限时内测,Flash 系列预告 9/10 全线降价</h3></div>
+<span class="tag">🏷 官方披露(DeepSeek 官方群通知与开放平台公告;36氪、智东西、IT之家等报道)</span>
+<p class="time">🕐 <strong>时间</strong>:两条消息——(a) V4.1 Flash 内测:9月8日(北京时间;当日发布,原文未注具体时刻;⚠️补录,9/8 晚间版缺失);(b) 降价预告:9月9日(北京时间;IT之家 06:59 转载开放平台公告,9/10 12:00 生效)。</p>
+<p>DeepSeek 开启 V4.1 Flash 中间版本限时内测:开发者保持 base_url 不变、把模型名设为 deepseek-v4.1-flash-expires-on-0910 即可调用(9/10 自动下线);官方群称新模型采用新架构、原生支持多模态,能力更强、速度更快、成本更低,当前计费与 V4 Flash 相同、每账号限 20 并发。同时官方预告 Flash 系列调价:9/10 12:00(北京时间)起,空闲时段每百万 token 输入(缓存命中)0.02 元(降 60%)、输入(未命中)1 元(降约 33%)、输出 4 元(降约 11%),高峰时段价格为空闲时段两倍。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.36kr.com/p/3974654461604357" target="_blank" rel="noopener">36氪 · DeepSeek V4.1 Flash开始限时内测:新架构、原生多模态</a>
+<span class="sep">·</span>
+<a href="https://aihot.news/items/cmtt9ucoa01prrofpri4rh45l" target="_blank" rel="noopener">IT之家(经 AIHOT 收录)· DeepSeek 宣布 9 月 10 日起 Flash 系列降价,输出每百万 Token 4 元</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>数学界炸锅:NYU 数学家指控 OpenAI「闻风抢跑」,Bubeck 否认、Altman 深夜长文回应</h3></div>
+<span class="tag">🏷 媒体解读与社区讨论(纽约时报报道 + HN 热帖 1043 分/871 评论;中文跟进见第 1 条)</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日 23:58(美东时间;Buckmaster 与 Alpöge 先行发布成果与声明)→ 9月8日(美东时间)OpenAI 公告(约 13:37)、Noam Brown 评论(约 13:31)、Altman 回应(约 14:07)及媒体跟进持续发酵(对应北京时间 9/8 深夜至 9/9 凌晨,本期窗口)。</p>
+<p>NYU 数学教授 Tristan Buckmaster 与 Anthropic 数学家 Levent Alpöge 于周一深夜发布带光滑强迫的 Euler 等多组流体方程「有限时间爆破」证明(陶哲轩给予称赞),并声明指控:其方法进展疑外泄给 OpenAI,后者随即投入巨量算力沿同路线抢先完成完整证明,还曾要求把 Anthropic 员工 Alpöge 移出署名、以「毁掉自己职业生涯」相胁(均系其一面说法,指控未获证实)。OpenAI 数学负责人 Bubeck 公开称指控「虚假且具有煽动性」;Altman 连发长帖给出己方版本——主动联系求联合发布、从未要求除名,并承认「无法排除」去标识化用户数据帮助改进了模型。IT之家报道称陶哲轩对结果「既点赞又担忧」;HN 热帖中社区分歧严重,焦点是 AI 实验室以用户数据与算力「截胡」学者成果的边界。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nytimes.com/2026/09/08/science/openai-proof-millennium-problem.html" target="_blank" rel="noopener">纽约时报 · OpenAI Says It Has Cracked One of Math&#x27;s &#x27;Millennium Problems&#x27;</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49613262" target="_blank" rel="noopener">Hacker News · On the Navier–Stokes Millennium Prize Problem</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>TechCrunch 调查:黑客用信息窃取木马盗 Claude 登录会话,订阅额度被静默薅走</h3></div>
+<span class="tag">🏷 媒体调查报道(TechCrunch;IT之家 9/9 中文跟进)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;TechCrunch 页面标注 9/8、未注具体时刻,聚合源约 17:27 收录;对应北京时间 9/9 05:27 前后)。</p>
+<p>TechCrunch 报道多名 Claude Max 订阅用户的账户被黑:攻击者用信息窃取类恶意软件(infostealer)盗取登录会话,再铸造未经授权的 Claude Code OAuth 令牌暗中消耗订阅额度——有用户全程未工作,用量却从 45% 涨到 55%,还有人连续三天被烧满额度。Anthropic 承认存在此类盗号行为,对受影响账户执行登出、作废授权并部分退款,但因只统计总量、不提供逐项用量明细,用户难以及时察觉;一名受害者因此取消订阅转投 Cursor,并称「没办法自保」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/" target="_blank" rel="noopener">TechCrunch · Hackers are stealing Claude tokens from subscribers</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>The Verge:Anthropic 遭扩大版集体诉讼——Max「5x/20x 用量」被指名不副实</h3></div>
+<span class="tag">🏷 媒体解读(The Verge;诉状 9/8 当日提交,指控均属未证实主张)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日 17:27 UTC(即美东时间 13:27,The Verge 页面时间戳;对应北京时间 9月9日 01:27)。</p>
+<p>由两名前 FTC 律师(Monica Vaca、Kati Daffan)代理的扩大版集体诉讼在加州北区法院提交:原告指 Anthropic 对 Max 5x(100 美元/月)与 Max 20x(200 美元/月)「5 倍/20 倍于 Pro 用量」「省 50%」的宣传误导用户——按 Anthropic 2025 年 7 月邮件披露的每周额度区间推算,实际或仅约 3.5 倍与 6–8 倍,且受滚动 5 小时窗口与每周上限双重约束,计价说明形同「黑盒」。该案 7 月曾提交后撤回、本次扩大重诉;Anthropic 未回应置评请求。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans" target="_blank" rel="noopener">The Verge · A new class action lawsuit questions whether Anthropic broke the law by misleading power users</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>中文博主实测:GPT-6 Astra 推理档位怎么选才最省 Token</h3></div>
+<span class="tag">🏷 博主解读(公众号「数字生命卡兹克」;AIHOT 收录)</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 08:20(北京时间;本期窗口最尾端的新鲜解读)。</p>
+<p>博主卡兹克以烧完两个 200 美元会员的第一手实测,讲解 GPT-6 Astra 推理强度(Reasoning Effort)档位的含义:各档位本质是同一模型的不同「思考预算」,Ultra 档则类似临时拉起多个智能体协作的专项工作组。文章给出各档位的通俗解释与分场景省 Token 的具体用法,帮助用户按任务难度选档、避免无谓烧额度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://aihot.news/items/cmttcqkx404pprofp0jwc34zu" target="_blank" rel="noopener">AIHOT 收录(原载公众号「数字生命卡兹克」)· GPT-6 Astra推理等级怎么选才最省Token</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>一道千禧年题烧多少钱?社区算账:按商业价复现可能要亏本</h3></div>
+<span class="tag">🏷 社区讨论与媒体报道(New Scientist 报道 + HN 讨论)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;Noam Brown 约 13:31 发文评论,New Scientist 当日报道,HN 主帖讨论持续至美东傍晚;对应北京时间 9/8 深夜至 9/9 凌晨)。</p>
+<p>New Scientist 以《OpenAI has solved the Navier–Stokes Millennium problem using $15m of AI effort》为题报道本次证明的算力开销;OpenAI 研究员 Noam Brown 承认「这个结果花费了数百万美元」,但以 o3(约 50 万美元在 ARC-AGI-1 拿下 87.5%,如今约 20 美元即可更高)与 IMO 金牌的对比预测:一年之后,这种量级的数学能力将「人人可及」(自述)。HN 网友则按 Astra 的 API 单价粗算,约 1 万智能体跑 88 小时的复现成本或达数百万美元,超过 100 万美元奖金——「证明 AI 能力」的意义远大于解题本身;也有声音认为真正的隐患是:非知名研究者用公共 API 积累的进展,可能随时被实验室用算力碾压式抢先摘果。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.newscientist.com/article/2588063-openai-has-solved-the-navier-stokes-millennium-problem-using-15m-of-ai-effort/" target="_blank" rel="noopener">New Scientist · OpenAI has solved the Navier-Stokes Millennium problem using $15m of AI effort</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49613262" target="_blank" rel="noopener">Hacker News · On the Navier–Stokes Millennium Prize Problem(讨论)</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-08-早间版.html">← 2026-09-08-早间版</a></span><span><a href="2026-09-09-晚间版.html">2026-09-09-晚间版 →</a></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>生成时间 2026-09-09 21:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
