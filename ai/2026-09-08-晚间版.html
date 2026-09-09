@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 8 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美东假期收尾、欧洲白天的大消息多已随 9/9 早间版发布,本版补录面上亮点为 Anthropic 据报 11 个月锁定至多 5170 亿美元算力合同、Runway 官方入局 Adobe 生态;窗口内中国方面,小鹏人形机器人产线正式启用,成为全球首条高阶通用人形机器人自动化产线;社区与学界则围绕&quot;预训练进步主要来自数据&quot;与 OpenAI 3x 生产力之辩展开激辩。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>小鹏机器人产线正式启用:全球首位高阶通用人形机器人 IRON 完成自动化总装、自主走下产线</h3></div>
+<span class="tag">🏷 官方披露(小鹏官方新闻稿)+ 中文媒体报道</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(北京时间;小鹏官方新闻稿标注当日发布、原文未注具体时刻;IT之家等当日跟进)。</p>
+<p>小鹏官宣其人形机器人生产线正式启用,高阶通用人形机器人 IRON 完成自动化总装后自主走下产线,由研发试制跨入产线制造阶段;产线由小鹏自主设计开发,核心制程自动化率超 80%,并把汽车工业质量体系引入机器人制造。据新华财经,小鹏计划今年底进入规模量产,先从小鹏门店与园区落地商业场景,2027 年面向中国及海外市场正式上市交付;何小鹏称"机器人生产线是从零创造"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.xpeng.com/pressroom/news/01a080371029a057bc8e8a02a2c6012b" target="_blank" rel="noopener">小鹏汽车官方新闻稿 · IRON, The First General-Purpose Humanoid Robot, Rolls Off XPENG&#x27;s New Production Line</a>
+<span class="sep">·</span>
+<a href="https://www.cnfin.com/yw-lb/detail/20260908/4466690_1.html" target="_blank" rel="noopener">新华财经 · 小鹏机器人生产线正式启用 计划今年底达成规模量产</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 据报 11 个月签署至多 5170 亿美元算力合同,锁定至少 14.8GW 算力(补录)</h3></div>
+<span class="tag">🏷 媒体披露(据 The Information 报道,未经 Anthropic 证实;The Decoder 转述)</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(美东时间;The Decoder 报道于北京时间 9/8 凌晨见诸聚合源,原文未注具体时刻)。⚠️ 补录:美东 9/7,各版均未收录。</p>
+<p>据 The Information 报道,Anthropic 在 11 个月内签下价值至多 5170 亿美元的算力合同:自 2025 年 10 月以来,在原有 1–2GW 基础上至少锁定 14.8GW 算力,并计划自建数据中心;报道称其规划总产能或仍不及 OpenAI 2030 年 30GW 的目标,但许多合同期限远超 2030 年,直接比较并不容易。彭博口径下 Anthropic 年化营收已超 650 亿美元,OpenAI 截至 7 月年化营收超 400 亿美元,两家均无法仅靠营收覆盖此类承诺。The Decoder 评论:2026 年初 Amodei 曾警告对手"不了解自己承担的风险",如今 Anthropic 自己成了追赶算力的一方;Altman 则对新型云服务商的"不可持续的愚蠢行为"发出警告(据 The Information/The Decoder)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk" target="_blank" rel="noopener">The Decoder · Anthropic reportedly signs $517 billion in compute deals</a>
+<span class="sep">·</span>
+<a href="https://www.theinformation.com/articles/17777" target="_blank" rel="noopener">The Information(原文)· Anthropic&#x27;s $517B compute contracts</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>Runway 发布 Adobe 插件:在 Premiere Pro 与 After Effects 时间线内直接生成与编辑视频(补录)</h3></div>
+<span class="tag">🏷 官方披露(Runway 官方博客)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;Runway 官网页面标注 September 8, 2026、未注具体时刻;对应北京时间 9月9日凌晨,聚合源约美东 17:58 收录)。⚠️ 补录:美东 9/8,9/9 两版均未收录。</p>
+<p>Runway 正式推出 Runway Plugins:新面板可直接嵌入 Premiere Pro 与 After Effects,在时间线内生成图像与视频、为片段重设风格并把结果直接放入合成或序列,省去"导出—上传—下载—重导入"的往返;Edit Studio 可基于已有片段用 Aleph 2 按原始时长重新渲染。插件对 macOS 与 Windows 免费下载,生成功能面向所有付费计划、消耗现有额度(官方自述)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://runwayml.com/news/company-news/runway-for-adobe" target="_blank" rel="noopener">Runway 官方博客 · Introducing Runway for Premiere Pro &amp; After Effects</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>OpenAI 官宣:Astra 全面开放至 Codex 与 ChatGPT Work 的 Plus/Pro/Business/Enterprise 用户(补录)</h3></div>
+<span class="tag">🏷 官方披露(OpenAI 官方 X 账号)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日 17:06(美东时间,官方 X 帖时间戳;即北京时间 9月9日 05:06)。⚠️ 补录:美东 9/8 傍晚发布,落在 9/9 早间版窗口内但该版未收。</p>
+<p>OpenAI 在 X 上宣布,Astra 现已全面向 Codex 和 ChatGPT Work 中的 Plus、Pro、Business 及 Enterprise 用户开放,用户可直接使用,并附 openai.com/gpt-tv/ 实机演示链接。此前 Astra 于 9/4–9/5 起向 ChatGPT 各档位分批推送,本次补全了 Codex 与 ChatGPT Work 两条产品线的全付费档覆盖(据官方口径)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://x.com/OpenAI/status/2097431322117476423" target="_blank" rel="noopener">OpenAI 官方 X 帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>OpenRouter 推出 shell 沙箱工具与 Files API:任何支持工具调用的模型可在托管 Linux 容器里执行命令(补录)</h3></div>
+<span class="tag">🏷 官方披露(OpenRouter 官方博客)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;官方博客页面标注 2026-09-08、未注具体时刻与发布时区)。⚠️ 补录:美东 9/8,各版均未收录。</p>
+<p>OpenRouter 发布服务端 shell 工具与 Files API(原题《Give any model a terminal and files》):OpenRouter 上任何支持工具调用的模型,都可在其托管的 Linux 容器中执行 shell 命令、读写文件,两者现已在 beta 阶段开放。官方称此举让"给任意模型一个终端"成为平台能力,适用于让第三方模型跑代码、处理文件等落地场景(自述)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openrouter.ai/blog/announcements/shell-tool" target="_blank" rel="noopener">OpenRouter 官方博客 · Shell server tool and Files API</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>风投 Tomasz Tunguz 拆解 OpenAI"3x 生产力"神话:不过是"一台永不睡觉的电脑"?算力账单 5 个月涨 40 倍(补录)</h3></div>
+<span class="tag">🏷 博主解读(Theory Ventures VC 博客;基于 OpenAI 官方披露数据)</span>
+<p class="time">🕐 <strong>时间</strong>:9月7日(美东时间;博客原文未注具体时刻,北京时间 9月8日晨见诸聚合源,约美东 20:00 前后)。⚠️ 补录:美东 9/7,各版均未收录。</p>
+<p>Tunguz 用 OpenAI 自曝的数据重算其"3x 研究生产力"声明:8 月中旬研究部门每 8 小时人工作班对应 3.14 个 agent 工作日、典型研究员并行跑 4 个 agent;成本端,中位研究员日均推理花费从 3 月底约 14 美元涨到 8 月中旬超 600 美元(5 个月约 40 倍),90 分位研究员日均超 7000 美元、年化约 250 万美元。他评论:3x 不是"人变聪明三倍",而是"一个工程师监督三班倒的机器",且超半数 4–8 小时任务仍需人工干预——更像为第二、第三班次付钱(VC 个人观点)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://tomtunguz.com/openai-research-acceleration-agentic-productivity" target="_blank" rel="noopener">Tomasz Tunguz · Is the 3x AI Productivity Gain just a Computer that Never Sleeps?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>Dwarkesh Patel × Jerry Han 实验研究:2019–2025 预训练进步,数据贡献约为模型的 3.24 倍(补录)</h3></div>
+<span class="tag">🏷 博主研究(Dwarkesh Patel 博客,与 Jerry Han 合著)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(美东时间;页面标注 Sep 08, 2026、未注具体时刻)。⚠️ 补录:美东 9/8,9/9 两版均未收录。</p>
+<p>两人把 2019–2025 各年代表性开源模型配方(从 GPT-2 到 OLMo-2)与当年公开数据语料(从 OpenWebText 到 UltraFineWeb)交叉训练,在最高 1e19 FLOPs 算力预算下测 OLMES 能力:数据改进带来约 12.0x 的算力效率提升,模型改进约 3.7x——进步中约 3.24 倍来自数据;数据与模型改进的增益大致独立、可加总。作者同时给出边界:模型改进的真正贡献或是"让更大算力变得可用",结论对小模型最显著,前沿模型过度训练程度高,数据红利是否见顶仍不确定。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data" target="_blank" rel="noopener">Dwarkesh Patel · Pretraining progress is mostly coming from data</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>中文博主实测:GPT-6 Astra 操控 Blender 保姆级教程——Computer Use 花约 4 小时搭出天坛祈年殿、烧掉近半 Pro 额度(补录)</h3></div>
+<span class="tag">🏷 博主解读(公众号「数字生命卡兹克」,AIHOT 收录)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日 08:17(北京时间;AIHOT 收录页标注时刻,即美东 9月7日 20:17;早间版截稿前未及收录)。⚠️ 补录。</p>
+<p>博主卡兹克发布 Astra 操控 Blender 的小白教程,覆盖前期安装、官方 MCP 与 Computer Use 插件配置,并实测三种玩法:Computer Use 花约 4 小时搭出天坛祈年殿模型,却耗掉 200 美元 Pro 会员近半额度;MCP 更快,可完成摩托车建模与组装动画,但复杂任务会单次运行超时,需拆分步骤或用 CLI 执行 Python 脚本解决。文章给出各玩法的速度、成本与适用边界,可直接照做(博主自述实测)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://aihot.news/items/cmtrxbv5n02etroftlb6u96xt" target="_blank" rel="noopener">AIHOT 收录页(原载公众号「数字生命卡兹克」)· GPT-6 Astra操控Blender保姆级教程</a>
+<span class="sep">·</span>
+<a href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686056&idx=1&sn=c1710404c08cf3201da27f4d53f94940" target="_blank" rel="noopener">微信公众号原文</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>算力涨价,还会涨多久?——证券日报/新浪财经拆解云算力提价潮:部分服务涨幅超 30%</h3></div>
+<span class="tag">🏷 中文行业解读(媒体分析报道)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日(北京时间;新浪财经页面标注当日发布、未注具体时刻;当日午间已入新浪 AI 小时报)。</p>
+<p>报道复盘今年以来腾讯云、阿里云、百度智能云等云计算厂商及 AI 服务商密集上调算力产品价格、部分服务最高涨幅超 30% 的现象:赛智产业研究院智能经济研究所所长李铭岩称,涨价根本原因是供需失衡——需求端快速增长、供给端受多重瓶颈制约,缺口持续扩大;文章并分析涨价如何沿产业链上下游传导,以及对加速扩张的 AI 产业可能产生的影响(媒体报道口径)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.sina.com.cn/jjxw/2026-09-08/doc-inirapyy9288997.shtml" target="_blank" rel="noopener">新浪财经(证券日报系分析)· 算力涨价,还会涨多久?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>"想用 AI 省事,结果差点翻车":某县干部让 AI 匹配本地案例,四个里两个张冠李戴、两个凭空捏造</h3></div>
+<span class="tag">🏷 中文社会观察(华商报报道,新浪转载)</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日 11:04(北京时间;新浪转载页时间戳;华商报原文称"近日",未注具体时刻)。</p>
+<p>据华商报,某县干部宋平让 AI 工具为"当地某行业情况反映"匹配四个本地真实案例,提交前出于谨慎逐一核实,结果四例中两起张冠李戴(把邻县前几年旧闻安到本地企业头上)、两起凭空捏造(企业名称与法人在工商系统查无),险些"捅出大篓子"。报道以一线使用者的亲身教训提醒:AI 生成内容须以可核实信源为准,涉及政务材料时更要逐条验证(报道口径)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_5953190046_162d6789e06703rf6e.html" target="_blank" rel="noopener">新浪新闻(转载华商报)· &quot;想用AI省事,结果差点翻车&quot;,某县干部用AI写材料</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-08-早间版.html">← 2026-09-08-早间版</a></span><span><a href="2026-09-09-早间版.html">2026-09-09-早间版 →</a></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>生成时间 2026-09-10 00:38 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
