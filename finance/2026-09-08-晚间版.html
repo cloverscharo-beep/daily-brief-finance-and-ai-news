@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 8 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;沙特多处能源设施遭胡塞武装袭击起火并部分停运,布伦特盘中最高触及99.20美元/桶、逼近100美元关口,欧洲天然气同步创约三年新高;国内8月外贸延续两位数高增(美元计价出口+25%),A股资金转向农业、油气资源股而双创回调,港股AI应用股重挫(智谱跌破千港元、六连跌),南向资金仍净买入逾61亿港元。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>海关总署:前8个月外贸总值34.78万亿元、同比增17.6%,8月出口(美元计价)增25%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日海关总署发布数据(发布时间原文未注;新浪财经快讯自北京时间10:29起汇编转述,当日央视《新闻联播》19:44提要「前8个月我国外贸同比增长17.6%」)</p>
+<p>摘要:前8个月我国货物贸易进出口总值34.78万亿元、同比增长17.6%,较前7个月加快0.3个百分点,其中出口20.17万亿元(+14.6%)、进口14.61万亿元(+22%)。8月当月进出口4.65万亿元、增长19.8%,出口、进口分别增长18.6%、21.7%,连续4个月保持两位数增长,进口增速已连续6个月超过出口。按美元计,8月出口4014.4亿美元、同比增25.0%(高于7月的23.9%),进口2823.6亿美元、增28.2%(低于30%的市场预期),贸易顺差1190.9亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5081875" target="_blank" rel="noopener">新浪财经7x24 · 前8个月我国外贸增长17.6%</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260908-9642679" target="_blank" rel="noopener">联合早报 · 中国8月以美元计价进出口同比增长均达双位数</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5081975" target="_blank" rel="noopener">新浪财经7x24 · 海关总署:前8个月我国出口机电产品12.91万亿元,同比增长21.9%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>沙特能源部:南部多处能源设施遭胡塞武装袭击起火并部分停运,联军称73人受伤</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:沙特能源部称袭击发生在当地时间9月8日「周二上午」(具体时刻原文未注);沙特领导的也门联军伤亡通报自北京时间11:33起滚动发布,沙特能源部声明经新浪财经于北京时间13:23起转述</p>
+<p>摘要:沙特能源部9月8日发布消息,该国南部多处能源设施及公用设施遭也门胡塞武装袭击,多处起火、部分设施运营暂时中断。沙特领导的联军称袭击波及阿卜哈、海米斯穆谢特、奈季兰、吉赞等地民用与经济设施,致73人受伤;胡塞武装宣称动用数十枚弹道导弹与无人机打击沙特阿美相关设施及吉赞炼油厂(日处理约40万桶)等,并称将继续对沙特纵深展开行动,沙特外交部予以强烈谴责。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082109" target="_blank" rel="noopener">新浪财经7x24(CCTV国际时讯) · 沙特多处能源设施遭袭起火</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082274" target="_blank" rel="noopener">新浪财经7x24(综合外电) · 沙特称多个能源设施在袭击发生后已暂停运行</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>加拿大对美「等额」反制关税正式生效:涉及约200亿美元美国商品,分三档税率</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日加拿大东部时间0时(即北京时间12:00)起生效;新浪财经(央视财经稿)于北京时间14:28、17:27报道</p>
+<p>摘要:加拿大政府对美国商品加征的反制关税于北京时间12时起生效,覆盖钢铝、乳制品、家电、农业设备、纸浆造纸、塑料及电子产品等,税率分15%、25%、50%三档,其中多数美国钢铝制品关税由25%提至50%;加方称本次反制商品总额与美方50%关税涉及金额「等额、对等」。背景为美方8月22日依据《斯穆特-霍利关税法》第338条对约200亿美元加拿大商品加征50%关税,加总理卡尼8月21日已宣布暂停对美贸易谈判。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082216" target="_blank" rel="noopener">新浪财经7x24(央视财经) · 加拿大对美等额反制关税措施生效 美加从铁杆盟友走向强硬对手</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082689" target="_blank" rel="noopener">新浪财经7x24(央视财经) · 加拿大贸易反制精准施压美国 加拿大对美国贸易反制底牌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>商务部新增84个全国重点外资项目:阿斯利康全球战略研发中心、福建奔驰二期等在列</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日在厦门第二十六届投洽会期间披露(新浪快讯北京时间14:20;项目名单系「近日」新增,具体批复时刻原文未注);第二十六届投洽会当日于厦门开幕</p>
+<p>摘要:商务部披露近日新增84个全国重点外资项目,其中包括6个外资标志性项目:阿斯利康全球战略研发中心、庆鼎人工智能服务器和高速光模块高密度互连积层板、沙特水电公司绿电直连、和睦家北京医疗国际创新中心投资、福建奔驰二期建设、云顶集团国投吉能2×745兆瓦级燃气发电等项目。新增项目主要集中在制造业,涉及机电装备、化工能源、汽车、医疗健康等领域;商务部称重点外资项目累计实际使用外资已达1093亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082202" target="_blank" rel="noopener">新浪财经7x24(21世纪经济报道) · 商务部新增84个全国重点外资项目,福建奔驰二期等在列</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082119" target="_blank" rel="noopener">新浪财经7x24 · 新设新质生产力专区 第二十六届投洽会今天开幕</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股收盘:沪指涨0.20%报3940.55点,双创跌逾1%,农业与油气资源爆发、算力链回调,成交近1.98万亿</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日15:00收盘(北京时间);新浪财经收评快讯15:00:59发布,东方财富(央广财经)、同花顺等盘后陆续汇总</p>
+<p>摘要:A股三大指数涨跌不一:上证指数涨0.20%(收报3940.55点),深证成指跌0.52%,创业板指跌1.15%、科创50跌1.52%,北证50跌0.97%;全市场成交额19782亿元、较上日放量140亿元,超3400只个股上涨。板块上代糖概念、草甘膦、种植业与林业、油气开采及服务、煤炭开采加工领涨,医疗服务午后活跃;电子化学品、光刻机、半导体、消费电子与中国AI 50板块领跌,盘面呈「农业油气接力、高位算力回调」的轮动格局,龙版传媒7连板,亚盛集团、百大集团、爱仕达4连板。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082287" target="_blank" rel="noopener">新浪财经7x24 · A股收评:双创指数冲高回落均跌超1%,代糖概念、油气开采及服务、粮食概念板块涨幅居前</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609083868025069.html" target="_blank" rel="noopener">东方财富(央广财经) · 9月8日A股收评:创业板指回落跌超1% 农业板块逆势上行</a>
+<span class="sep">·</span>
+<a href="https://stock.10jqka.com.cn/hsdp_list/" target="_blank" rel="noopener">同花顺财经 · 大盘分析(9月8日收盘数据)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收盘:恒指跌0.38%报25317.18点,AI应用股重挫——智谱跌破千港元六连跌,南向仍净买入61.28亿港元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日16:00收盘(香港时间);新华社电稿(新华网17:25:28刊发),新浪财经快讯16:09、17:40等滚动发布</p>
+<p>摘要:香港恒生指数收跌0.38%报25317.18点,全日主板成交2061.7亿港元;国企指数跌0.38%,恒生科技指数收跌1.61%报4454.85点。应用软件与AI大模型股领跌:智谱收跌10.46%,盘中一度跌11%、跌破1000港元关口并最低触及906港元,为9月1日以来连续第6个交易日下跌,MINIMAX-W跌5.7%、联想集团跌6.4%;受国际油价大涨带动,中石化、中海油、中石油H股逆势涨近4%。南向资金全天净买入61.28亿港元,但智谱港股通(沪)净卖出7.55亿港元居首。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/gangao/20260908/3acd58dab24443cd9e7d2b69b84edaf9/c.html" target="_blank" rel="noopener">新华网 · 港股8日跌0.38% 收报25317.18点</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082159" target="_blank" rel="noopener">新浪财经7x24 · 连跌6日,智谱股价跌破1000港元</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082716" target="_blank" rel="noopener">新浪财经7x24 · 南向资金今日净买入61.28亿港元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>布伦特盘中逼近100美元/桶:沙特设施遇袭推油价冲高至99.20美元,汇丰上调2026年布油预测至90美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日盘中行情(北京时间);央视财经稿16:34发布、引用截至北京时间16:09的价位;新浪财经(综合外电)17:15、汇丰预测18:21、美股盘前速递20:34滚动更新</p>
+<p>摘要:受沙特能源设施遇袭停运与霍尔木兹海峡运输受阻影响,国际油价8日盘中走高:布伦特最高触及99.20美元/桶,北京时间16:09报99.17美元/桶(+2.24%),纽约WTI报94.46美元/桶(+3.26%);此后小幅回落,截至20:34布油报98.54美元(+1.59%)、WTI报93.68美元(+2.40%)。高盛称经霍尔木兹海峡运出的原油流量仅为战前水平约70%;汇丰当日将2026年布伦特均价预测由80美元上调至90美元/桶,并预计四季度达95美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082510" target="_blank" rel="noopener">新浪财经7x24(央视财经) · 布油期价逼近每桶100美元 国际油价又上涨了</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082830" target="_blank" rel="noopener">新浪财经7x24 · 汇丰银行将2026年布伦特原油价格预测从每桶80美元上调至90美元</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5083135" target="_blank" rel="noopener">新浪财经7x24 · 美股盘前要闻速递(20:34)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>欧洲能源与利率:TTF天然气创约三年新高,德国10年期国债收益率3.40%为2011年以来最高</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日欧市盘中(北京时间);新浪财经16:36快讯载德债与气价行情,18:02快讯引阿姆斯特丹时间11:50(即北京时间17:50)TTF报价</p>
+<p>摘要:在沙特遇袭、冬季补库与霍尔木兹航运风险叠加下,欧洲基准天然气荷兰TTF近月期货8日盘中一度涨3.4%,升至2023年1月以来(约三年)最高,阿姆斯特丹时间11:50报75.10欧元/兆瓦时,交易商争相补充库存。能源上涨向利率传导:德国10年期国债收益率升至3.40%,创2011年以来(约15年)新高,英国10年期升至5.20%。有分析称,欧洲以偏低库存进入冬季、应对冲击余地有限,正通过涨价与亚洲争夺LNG供应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082516" target="_blank" rel="noopener">新浪财经7x24(综合外电) · 能源价格上涨 德国10年期国债收益率升至15年高点</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082778" target="_blank" rel="noopener">新浪财经7x24(综合外电) · 欧洲天然气价格升至三年高点 交易商争相补充库存</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>日元创约七个月新高后回吐:美元兑日元最低152.89,市场押注日本央行9月17-18日加息至1.25%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日亚洲交易时段(北京时间8:57起快讯:USD/JPY报153.53,10:24报152.95,16:47盘中低点152.89),欧美时段回吐至154.15-154.40(16:47-19:12);日本二季度GDP上修数据于当日早间公布(发布时刻原文未注)</p>
+<p>摘要:日元延续上周以来的强势:美元兑日元自上周初160一线累计回落逾4%,今日亚市最低触及152.89,为约2月下旬以来最强,随后回吐涨幅,截至北京时间19:12基本持平于154.40附近。驱动因素方面,市场几乎完全定价日本央行9月17-18日会议加息25个基点至1.25%(据日媒报道,日本央行正考虑该幅度),日本二季度GDP上修至年化1.4%、7月实际工资同比增2.4%强化了该预期;Saxo Markets则警告,日元走强或引发高估值软件股、AI半导体等拥挤交易头寸的平仓。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082211" target="_blank" rel="noopener">新浪财经7x24(综合外电) · 日元大幅走强创七个月新高 央行9月加息已经板上钉钉</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082700" target="_blank" rel="noopener">新浪财经7x24 · 日媒:日本央行计划在9月17-18日会议上将利率上调至1.25%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082559" target="_blank" rel="noopener">新浪财经7x24 · Saxo警告称日元走强或引发全球股市拥挤交易平仓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>美股劳动节后今晚复市:盘前期指分化(道指期货-0.81%、纳指期货+0.07%),油气股与甲骨文走强、中概普跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月8日美股盘前(美东时间上午,即北京时间约16:00-20:40;新浪盘前速递20:34发布,中概盘前稿16:57发布);美股将于美东时间9月8日9:30(北京时间21:30)开盘,晚于本期截稿</p>
+<p>摘要:美国劳动节假期后美股今日复市在即。截至北京时间20:34,三大股指期货涨跌不一:道指期货跌0.81%、标普500期货跌0.25%,纳指期货涨0.07%;盘前油气股集体上涨(挪威国油、英国石油涨超3%),甲骨文涨约5%(联博维持买入、目标价325美元),阿斯麦涨超2%;半导体与存储芯片股盘前多数走高。热门中概股盘前普遍下跌,百度一度跌逾7%,蔚来、京东、阿里巴巴跌逾1%。强非农与中东扰动之后,市场焦点转向本周美国通胀数据与美联储官员表态,具体开盘表现留待明日早间版跟进。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5083135" target="_blank" rel="noopener">新浪财经7x24 · 美股盘前要闻速递(20:34)</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5082568" target="_blank" rel="noopener">新浪财经7x24 · 热门中概股,盘前集体下跌</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-08-早间版.html">← 2026-09-08-早间版</a></span><span><a href="2026-09-09-早间版.html">2026-09-09-早间版 →</a></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-09 09:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

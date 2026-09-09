@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 9 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美军隔夜打击伊朗哈尔克岛、贾斯克附近目标并击中一艘小型油轮,伊朗放话将报复美军基地,布油结算收报97.92美元、距100美元关口不足3美元;美股三大指数连续第二个交易日收跌(道指跌1.18%),医药Lp(a)降脂赛道遭整体重估;今日9:30统计局公布8月CPI/PPI,本周美国PPI与CPI(周四、周五)将左右9月加息预期。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>国家统计局今日9:30发布8月CPI/PPI:机构预计CPI同比回升至0.7%~0.9%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:国家统计局官网发布预告:9月9日(周三)9:30(北京时间)公布,本期截稿时尚未发布;机构前瞻稿9月8日下午刊发(早于晚间版截稿,晚间版未及收录)</p>
+<p>摘要:统计局官网预告显示,8月居民消费价格指数与工业生产者出厂价格指数月度报告于今日9时30分发布,7月分别为同比+0.5%与+3.5%。中金、招商、民生、华泰、华创等机构预计,猪价低基数与油价上涨将带动8月CPI同比回升至0.7%~0.9%,PPI同比约3.5%~3.8%(8月布油均价环比涨4.9%)。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局 · 数据发布预告</a>
+<span class="sep">·</span>
+<a href="https://news.ifeng.com/c/8wFgfchE3lT" target="_blank" rel="noopener">澎湃新闻(经凤凰网转载) · 物价前瞻:食品、能源价格上涨或带动8月CPI同比涨幅回升</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美军被指打击伊朗哈尔克岛、贾斯克附近目标并击中一艘小型油轮,伊朗警告将攻击美军基地</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:伊朗媒体当地时间9月8日晚间起滚动报道(即北京时间9月9日凌晨):法尔斯通讯社称贾斯克当地时间约21:45(北京时间约2:15)传出两响爆炸,哈尔克岛更早传出爆炸声;美方回应报道于北京时间9月9日3时至8时陆续刊发</p>
+<p>摘要:塔斯尼姆通讯社称,一艘小型油轮在哈尔克岛(伊朗约九成原油出口装船枢纽)锚地约4海里处遭美方攻击,船员撤离、暂无伤亡;福克斯援引美方官员称美军正打击哈尔克岛与贾斯克附近含油轮在内的目标,系报复伊方袭击美舰。伊朗武装部队总参谋长警告:油轮若再遭袭,将打击美军在中东的基地。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.dw.com/en/us-strikes-iran-oil-tankers-hormuz/a-79194562" target="_blank" rel="noopener">德国之声(综合AP/路透/德新社) · US strikes Iranian oil tankers in Strait of Hormuz</a>
+<span class="sep">·</span>
+<a href="https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-reports-us-attack-iranian-tanker-kharg-island-explosions" target="_blank" rel="noopener">Middle East Eye(直播帖,9月8日21:25 BST) · Iranian media reports US attack on Iranian tanker off Kharg Island</a>
+<span class="sep">·</span>
+<a href="https://www.bannedbook.org/bnews/cnnews/20260909/2357529.html" target="_blank" rel="noopener">禁闻网(编译伊媒及福克斯报道) · 伊朗两大战略要地连传爆炸声</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>美国财政部580亿美元3年期国债标售:中标收益率4.474%,创2024年6月以来该期限最高</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:投标于美东时间9月8日13:00截止(北京时间9月9日凌晨约1时);新浪财经9月9日刊发结果(原文未注具体刊发时刻)</p>
+<p>摘要:美国财政部周二标售580亿美元3年期国债,中标收益率4.474%,为该期限2024年6月以来标售最高水平,并略低于截标时4.475%的发行前市场水平,显示需求略好于预期(8月11日同期限标售为4.291%)。市场关注随后(美东周三、周四)10年期与30年期国债标售的承接情况。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-09-09/doc-inireaan9108718.shtml" target="_blank" rel="noopener">新浪财经 · 美国3年期国债拍卖中标收益率创2024年以来最高</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美股三大指数连续第二个交易日收跌:道指跌1.18%报52786.07点,光通信与算力租赁逆势走强</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月8日(周二)16:00收盘,即北京时间9月9日约4时;财联社(9月9日刊发,编辑赵昊)与东方财富全球市场综述(9月9日05:15)收录</p>
+<p>摘要:截至收盘,道指跌628.18点、报52786.07点(-1.18%),标普500跌45.08点、报7673.52点(-0.58%),纳指跌85.58点、报26421.41点(-0.32%),三大指数连跌两个交易日。英特尔逆势涨超9%(供应链消息称PC CPU暂定10月上旬再涨10%),光通信(Lumentum涨11.04%、康宁涨7.56%)与AI算力租赁(CoreWeave涨11.72%、甲骨文涨2.36%)走强,Bloom Energy涨9.63%(将纳入标普500);医药权重重挫拖累大盘(见第7条);热门中概普跌,金龙指数跌1.73%,百度跌超6%、贝壳跌超3%、拼多多跌近3%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2477628" target="_blank" rel="noopener">财联社 · 美股收盘:三大指数集体收跌 算力租赁&amp;光通信逆市走强</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609093868460151.html" target="_blank" rel="noopener">东方财富 · 全球市场:美股三大指数收跌 道指跌超1% 光通信板块逆市上涨 英特尔涨超9%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>油价结算价再上台阶:WTI收94.25美元/桶涨3.03%,布伦特11月合约97.92美元、距100美元不足3美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:WTI于美东时间9月8日14:30结算(北京时间9月9日约2:30);布伦特11月合约结算于北京时间9月8日深夜;哈尔克岛消息传出后,两油电子盘于北京时间9月9日凌晨短线急涨(综合报道称一度上涨约1美元)</p>
+<p>摘要:美国劳动节假期后首个完整交易日,纽约WTI收94.25美元/桶、涨2.77美元(+3.03%),布伦特11月合约结算97.92美元/桶、涨0.92美元(+0.9%),距100美元关口约2美元。CNBC盘中报道美国汽油零售均价升破4美元并创纪录;高盛警告若中东局势进一步恶化,布油或上看120美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609093868460151.html" target="_blank" rel="noopener">东方财富 · 全球市场(商品收盘数据)</a>
+<span class="sep">·</span>
+<a href="https://m1.100ppi.com/news/detail-event-20260909-6189644.html" target="_blank" rel="noopener">生意社PriceSeek · 9月8日国际原油期货收涨</a>
+<span class="sep">·</span>
+<a href="https://youtube.com/watch?v=af-6ezkXscc" target="_blank" rel="noopener">CNBC(9/8 Market Midday视频报道)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美债收益率高位持稳:10年期报4.7942%,UBS料美联储9月与12月各加息25个基点</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月8日纽约尾盘(北京时间9月9日约5时)收益率定格;新华财经(中国金融信息网)综述9月9日刊发(电头未注具体时刻)</p>
+<p>摘要:纽约尾盘,10年期美债收益率涨1.21BP报4.7942%、持稳于4.8%附近,2年期涨2.54BP报4.3915%(盘中现V形反转),30年期涨0.95BP报5.2518%。美联储已进入9月15-16日议息会议前静默期;阿波罗首席经济学家Slok明确判断本月将加息,瑞银财富管理调整为9月与12月各加息25个基点;周四PPI与周五CPI被视为决定加息与否的「最后拼图」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L6CADIA505568W0A.html" target="_blank" rel="noopener">新华财经 · 非农余波叠加油价攀升 美债收益率延续上行(经网易转载)</a>
+<span class="sep">·</span>
+<a href="https://youtube.com/watch?v=af-6ezkXscc" target="_blank" rel="noopener">CNBC(9/8 Market Midday视频报道,市场加息概率约六成)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>医药Lp(a)降脂赛道遭重估:诺华III期试验失败,安进跌约10%、诺华跌14%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月8日全天(北京时间9月8日21:30至9月9日约4时);导火索为诺华与Ionis合作的pelacarsen于美东9月4日盘后公布的III期结果,9月8日美股大幅发酵</p>
+<p>摘要:诺华pelacarsen虽显著降低脂蛋白(a)却未减少主要不良心血管事件,令整个Lp(a)降脂赛道前景遭质疑:9月8日诺华收跌约14%,安进跌约10%(其同类在研药olpasiran前景被看淡,BMO下调评级至「与大盘持平」),礼来跌约2%。安进同日宣布小细胞肺癌III期研究(DeLLphi-305)达总生存期主要终点,仍未能提振股价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://247wallst.com/investing/2026/09/08/amgen-falls-10-as-novartis-trial-failure-clouds-a-cholesterol-drug-class-nvs-stock-drops-14" target="_blank" rel="noopener">247wallst · Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%</a>
+<span class="sep">·</span>
+<a href="https://cnbc.com/2026/09/08/novartis-cholesterol-setback-drug-race-eli-lilly-amgen.html" target="_blank" rel="noopener">CNBC · Novartis trial failure raises stakes for Amgen and Eli Lilly in Lp(a) drug race</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>金价重挫:COMEX黄金收4400美元/盎司、单日跌1.71%,现货金报4355.55美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月8日贵金属收盘(COMEX约13:30结算,北京时间9月9日约1:30);东方财富全球市场综述(9月9日05:15)收录</p>
+<p>摘要:COMEX黄金期货收报4400.0美元/盎司、跌76.60美元(-1.71%),现货黄金跌50.89美元、报4355.55美元/盎司(-1.15%);白银同步走低,COMEX收66.375美元/盎司(-0.56%),现货报65.76美元(-0.63%)。媒体普遍将金价自4500美元上方的高位回落归因于美债收益率居高与9月加息预期升温推高持有成本。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609093868460151.html" target="_blank" rel="noopener">东方财富 · 全球市场(贵金属收盘数据)</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609043865593683.html" target="_blank" rel="noopener">东方财富(9月4日) · 国际金价单日拉升近90美元,机构看高年底至5100美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>日元续强:美元兑日元9月8日收跌0.65%,日本央行9月17-18日加息25个基点近完全定价</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:覆盖美东时间9月8日全天(至北京时间9月9日凌晨纽约收盘);相关盘后综述于美东9月8日收盘后刊出;日本央行审议委员等鹰派表态见诸9月8日报道</p>
+<p>摘要:美元兑日元9月8日收跌0.65%至约154.4,日本10年期国债收益率创数十年高位。市场近乎完全定价日本央行9月17-18日会议加息25个基点至1.25%,审议委员高田创更提出采取更大加息幅度或连续加息的可能。机构提醒,技术指标已入超卖区(RSI约24),日元升值交易短线或现反复与平仓波动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.tradingkey.com/zh-hans/news/market-movers/262155147-market-movers-usdjpy-20260908" target="_blank" rel="noopener">TradingKey(中文) · 美元/日元9月8日下跌0.65%:宏观数据释放了什么信号?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>前瞻:苹果秋季发布会定于美东9月9日10:00(北京时间今晚22:00),新任CEO特纳斯首秀</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:发布会时间已由苹果官方确认:美东时间9月9日10:00,即北京时间9月9日22:00(晚于本期截稿,属今晚);相关预告报道于9月初刊发(原文未注具体刊发时刻)</p>
+<p>摘要:苹果将于美东9月9日上午10时举行秋季特别活动,市场预计新一代iPhone为核心看点;这也是9月1日接替库克出任CEO的约翰·特纳斯(John Ternus)履新后的首场大型发布会,华尔街关注其对Apple Intelligence硬件生态的交付进展。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262143766-us-stock-futures-september-pressure-nvidia-apple-tesla-micron-tradingkey" target="_blank" rel="noopener">TradingKey(中文) · 美股三大指数期货9月开局为何承压(文内载苹果发布会日程)</a>
+<span class="sep">·</span>
+<a href="https://www.moomoo.com/hans/community/feed/u-s-stock-market-global-news-review-03-september-2026-117207066607622" target="_blank" rel="noopener">moomoo社区 · 美股市场与全球新闻回顾(9月3日)</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-08-晚间版.html">← 2026-09-08-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>生成时间 2026-09-09 09:00 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
