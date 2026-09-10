@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-10</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 10 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;《金融强国建设&quot;十五五&quot;规划》正式出台,央行、证监会、金融监管总局、外汇局集体亮相国新办发布会;晚间美国8月PPI数据落地后油价与美债收益率高企,布伦特突破105美元、现货黄金跌破4360美元,全球风险资产承压。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>《金融强国建设"十五五"规划》正式出台:2030年形成中国特色现代金融体系总体框架</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 15:00 起(北京时间,国新办发布会于下午3时举行;新华社通稿15:06发布)</p>
+<p>摘要:中央金融办会同各金融单位制定的《金融强国建设"十五五"规划》正式出台,央行副行长陆磊称其系统明确健全金融宏观调控体系、全面加强金融监管、防范化解金融风险等任务;总体目标为到2030年形成中国特色现代金融体系总体框架、到2035年基本建成具有高度适应性、竞争力、普惠性的现代金融体系。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609103870514176.html" target="_blank" rel="noopener">东方财富 · 新华社《金融强国建设&quot;十五五&quot;规划》正式出台</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609103870531161.html" target="_blank" rel="noopener">东方财富 · 财联社 · 一文看懂国新办新闻发布会 央行、证监会等最新发声</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>证监会副主席李超:中长期资金年内净买入A股超6000亿元,持有流通市值较去年底增长12.5%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 15:00 起(北京时间;财联社汇总稿15:34发布)</p>
+<p>摘要:李超在国新办发布会披露,今年以来社保、年金、保险等中长期资金合计净买入A股超6000亿元;将拓宽中长期资金来源与入市渠道、实施更具包容性的发行上市和并购重组制度,修订后的证券公司监管条例有望近期出台;前8个月查办证券期货违法案件644件、罚没近百亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609103870531161.html" target="_blank" rel="noopener">东方财富 · 财联社 · 一文看懂国新办新闻发布会 央行、证监会等最新发声</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>商务部:中美正就300亿美元对等降税框架安排进行磋商</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 15:04(北京时间,新华社稿发布时刻;例行新闻发布会当日举行)</p>
+<p>摘要:商务部新闻发言人黄玲在例行新闻发布会上表示,中美双方经贸团队认真落实两国元首北京会晤达成的共识,正在就300亿美元对等降税框架安排进行磋商,争取早日落地实施;她还回应了约见在华法国企业、法国"反超快时尚"法等问题。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609103870513919.html" target="_blank" rel="noopener">东方财富 · 新华社 · 商务部:中美正就300亿美元对等降税框架安排进行磋商</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>外交部宣布习近平将赴印度出席金砖国家领导人第十八次会晤;央行副行长陶玲出席金砖财长和央行行长会议</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 18:00—18:01(北京时间,快讯发布时刻;会晤于9月12日至13日举行)</p>
+<p>摘要:外交部发言人宣布,应印度总理莫迪邀请,国家主席习近平将于9月12日至13日赴印度新德里出席金砖国家领导人第十八次会晤。同日,央行副行长陶玲在印度孟买出席本年度第二次金砖国家财长和央行行长会议,会议审议并通过了《金砖国家财长和央行行长联合声明》。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087121" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 习近平将赴印度出席金砖国家领导人第十八次会晤</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087117" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 中国人民银行副行长陶玲出席金砖国家财长和央行行长会议</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美国8月PPI环比+0.4%总体接近预期:加息押注小幅上调、10年期美债收益率升至4.893%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 8:30(美东时间,即北京时间20:30;市场反应持续至北京20:34)</p>
+<p>摘要:美国8月PPI环比+0.4%(预期+0.4%、前值0%)、核心PPI环比+0.2%(预期+0.3%)、核心PPI同比+4.6%(预期+4.6%);9月5日当周初请失业金人数20.6万人。数据接近预期,但美国短期利率期货小幅下跌、交易员加息押注小幅上调,10年期美债收益率上行5.63个基点至4.893%,纳指100期货跌幅一度扩大至1.06%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087491" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美国8月核心PPI环比0.2%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087517" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美国国债收益率在通胀数据公布后继续上行</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>国际油价续涨:布伦特突破105美元,WTI自5月21日以来首次触及100美元;欧佩克月报下调2026年需求增长预期</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 20:28—20:32(北京时间,欧美交易时段;欧佩克月报20:30发布)</p>
+<p>摘要:布伦特原油日内涨逾4%、突破105美元报105.30美元/桶;WTI原油涨4.13%站上100美元,为5月21日以来首次,中东冲突升级为触发因素。同日欧佩克月报显示,2026年全球石油需求预计同比仅增长40万桶/日、较上月预测下调,并预计2027年增长约240万桶/日。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087488" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 布伦特原油突破105美元/桶</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087494" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 欧佩克下调2026年全球石油需求增长预期</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>A股收盘:沪指跌0.43%报3934.40点,成交1.66万亿连续第四日不足2万亿</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 15:00(北京时间,A股收盘)</p>
+<p>摘要:沪指收报3934.40点、跌0.43%,深证成指跌0.77%,创业板指跌0.49%;沪深京三市成交额1.66万亿元、较昨日缩量逾2100亿元,为连续第四个交易日不足2万亿。银行板块逆市走强、42只个股无一下跌,全市场超4500只个股下跌,上涨个股不足1000只。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609103870510049.html" target="_blank" rel="noopener">东方财富 · A股三大指数收跌 成交额不足1.7万亿 银行板块逆市走强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>港股收盘:恒生指数跌1.27%报24954.47点,恒生科技指数跌2.04%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 16:00(北京时间,港股收盘)</p>
+<p>摘要:恒生指数收报24954.47点、跌320.49点(-1.27%),恒生科技指数收报4330.49点(-2.04%),国企指数跌1.13%报8274.78点;全天港股成交额1988.65亿港元。大金融与石油股逆势护盘,科网股、AI硬科技及大模型股承压。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.eastmoney.com/a/202609103870574122.html" target="_blank" rel="noopener">东方财富 · 9月10日港股收盘:恒指跌1.27% 恒生科技指数跌2.04%</a>
+<span class="sep">·</span>
+<a href="https://www.chnfund.com/article/AR6618726d-8a52-6b1c-86c3-3a239cb1575d" target="_blank" rel="noopener">中国基金报 · DeepSeek发布新模型并降价,大模型股承压</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>贵金属重挫:现货黄金失守4360美元、纽约期银大跌逾5%,美元与油价双双走强</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 20:31—20:36(北京时间,欧美交易时段)</p>
+<p>摘要:现货黄金日内跌约1%、失守4360美元/盎司(报4355.55美元),纽约期金跌1.36%失守4400美元;纽约期银日内跌5.48%失守65美元/盎司,钯金期货跌5%。美元指数维持涨势,新兴市场货币跌幅扩大。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087499" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 现货黄金日内跌1%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5087529" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 纽约期银失守65美元/盎司</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>星图金融研究院:成交创年内次低源于AI主线退潮,盘后政策组合如"强心剂"</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 16:05(北京时间,文章发布时刻)</p>
+<p>摘要:星图金融研究院指出,A股今日成交1.66万亿创年内次低,缩量源于AI赛道交易退潮与双节前效应叠加;并称盘后央行、证监会、金融监管总局相关领导接连发布政策部署,"无异于给市场注入了一阵强心剂"。后市聚焦美国8月CPI,短期建议多看少动,关注内需与国产替代方向。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://timeline.sohu.com/news/VokvCBj2y1?from=news" target="_blank" rel="noopener">星图金融研究院(搜狐时间线)· 央行、证监会送温暖!盘后,A股利好来得太及时了</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-10-早间版.html">← 2026-09-10-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-10 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
