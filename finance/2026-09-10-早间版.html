@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-10</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 10 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;布伦特原油自去年 7 月以来首次收于 100 美元上方(结算 101.21 美元/桶),9 月 10 日亚市进一步逼近 102 美元;油价与美债收益率双升压制全球风险资产,美股三大指数连续第三日收跌,亚太与港股同步走低。苹果发布首款折叠屏手机 iPhone Duo(国行 15999 元起),A股上午缩量普跌、银行与电力逆势走强。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美国财政部公布扩大后国债回购首次操作上限 60 亿美元,10 年期美债收益率升至 4.8507% 创 2023 年 11 月以来新高</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 23:06—23:41(北京时间,美东时间9月9日上午);收益率创新高见 9月9日 23:14</p>
+<p>摘要:美国财政部表示,根据扩大后的国债回购计划,首次操作将购买最多 60 亿美元长期政府债券(10年至20年期),为最初向投资者公布规模 20 亿美元的三倍,操作定于美东周四进行。财长贝森特此前谈及规模或超 40 亿美元、部分交易商上调预期至约 100 亿美元,实际公布后美债延续跌势。10 年期美债收益率一度升 3.06 个基点报 4.835%,随后进一步上行至 4.8507%,创 2023 年 11 月以来新高。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085531" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美国财政部周四拟回购至多60亿美元长期国债</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085536" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美国10年期国债收益率继续上行至4.8507%,创2023年11月以来新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美国 EIA 大幅上调今明两年油价预测:2026 年布伦特均价看至 91.01 美元/桶</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 00:01—00:02(北京时间,美东时间9月9日发布《短期能源展望》)</p>
+<p>摘要:美国能源信息署预计 2026 年布伦特原油均价 91.01 美元/桶(此前预测 86.81 美元),2027 年 73.74 美元(此前 69.39 美元);2026 年 WTI 均价 84.65 美元/桶(此前 80.88 美元),2027 年 69.74 美元(此前 65.39 美元);并预计 2026 年全球石油需求 1.026 亿桶/日。媒体将此次大幅上调归因于伊朗战事导致全球库存消耗。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085565" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · EIA预计2026年布伦特原油均价为每桶91.01美元</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085566" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · EIA预计2026年WTI原油均价为每桶84.65美元</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085931" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 9月10日隔夜要闻一览</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>苹果发布首款折叠屏手机 iPhone Duo:国行 15999 元起、顶配 26499 元,10 月 16 日预售</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 01:00(北京时间)发布会开始(美东时间9月9日10:00);价格与发售安排于 1:22—3:07 陆续公布</p>
+<p>摘要:iPhone Duo 起售价 1999 美元(256GB—2TB,顶配 2TB 版 3199 美元),国行四个存储版本 15999 元起、顶配 26499 元;展开后 7.6 英寸超视网膜 XDR 屏,仅支持 eSIM,10 月 16 日预售、10 月 23 日开售。同场发布 iPhone 18 Pro/Pro Max(国行 9999 元/10999 元起,9月12日预售、18日发售)、AirPods 5(129 美元起)、Apple Watch Series 12 与 Ultra 4,系新任 CEO 特努斯首场发布会。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085713" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 苹果iPhone 18 Pro国行售价9999元起,iPhone 18 Pro Max国行售价10999元起,9月12日开启预购</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085665" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 苹果:iPhone Duo起售价为1999美元,10月16日开启预售</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085908" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · iPhoneDuo充电5分钟看视频5小时(国行15999元起、顶配26499元)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>人民银行 9月10日开展 30 亿元 7 天期逆回购操作,操作利率 1.40% 持平</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 09:20(北京时间);央行官网公开市场业务交易公告[2026]第177号标注日期为 2026-09-10</p>
+<p>摘要:中国人民银行今日开展 30 亿元 7 天期逆回购操作,投标量 30 亿元、中标量 30 亿元,操作利率 1.40%,与此前持平,延续小额投放、价格不变的节奏。央行公开市场业务交易公告当日正常发布,编号为[2026]第177号。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/125475/index.html" target="_blank" rel="noopener">中国人民银行 · 公开市场业务交易公告(2026-09-10,第177号)</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086082" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 央行今日开展30亿元7天逆回购操作,操作利率为1.40%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>财政部拟第二次续发行 30 年期超长期特别国债 730 亿元,并启动第七、八期电子式储蓄国债发行</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 09:49—09:50(北京时间)</p>
+<p>摘要:财政部拟第二次续发行 2026 年超长期特别国债(六期),为 30 年期固定利率附息债,竞争性招标面值总额 730 亿元,不进行甲类成员追加投标,票面利率与同期国债相同为 2.14%。同日,财政部开始发行今年第七期、第八期电子式储蓄国债:第七期 3 年期票面年利率 1.63%、最大发行额 248 亿元;第八期 5 年期 1.70%、最大发行额 302 亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086165" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 财政部拟第二次续发行2026年超长期特别国债(六期)</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086164" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 第七、八期电子式储蓄国债今起发行</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>全球股市延续跌势:美股三大指数连续第三日收跌,亚太主要股指 9月10日盘中普跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美股于美东时间9月9日16:00收盘(北京时间9月10日04:00);亚太市场为 9月10日盘中(相关快讯12:42发布);日经225数据见 9月10日 08:34</p>
+<p>摘要:美股道指跌 0.77%、标普500 跌 0.48%、纳指跌 0.64%,连续第三个交易日收跌;纳斯达克中国金龙指数收跌 2.08%,闪送跌 12.23%、小马智行跌 5.71%。9月10日亚太承接跌势,MSCI 亚太指数最大跌幅 1.3% 为一周最大,台积电、阿里巴巴与必和必拓领跌,韩国综合指数一度跌 2.2%;日经225 早盘跌 1% 报 64487.12 点,澳大利亚 S&amp;P/ASX 200 早盘跌 1.3% 报 8793.10 点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085771" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美股收盘:三大股指集体收跌</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086382" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 油价上涨打压市场情绪,亚洲股市下挫</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086015" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 日本日经指数下跌1%,至64487.12点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价 9月9日首次收于 100 美元上方:布伦特收 101.21 美元涨 3.36%,铜价同步创历史新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 03:31(北京时间,对应美东9月9日结算);9月10日 08:38 亚市布油逼近102美元;铜价新高见 9月9日 22:42 及隔夜要闻</p>
+<p>摘要:纽约商品交易所 10 月交货轻质原油期货涨 3.02 美元、收于 96.05 美元/桶(+3.25%);11 月交货布伦特原油涨 3.29 美元、收于 101.21 美元/桶(+3.36%),为去年 7 月以来首次收于三位数。9月10日亚市布油续涨逼近 102 美元、连涨五日,WTI 徘徊 97 美元附近;伊朗称面对美方封锁无意退让。同期 LME 三个月期铜一度升至 14782 美元/吨的历史新高,COMEX 铜价亦创纪录新高 6.894 美元/磅。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085740" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 国际油价9日显著上涨</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086018" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 布油逼近102美元 伊朗表示已做好准备应对更激烈的冲突</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5085931" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 9月10日隔夜要闻一览</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>A股 9月10日上午缩量普跌:上证跌 0.35%,成交 1.102 万亿,银行、电力、燃气逆势走强</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 11:30(北京时间)上午收盘;午评快讯11:31发布</p>
+<p>摘要:截至午盘,上证指数跌 0.35%、深证成指跌 0.55%、创业板指跌 0.15%,北证50 跌 1.93%、科创50 跌 0.43%;全市场成交额 11020 亿元,较上日缩量 1182 亿元,超 4200 只个股下跌。板块上,元件、厨卫电器、银行、电力、燃气涨幅居前(逸豪新材、金安国纪、超声电子涨停,华银电力、闽东电力、湖南发展、芯能科技涨停);草甘膦、农产品加工、养殖业、医疗服务跌幅居前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086307" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 午评:创业板指冲高回落跌0.15%,元件、银行、燃气板块涨幅居前</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>港股 9月10日上午显著走低:恒生指数跌 1.288%、恒生科技指数跌 2.071%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 12:00(北京时间)港股上午收盘;午评快讯12:01发布</p>
+<p>摘要:港股半日恒生指数跌 1.288%、恒生科技指数跌 2.071%。个股方面,智谱跌 7.882%、潍柴动力跌 6.996%、MINIMAX-W 跌 6.733%、蔚来-SW 跌 4.711%、石药集团跌 3.791%、阿里巴巴-W 跌 3.643%、美团-W 跌 3.406%,科技与创新药权重股为主要拖累。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086336" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 港股午评:恒生指数跌1.288%,恒生科技指数跌2.071%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>美国司法部据悉调查英伟达与 Groq 的 200 亿美元授权交易,涉规避反垄断审查疑虑</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:相关消息于 9月10日 08:29 与 11:42(北京时间)两次披露,均援引知情人士</p>
+<p>摘要:知情人士称,美国司法部正调查英伟达去年 12 月公布的、与 AI 芯片新创公司 Groq 达成的约 200 亿美元授权交易,判断其是否被刻意设计以规避反垄断审查;交易使英伟达取得 Groq 技术使用权,Groq CEO Jonathan Ross 与 COO Sunny Madra 转投英伟达,而 Groq 维持独立。美国国会议员此前称该交易实质上是扼杀竞争的收购;Groq 当时将其描述为"非独占许可协议"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086005" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 监管机构调查英伟达与Groq的授权协议</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5086321" target="_blank" rel="noopener">新浪财经 · 7×24快讯 · 美国司法部据悉调查英伟达与Groq的200亿美元授权交易 涉反垄断疑虑</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-09-晚间版.html">← 2026-09-09-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-10 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

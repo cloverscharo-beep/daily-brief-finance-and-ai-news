@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-10</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 10 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;DeepSeek 正式发布 V4.1 Flash——552B 参数的 MoE 非对称新架构、原生多模态,MIT 协议开源,官方称性能、费用、速度、总用时全面超越 V4 Pro,并预告 9/14 起把 V4 Pro 请求全部路由至新模型。同日 OpenAI 连出两手:Paul Christiano 加入基金会董事会,并公开呼吁美国建立强制性、按风险分级的全国 AI 安全制度、转而支持四项加州法案;苹果发布会则把「AI 参与制造铰链」与端侧 Siri AI、Apple Reference Image 图像真实性验证一并端上台面。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>DeepSeek 正式发布 V4.1 Flash:552B 参数 MoE 非对称新架构,官方称全面超越 V4 Pro</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 10:17(北京时间;据 Hugging Face 模型仓库创建时间戳 2026-09-10T02:17:58Z 换算;DeepSeek 官方当日发布公告,原文未注具体时刻,中文媒体 cnBeta 于 15:16 收录;新定价于当日 12:00 生效)</p>
+<p>DeepSeek 官方宣布正式发布 V4.1 Flash,称其为全新模型结构系列中最小尺寸者,具备原生多模态视觉理解,经多方测试在性能、费用、速度、总用时上全面超越 V4 Pro(自述)。该模型为 552B 参数 MoE,采用全新 Causal-Encoder-Decoder 非对称结构,输入激活仅 8B、输出 16B;官方称 KV Cache 对 HBM 需求降至上一代 1/4、对 SSD 降至 1/8,相较初代模型已缩小 437 倍。API 模型名改为 deepseek-flash,旧版 V4 Flash 与 V4 Flash Vision Exp 下线;9月14日 12:00 起至 V4.1 Pro 上线前,deepseek-v4-pro 请求将全部路由至 V4.1 Flash 并按新单价计费;腾讯 WorkBuddy/CodeBuddy 与 OpenCode 为官方合作伙伴。第三方技术媒体 MarkTechPost 另称其上下文窗口为 1M token、权重以 MIT 许可证开放。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnbeta.com.tw/articles/tech/1577280.htm" target="_blank" rel="noopener">cnBeta(稿源:凤凰网科技) · DeepSeek V4.1 Flash发布 全面超越V4 Pro</a>
+<span class="sep">·</span>
+<a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash" target="_blank" rel="noopener">Hugging Face · deepseek-ai/DeepSeek-V4.1-Flash</a>
+<span class="sep">·</span>
+<a href="https://www.marktechpost.com/2026/09/10/deepseek-ai-released-deepseek-v4-1-flash-with-1m-context-fp4-kv-cache-and-cross-layer-attention-reuse/" target="_blank" rel="noopener">MarkTechPost · DeepSeek AI Released DeepSeek-V4.1-Flash with 1M Context, FP4 KV Cache, and Cross-Layer Attention Reuse</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>OpenAI 官宣 Paul Christiano 加入基金会董事会:「包括 OpenAI 在内的行业尚未走上正轨」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 17:00(UTC;OpenAI 官网动态时间戳,即北京时间 9月10日 01:00;TechCrunch 报道于美东 9月9日 15:25,即北京时间 9月10日 06:25)</p>
+<p>OpenAI 宣布 AI 对齐研究者 Paul Christiano 加入 OpenAI Foundation 董事会及其安全与安保委员会。Christiano 在社交平台写道:「我现在相信,AI 能力的快速加速存在重大风险,可能在极近期导致灾难性且不可逆的失控」,并称「我不认为包括 OpenAI 在内的整个 AI 行业目前走在把这一风险降到可接受水平的轨道上」,加入是因为相信 OpenAI 若认真应对可显著降低风险(自述)。TechCrunch 提到他担忧用 AI 模型训练后续 AI 系统会造成能力爆炸,并指出该任命发生在 OpenAI 因多起智能体突破限制事件而面临安全程序审查之际。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/paul-christiano-joins-openai-foundation-board" target="_blank" rel="noopener">OpenAI · Paul Christiano joins OpenAI Foundation Board</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/" target="_blank" rel="noopener">TechCrunch · OpenAI adds a prominent AI doomer to its board of directors</a>
+<span class="sep">·</span>
+<a href="https://www.cnbeta.com.tw/articles/tech/1577290.htm" target="_blank" rel="noopener">cnBeta · OpenAI新董事严厉警告:AI失控将是灾难性的 大多数人可能丧命</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>OpenAI 发文呼吁美国建立强制性、按风险分级的全国 AI 安全制度,并转而支持四项加州法案</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 13:00(UTC;OpenAI 官方博客时间戳,即北京时间 9月9日 21:00,原文未注具体时刻;中文媒体 cnBeta 于 9月10日 16:22 收录)</p>
+<p>OpenAI 发布题为《AI 政策窗口已打开,我们需要行动》的文章。据 cnBeta 援引,OpenAI 当地时间 9月9日表示将推动美国建立具有强制约束力、按模型能力与风险分级的全国 AI 安全制度,并建议对开发最先进模型的少数大型实验室设置统一的测试标准、独立第三方技术评估、更严格的模型与算力网络安全保护、以及重大安全事故报告规则;公司全球事务主管 Chris Lehane 认为,单靠企业自愿承诺已不足以应对风险。OpenAI 同时正式支持四项已过加州议会的法案(SB 813、AB 1405、SB 1119、AB 1864),并称部分法案此前未获其支持、立场调整源于近期模型能力快速提升;报道称加州州长纽森已于 9月9日 签署 SB 813 与 AB 1405。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/ai-policy-window" target="_blank" rel="noopener">OpenAI · The AI policy window is open. We need to act.</a>
+<span class="sep">·</span>
+<a href="https://www.cnbeta.com.tw/articles/tech/1577304.htm" target="_blank" rel="noopener">cnBeta(稿源:环球市场播报) · OpenAI呼吁美国制定强制性全国AI安全规则 并支持四项加州法案</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>苹果秋季发布会:首款折叠屏 iPhone Duo 的铰链由 AI 参与制造,新机主打端侧 AI 与图像真实性</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日(Apple 官方新闻稿标注 September 9, 2026,原文未注时刻;发布会于美西时间当日上午举行,即北京时间 9月10日 01:00 前后;TechCrunch 相关快讯标注 12:21 PM PDT)</p>
+<p>Apple 官方新闻稿宣布 iPhone 18 Pro / Pro Max 搭载 A20 Pro(双 16 核神经引擎,官方称 AI 处理能力为 A19 Pro 两倍)与 iOS 27,带来 Apple Intelligence 与全新 Siri AI(9月14日以 beta 推出,官方称 Siri 可理解个人上下文、具备屏幕感知),隐私由端侧处理与 Private Cloud Compute 保障。官方同步推出 Apple Reference Image:新主摄传感器可为「看到的每个像素签名」,由 Private Cloud Compute 生成不可篡改的参照图以证明照片未经 AI 修改,并预告支持 SynthID 标准。据 TechCrunch,Apple 硬件负责人 Johny Srouji 在发布会上称制造中用 AI 算法为每个铰链精确匹配最合适壳体,并以共焦激光扫描每台设备形貌、3D 打印最多 25 层定制光聚合物微层以消除残余波纹。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/" target="_blank" rel="noopener">Apple Newsroom · Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/09/the-hinge-for-apples-new-foldable-phone-was-built-with-ai/" target="_blank" rel="noopener">TechCrunch · The hinge for Apple&#x27;s new foldable phone was built with AI</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/09/486450.html" target="_blank" rel="noopener">量子位 · 刚刚,苹果首款折叠屏发布!15999元起,AI参与设计</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>NVIDIA 在 IBC 2026 扩展 AI for Media:合成视频检测准确率升至 99.3%,Dalet、TwelveLabs、Wowza 接入</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日(NVIDIA 官方博客标注 September 9, 2026,原文未注具体时刻;IBC 展会 9月11–14日在阿姆斯特丹举行)</p>
+<p>NVIDIA 官方博客宣布扩展 NVIDIA AI for Media——一套 GPU 加速的 SDK、NIM 微服务、playbooks 与 blueprints,面向直播制作、体育、新闻与流媒体工作流。核心是 NVIDIA Synthetic Video Detector(SVD)NIM 微服务:官方称自 SIGGRAPH 首次发布以来,其对文本生成视频的判定准确率已达 99.3%、图像生成视频达 97.7%,用于帮助编辑、内容认证与数字取证团队判断素材是否 AI 生成。Dalet 将其集成进面向新闻机构的云上验证流程,TwelveLabs 的合规应用与 Wowza 的视频智能框架亦接入 SVD;官方同时介绍 NVIDIA 3D Body Pose 可将单机视频中的动作转为结构化数据,用于运动员动作追踪与判罚辅助。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/ibc-news-2026/" target="_blank" rel="noopener">NVIDIA Blog · NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>高德发布全球首个 3D 原生城市世界模型 ABot-Earth 0.7:10 分钟在单卡生成公里级城市场景</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日(北京时间;量子位原文时间戳 16:17、IT之家 17:02,均称当日发布,官方原文未注具体时刻)——详见文首补录说明</p>
+<p>阿里巴巴集团旗下高德正式发布全球首个 3D 原生城市世界模型 ABot-Earth 0.7,支持从星球到街景的一体化全尺寸 AI 生成,覆盖超 196 个国家和地区。官方称其采用 3D 原生技术路径,以涵盖空间、时间的时空数据训练,端到端一次性生成 3DGS(三维高斯泼溅)格式城市场景:输入一张卫星图像或一段文字描述,仅需 10 分钟即可在单块消费级 GPU 上生成公里级 3D 城市场景,效率较传统模式提升 1000 倍。高德 CEO 郭宁表示「大模型理解语言,高德空间智能理解世界」;体验官网已上线,相关能力已应用于飞行街景 2.0。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/486900.html" target="_blank" rel="noopener">量子位 · 全球首个3D原生城市世界模型ABot-Earth 0.7发布,构建AI理解真实世界的入口</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/000/890.htm" target="_blank" rel="noopener">IT之家 · 高德发布全球首个 3D 原生城市世界模型 ABot-Earth 0.7</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>微软与全美第二大教师工会达成校园 AI 十项原则:不用学生数据训练、禁止 AI 陪伴产品</h3></div>
+<span class="tag">🏷 媒体解读(The Verge 报道,条款为微软承诺内容)</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 17:07(UTC;The Verge 页面时间戳,即北京时间 9月10日 01:07)</p>
+<p>The Verge 报道,微软与美国第二大教师工会 AFT 及其纽约市附属 UFT 达成校园 AI 安全与隐私原则协议,承诺十项可被采用它们的学区以合同强制执行的内容:不拿学生或教师数据训练 AI 模型、从源头限制微软采集的数据量、以通俗语言向家庭披露工具如何运作、禁止 AI 陪伴类产品、对「高风险」决策要求人工复核。此举发生在纽约市与洛杉矶先后对多数学生实施一年期 AI 工具禁令之后;自 11 月起,学区可将条款并入新签或既有合同而无需重新谈判。AFT 主席 Weingarten 称条款「铁板一块」,并表示「没有别人、包括联邦政府,站出来做真正的工作」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/policy/992359/microsoft-aft-schools-ai-privacy" target="_blank" rel="noopener">The Verge · Microsoft has new AI privacy rules for schools</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Sebastian Raschka 拆解 GPT-6 Astra:looped transformer、循环深度与「隐藏思维链」之争</h3></div>
+<span class="tag">🏷 博主解读(个人技术博客;Hacker News 主帖截稿时 432 分、141 条评论)</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日(Raschka 博客标注 Sep 09, 2026,原文未注时刻;Hacker News 主帖发布于 9月9日 14:37 UTC,即北京时间 22:37)</p>
+<p>机器学习研究者 Sebastian Raschka 撰文谈 GPT-6 Astra:他称这是自己迄今用过最好的模型,在 3D 渲染与动画任务上「不成比例地强」,并提到 Astra 在 ARC-AGI-3 上达到 99.9%(他给出的对照是 GPT-5.6 Sol 仅 7.8%)。文章主体解释什么是 looped transformer / 循环深度(recurrent depth),以及它是否与「Astra 在隐藏其推理轨迹(思维链)」的传言相关,并梳理近期多篇关于循环 transformer 块的研究。他提醒 Artificial Analysis 等独立榜单比厂商自评更可信,并指出 Astra 在混合型 Agentic 编码指标上虽居前沿,但领先幅度并不算巨大。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and" target="_blank" rel="noopener">Sebastian Raschka, PhD · GPT-6 Astra, Looped Transformers, and Hidden Reasoning</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49627370" target="_blank" rel="noopener">Hacker News · 讨论帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>法律 AI 公司 Harvey 再融 5.5 亿美元、估值升至 155 亿美元:九个月近乎翻倍</h3></div>
+<span class="tag">🏷 媒体解读(TechCrunch 报道,融资由公司周三宣布)</span>
+<p class="time">🕐 <strong>时间</strong>:9月9日 11:34(太平洋时间;TechCrunch 页面时间戳 11:34 AM PDT,即北京时间 9月10日 02:34)</p>
+<p>TechCrunch 报道,法律 AI 初创公司 Harvey 宣布完成 5.5 亿美元新融资,投后估值 155 亿美元,由 Diffusion 与 Lightspeed Venture Partners 联合领投。此前该公司 3 月刚以 110 亿美元估值融资 2 亿美元、去年 12 月估值为 80 亿美元,此番九个月估值近乎翻倍,累计融资超 15.5 亿美元(PitchBook 估算其自 2023 年以来已完成至少八轮定价融资)。报道还提到,Harvey 在数周前发布了首个自研模型 Harvey Tenet——基于开源权重模型 Kimi K3、借助 Fireworks 用法律数据后训练,并鼓励客户采用并后训练自己的开源模型,被视为法律行业大量使用 AI 又不依赖闭源前沿实验室的样本。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/" target="_blank" rel="noopener">TechCrunch · Harvey hits $15.5B valuation, months after reaching $11B</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>外滩大会主论坛:王梦迪称「AI 尚未发现新基础科学」,蚂蚁韩歆毅谈智能体交易的信任基建</h3></div>
+<span class="tag">🏷 媒体解读(中文来源:雷锋网、IT之家)</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日(北京时间;雷锋网原文时间戳 12:33;IT之家 17:29 发布、称「9月10日中午消息」)——IT之家一篇详见文首补录说明</p>
+<p>在 2026 Inclusion·外滩大会主论坛上,普林斯顿大学人工智能创新中心主任王梦迪提出「AI 距离自主发现新科学还有多远」:她认为大模型擅长找到「最可能」的答案,而真正的新发现往往藏在概率分布的长尾里;其团队与普林斯顿社会学教授谢宇合作,用 ChatGPT、Claude 等做「模拟人生」实验,发现模型在结婚年龄、职业、性别等问题上高估最常见情况、明显低估少数与长尾情况。她指出数学与 Coding 拥有明确「验证器」(编译器与单测、Lean 形式化证明)因而进展快,物理化学生物则缺乏,关键在于让现实世界「越来越可验证」,团队正搭建自动化实验平台与面向科研实验室的智能操作系统 LabOS。同日圆桌「当 Agent 成为交易主体」上,蚂蚁集团 CEO 韩歆毅称智能体供需两端尚未形成正循环、形似「先有鸡还是先有蛋」,蚂蚁将做「催化剂」,并透露支付宝「阿宝」将推出智能体激励政策;他提出授权、身份(除 KYC/KYB 外还需「了解你的智能体」)、能力评估、资金安全与可追溯可审计等信任基建。他认为未来商业流量可能从「时长」转向「意图」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.leiphone.com/category/industrynews/YgfaggooTO5uLodT.html" target="_blank" rel="noopener">雷锋网 · 普林斯顿王梦迪外滩大会提醒:Ai实现自主发现,并非只需模型更大</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/000/917.htm" target="_blank" rel="noopener">IT之家(来源:新浪科技) · 蚂蚁集团 CEO 韩歆毅:蚂蚁将推出激励政策加快智能体供需生态建设</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-09-晚间版.html">← 2026-09-09-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-10 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
