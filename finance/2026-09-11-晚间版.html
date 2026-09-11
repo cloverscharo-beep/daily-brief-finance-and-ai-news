@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 11 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美国8月CPI核心环比涨幅高于预期,交易员定价美联储下周加息概率升至约90%,10年期美债收益率触及2023年10月以来最高;A股放量下跌、港股五连跌,国常会研究算力网建设,燧原科技科创板上市首日大涨179%。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美国8月CPI同比涨3.4%符合预期,核心CPI环比涨0.3%高于预期,加息押注升至约90%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 20:30(北京时间;美国劳工统计局于美东时间当日上午8:30发布,市场反应持续至20:34前后)</p>
+<p>摘要:美国8月CPI同比涨3.4%、环比涨0.4%,均符合预期;核心CPI同比涨2.4%、环比涨0.3%,高于预估的0.2%。数据公布后,交易员预计下周美联储加息概率升至约90%,10年期美债收益率触及2023年10月以来最高,现货黄金一度跌破4300美元/盎司、为9月2日以来首次。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481152" target="_blank" rel="noopener">财联社 · 美国8月CPI同比增长3.4% 符合市场预期</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481151" target="_blank" rel="noopener">财联社 · 美国8月核心CPI环比增长0.3% 高于市场预期</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481155" target="_blank" rel="noopener">财联社 · 交易员预计下周美联储加息的概率约为90%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>国常会:研究算力网建设有关工作,构建多层次网络化算力体系</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 19:49(北京时间,新华社发布通稿时刻;会议由李强总理当日主持召开)</p>
+<p>摘要:会议指出,算力网是人工智能发展的基础支撑,要完善算力基础设施,推动算电协同、算网融合,加快绿电直连、源网荷储等项目落地;会议还对加强安全生产工作作出进一步部署,研究全面系统推进老旧水库改造提升有关工作,审议通过《基金会管理条例(修订草案)》。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.81.cn/ss_208539/16485204.html" target="_blank" rel="noopener">新华社(中国军网转载) · 李强主持召开国务院常务会议</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481118" target="_blank" rel="noopener">财联社 · 国常会:要聚焦国家战略需求培养优秀创新人才</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>证监会公布《期货公司监督管理办法》(第235号令),自2027年1月1日起施行</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日(北京时间,证监会令落款日期并予公布;原文未注具体时刻)</p>
+<p>摘要:修订后的办法经9月10日证监会委务会议审议通过:将期货公司业务分为基础类与交易类,强化对股东、实际控制人的监管及公司治理、内控要求,严格子公司和分支机构备案管理;配套实施公告同步发布。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.csrc.gov.cn/csrc/c101953/c7658242/content.shtml" target="_blank" rel="noopener">中国证监会 · 【第235号令】《期货公司监督管理办法》</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481127" target="_blank" rel="noopener">财联社 · 中国证监会发布《期货公司监督管理办法》</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>证监会严肃查处*ST卓然严重财务造假,公司或触及重大违法强制退市</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 20:05起(北京时间,金融界及财联社晚间快讯播发时段)</p>
+<p>摘要:*ST卓然(688121.SH)收到上海证监局《行政处罚事先告知书》:2021—2024年年报涉嫌虚增收入、利润并存在多期重大遗漏,公司拟被责令改正、警告并罚款1250万元,6名责任人合计被罚3580万元,实控人被采取10年证券市场禁入;公司可能被实施重大违法强制退市。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.jrj.com.cn/2026/09/11200558417106.shtml" target="_blank" rel="noopener">金融界 · 中国证监会严肃查处*ST卓然严重财务造假案件 上交所将依法启动退市程序</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481146" target="_blank" rel="noopener">财联社 · *ST卓然:可能被实施重大违法强制退市</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股放量下跌:沪指跌1.18%报3888.11点,全市场成交额1.99万亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 15:00(北京时间,A股收盘)</p>
+<p>摘要:沪指收跌1.18%报3888.11点,深证成指跌1.08%报13471.26点,创业板指跌0.49%;全市场成交额1.99万亿元、较上日放量逾3200亿元,超4800只个股下跌;多元金融、工业金属、贵金属领跌,元件、MLCC、通信设备逆势走强,沪指盘中最低探至3852点后企稳。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609113872036727.html" target="_blank" rel="noopener">东方财富 · 沪指收跌1.18% AI硬件板块局部走强</a>
+<span class="sep">·</span>
+<a href="https://m.10jqka.com.cn/20260911/c679829160.shtml" target="_blank" rel="noopener">同花顺 · 外围扰动不改A股内在韧性</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股五连跌:恒指跌0.60%报24805点,南向资金净买入44.31亿港元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 16:00(北京时间,港股收盘)</p>
+<p>摘要:恒指收跌0.60%报24805.63点、录得五连跌,恒生科技指数跌0.23%报4320点(盘中一度转涨),国企指数跌0.34%;大市成交2284.31亿港元,南向资金净买入44.31亿港元;铜业股重挫拖累有色金属板块(江西铜业股份跌逾9%),光通信股逆势活跃,恒指本周累跌3.3%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/bxjj/2026-09-11/doc-inirmvzx5430095.shtml" target="_blank" rel="noopener">新浪财经(格隆汇) · 科指午后一度转涨仍以小幅收跌告终,科网股多数转涨,铜业股重挫领跌板块</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609113872180294.html" target="_blank" rel="noopener">东方财富(哈富证券) · 晚报丨美国8月CPI今晚20:30公布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>日韩股市收跌约2%:日经225跌1.93%、KOSPI跌1.76%,芯片股领跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日收盘(东京、首尔当地时间;原文未注具体时刻)</p>
+<p>摘要:日经225指数收跌1.93%报64011.34点,韩国KOSPI指数收跌1.76%报6909.92点;承接美股跌势与美债收益率飙升,铠侠等芯片股重挫,软银、三星电子、SK海力士走低,日元升值引发套息交易风险担忧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.caiwennews.com/article/1597077.shtml" target="_blank" rel="noopener">财闻 · 日韩股市收盘,铠侠、三星重挫</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/more/262162842-japan-south-korea-stocks-kospi-nikkei225-softbank-skhynix-samsung-kioxia-oil-fomc-cpi-ppi-tradingkey" target="_blank" rel="noopener">TradingKey · KOSPI与日经225双双暴跌2%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>国际油价回落逾3%:WTI跌回99美元附近,中东现缓和信号;美国柴油价格史上首破6美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 20:00前后(北京时间,财联社美股盘前快讯报价时刻;中东消息原文未注具体时刻)</p>
+<p>摘要:WTI原油期货跌3.27%报99.13美元/桶、布伦特跌3.42%报103.95美元/桶;海湾六国外长计划下周一与伊朗外长会晤、或签署霍尔木兹海峡航运临时协议,也门胡塞武装亦释放缓和表态。另据GasBuddy,美国柴油均价史上首次突破每加仑6美元,柴油裂解价差升至112.17美元/桶的历史新高。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481120" target="_blank" rel="noopener">财联社 · 美股盘前要闻一览:美国8月通胀数据今晚来袭</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609113872180294.html" target="_blank" rel="noopener">东方财富(哈富证券) · 晚报丨美国8月CPI今晚20:30公布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>"国产GPU"燧原科技科创板上市首日大涨179%,收盘市值约1708亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 15:00(北京时间,科创板上市首日收盘)</p>
+<p>摘要:燧原科技(688801.SH)发行价142.18元,上市首日开盘410元(涨188.37%),盘中最高触及475元、收盘报397元(涨179.22%),总市值约1708亿元;中一签(500股)按开盘价浮盈约13.4万元,腾讯、小米等此前已布局,四家国产GPU头部企业全部登陆资本市场。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.36kr.com/p/3978694700324489" target="_blank" rel="noopener">36氪 · GPU五小龙,燧原科技排第几?</a>
+<span class="sep">·</span>
+<a href="https://www.shobserver.com/news/detail?id=1174937" target="_blank" rel="noopener">上海观察 · 燧原科技上市首日市值破千亿元,上海国资陪跑八年</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>星图金融研究院:CPI公布前A股探底回升,若数据不过度超预期或现"利空出尽"</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 15:35(北京时间,文章发布时刻)</p>
+<p>摘要:星图金融研究院盘后指出,受隔夜美国PPI超预期、美债收益率走高与中东局势影响,A股上午下探3852点,午后随红海局势缓和、油价回落收复部分跌幅;其认为美债收益率已处近20年高位、加息计价较充分,若今晚CPI不过度"凶猛",不排除"利空出尽"式回升,建议均衡配置。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.jrj.com.cn/2026/09/11153558411279.shtml" target="_blank" rel="noopener">星图金融研究院(金融界)· A股暂时稳住了,但今晚这件大事,可能才是下周变盘的关键!</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-11-早间版.html">← 2026-09-11-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-11 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

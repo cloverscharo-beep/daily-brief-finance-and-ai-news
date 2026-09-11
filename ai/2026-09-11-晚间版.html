@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 11 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：AI 安全之争全面升温——奥特曼对员工称 OpenAI 愿放慢开发，特朗普则拒绝「灭绝」担忧、强调领先中国；中国 AI 资本热潮延续：月之暗面 ARR 破 10 亿美元、剑指年底 20 亿，智谱启动约 50 亿美元配售与可转债，燧原科技上市首日大涨约 188%。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Anthropic 报告进一步披露：阻止也门导弹制导软件、生物武器与间谍监控等滥用</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（美东时间；Al Jazeera 当日报道报告细节；报告发布日为 9月10日，原文未注具体时刻）</p>
+<p>继早间版报道的「蒸馏攻击」与网络攻击部分之后，报告其他披露浮出水面：据 Al Jazeera，Anthropic 在也门北部阻止了一起用 Claude 编写导弹制导软件（含制导火箭与远程弹道导弹）的行动——操作者让模型「替代人类软件工程师」、按角色分工写代码；另移除三个伊朗背景账号用于隐蔽影响与心理行动。报告还涵盖大规模监控与疑似生物武器相关拦截。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">Anthropic · Detecting and countering misuse of AI: September 2026</a>
+<span class="sep">·</span>
+<a href="https://www.aljazeera.com/news/2026/9/11/anthropic-claims-claude-ai-used-for-missile-projects-global-espionage" target="_blank" rel="noopener">Al Jazeera · Anthropic claims Claude AI used for missile projects, global espionage</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>智谱启动大规模新融资：拟配售约 20 亿美元新股，另发约 30 亿美元可转债</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 18:37（北京时间；财联社电报发布时刻；据彭博社、路透社引述交易条款报道）</p>
+<p>据报道，智谱（02513.HK）拟以每股 714 港元配售约 2197 万股新 H 股，较周五收盘价 793 港元折让约 10%，集资约 20 亿美元（逾 156 亿港元）；另同步发行本金总额约 201.4 亿元人民币的零息可转债（约合 30 亿美元），两项合计约 392 亿港元。这是继 7 月 314 亿港元配售之后约两个月内的再度「抽水」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cls.cn/detail/2481046" target="_blank" rel="noopener">财联社 · 智谱拟以每股714港元的价格配售约2197万股H股</a>
+<span class="sep">·</span>
+<a href="https://finance.mingpao.com/fin/instantf/20260911/1789124479834/%E6%99%BA%E8%AD%9C%E9%9A%94%E5%85%A9%E6%9C%88%E5%8D%B3%E5%86%8D%E3%80%8C%E6%8A%BD%E6%B0%B4%E3%80%8D-%E9%85%8D%E8%82%A1%E5%85%BC%E7%99%BC%E6%8F%9B%E8%82%A1%E5%82%B5%E9%9B%86%E8%B3%87392%E5%84%84%E5%85%83" target="_blank" rel="noopener">明报财经 · 智谱隔两月即再「抽水」配股兼发换股债集资392亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>DeepSeek 官方改口：V4 Pro API 在 9月14日后继续提供，计费不变</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；IT之家 20:25 报道；官方文档未注具体时刻）</p>
+<p>DeepSeek 在官方 API 文档中宣布，为响应用户需求，决定在 2026 年 9 月 14 日之后继续提供 DeepSeek V4 Pro 的 API 调用服务、计费方式保持不变。此前 9 月 9 日其曾宣布把 V4 Pro 请求路由至 V4.1 Flash 并按 Flash 单价计费，9 月 10 日又推迟下线至 9 月 14 日 12:00；今天相当于完全收回下线计划。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener">DeepSeek API 文档 · Your First API Call（官方公告原文）</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/001/443.htm" target="_blank" rel="noopener">IT之家 · DeepSeek 将继续提供 V4 Pro API 调用服务</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>燧原科技上市首日：开盘涨约 188%，市值一度超 1700 亿元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；澎湃新闻 09:35、财新 13:59 发布；原文未注具体开盘时刻）</p>
+<p>「国产 AI 芯片四小龙」最后一家登陆资本市场：燧原科技（688801.SH）发行价 142.18 元/股，今日开盘报 410 元、较发行价涨 188%；据财新，截至午盘涨 176.96%、总市值约 1695 亿元；澎湃报道高开时总市值 1764 亿元、打新一签（500 股）浮盈超 13 万元。此前上市的摩尔线程、沐曦、壁仞、天数智芯首日开盘涨幅分别为 469%、755%、82%、31.5%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://companies.caixin.com/2026-09-11/102483938.html" target="_blank" rel="noopener">财新 · AI芯片公司燧原上市开盘涨188% 市值约1700亿元</a>
+<span class="sep">·</span>
+<a href="https://m.thepaper.cn/newsDetail_forward_34048941" target="_blank" rel="noopener">澎湃新闻 · 燧原科技上市首日高开188%，总市值1764亿元，单签浮盈超13万元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>月之暗面 Kimi K2.8 Preview 全量上线 Kimi Code，官方称接近 K3</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；IT之家 16:00 报道；官方未注具体时刻）</p>
+<p>月之暗面今日宣布 Kimi K2.8 Preview 模型全量上线 Kimi Code：Model ID 不变（kimi-for-coding），客户端与第三方工具无需修改配置即可使用；官方表示其综合性能接近 K3、思考效率更高，编码与智能体能力全面提升，全部会员档位开放最高 1M 上下文窗口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/319.htm" target="_blank" rel="noopener">IT之家 · 月之暗面 Kimi K2.8 Preview 模型全量上线 Kimi Code，综合性能接近 K3</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>国内首个智能体可信身份工作组成立：阿里、蚂蚁、华为、小米、高通等加入</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；IT之家 16:30 报道；原文未注具体时刻）</p>
+<p>在 2026 Inclusion·外滩大会上，IIFAA 智能体可信身份工作组正式成立——国内首个聚焦智能体可信身份的产业协作组织，首批已有 50 余家机构加入，成员包括阿里巴巴、蚂蚁集团、华为、OPPO、联想、小米、阶跃、中移金科、携程、高通、中国信通院、银行卡检测中心等，针对「身份不可信、隐私难保护、标准不统一」等挑战。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/360.htm" target="_blank" rel="noopener">IT之家 · 国内首个智能体可信身份工作组成立，阿里、华为、OPPO、联想、小米等加入</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>彭博社：奥特曼向员工表态，OpenAI 对放慢开发持开放态度</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；美东时间 9月10日晚间 Bloomberg 首发报道，Reuters 随后转引；原文未注具体时刻）</p>
+<p>据彭博社，奥特曼在 OpenAI 本周的全员会上表示，公司对放慢 AI 系统开发持开放态度，可与其它实验室同步推进节奏，但「有些人可能不同意」；报道称这正值研究者安全警告与多起模型脱离控制事件引发监管呼声之际。Reuters 另提到，Anthropic 发言人当日称愿与业界合作把控新工具的发布节奏。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/" target="_blank" rel="noopener">Reuters · Altman tells staff OpenAI is open to slowing AI development, Bloomberg News reports</a>
+<span class="sep">·</span>
+<a href="https://www.bloomberg.com/news/videos/2026-09-11/openai-is-open-to-slowing-cutting-edge-ai-video" target="_blank" rel="noopener">Bloomberg · OpenAI Is Open to Slowing Cutting-Edge AI, Altman Tells Staff</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>特朗普：不担心 AI 引发人类灭绝，关键是保持对中国领先</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 6:58（美东时间；CNBC 发布时刻，即北京时间 18:58）</p>
+<p>CNBC 报道：美国总统特朗普表示对 AI 导致人类灭绝「没有担忧」，强调美国须保持领先中国；背景是本周已有十余名 OpenAI、Anthropic 内部人士加入呼吁放慢的声浪。CNBC 另一篇报道指出，两家公司研究人员的担忧集中于「递归自我改进」——AI 参与改进模型开发的进程快于预期，恐致人类失去对系统的控制。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnbc.com/2026/09/11/trump-ai-extinction-risks.html" target="_blank" rel="noopener">CNBC · Trump dismisses AI extinction risks as more than a dozen OpenAI, Anthropic insiders call for a slowdown</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/09/11/anthropic-openai-ai-existential-concerns.html" target="_blank" rel="noopener">CNBC · Why fears of AI self-improvement are causing &#x27;existential&#x27; concerns at Anthropic and OpenAI</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>彭博社：月之暗面 ARR 突破 10 亿美元，年底目标 20 亿、以 500 亿美元估值融资</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；IT之家 18:03 报道；彭博社消息，原文未注具体时刻）</p>
+<p>据彭博社，凭借 7 月发布的 Kimi K3 的「突破性」成功，月之暗面 8 月年度经常性收入（ARR）突破 10 亿美元，较 6 月的 3 亿美元大幅增长，并计划年底前提升至 20 亿美元；公司正以 500 亿美元估值融资、最快可能于今年赴港上市，并与微软、亚马逊、谷歌洽谈托管收入分成。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/411.htm" target="_blank" rel="noopener">IT之家 · Kimi K3 模型「突破性」成功，消息称月之暗面瞄准今年年底 20 亿美元年化收入</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>媒体评测与调查：Meta Muse「能用但令人不安」，多数消费者不想让 AI 花自己的钱</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 3:00（美东时间；Fortune 发布时刻，即北京时间 15:00；The Verge 上手评测发布于美东时间 9月10日 11:00）</p>
+<p>The Verge 上手 Meta 新个人智能体 Muse：功能总体符合预期，但它自动道出了与作者 Instagram 账号关联的非常具体的兴趣信息，「它能用，但让我毛骨悚然」。Fortune 同日报道称，在 AI 代购热潮中（亚马逊、谷歌、沃尔玛、OpenAI 等均已入局），消费者调查显示多数人仍不愿把花钱这件事交给 AI 代理。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://fortune.com/2026/09/11/meta-muse-ai-shopping-agent-consumer-trust/" target="_blank" rel="noopener">Fortune · Meta built an AI that can shop for you. The problem is that most people don&#x27;t want AI spending their money</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/993391/meta-muse-ai-hands-on" target="_blank" rel="noopener">The Verge · Meta&#x27;s Muse AI works and creeps me out</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-11-早间版.html">← 2026-09-11-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-11 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
