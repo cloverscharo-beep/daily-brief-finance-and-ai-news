@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 11 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;欧洲央行加息25个基点应对能源通胀,央行公告将于下周开展隔夜逆回购操作;美股三大指数四连跌,油价结算价续创5月以来最高、30年期美债收益率创2007年以来新高,黄金白银重挫——市场聚焦今晚美国8月CPI。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>央行公告:将于9月14日至17日开展隔夜逆回购操作,每日操作量不超过6000亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日(北京时间,央行当日发布公告;新华社20:52发稿)</p>
+<p>摘要:央行公告称,为更好匹配银行体系短期流动性需求,将在9月14日至9月17日开展隔夜逆回购操作,采用固定利率、数量招标,每日操作量不超过6000亿元。新华社称,该品种6月底已加入公开市场操作,可在特殊时点“削峰填谷”,提高流动性管理效率、降低金融机构成本。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/fortune/20260910/c35e1432c05540ffbf2e810f465cc546/c.html" target="_blank" rel="noopener">新华网 · 央行将开展隔夜逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4180744.html" target="_blank" rel="noopener">证券时报 · 早新闻｜证监会发声！央行，下周新操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>欧洲央行加息25个基点,存款利率升至2.50%,上调后两年通胀预期</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:当地时间9月10日(北京时间当晚;新闻发布会于当地时间14:45举行)</p>
+<p>摘要:欧洲央行将三大关键利率各上调25个基点,自9月16日起生效,存款机制利率、主要再融资利率、边际借贷利率分别升至2.50%、2.65%、2.90%,理由是中东冲突持续带来通胀压力。最新预测将2027年、2028年通胀预期上调至2.5%、2.1%;交易员预计2026年还将加息一次。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.qq.com/rain/a/20260910A0BNZ100" target="_blank" rel="noopener">华尔街见闻(腾讯新闻) · 欧洲央行加息25个基点符合预期，上调未来两年通胀预期</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-10/doc-inirkcsn5291191.shtml" target="_blank" rel="noopener">新浪财经 · 欧洲央行宣布加息25个基点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>发改委、市场监管总局发文治理重要工业品低价无序竞争,明确成本核算要求</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日(北京时间,发改委发布答记者问;通知文件此前印发)</p>
+<p>摘要:两部门《关于重要工业品低价无序竞争成本核算有关事项的通知》聚焦低价无序竞争突出的重要工业品领域,对涉嫌经营者进行提醒告诫、必要时开展成本调查;成本核算原则上以经营者个别成本为基础,无法核算时参考行业平均成本并考虑一定下浮幅度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-10/doc-inirkcst5661997.shtml?froms=ggmp" target="_blank" rel="noopener">新浪财经 · 国家发展改革委市场监管总局关于重要工业品低价无序竞争成本核算有关事项的通知</a>
+<span class="sep">·</span>
+<a href="https://m.10jqka.com.cn/20260910/c679787257.shtml" target="_blank" rel="noopener">同花顺 · 国家发改委：对涉嫌低价无序竞争的经营者进行提醒告诫</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>甲骨文第一财季营收超预期、云基建强劲,盘后股价一度涨约9%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日盘后(北京时间9月11日凌晨,美股收盘后发布)</p>
+<p>摘要:甲骨文第一财季调整后营收193.5亿美元,超市场预期的191.3亿美元;云基础设施(IaaS)营收73.9亿美元;公司预计第二财季总营收按恒定汇率增长30%—34%、2027财年营收至少900亿美元,季度资本开支285亿美元(预期198亿美元)。财报发布后股价由跌转涨,盘后一度涨约9%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2480136" target="_blank" rel="noopener">财联社 · 美股收盘：美油破百三大指数四连跌 芯片、存储、光通信集体回落</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2480154" target="_blank" rel="noopener">财联社 · 【早报】油价大涨，黄金、白银大跌；美股存储板块，集体回落；燧原科技，今日上市；甲骨文，业绩超预期</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/7x24/2026-09-11/doc-inirkuqm5474087.shtml" target="_blank" rel="noopener">新浪财经 · 7×24快讯：甲骨文第一财季调整后营收193.5亿美元</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股三大指数连续第四日收跌,标普500创6月以来最长连跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日16:00收盘(北京时间9月11日04:00)</p>
+<p>摘要:道指跌0.60%报52064.10点,标普500跌0.58%报7591.70点,纳指跌0.65%报26081.72点;标普500创6月以来最长连跌、跌至7月以来最低。费城半导体指数跌2.66%,存储、光通信、铜矿股集体回落(英特尔跌5.57%、美光跌4.9%),苹果逆势涨3.56%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2480136" target="_blank" rel="noopener">财联社 · 美股收盘：美油破百三大指数四连跌 芯片、存储、光通信集体回落</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-11/doc-inirkywm2145345.shtml" target="_blank" rel="noopener">新浪财经 · 美国股市：标普500指数连续第四天下跌 投资者的加息预期增强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>国际油价大涨收官:WTI结算102.48美元、布伦特107.63美元,均创5月19日以来最高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日结算(北京时间9月11日凌晨)</p>
+<p>摘要:WTI 10月合约结算价涨6.69%报102.48美元/桶,布伦特11月合约涨6.34%报107.63美元/桶,两大基准均创5月19日以来最高收盘价。中东局势持续发酵:也门胡塞武装在哈尼什群岛部署兵力;另有消息称伊朗暂停对运输能源产品的外国船舶收取10%的运费附加费。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2480136" target="_blank" rel="noopener">财联社 · 美股收盘：美油破百三大指数四连跌 芯片、存储、光通信集体回落</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-11/doc-inirkuqp2244198.shtml" target="_blank" rel="noopener">新浪财经 · 原油：布伦特升逾每桶107美元 中东冲突加剧供应担忧</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>贵金属重挫:现货黄金跌1.91%报4314.82美元,现货白银跌5.43%报63.60美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日美盘末(北京时间9月11日凌晨)</p>
+<p>摘要:受加息预期升温、美元与美债收益率同步走强压制,贵金属美盘末扩大跌幅:现货黄金跌1.91%报4314.82美元/盎司,现货白银跌5.43%报63.60美元/盎司,双双较前一日收盘大幅回落。市场等待今晚美国8月CPI数据指引。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2480154" target="_blank" rel="noopener">财联社 · 【早报】油价大涨，黄金、白银大跌；美股存储板块，集体回落；燧原科技，今日上市；甲骨文，业绩超预期</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/commodities/crude-oil/262162197-wti-crude-breaks-100-us-stocks-fourth-consecutive-day-apple-bucks-trend-cpi-tradingkey" target="_blank" rel="noopener">TradingKey · 每日市场简报：WTI油价突破100美元，美股4连跌，苹果逆势上涨，CPI来袭</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美债收益率升至多年高位:30年期创2007年以来新高,30年期拍卖需求强劲</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日(北京时间9月11日凌晨至早晨)</p>
+<p>摘要:各期限美债收益率上涨7—15个基点,30年期升至5.34%、创2007年6月以来新高,10年期盘中触及2023年10月以来最高(财联社报4.963%)。规模220亿美元的30年期国债拍卖需求罕见强劲,中标收益率5.308%、一级交易商获配仅2.2%创新低;但财政部10—20年期回购操作规模51.87亿美元、未达60亿美元上限,收益率盘中回升。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-11/doc-inirkywi5372571.shtml" target="_blank" rel="noopener">新浪财经 · 美债收益率升至多年高位 吸引买家参与30年期国债拍卖</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4180744.html" target="_blank" rel="noopener">证券时报 · 早新闻｜证监会发声！央行，下周新操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>日韩股市今晨大幅低开:KOSPI跌3.29%失守6900点,日经225低开1.52%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日早盘(亚洲时间;原文未注具体时刻)</p>
+<p>摘要:承接美股跌势,日韩股市今晨低开:韩国KOSPI指数开盘下跌3.29%报6802.50点,日经225指数低开1.52%报64276.82点;三星电子、SK海力士、铠侠等芯片股领跌(三星跌3.81%、SK海力士跌4.37%、铠侠跌5.54%)。财联社另报,MSCI亚太指数下跌1%至278.16点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2480190" target="_blank" rel="noopener">财联社 · 韩国KOSPI指数开盘下跌3.29%报6802.50点</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/more/262162198-japan-south-korea-stocks-kospi-nikkei225-softbank-skhynix-samsung-kioxia-oil-wti-cpi-ppi-tradingkey" target="_blank" rel="noopener">TradingKey · 日韩股市开盘大跌3%！KOSPI失守6900关口，三星电子、SK海力士与铠侠均暴跌4%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2480192" target="_blank" rel="noopener">财联社 · MSCI亚太指数下跌1%至278.16点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>白宫精炼铜关税决定未定,COMEX铜价跌逾4%、铜矿股重挫</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月10日(北京时间9月10日晚至11日凌晨,路透社报道)</p>
+<p>摘要:路透社援引知情人士称,白宫尚未就是否对精炼铜征收进口关税作出最终决定,仍在权衡制造业成本与产业回流的利弊;消息后COMEX 10月铜期货盘中跌逾4%报约6.585美元/磅,Freeport-McMoRan盘前跌逾8%,南方铜业收跌7.23%、麦克莫兰铜金跌6.59%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/commodities/metal/262160988-white-house-refined-copper-tariff-still-undecided-comex-copper-tradingkey" target="_blank" rel="noopener">TradingKey · 白宫精炼铜关税仍未定，COMEX铜期货跌逾4%，FCX盘前跌逾8%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2480136" target="_blank" rel="noopener">财联社 · 美股收盘：美油破百三大指数四连跌 芯片、存储、光通信集体回落</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-10-晚间版.html">← 2026-09-10-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-11 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

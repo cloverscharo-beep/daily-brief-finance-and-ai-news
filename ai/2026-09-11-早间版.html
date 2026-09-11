@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 11 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：OpenAI 一夜连发三款新品（Agents API 公测、GPT-Live-1 语音 API、金融版 ChatGPT）；Anthropic 威胁情报报告点名阿里、月之暗面等「蒸馏攻击」，近 2 亿次交互；OpenAI 因 Astra 需求过载首次暂停 Pro 新订阅。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>OpenAI 发布 Agents API 公测：把 Codex 的「智能体骨架」开放给所有开发者</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；OpenAI 官网标注 September 10, 2026，原文未注具体时刻；MarkTechPost 同日报道）</p>
+<p>OpenAI 宣布 Agents API 进入公开测试：一次 API 调用即可创建云端托管运行的生产级智能体，底层为驱动 Codex 的开源 harness，支持多智能体（子代理并行）、上下文自动压缩、工具检索与编程式工具调用；沙箱可选 OpenAI 托管或 Cloudflare、Modal、Vercel 等伙伴，不另收 API 费、仅按 token 与工具计费。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI · Introducing the Agents API</a>
+<span class="sep">·</span>
+<a href="https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/" target="_blank" rel="noopener">MarkTechPost · OpenAI Launches the Agents API in Public Beta</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>GPT-Live-1 上线 API：ChatGPT 的「全双工语音」开放，每分钟 0.05 美元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；官网标注 September 10, 2026，原文未注具体时刻）</p>
+<p>OpenAI 将 GPT-Live-1 语音模型引入 API：单模型同时听说、原生处理打断，可将深度推理委派给 GPT-6 Astra 等后端模型；官方称其 Full Duplex Bench 较 GPT-Realtime-2.1 高 30 个百分点、搭配 Astra 在 Tau3 语音智能体评测居首；前端语音层定价每分钟 0.05 美元，支持电话客服等场景部署。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/introducing-gpt-live-1-in-the-api/" target="_blank" rel="noopener">OpenAI · Build more natural voice experiences with GPT‑Live‑1 in the API</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>ChatGPT for Financial Services：内置华尔街数据源的投资银行版</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；官网标注 September 10, 2026，原文未注具体时刻；新浪财经 9月11日 02:40 转引报道）</p>
+<p>OpenAI 推出面向金融机构的 ChatGPT for Financial Services：与 Morgan Stanley、Evercore 共同设计，内置 Daloopa、PitchBook、LSEG News、Crunchbase 等数据（由 OpenAI 索引托管、支持逐条溯源引用），原生搭载 GPT-6 Astra，可产出研究底稿与机构模板文件，并配备企业级权限与信息隔离。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/introducing-chatgpt-financial-services/" target="_blank" rel="noopener">OpenAI · Introducing ChatGPT for Financial Services</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/stock/usstock/c/2026-09-11/doc-inirkqhk2540899.shtml" target="_blank" rel="noopener">新浪财经 · 像分析师一样做研究 OpenAI推出专为金融业者打造的人工智能工具</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Anthropic 威胁情报报告：近 2 亿次「蒸馏攻击」，点名阿里、月之暗面、DeepSeek</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；Anthropic 官网标注；TechCrunch 当日 13:57 太平洋时间报道，即北京时间 9月11日 4:57；报告原文未注具体时刻）</p>
+<p>报告称近八个月监测到近 2 亿次与「蒸馏攻击」相关交互、涉五个行动：点名阿里巴巴相关行动 1.51 亿次（5–7月、约 3500 个账号）、月之暗面经 5000 账号向 Opus 发送近 30 万请求，另含商汤、MiniMax；网络安全部分披露疑似俄关联组织用 AI 自动改写恶意软件以规避检测，报告在 Hacker News 引发热议。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">Anthropic · Detecting and countering misuse of AI: September 2026</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/" target="_blank" rel="noopener">TechCrunch · Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>Google：Gemini 桌面应用登陆 Windows，Alt+Space 随时唤起</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日 12:22（美东时间；The Verge 发布时刻，即北京时间 9月11日 0:22；Google 官方博客同日发布，原文未注具体时刻）</p>
+<p>Google 推出 Windows 版 Gemini 桌面应用：按 Alt+Space 可随时唤起，可从官网下载；此前 4 月其已发布 macOS 版，此次补齐 Windows 端。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/" target="_blank" rel="noopener">Google · The Gemini app is now available for Windows</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/993506/gemini-now-has-a-windows-app" target="_blank" rel="noopener">The Verge · Gemini now has a Windows app</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>英伟达：推理芯片商 d-Matrix 采用 NVLink Fusion，自研 XPU 直连「AI 工厂」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；NVIDIA 博客标注 September 10, 2026，原文未注具体时刻）</p>
+<p>d-Matrix 宣布下一代 Raptor XPU 将采用 NVIDIA NVLink Fusion 接入英伟达 AI 基础设施：借 MGX 标准机架、Spectrum-X 组网并整合 Vera CPU、ConnectX-9 SuperNIC、BlueField-4 DPU，为定制推理芯片提供更低风险的规模化部署路径；其机架还可与 Vera Rubin NVL72 混跑用于分解式推理。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/" target="_blank" rel="noopener">NVIDIA · d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>燧原科技今日科创板挂牌：发行价 142.18 元/股，对应市值约 612 亿元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日（北京时间；为上交所科创板上市日期，公司 9月9日晚公告，原文未注具体挂牌时刻）</p>
+<p>云端 AI 芯片企业燧原科技（688801）今日登陆科创板，发行价 142.18 元/股、发行后总股本 4.30 亿股，按发行价对应市值约 611.87 亿元；公司创立于 2018 年，与摩尔线程、沐曦、壁仞并称「国产 GPU 四小龙」，尚未盈利、将纳入科创成长层。其预计 2026 年前三季度营收 23 亿–30 亿元，媒体测算中一签浮盈或超 28 万元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609093869520751.html" target="_blank" rel="noopener">东方财富 · 燧原科技周五登陆科创板还有这些细节值得看！</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/stock/estate/2026-09-09/detail-inirfums3606784.d.html?vt=4" target="_blank" rel="noopener">新浪财经 · 燧原科技股票9月11日登陆科创板 发行价142.18元/股</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">8</span><h3>OpenAI 因 Astra 需求首次暂停 Pro 新订阅</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；产品负责人 Tibo Sottiaux 当日在 X 宣布，原文未注具体时刻；TechCrunch 当日 13:59 太平洋时间报道）</p>
+<p>TechCrunch 报道：因 GPT-6 Astra 需求「前所未见」，OpenAI 暂时关闭 200 美元/月 Pro 档的新订阅入口，以保障现有用户体验；API 与 Go、Plus 档不受影响，未说明恢复时间。Sottiaux 称「我们想采取最小的一步，让尽可能多的人保持访问」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/" target="_blank" rel="noopener">TechCrunch · OpenAI puts Pro subscriptions on hold due to Astra demand</a>
+<span class="sep">·</span>
+<a href="https://x.com/thsottiaux/status/2098113585683808624" target="_blank" rel="noopener">Thibault Sottiaux 的 X 帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>黄仁勋：英伟达明年营收有望再增 70%，网络安全是 AI 下一个大市场</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月10日（美西时间；TechCrunch 当日 14:51 太平洋时间报道；财联社「9月11日电」转引其旧金山高盛 Communacopia+科技大会发言）</p>
+<p>黄仁勋重申有信心英伟达明年营收同比增长 70%（分析师预计本财年约 4000 亿美元）；回应「循环交易」质疑称「我们投进去 1 美元、回来 100 美元」；并称网络安全可能成为 AI 下一个重要应用场景，代码生成加速正让攻防同步提速。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/" target="_blank" rel="noopener">TechCrunch · Jensen Huang explains why Nvidia will grow an astounding 70% next year</a>
+<span class="sep">·</span>
+<a href="http://k.sina.com.cn/article_5953740931_162dee08306703yc22.html" target="_blank" rel="noopener">新浪财经（稿源：财联社） · 黄仁勋看好网络安全市场：AI带来的“新问题”正在创造新需求</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>OpenAI 悄然调整 ChatGPT 广告政策：不再接受图像/音频生成类竞品广告</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 7:01（北京时间；每日经济新闻《数智早参》发布时刻；政策调整据报道发生于 9月10日）</p>
+<p>据每日经济新闻与新浪财经，OpenAI 已告知部分商业伙伴：不再接受图像与音频生成类 AI 产品在 ChatGPT 内投放广告，因这类产品与自身功能直接竞争；该调整尚未更新至其公开广告政策页面。此前其刚发布 ChatGPT Images 2.5 图像模型。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202609113871018394.html" target="_blank" rel="noopener">东方财富网（稿源：每日经济新闻） · DeepSeek V4.1 Flash模型正式发布；OpenAI限制ChatGPT竞品广告投放｜数智早参</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-10/doc-inirhvxe3138963.shtml" target="_blank" rel="noopener">新浪财经 · OpenAI据悉限制Adobe等在ChatGPT投放AI竞品广告</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-10-晚间版.html">← 2026-09-10-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-11 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
