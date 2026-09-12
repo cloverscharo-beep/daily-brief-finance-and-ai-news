@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-12</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 12 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;美股周五止跌反弹、三大指数结束日线四连跌但周线仍收跌,市场对美联储下周加息25个基点的押注升至约87%;美国2026财年前11个月预算赤字达1.96万亿美元、消费者通胀预期升至4.6%;沙特东西输油管道遇无人机袭击、国际油价回落,金砖国家领导人会晤今日在印度新德里开幕。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美国2026财年前11个月预算赤字1.96万亿美元,可交易国债平均利率升至3.48%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 02:18(北京时间,财联社稿经东方财富转载的时刻;数据由美国财政部于美东时间9月11日周五公布)</p>
+<p>摘要:截至8月的财年前11个月,美国联邦预算赤字累计1.96万亿美元,较2025年同期1.97万亿美元小幅下降;8月单月赤字1668亿美元。赤字扩大部分源于债务利息支出上升;截至8月底,可交易美国国债平均利率升至3.48%,比五年前高出逾2个百分点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202609123872476929.html" target="_blank" rel="noopener">东方财富(转自财联社) · 美国2026财年前11个月预算赤字累计达到1.96万亿美元</a>
+<span class="sep">·</span>
+<a href="https://m.163.com/dy/article/L6JGISAU05198CJN.html?clickfrom=subscribe" target="_blank" rel="noopener">网易财经 · 美国2026财年前11个月预算赤字累计达到1.96万亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>沙特东西输油管道遭伊拉克方向无人机袭击,沙特外交部谴责、伊总理下令紧急调查</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日晚(当地时间,沙特外交部发表声明;沙特能源部称管道自9月10日上午起多次遭袭;原文未注具体时刻)</p>
+<p>摘要:沙特外交部11日晚强烈谴责来自伊拉克的多架无人机袭击利雅得和麦地那地区的东西输油管道,袭击造成人员受伤及部分设施受损,管道已采取预防性关闭措施。应伊拉克总理请求,沙特现阶段不作回应;伊总理下令紧急调查,胡塞武装则称除沙特外其余国家船只红海航行安全。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/20260912/5f34575a2fc844e2ab6cea7e01226282/c.html" target="_blank" rel="noopener">新华网 · 沙特谴责来自伊拉克的无人机袭击东西输油管道</a>
+<span class="sep">·</span>
+<a href="https://www.chinanews.com.cn/gj/2026/09-12/10695095.shtml" target="_blank" rel="noopener">中国新闻网 · 沙特输油管道遭伊拉克方向无人机袭击 伊总理下令紧急调查</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>金砖国家领导人第十八次会晤今日在印度新德里开幕,习近平应邀出席</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日至13日(当地时间,新德里;会晤今日开幕,原文未注具体时刻)</p>
+<p>摘要:应印度总理莫迪邀请,国家主席习近平于9月12日至13日赴新德里出席金砖国家领导人第十八次会晤,预计今日抵达,系2019年以来首次访问印度。印度方面已对俄罗斯、伊朗、中国等国领导人与会表示欢迎。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://world.people.com.cn/n1/2026/0911/c1002-40797106.html" target="_blank" rel="noopener">人民网 · 外交部介绍习近平主席出席金砖国家领导人会晤安排</a>
+<span class="sep">·</span>
+<a href="https://amp.dw.com/zh/%E5%8D%B0%E5%BA%A6%E6%AC%A2%E8%BF%8E%E4%BF%84%E7%BD%97%E6%96%AF%E4%BC%8A%E6%9C%97%E4%B8%AD%E5%9B%BD%E9%A2%86%E5%AF%BC%E4%BA%BA%E5%8F%82%E5%8A%A0%E9%87%91%E7%A0%96%E5%B3%B0%E4%BC%9A/a-79236497" target="_blank" rel="noopener">德国之声(中文) · 印度欢迎俄罗斯、伊朗、中国领导人参加金砖峰会</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美国9月消费者信心初值降至47.8,一年期通胀预期跳升至4.6%创6月以来新高</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月11日(密歇根大学当日公布调查;财联社于北京时间9月11日23:59发稿)</p>
+<p>摘要:密歇根大学调查显示,美国9月消费者信心指数初值47.8,远低于预期的51.0(前值51.7);一年期通胀预期由4.0%跳升至4.6%,创6月以来新高,五至十年期由3.3%升至3.4%。高盛资管方面认为8月CPI未充分反映最新一轮能源涨价压力,柴油均价一周内由5.85美元升至6.06美元/加仑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481259" target="_blank" rel="noopener">财联社 · 8月CPI或未充分反映通胀压力 美国消费者一年期通胀预期升至4.6%</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股周五止跌反弹、结束日线四连跌:道指涨0.98%,下周加息押注升至约87%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月11日16:00收盘(北京时间9月12日04:00;新浪财经04:35发稿)</p>
+<p>摘要:道指涨0.98%报52573.29点,标普500涨0.86%报7656.98点,纳指涨0.96%报26333.04点,均结束日线四连跌;本周三大指数仍累跌(道指-1.57%、标普-0.58%、纳指-0.66%)。费城半导体指数涨1.81%,戴尔获加拿大皇家银行首予"跑赢大盘"评级、目标价640美元,收涨11.98%;中概金龙指数涨0.4%。芝商所FedWatch显示,市场预计下周FOMC加息25个基点的概率约86.5%—87%;Principal资管Seema Shah称,争论已从"是否加息"转向"需要加几次"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481323" target="_blank" rel="noopener">财联社 · 美股收盘:三大指数止跌反弹 芯片股走强费城指数涨近2%</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/world/2026-09-12/doc-inirpcvs6982371.shtml" target="_blank" rel="noopener">新浪财经 · 9月12日美股收盘:三大指数集体上涨,油价回落,美联储下周加息押注升至87%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>国际油价回落:WTI结算100.05美元、布伦特104.61美元,周涨幅仍近10%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:美东时间9月11日收盘结算(北京时间9月12日凌晨;原文未注具体结算时刻)</p>
+<p>摘要:WTI原油10月合约结算价跌2.37%报100.05美元/桶,布伦特11月合约跌2.81%报104.61美元/桶。因市场预期伊朗与海湾六国外长下周会晤、或就霍尔木兹海峡航运达成临时安排,油价自高位回落;本周WTI仍累涨近10%、布伦特累涨8.6%。沙特管道遇袭消息后油价波动不大。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-09-12/doc-inirpcvs6982371.shtml" target="_blank" rel="noopener">新浪财经 · 9月12日美股收盘:三大指数集体上涨,油价回落,美联储下周加息押注升至87%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2480923" target="_blank" rel="noopener">财联社 · 霍尔木兹传来新消息?伊朗与海湾六国下周会晤 油价应声走低</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>黄金周线收跌:纽约尾盘现货金报4348.11美元,本周累跌1.85%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 05:19(北京时间,财联社电报;行情为纽约尾盘)</p>
+<p>摘要:纽约尾盘,现货黄金涨0.68%报4348.11美元/盎司,本周累计下跌1.85%;现货白银涨1.32%报64.4384美元/盎司,本周累跌2.66%。在美联储下周加息预期与美债收益率高企的背景下,贵金属本周整体承压。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481319" target="_blank" rel="noopener">财联社 · 纽约尾盘,现货黄金涨0.68%,报4348.11美元/盎司,本周累计下跌1.85%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>中美利差创327bp历史极值:10年期美债盘中最高4.977%,中资美元债长端承压</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日 21:05(北京时间,财联社发稿)</p>
+<p>摘要:9月10日中美10年期国债利差走阔至327个基点、创有记录以来最高;11日盘中10年期美债收益率最高达4.977%,距5%关口仅约2个基点,中国10年期国债收益率稳定在1.68%附近。中资美元债指数连跌3日,长久期品种跌幅更大;兴业证券认为10年美债高点或远不止5%。人民币汇率逼近6.7关口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481035" target="_blank" rel="noopener">财联社 · 中美利差创327bp历史极值 美债逼近5%关口 中资美元债长端承压</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>离岸人民币纽约尾盘报6.7080元涨64点;富时A50期指夜盘收涨0.03%报14517点</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 06:47(北京时间,每经AI快讯发稿;行情为周五纽约尾盘,财联社A50快讯05:17播发)</p>
+<p>摘要:周五纽约尾盘,离岸人民币(CNH)兑美元报6.7080元,较周四纽约尾盘涨64个基点,已逐步逼近6.7关口;富时A50期指连续夜盘收涨0.03%,报14517点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-12/4579638.html" target="_blank" rel="noopener">每日经济新闻 · 离岸人民币兑美元报6.7080元,较周四纽约尾盘涨64个基点</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481318" target="_blank" rel="noopener">财联社 · 富时A50期指连续夜盘收涨0.03%,报14517点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>Anthropic上市在即:华尔街大行争抢其员工财富管理生意,募资或比肩SpaceX</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(北京时间,财联社快讯播发;原文未注具体时刻)</p>
+<p>摘要:据知情人士,高盛、美国银行、摩根大通、富国银行和纽约梅隆银行等正竞相争取管理Anthropic员工在公司重磅上市后预计获得的财富;该公司预计未来几周上市,募资规模或与SpaceX上市时的862亿美元相当甚至更多。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481325" target="_blank" rel="noopener">财联社 · Anthropic上市料造就大批百万富翁 华尔街大行争抢财富管理生意</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-11-晚间版.html">← 2026-09-11-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-12 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
