@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-12</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 12 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;习近平在新德里出席金砖峰会第一阶段会议并发表讲话、宣布中国将于明年接任金砖主席国;中东&quot;第二个海上咽喉&quot;告急——胡塞武装进抵丕林岛、曼德海峡单日通行骤降至6艘;美联储下周加息概率触及90%,市场焦点转向&quot;加几次&quot;;周末国际油价暗盘续跌,布伦特跌破100美元。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>习近平出席金砖峰会第一阶段会议:金砖要"勇做时代先锋",中国将于明年接任轮值主席国</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日下午(新德里当地时间;新华社、央视新闻稿于北京时间18时13分—18时22分陆续发布)</p>
+<p>摘要:习近平在讲话中表示,金砖国家要"坚定站在历史正确一边,勇做时代先锋",引领国际秩序朝着更加公正合理的方向发展,携手推动构建人类命运共同体;要做促进创新发展的先锋、加强人工智能合作。他并表示中国愿同金砖成员一道为实现中东和平发挥作用,讲话中总结了金砖20年发展成就,并宣布中国将于明年接任金砖主席国。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://app.xinhuanet.com/news/article.html?articleId=202609127e6ddf3d0aed4e47b0d117524a975791" target="_blank" rel="noopener">新华网客户端 · 习近平:金砖国家要坚定站在历史正确一边,勇做时代先锋</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4182880.html" target="_blank" rel="noopener">证券时报 · 同题报道</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260912-9667366" target="_blank" rel="noopener">联合早报 · 习近平:中国愿同金砖成员一道为实现中东和平发挥作用</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>金砖峰会开幕首日:莫迪提议改革全球治理架构并建立"三驾马车"连续性机制;中印领导人晚间会谈</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(当地时间,新德里;TV BRICS等媒体当日报道,原文未注具体时刻)</p>
+<p>摘要:莫迪在峰会闭门会议上呼吁将全球治理的"金字塔"转变为平等的"合作平台",并提出建立"三驾马车"连续性机制、改革联合国安理会及制定金砖改革议程;普京、习近平与莫迪在峰会现场站立交谈。据印度外交部消息,习近平定于当日晚些时候与莫迪举行面对面双边会谈,系其2019年以来首次访问印度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://tvbrics.com/cn/news/narendra-modi-proposes-reforming-global-governance-architecture-and-creating-brics-continuity-mechan/" target="_blank" rel="noopener">TV BRICS · 印度总理莫迪提议改革全球治理架构并建立金砖国家连续性机制</a>
+<span class="sep">·</span>
+<a href="https://sputniknews.cn/20260912/1073219565.html" target="_blank" rel="noopener">俄罗斯卫星通讯社 · 普京和习近平及莫迪在金砖国家峰会上站着进行交谈</a>
+<span class="sep">·</span>
+<a href="https://amp.dw.com/zh/%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%8A%B5%E8%BE%BE%E6%96%B0%E5%BE%B7%E9%87%8C-%E9%87%91%E7%A0%96%E5%B3%B0%E4%BC%9A%E9%9A%BE%E6%9C%89%E6%96%A9%E8%8E%B7/a-79243633" target="_blank" rel="noopener">德国之声中文网 · 习近平抵达新德里 金砖峰会难有斩获</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>证监会公布四份处罚决定书:编造、传播"税率调整"虚假信息,4人被罚、1人被5年市场禁入</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日晚(证监会公布决定书);9月12日 07:32(澎湃新闻稿经东方财富转载,北京时间)</p>
+<p>摘要:4名当事人编造或传播涉"税率调整"虚假信息,均被认定扰乱证券市场、无违法所得:证券从业人员宗建树被采取5年市场禁入措施(公安机关已另处罚款),马星瑞被罚30万元,卢润凯(使用APP生成并发布文章)与陈广华(粉丝超103万的财经博主)各被罚20万元。相关虚假信息曾于2025年12月至2026年2月间在互联网平台广泛传播。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/news/1344,202609123872513967.html" target="_blank" rel="noopener">澎湃新闻(东方财富转载) · 编造、传播&quot;税率调整&quot;虚假信息 四人被证监会处罚</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>欧洲央行管委科赫尔:若油价年底前持续处于100美元附近,将不得不进一步加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 15:14(北京时间,财联社稿经东方财富发布;受访于9月11日欧央行加息后,原文未注采访时刻)</p>
+<p>摘要:欧洲央行管委、奥地利央行行长科赫尔警告,若石油和天然气价格进一步向不利情景演变,货币政策必须将其纳入考量。欧央行最恶劣情景假设四季度油价均价99美元、气价77欧元/兆瓦时,对应明年通胀升至3.2%。欧央行9月11日加息25个基点至2.5%、为三个月内第二次加息,投资者目前押注年底前再加息至2.75%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609123872720292.html" target="_blank" rel="noopener">财联社(东方财富转载) · 欧洲央行官员警告:若油价持续站上100美元 将不得不进一步加息</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>特朗普表态"不反对"中国车企赴美设厂:条件是雇用美国工人,反对墨西哥借道</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月11日(美东时间,特朗普接受福克斯新闻"The Ingraham Angle"采访);9月12日(北京时间,联合早报、德国之声、钜亨网等报道)</p>
+<p>摘要:特朗普表示,尽管国会议员与车企普遍反对,他"不反对"中国汽车制造商在美国设厂,"日本就是这么做的,关键在于必须雇用我们的人";他同时反对中国车企在墨西哥建厂后再出口美国,并驳斥"将允许中国汽车入美作为大协议一部分"的说法为"完全是假消息"。德国之声、钜亨网等报道称,新一轮中美元首会晤预计约两周后在华盛顿举行。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.zaobao.com.sg/news/world/story20260912-9665703" target="_blank" rel="noopener">联合早报 · 特朗普不反对中国汽车制造商在美国设厂</a>
+<span class="sep">·</span>
+<a href="https://www.dw.com/zh/%E4%B8%AD%E5%9B%BD%E8%BD%A6%E4%BC%81%E8%B5%B4%E7%BE%8E%E5%BB%BA%E5%8E%82-%E7%89%B9%E6%9C%97%E6%99%AE%E4%B8%8D%E5%8F%8D%E5%AF%B9-%E4%BD%86%E6%9C%89%E6%9D%A1%E4%BB%B6/a-79244108" target="_blank" rel="noopener">德国之声中文网 · 中国车企赴美建厂 特朗普不反对 但有条件</a>
+<span class="sep">·</span>
+<a href="https://hk.finance.yahoo.com/news/%E5%B7%9D%E7%BF%92%E6%9C%83%E5%89%8D%E5%A4%95%E9%AC%86%E5%8F%A3-%E5%B7%9D%E6%99%AE%E8%A1%A8%E6%85%8B%E4%B8%8D%E5%8F%8D%E5%B0%8D%E4%B8%AD%E5%9C%8B%E8%BB%8A%E5%BB%A0%E8%B5%B4%E7%BE%8E%E8%A8%AD%E5%BB%A0-%E6%A2%9D%E4%BB%B6%E6%98%AF%E9%9B%87%E7%94%A8%E7%BE%8E%E5%9C%8B%E5%B7%A5%E4%BA%BA-065002548.html" target="_blank" rel="noopener">钜亨网(雅虎香港财经) · 川习会前夕松口!特朗普表态不反对中国车厂赴美设厂 条件是雇用美国工人</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>中东"第二个海上咽喉"告急:胡塞武装进抵丕林岛,曼德海峡单日通行船只降至6艘</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 13:09(北京时间,期货日报稿经金融界发布;所述事件为当地时间9月10日—11日)</p>
+<p>摘要:报道称胡塞武装9月11日进抵曼德海峡丕林岛并控制附近沿岸据点,当地时间10日通行曼德海峡的船舶数量从数日前的约30艘锐减至6艘;沙特王储被曝10日两度致电特朗普请求对胡塞武装采取军事行动,美方拒绝直接动武、仅提供情报支持(尚未获白宫与沙特证实)。美方还要求穿行霍尔木兹海峡的油轮仅在每日两个特定时段航行以获军事保护;凯投宏观经济学家胡笙警告,若东西输油管遭重大破坏,油价可能升向每桶120美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.jrj.com.cn/2026/09/12130958421051.shtml" target="_blank" rel="noopener">期货日报(金融界转载) · 中东突发:第二个海上咽喉告急!美国,实施通航限制!国际油价,怎么走?</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/world/story20260911-9664908" target="_blank" rel="noopener">联合早报 · 据报胡塞武装已控制曼德海峡</a>
+<span class="sep">·</span>
+<a href="https://www.stheadline.com/zh-hans/realtime-world/3614482/%E6%B2%99%E7%89%B9%E4%B8%9C%E8%A5%BF%E8%BE%93%E6%B2%B9%E7%AE%A1%E9%81%AD%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%A2%AD%E5%87%BB%E5%85%B3%E9%97%AD-%E4%B8%93%E5%AE%B6%E8%8B%A5%E4%B8%A5%E9%87%8D%E5%8F%97%E6%8D%9F-%E6%B2%B9%E4%BB%B7%E6%81%90%E9%A3%99120%E7%BE%8E%E5%85%83" target="_blank" rel="noopener">星岛头条 · 沙特东西输油管遭无人机袭击关闭 专家:若严重受损 油价恐飙120美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价周末"暗盘"大跌:布伦特跌破100美元报99.4,全美柴油均价续创纪录</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 14时55分(北京时间,行情数据时刻;21世纪经济报道15:25发稿)</p>
+<p>摘要:周末电子盘交易中,布伦特原油暗盘跌超3%、跌破100美元报99.4美元/桶,纽约原油暗盘跌2.85%报95.38美元/桶(周五正式收盘分别为104.61、100.05美元,本周WTI仍累涨近10%、布伦特涨8.6%)。美国柴油平均零售价升破每加仑6美元、续刷历史纪录。市场关注9月14日海湾国家与伊朗外长阿曼会晤及下周美联储议息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609123872721252.html" target="_blank" rel="noopener">21世纪经济报道(东方财富转载) · 国际油价暗盘大跌 布油跌破100美元 美联储年内可能不止加息一次</a>
+<span class="sep">·</span>
+<a href="https://finance.jrj.com.cn/2026/09/12143458421629.shtml" target="_blank" rel="noopener">金融界 · 全美柴油平均零售价格11日突破每加仑6美元关口,刷新历史纪录</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美联储下周议息前瞻:"加息"几成定局,机构激辩"不止加息一次"</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(北京时间,第一财经稿经东方财富07:33发布、21世纪经济报道15:25发布)</p>
+<p>摘要:8月CPI公布后,CME数据显示美联储下周加息25个基点概率最高触及90%,9月、10月和12月两次加息概率接近70%。摩根大通转向预计9月和12月各加息25个基点;道明证券预计9月启动、共三次;花旗预计9月一次后按兵至2027年年中。报道提示:8月CPI调查期早于最新一轮能源涨价,柴油与计算机软件等分项(同比+25.4%创纪录)通胀压力尚未完全体现。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://fund.eastmoney.com/a/202609123872618595.html" target="_blank" rel="noopener">第一财经(东方财富转载) · 不止加息一次?美国8月CPI引发市场疯狂猜测</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202609123872721252.html" target="_blank" rel="noopener">21世纪经济报道(东方财富转载) · 国际油价暗盘大跌 布油跌破100美元 美联储年内可能不止加息一次</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>券商秋季策略会现分歧:沪指失守3900点后,"金秋行情"还是防守为王?</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 09:05(北京时间,时代财经稿经金融界发布)</p>
+<p>摘要:在沪指9月11日收跌1.18%报3888.11点、失守3900点关口之际,数十家券商密集举行秋季策略会,"修复、均衡、红利、科技"成为关键词。国泰海通方奕称"慢牛、长牛、转型牛"条件已形成、看好"金秋行情";华泰证券何康则认为科技筹码仍在调整、四季度风格再平衡或持续,建议相对防守。配置共识集中在AI与红利"攻防兼备",金融、医药等关注度回升。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.jrj.com.cn/2026/09/12090558419257.shtml" target="_blank" rel="noopener">时代财经(金融界转载) · 沪指失守3900点!券商A股秋季策略现分歧:布局&quot;金秋行情&quot;,还是防守为王?</a>
+<span class="sep">·</span>
+<a href="https://www.tfcaijing.com/article/page/6f4c335a626a324e6e43496f4d324c643567387a63513d3d" target="_blank" rel="noopener">时代财经 · 同题报道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>英伟达被曝洽谈在Anthropic IPO中投资高达100亿美元,"史上最大IPO"渐近</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日午间(北京时间,格隆汇、PANews等转述路透社报道;金融界13时许跟进)</p>
+<p>摘要:据路透社报道,英伟达正洽谈在Anthropic的首次公开募股中投资高达100亿美元;知情人士称,Anthropic寻求募资规模或高达1000亿美元、对应估值约2万亿美元,有望成为"史上最大IPO"。此前报道称其计划未来几周上市,高盛、摩根大通等华尔街大行正争抢承销与财富管理业务。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_5115326071_130e5ae77020030yf4.html?from=finance" target="_blank" rel="noopener">格隆汇(新浪财经转载) · 英伟达洽谈在Anthropic IPO中投资高达100亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.tradingview.com/news/panews:0b4d920b6acdf:0/" target="_blank" rel="noopener">PANews(TradingView转载) · 英伟达正洽谈投资Anthropic的IPO项目,高达100亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L6KIAOL905199NPP.html" target="_blank" rel="noopener">钜亨网(网易转载) · 史上最大IPO,英伟达拟投资100亿美元</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-12-早间版.html">← 2026-09-12-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-12 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
