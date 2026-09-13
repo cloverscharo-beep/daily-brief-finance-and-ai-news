@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 13 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：AI 安全「失血」与「承诺」同框——DeepMind 安全研究员恩格尔斯离职投奔独立机构 METR，直言「五年内 AI 造成巨大危害的概率高得吓人」；阿莫迪倡议的余波中，奥尔特曼正式承诺 OpenAI 也将向独立评估者开放「员工级」权限，哈萨比斯加入支持。国内方面，工信部《「人工智能 + 软件」专项行动实施方案》出炉，目标 2030 年关键软件全面实现智能化升级。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>奥尔特曼正式承诺：OpenAI 也将向独立评估者开放「员工级」访问权限</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日（The Decoder 刊发日期、Techmeme 9月13日将其列为头条要闻；奥尔特曼与马斯克的 X 帖文发布于美东时间 9月12日，帖文原文未注具体时刻）</p>
+<p>早间版已收录奥尔特曼对阿莫迪的公开支持（「我同意」），本条为其承诺的进一步具体化：他在 X 写道「承诺让独立评估者拥有员工级访问权限是个好主意，我们将同样做到，更多细节很快公布」。同一天，谷歌 DeepMind 前 CEO 哈萨比斯也表态支持独立监督；反面声音同样出现——谷歌研究员佩曼·米兰法尔公开反对「速度限制」论，称递归自我提升的反馈回路并不稳定，「稳定性才是速度上限」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://the-decoder.com/altman-musk-and-hassabis-back-amodeis-call-to-add-independent-oversight/" target="_blank" rel="noopener">The Decoder · Altman, Musk, and Hassabis back Amodei&#x27;s call to add independent oversight</a>
+<span class="sep">·</span>
+<a href="https://www.techmeme.com/" target="_blank" rel="noopener">Techmeme（9月13日头条）</a>
+<span class="sep">·</span>
+<a href="https://x.com/sama/status/2098811563415150910" target="_blank" rel="noopener">奥尔特曼 X 原帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>工信部印发《「人工智能 + 软件」专项行动实施方案》：2030 年关键软件全面实现智能化升级</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 19:45（北京时间，IT之家发布报道时刻；据新华社，工信部于 9月11日对外发布文件，原文未注具体时刻）</p>
+<p>方案提出到 2030 年「关键软件全面实现智能化升级」，智能编程、智能体软件及智能服务等成为产业新增长极；到 2028 年推广应用覆盖 2 万家规上软件企业，打造 100 个智能体软件标杆应用，孵化 5 个以上优质开源项目。具体举措包括发展智能体驱动的智能编程工具、推动 CAD/CAE/EDA 等工业软件与 AI 深度融合、建设智能体软件应用商店和技能包（Skills）资源库等。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/836.htm" target="_blank" rel="noopener">IT之家 · 我国力争到 2030 年关键软件全面实现智能化升级</a>
+<span class="sep">·</span>
+<a href="https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_49783ce685f042029111c8b6e94f0f30.html" target="_blank" rel="noopener">工业和信息化部 · 实施方案官方通知</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>移动云发布国内首个「国产 GPU + 类脑芯片」大模型异构混合推理系统</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 15:32（北京时间，IT之家发布报道时刻；原文未注发布方具体发布时间）</p>
+<p>中国移动旗下移动云发布国内首个「国产 GPU + 类脑芯片」大模型异构混合推理系统。据 IT之家，经 DeepSeek V4 实测，该系统相较同类国产 GPU 算力集群性价比提升一倍以上，业务运营成本降低 40% 以上。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/793.htm" target="_blank" rel="noopener">IT之家 · 国内首个国产 GPU + 类脑芯片大模型异构混合推理系统发布，较同类国产 GPU 算力集群性价比提升一倍以上</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>比亚迪腾势 N8L 纯电全球首搭「迪迪虾」AI 超级智能体，官宣支付宝、豆包大模型等合作伙伴</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 15:52（北京时间，IT之家发布报道时刻；新车将于 9月14日 19:00 正式上市）</p>
+<p>腾势 N8L 纯电将全球首搭比亚迪 AI 超级智能体「迪迪虾」，今日阿里云、淘宝闪购、高德地图、火山引擎与豆包大模型、支付宝、美的 COLMO、QQ 音乐等合作伙伴发来祝贺。从名单看，新车将在外卖、导航、支付、智能家居、音乐等领域带来智能化体验；腾势方面称其为「真正懂家庭的 AI 超级助理」。「迪迪虾」此前于 5 月底比亚迪智能化战略发布会上发布，主打全舱记忆、跨域互动、端云协同、快慢思考。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/801.htm" target="_blank" rel="noopener">IT之家 · 比亚迪腾势 N8L 纯电全球首搭「迪迪虾」AI 超级智能体，官宣支付宝、豆包大模型等合作伙伴</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>亮源新创连发三项 Physical AI 技术：导航模型零样本「通吃」四种机器人本体</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 15:38（北京时间，量子位发布时刻）</p>
+<p>亮源新创一个多月来连续发布三项技术：LightParkour 从单个动作种子经物理仿真与课程学习，扩展出可跨越 75cm 障碍的跑酷技能；LightNav-0 把 2,000+ 互联网场景转为仿真环境、生成 4,000+ 小时经验，并通过 Point CoT 与统一表征实现跨场景、跨任务的零样本导航，零样本迁移至人形、四足、轮式、飞行四种本体；Light REACT 实现外力扰动与硬件损伤下的全身韧性控制。官方已同步发布模型、代码与技术报告。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/488672.html" target="_blank" rel="noopener">量子位 · 2000+真实场景搬进仿真！一个导航模型零样本「通吃」四种机器人本体</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>谷歌 DeepMind 安全研究员离职加入 METR：称「AI 五年内造成巨大危害的概率高得吓人」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 20:21（北京时间，IT之家发布报道时刻；恩格尔斯自述三周前已离开 DeepMind，原文未注具体时刻）</p>
+<p>IT之家援引报道称，DeepMind 通用人工智能安全团队研究员乔希·恩格尔斯已离职并加入独立评估机构 METR。他称自己拒绝了 Anthropic 和 OpenAI 的邀约，仍决定离开，因为先进 AI 相关风险已经太高；他警告，若对齐技术跟不上模型能力增长，递归自我提升（RSI）将产生危险，近期 AI 串通、入侵企业、隐瞒行为、社工攻击等事件加重了担忧。据 Free Press Journal 报道，Anthropic 前安全团队成员乔·本顿亦离职并计划加入 METR，称「人类可能无法幸存于」比自己远为聪明的机器的出现。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/843.htm" target="_blank" rel="noopener">IT之家 · 谷歌 DeepMind 安全研究员离职，称 AI 五年内造成巨大危害的概率高得吓人</a>
+<span class="sep">·</span>
+<a href="https://www.freepressjournal.in/world/joe-benton-quits-anthropic-safety-team-warns-ai-race-could-pose-extinction-level-risks" target="_blank" rel="noopener">Free Press Journal · Joe Benton Quits Anthropic Safety Team, Warns AI Race Could Pose &#x27;Extinction-Level Risks&#x27;</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>英国试点「AI 速成训练营」：面向 16–24 岁尼特族，结业可入职 AI 学徒岗位</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 17:45（北京时间，IT之家发布编译报道时刻；原报道出自英国《卫报》，原文未注具体时刻）</p>
+<p>据英国《卫报》报道，英国在兰开夏郡普雷斯顿试点面向 16–24 岁尼特族（NEET，不读书、不就业、不培训）的「AI 速成训练营」：由纳税人资金支持，共招 70 人、为期三周，学员学习搭建 AI 工具、了解企业如何应用 AI 及负责任使用。JD Sports、亨氏、IT 公司 Agilysys 等为学员提供 AI 学徒岗位（内容创作/AI 营销、IT 服务台两类）。英国约有近百万尼特族青年，占该年龄段人口略超十分之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/822.htm" target="_blank" rel="noopener">IT之家 · 英国试点 AI 训练营，帮助待业青年破解就业难题</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>外滩大会观察：米羊科技「白艾莉」演示「关系型生产力 Agent」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 14:40（北京时间，量子位发布时刻；外滩大会近日在上海举行）</p>
+<p>量子位报道了米羊科技（创始人徐奕成）的桌面 Agent「白艾莉」：它比一般陪伴产品更懂干活，也比纯生产力 Agent 更有「人味」——自研 AI 人格系统（人格内核、感知适配、决策调度、动态表达四层），并有一个持续运转的世界模拟引擎（接入高德 API、录入 330 个真实场馆）。官方称产品次日留存 73%、7 日留存 45%、90 日留存 15%；团队还开源了解决图像迭代编辑「数字涟漪」的 MiRipple 修复算法。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/488447.html" target="_blank" rel="noopener">量子位 · 今年外滩最特别 Agent：能干活，能陪聊，还会朋友圈拉黑你</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>GitHub 三榜第一背后：16 岁辍学、「专升本」工程师涂少坤和他的画图 Agent Archify</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 15:20（北京时间，量子位发布时刻）</p>
+<p>量子位对话 Archify 开发者涂少坤：这款 AI 画图 Agent 能把模糊想法整理成清晰图表，单日最高新增 5,000 Star、总 Star 5.88 万，项目与其个人双双登顶 GitHub 热榜。他 16 岁辍学打工，后「专升本」考入重庆邮电大学，求职时多次因学历标签被撤回 offer，最终靠开源作品证明自己，现为小红书 AI Native 工程师。他称「出身寒微不是耻辱，放弃自己才是」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/488519.html" target="_blank" rel="noopener">量子位 · GitHub 三榜第一背后，一个「专升本」工程师的十年</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>社区发现 huggingface_hub 静默识别你使用的 AI 编码 Agent 并随请求上报</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 0时45分前后（北京时间，聚合站 promppy 收录该帖的时刻；原帖未注具体时刻；AI Weekly 9月13日日报将其列为当日头条）</p>
+<p>据 r/LocalLLM 帖文与聚合报道，有开发者在审计本地 AI 项目网络流量时发现：huggingface_hub 内置模块会扫描环境变量识别 Cursor、Copilot、Claude Code 等 26 个 AI 编码 Agent，并在每次 Hub API 调用中以「agent/&lt;名称&gt;」标识上报；transformers、faster-whisper 等下游库一并受影响。用户可用 HF_HUB_OFFLINE=1 或改用本地路径规避；报道称开发者对事先未被告知表示不满。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reddit.com/r/LocalLLM/comments/1wehgvc/huggingface_hub_silently_fingerprints_which_ai/" target="_blank" rel="noopener">r/LocalLLM · huggingface_hub silently fingerprints which AI coding agent you&#x27;re using</a>
+<span class="sep">·</span>
+<a href="https://www.promppy.com/item/1624963" target="_blank" rel="noopener">promppy · 收录页</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/ai-news-today" target="_blank" rel="noopener">AI Weekly · AI News Today, September 13</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-13-早间版.html">← 2026-09-13-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-13 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

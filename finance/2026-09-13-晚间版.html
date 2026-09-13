@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 13 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;智谱完成约50亿美元融资(约20亿美元配股+约30亿美元可转债)加码下一代GLM与算力基建;交易商称沙特输油管道中断,若数日内不能恢复,全球石油供应恐损失4%;美联储议息前夜,美股存储与芯片股周末暗盘集体下挫。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>智谱完成约50亿美元融资:配股20亿美元+可转债30亿美元,加码下一代GLM与算力</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 18:19(北京时间,新浪财经、东方财富播报;公告当日披露,财联社早间亦曾播报)</p>
+<p>摘要:智谱(02513.HK)宣布完成约50亿美元融资,包括约20亿美元股份配售及约30亿美元可转债发行,资金主要投向下一代GLM模型、完全自训练体系及算力基础设施。配售价为每股714港元、较公告前收盘价折让约9.96%,配售股份占扩大后已发行股本约4.50%;可转债为零息结构,初始转股价892.50港元,较配售价溢价25%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/marketresearch/2026-09-13/doc-inirsqpw7777322.shtml" target="_blank" rel="noopener">新浪财经 · 智谱:以零息+溢价转股形式融资50亿美元 释放长期股权预期</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609133872851063.html" target="_blank" rel="noopener">东方财富 · 智谱:以零息+溢价转股形式融资50亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>《新闻联播》9月13日要目:《"人工智能+软件"专项行动实施方案》发布,发改委向民营企业推介投资项目</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 19:46(北京时间,新浪财经播报;当日19:00央视《新闻联播》播出)</p>
+<p>摘要:9月13日《新闻联播》国内联播快讯显示,工信部《"人工智能+软件"专项行动实施方案》发布,提出引导软件企业向人工智能应用服务商转型、实施AI中小企业创业支持计划等;国家发展改革委向民营企业推介一批投资项目。节目要目还显示:我国实现一体化算力统筹监测,2026年服贸会达成各类成果超1200项。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091395" target="_blank" rel="noopener">新浪财经7x24 · 9月13日《新闻联播》主要内容</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481735" target="_blank" rel="noopener">财联社 · 9月13日周日《新闻联播》要闻21条</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>伊朗外长:14日阿曼会议将讨论霍尔木兹海峡新通道,海峡重开前提是美方履约</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 18:38(北京时间,新浪财经转引央视新闻;财联社当日06:50亦播报)</p>
+<p>摘要:伊朗外长阿拉格齐表示,9月14日在阿曼举行的会议将重点讨论霍尔木兹海峡内一条新的海上通道,伊方将向与会国家介绍伊朗与阿曼达成的协议细节及新通道路线图。他强调,伊阿协议并不意味着海峡重新开放;重开海峡的前提是美国重新履行"伊斯兰堡谅解备忘录"中的承诺,地区安全责任应完全由地区国家承担。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091377" target="_blank" rel="noopener">新浪财经7x24 · 伊朗将与相关国家讨论霍尔木兹海峡内新通道</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481723" target="_blank" rel="noopener">财联社 · 伊朗称霍尔木兹海峡或将开新通道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>康方生物:依沃西单抗在一项研究中达到总生存期(OS)终点</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 19:08(北京时间,新浪财经快讯)</p>
+<p>摘要:康方生物报告,其PD-1/VEGF双抗依沃西单抗在一项研究中达到总生存期(OS)终点。OS是抗肿瘤药物最关键疗效终点之一,若后续完整数据获确认,有望强化依沃西在核心适应症中的临床与商业价值预期;具体研究数据以公司正式披露为准。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091388" target="_blank" rel="noopener">新浪财经7x24 · 康方生物报告依沃西单抗达到总生存期(OS)终点</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>交易商:沙特输油管道中断,若数日内不能恢复,全球石油供应恐损失4%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 20:00(北京时间,新浪财经快讯引述交易商及消息人士;财联社当日08:11已首报)</p>
+<p>摘要:交易商及消息人士称,沙特输油管道中断,若数日内不能恢复输送,全球石油供应恐将损失4%;三位消息人士称,沙特延布港的石油储存仅够维持5至7天的出口量,此外在埃及还有少量储存。中东能源供应风险持续发酵,成为周末油市与下周开盘的核心关注点之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091403" target="_blank" rel="noopener">新浪财经7x24 · 交易商:沙特管道若无法尽快恢复,或致全球石油供应减少4%</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609133872860339.html" target="_blank" rel="noopener">东方财富 · 沙特输油管道中断 全球石油供应恐损失4%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股存储与芯片股周末暗盘集体下挫:美光、SK海力士跌超4%,英伟达跌超2%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 16:42—18:51(北京时间,新浪财经7x24等快讯;美股周末暗盘交易时段)</p>
+<p>摘要:周末暗盘交易中,美股半导体板块集体走低:SK海力士跌超4%报182.765美元,美光科技跌超4%报936.155美元,AMD跌超3%报502.32美元,英伟达跌超2%报214.94美元,英特尔跌超3%。市场观察人士称,AI企业高管呼吁放缓技术发展的言论短期压制芯片股情绪;据统计,纳斯达克100指数较6月纪录高点已回落超4%,美国芯片股期间下跌14%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091320" target="_blank" rel="noopener">新浪财经7x24 · 美股半导体股暗盘集体下挫</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091372" target="_blank" rel="noopener">新浪财经7x24 · SK海力士美股暗盘暴跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>机构论市:十大机构把脉"美联储加息后的A股",中信证券称"静待加息落地"</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 16:31—17:00(北京时间,东方财富、新浪财经发布)</p>
+<p>摘要:东方财富汇总"十大机构论市"聚焦"以史为鉴,美联储加息,A股如何走",本周沪指跌1.07%、深证成指跌0.34%、创业板指涨1.08%。中信证券研报认为,市场需在定价上反映至少一次加息落地才能释放四季度空间,象征性加息的风险释放应视为买点而非卖点,配置上维持AI+能化结构;其另一报告提示美债供需再平衡,长端利率中枢或从2-3%向4-5%上移,并维持港股红利策略推荐。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609133872841523.html" target="_blank" rel="noopener">东方财富 · 十大机构论市:以史为鉴 美联储加息 A股如何走?</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091312" target="_blank" rel="noopener">新浪财经7x24 · 中信证券:静待加息落地,维持AI+能化结构</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091313" target="_blank" rel="noopener">新浪财经7x24 · 中信证券:美债收益率飙升,担忧谁来为美国国债&quot;买单&quot;</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>港股IPO动态:罗博特科、欢创科技通过港交所聆讯,海柔创新递表</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 19:06—19:47(北京时间,港交所文件及利弗莫尔证券数据)</p>
+<p>摘要:据港交所文件及利弗莫尔证券数据,罗博特科智能科技、深圳市欢创科技更新聆讯后资料集,通过港交所上市聆讯;深圳市海柔创新智能科技集团递交上市申请。同日,湖南军信环保获港交所批准上市,博雷顿科技拟发行最多1660万股新H股、最多募资约1.71亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091394" target="_blank" rel="noopener">新浪财经7x24 · 罗博特科通过港交所上市聆讯</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091390" target="_blank" rel="noopener">新浪财经7x24 · 深圳市欢创科技通过港交所上市聆讯</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091387" target="_blank" rel="noopener">新浪财经7x24 · 海柔创新递交港交所上市申请</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>IDC:二季度全球服务器市场收入1663亿美元、同比增52%,创历史最高单季纪录</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 19:24(北京时间,新浪财经播报;IDC报告)</p>
+<p>摘要:IDC发布最新报告,2026年第二季度全球服务器市场厂商收入达1663亿美元,同比增长52.0%、环比增长35.7%,超过2025年第四季度1253亿美元的前高,创下历史最高单季纪录。IDC认为,AI基础设施投资仍是市场增长的核心驱动力。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091389" target="_blank" rel="noopener">新浪财经7x24 · 机构:第二季度全球服务器市场收入同比增长52%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>GE医疗洽谈收购Sofie Biosciences,交易金额约10亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 18:04(北京时间,东方财富播报;财联社当日06:04亦播报)</p>
+<p>摘要:GE医疗据悉正就收购Sofie Biosciences进行洽谈,交易金额达10亿美元,该笔交易最快可能于下周宣布。若交易落地,将成为近期医疗行业的重要并购之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609133872849792.html" target="_blank" rel="noopener">东方财富 · GE医疗据悉就收购Sofie Biosciences进行洽谈</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481708" target="_blank" rel="noopener">财联社 · GE医疗据悉就收购Sofie Biosciences进行洽谈</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-13-早间版.html">← 2026-09-13-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-13 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
