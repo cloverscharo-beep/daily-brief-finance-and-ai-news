@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 13 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;金砖峰会通过《新德里宣言》、中国明年接任金砖主席国;下周&quot;央行超级周&quot;临近——美联储加息概率约87%、日本央行拟加息至1.25%;国际油价周末暗盘续跌,特朗普称战争结束后油价将大幅回落。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>金砖峰会通过《新德里宣言》:呼吁中东"最大程度克制",中国明年接任主席国</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(新德里当地时间,峰会第一阶段会议通过宣言;星岛头条稿于北京时间9月13日3时发布)</p>
+<p>摘要:《新德里宣言》呼吁中东保持最大程度的克制、避免采取可能恶化局势的行动,谴责针对民用基础设施和核设施的攻击,重申应维持全球贸易、供应链与能源顺畅;中国明年将接任金砖主席国。习近平当晚同莫迪会谈,表示中印可以取长补短、共同发展。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stheadline.com/zh-hans/daily-china/3614679/%E4%B9%A0%E8%BF%91%E5%B9%B3%E9%87%91%E7%A0%96%E5%9B%BD%E5%AE%B6%E8%A6%81%E7%AB%99%E5%9C%A8%E5%8E%86%E5%8F%B2%E6%AD%A3%E7%A1%AE%E4%B8%80%E8%BE%B9" target="_blank" rel="noopener">星岛头条 · 习近平:金砖国家要站在历史正确一边</a>
+<span class="sep">·</span>
+<a href="https://www.cna.com.tw/news/aopl/202609120200.aspx" target="_blank" rel="noopener">中央社 · 金磚峰會發布新德里宣言籲中東「最大程度克制」</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>中国电信研究院:我国词元(Token)需求爆发式增长,多地布局"词元经济"</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 02:00(北京时间,券商中国稿经东方财富发布;报告于9月12日经央视新闻报道)</p>
+<p>摘要:报告预计2026年至2030年我国Token(词元)消耗量年复合增长率接近12倍,2026年消耗量达10亿亿、2030年超3500亿亿,未来2-3年算力需求平均每年增长近10倍;北京、重庆、成都等地近期出台词元经济规划、词元券等支持政策。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609123872766324.html" target="_blank" rel="noopener">券商中国(东方财富转载) · 周末利好来了!事关万亿赛道!我国词元需求呈现爆发式增长</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>伊朗总统:美国须停止封锁,伊朗"目前无法"决定与美直接谈判</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 06:27(北京时间,财联社《环球下周看点》发稿,文中称表态发生于发稿前不久)</p>
+<p>摘要:佩泽希齐扬表示,如果美国结束封锁,霍尔木兹海峡将重新开放,伊朗"目前无法做出"与美国进行直接谈判的决定;伊朗外交部称,伊朗与阿曼将于9月14日地区会议上向海湾国家通报霍尔木兹海峡通航问题磋商结果。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202609133872774337.html" target="_blank" rel="noopener">财联社(东方财富转载) · 环球下周看点:央行决议与中东局势牵动市场 美联储加息悬念待揭晓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>甲骨文:埃里森取消出售至多5000万股公司股票的计划</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(美东时间周六,甲骨文公司声明);9月13日 01:08(北京时间,财联社电)</p>
+<p>摘要:甲骨文公司周六声明称,董事长埃里森取消了出售不超过5000万股公司股票的计划,该计划下没有甲骨文股票被出售,他也没有其他出售所持公司股票的计划;甲骨文于周五披露了上述股票出售计划。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.sina.com.cn/roll/2026-09-13/doc-inirranq8156533.shtml" target="_blank" rel="noopener">财联社(新浪财经转载) · 埃里森取消出售至多5000万股甲骨文股票的计划</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>周末原油暗盘续跌:布伦特跌破100美元,特朗普称战后油价将大幅回落</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日(周六,周末暗盘行情;中国基金报稿于北京时间9月13日00:09发布)</p>
+<p>摘要:9月12日纽约原油暗盘跌破96美元、日内跌超1%,布伦特原油暗盘跌破100美元、日内跌超1.9%;油价周五回落,但全周仍录得大幅上涨。特朗普在访问爱尔兰期间称,伊朗战争很可能在11月中期选举后不久结束,届时能源价格将大幅下跌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-13/doc-inirqwes8262030.shtml" target="_blank" rel="noopener">中国基金报(新浪财经转载) · 周末!原油暗盘,跳水</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1075299771_465270" target="_blank" rel="noopener">搜狐转载 · 同题报道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>下周"央行超级周":美联储加息概率约87%,日本央行拟加息25个基点</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 06:27(北京时间,财联社稿)</p>
+<p>摘要:美联储将于当地时间9月15日至16日议息,决议北京时间9月17日凌晨公布,CME显示加息25个基点概率87.3%;美股周五反弹但三大指数全周收跌。英国央行、日本央行下周也将公布决议,市场预计日本央行加息25个基点至1.25%左右。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202609133872774337.html" target="_blank" rel="noopener">财联社(东方财富转载) · 环球下周看点:央行决议与中东局势牵动市场 美联储加息悬念待揭晓</a>
+<span class="sep">·</span>
+<a href="https://www.jpchinapress.com/static/content/CJ/2026-09-12/1548308732399886336.html" target="_blank" rel="noopener">旅日侨网 · 日本央行拟9月会议加息至1.25%左右</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>黄金周评:金价周线承压,市场聚焦美联储议息</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 21:23(北京时间,新浪财经周评发布;行情数据为美东时间9月11日收盘)</p>
+<p>摘要:现货黄金周五收报4348.11美元/盎司、涨0.68%,本周累跌1.85%;现货白银收报64.4384美元/盎司、周跌2.66%。市场聚焦下周美联储议息会议,加息预期升温令金价短线承压。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/money/nmetal/2026-09-12/doc-inirqrwy6356588.shtml" target="_blank" rel="noopener">新浪财经 · 周评:定了!下周美联储加息概率超90%,金价承压明显</a>
+<span class="sep">·</span>
+<a href="https://m.cls.cn/detail/2481319" target="_blank" rel="noopener">财联社 · 纽约尾盘金银行情快讯</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>博主解读:神秘资金提前布局9月原油多单,胡塞地面进攻推升油价</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月12日 23:45(北京时间,网易号"远方青木"发布;新浪财经版本23:41)</p>
+<p>摘要:远方青木称,ICE数据显示9月1日布伦特原油净多头头寸创一年新高、COT持仓指数升至95%;此后OPEC+七国宣布暂停增产、胡塞武装对也门政府军发动地面进攻并攻占红海沿岸穆哈港,油价自7月约70美元涨至9月10日约110美元;9月11日油价跳水约3%,疑似埋伏多头获利平仓。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L6LP2NS40552KEXA.html" target="_blank" rel="noopener">网易(远方青木) · 神秘资金狂买9月原油多单后,胡赛发动地面进攻</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-12/doc-inirqwer1096983.shtml" target="_blank" rel="noopener">新浪财经转载 · 同题报道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>哪吒汽车重整现投资人:太乙圣莲拟投30亿元获70.62%股权</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 00:50(北京时间,稿件发布;第四次债权人会议于9月11日召开)</p>
+<p>摘要:合众新能源破产重整案第四次债权人会议首次披露,《重整计划(草案)》确定的重整投资人为浙江太乙圣莲(山子高科系),拟出资30亿元取得70.62%股权;第一阶段计划复产哪吒X、主攻海外市场,公司普通债权约117亿元,方案仍待债权人表决与法院裁定。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.sina.com.cn/roll/2026-09-13/doc-inirranp0985753.shtml" target="_blank" rel="noopener">新浪财经(车联新生态) · 真&quot;神话&quot;!太乙圣莲&quot;复活&quot;哪吒汽车</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>9家私募管理人集体"失联",中基协公示后或将被注销</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 00:04(北京时间,稿件发布;中基协失联公告发布于9月7日)</p>
+<p>摘要:中基协9月7日公告将9家私募基金管理人列入失联名单,包括杨天南旗下北京金石致远、仍有产品运作的上海胤狮私募等;报道将其与9月1日起施行的私募信披新规(托管人须报告管理人失联)联系起来,逾期未联系者公示一个月后将注销登记。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://k.sina.com.cn/article_5952915705_162d248f906703o358.html" target="_blank" rel="noopener">新浪看点(券研社) · 5天不现身就注销!9家私募集体失联,投资者赎回无门、清算真空</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-12-晚间版.html">← 2026-09-12-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-13 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
