@@ -59,6 +59,17 @@ h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:
 .arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
 .arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
 .arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
 .back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
 .back:hover{color:var(--ink);text-decoration:underline}
 .phead{margin:14px 0 8px}

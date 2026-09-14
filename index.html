@@ -59,6 +59,17 @@ h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:
 .arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
 .arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
 .arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
 .back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
 .back:hover{color:var(--ink);text-decoration:underline}
 .phead{margin:14px 0 8px}
@@ -104,48 +115,14 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:v
 <a class="issue" href="finance/2026-09-14-晚间版.html"><div class="lbl"><span class="sw" style="background:#1F6E5C"></span>📊&nbsp;每日财经</div><h3>2026 年 9 月 14 日<span class="badge pm">晚间版</span></h3><div class="date">财经要闻 · 政策披露 + 市场解读</div><div class="foc">国新办吹风会详解中小企业“回款难”治理新规,央行隔夜逆回购工具首日投放5040亿元;全球AI“减速”呼声引爆科技与存储股抛售,KOSPI收跌3.26%、现货黄金跌破4300美元,美联储议息临近。</div><div class="meta"><span>10 条 · 🏢 官方与政策披露 / 💬 市场与解读</span><span class="go">阅读本期 →</span></div></a>
 </div>
 <h2 class="sec">全部期次</h2><div class="sec-note">ARCHIVE</div><div class="arch">
-<div class="col"><h3 style="color:#B4443C">📰 AI 每日资讯</h3><ul>
-<li><a href="ai/2026-09-14-晚间版.html">2026-09-14<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-14-早间版.html">2026-09-14<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-13-晚间版.html">2026-09-13<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-13-早间版.html">2026-09-13<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-12-晚间版.html">2026-09-12<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-12-早间版.html">2026-09-12<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-11-晚间版.html">2026-09-11<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-11-早间版.html">2026-09-11<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-10-晚间版.html">2026-09-10<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-10-早间版.html">2026-09-10<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-09-晚间版.html">2026-09-09<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-09-早间版.html">2026-09-09<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-08-晚间版.html">2026-09-08<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-08-早间版.html">2026-09-08<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-07-晚间版.html">2026-09-07<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-07-早间版.html">2026-09-07<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-06-晚间版.html">2026-09-06<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li>
-<li><a href="ai/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li>
-</ul></div>
-<div class="col"><h3 style="color:#1F6E5C">📊 每日财经</h3><ul>
-<li><a href="finance/2026-09-14-晚间版.html">2026-09-14<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-14-早间版.html">2026-09-14<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-13-晚间版.html">2026-09-13<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-13-早间版.html">2026-09-13<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-12-晚间版.html">2026-09-12<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-12-早间版.html">2026-09-12<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-11-晚间版.html">2026-09-11<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-11-早间版.html">2026-09-11<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-10-晚间版.html">2026-09-10<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-10-早间版.html">2026-09-10<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-09-晚间版.html">2026-09-09<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-09-早间版.html">2026-09-09<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-08-晚间版.html">2026-09-08<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-08-早间版.html">2026-09-08<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-07-晚间版.html">2026-09-07<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-07-早间版.html">2026-09-07<span class="badge">早间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-06-晚间版.html">2026-09-06<span class="badge">晚间版</span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li>
-<li><a href="finance/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li>
-</ul></div>
+<div class="col"><h3 style="color:#B4443C">📰 AI 每日资讯</h3>
+<ul><li><a href="ai/2026-09-14-晚间版.html">2026-09-14<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-14-早间版.html">2026-09-14<span class="badge">早间版</span></a><span class="n">10 条</span></li></ul>
+<details class="more"><summary><span class="lbl-closed">展开全部期次（共 19 期）</span><span class="lbl-open">收起</span><span class="ar">▾</span></summary><ul><li><a href="ai/2026-09-13-晚间版.html">2026-09-13<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-13-早间版.html">2026-09-13<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-12-晚间版.html">2026-09-12<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-12-早间版.html">2026-09-12<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-11-晚间版.html">2026-09-11<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-11-早间版.html">2026-09-11<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-10-晚间版.html">2026-09-10<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-10-早间版.html">2026-09-10<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-09-晚间版.html">2026-09-09<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-09-早间版.html">2026-09-09<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-08-晚间版.html">2026-09-08<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-08-早间版.html">2026-09-08<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-07-晚间版.html">2026-09-07<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-07-早间版.html">2026-09-07<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-06-晚间版.html">2026-09-06<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li><li><a href="ai/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li></ul></details>
 </div>
-<footer><span>每日资讯站 · 由 Obsidian 笔记自动生成</span><span>生成时间 2026-09-14 21:00</span></footer>
+<div class="col"><h3 style="color:#1F6E5C">📊 每日财经</h3>
+<ul><li><a href="finance/2026-09-14-晚间版.html">2026-09-14<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-14-早间版.html">2026-09-14<span class="badge">早间版</span></a><span class="n">10 条</span></li></ul>
+<details class="more"><summary><span class="lbl-closed">展开全部期次（共 19 期）</span><span class="lbl-open">收起</span><span class="ar">▾</span></summary><ul><li><a href="finance/2026-09-13-晚间版.html">2026-09-13<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-13-早间版.html">2026-09-13<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-12-晚间版.html">2026-09-12<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-12-早间版.html">2026-09-12<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-11-晚间版.html">2026-09-11<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-11-早间版.html">2026-09-11<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-10-晚间版.html">2026-09-10<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-10-早间版.html">2026-09-10<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-09-晚间版.html">2026-09-09<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-09-早间版.html">2026-09-09<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-08-晚间版.html">2026-09-08<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-08-早间版.html">2026-09-08<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-07-晚间版.html">2026-09-07<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-07-早间版.html">2026-09-07<span class="badge">早间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-06-晚间版.html">2026-09-06<span class="badge">晚间版</span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-05.html">2026-09-05<span class="badge"></span></a><span class="n">10 条</span></li><li><a href="finance/2026-09-04.html">2026-09-04<span class="badge"></span></a><span class="n">10 条</span></li></ul></details>
+</div>
+</div>
+<footer><span>每日资讯站 · 由 Obsidian 笔记自动生成</span><span>生成时间 2026-09-14 22:45</span></footer>
 </div></body></html>
