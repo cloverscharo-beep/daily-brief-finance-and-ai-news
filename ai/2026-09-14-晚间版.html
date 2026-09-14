@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 14 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：AI「减速」之争从言论蔓延至市场与外交——奥尔特曼详述「我们可能失去控制」并欢迎联邦安全框架，美总统科学技术顾问委员会联合主席萨克斯反呛「别借放缓之名寻求监管保护」，中国外交部批评「散播威胁叙事」；全球 AI 概念股应声下挫，软银一度跌逾 13%。同日国内两项治理成果落地：《人工智能安全治理框架 3.0》与全球首个「AI+脑机接口」标准；智谱 50 亿美元融资、豆包手机助手消费者版发布。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>奥尔特曼详述「控速」路线图：OpenAI 欢迎联邦统一安全框架，称「我们可能失去控制」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东时间；帖文发布于当日凌晨；The Verge 于美东时间 05:33 报道，即北京时间 17:33）</p>
+<p>奥尔特曼在 X 发帖，对「减速」立场作迄今最详细的阐述：OpenAI「欢迎为前沿 AI 设定统一安全要求的联邦框架」；「无论美国面临多大的竞争压力，都不能成为鲁莽行事的理由，也不能让模型能力的发展领先于对齐技术与监管监测」。他警告 AI 可能以两种方式「非常糟糕」地发展——人类「失去对未来的控制」，或权力过度集中于某个人或公司；并强调「控速」不等于「停止」，政府最能帮忙的地方是国际协调。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/994562/sam-altman-lets-slow-down-without-slowing-down" target="_blank" rel="noopener">The Verge · Sam Altman: Let&#x27;s slow down.</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/09/14/sam-altman-ai-slowdown-anthropic-amodei-musk.html" target="_blank" rel="noopener">CNBC · Sam Altman spells out how and why the AI industry wants to slow down: &#x27;We could lose control&#x27;</a>
+<span class="sep">·</span>
+<a href="https://x.com/sama/status/2099352016988614852" target="_blank" rel="noopener">奥尔特曼 X 帖文</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>外交部回应「AI 减速」论：散播各种威胁叙事只会干扰人工智能全球治理进程</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（北京时间；外交部例行记者会，原文未注具体时刻）</p>
+<p>就「有美国 AI 企业称中国 AI 发展对美构成威胁」及美方科技领袖「放缓」呼吁，外交部发言人郭嘉昆 14 日在例行记者会上表示：人工智能的发展关乎全人类共同福祉，各方应该共同推动人工智能开放、包容、普惠、向善；「散播各种威胁叙事，搞对抗和恶意竞争，只会干扰人工智能全球治理进程，不符合任何一方利益」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/world/20260914/794c7232cc3346bfac9f16f109692606/c.html" target="_blank" rel="noopener">新华网 · 外交部：散播人工智能威胁叙事不符合任何一方利益</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/002/170.htm" target="_blank" rel="noopener">IT之家 · 外交部：散播各种威胁叙事，只会干扰人工智能全球治理进程</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>全国网安标委发布《人工智能安全治理框架 3.0》，在国家网络安全宣传周亮相</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 19:56（北京时间，IT之家发文时刻；发布发生于当日国家网络安全宣传周开幕式，原文未注具体时刻）</p>
+<p>据网信办官网消息，9月14日在 2026 年国家网络安全宣传周开幕式上，全国网络安全标准化技术委员会发布《人工智能安全治理框架 3.0》。框架延续「风险分类、技术应对、综合治理」的核心逻辑，梳理更新风险分类、优化技术应对与综合治理措施；此前 1.0（2024 年）、2.0（2025 年）版本已相继发布并在各界引发广泛关注。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm" target="_blank" rel="noopener">中央网信办 · 《人工智能安全治理框架 3.0》发布页</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/002/279.htm" target="_blank" rel="noopener">IT之家 · 全国网络安全标准化技术委员会发布《人工智能安全治理框架 3.0》</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>国家药监局发布全球首个「AI+脑机接口」标准，2027 年 9 月 1 日起实施</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（北京时间；国家药监局当日批准发布，原文未注具体时刻）</p>
+<p>国家药监局 14 日批准发布 YY/T 2029—2026《脑机接口医疗器械 用于人工智能算法的脑电数据集质量要求与评价方法》——我国第三个脑机接口医疗器械标准，也是全球首个采用人工智能技术、处理脑电数据的脑机接口医疗器械产品标准。标准规范了脑电数据采集、处理、标注、存储和访问等全流程的技术要求与测试方法，破解数据集质量控制尺度不统一、建设过程不规范等共性问题。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/cj/2026/09-14/10696098.shtml" target="_blank" rel="noopener">中国新闻网 · 全球首个人工智能+脑机接口标准在我国发布</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4183774.html" target="_blank" rel="noopener">证券时报 · 全球首个人工智能+脑机接口标准在我国发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>布罗克曼：研发「控速」只针对数百亿美元级前沿项目，不涉开源与业余开发</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 17:41（北京时间，IT之家发文时刻；采访为彭博社《Odd Lots》播客，录制早于阿莫迪博文，原文未注播出时刻）</p>
+<p>OpenAI 总裁兼联合创始人格雷格·布罗克曼在播客中称：「我们所说的研发节奏管控，针对的其实是前沿领域，指的是那些需要数千亿美元资本投入的巨型超级计算机项目」；开源模型与业余项目「毫无疑问」可以继续。他还透露，Hugging Face 入侵事件后 OpenAI 已降低模型训练频率，并对「大量工作流程」进行了「代价沉重的全面整改」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/002/229.htm" target="_blank" rel="noopener">IT之家 · OpenAI 联合创始人布罗克曼：仅前沿 AI 大模型研发需放缓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>智谱完成约 50 亿美元融资，次日港股盘中一度跌超 10%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 15:06（北京时间，界面新闻发文时刻；融资公告发布于 9月13日晚间，公告未注具体时刻）</p>
+<p>9月13日晚间智谱（02513.HK）公告完成约 50 亿美元融资：约 20 亿美元股份配售（每股 714 港元，较前收盘折让约 9.96%）+ 约 30 亿美元零息可转债（初始转股价 892.5 港元），募资净额已全部到账，将投向下一代 GLM 模型研发、完全自训练体系与算力基础设施；这是其上市八个月来第三次大额融资，累计募资超 750 亿港元。今日港股股价大幅低开，盘中一度跌超 10%、最低触及 710 港元，午间收 735.5 港元（-7.25%）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.jiemian.com/article/15091150.html" target="_blank" rel="noopener">界面新闻 · 智谱完成50亿美元融资次日，股价盘中跌超10%</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-13/doc-inirszcr0145741.shtml" target="_blank" rel="noopener">新浪财经 · 智谱：融资50亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>豆包手机助手消费者版发布：实体「AI 键」+ 本地记忆，首款新机 9 月 16 日开售</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（北京时间；官方发布日，原文未注具体时刻）</p>
+<p>9月14日豆包手机助手消费者版正式发布（以豆包 App 为基础、与手机厂商在系统层面合作）：新增实体「AI 键」，按压即同步完成指纹验证、锁屏状态下也能直接调用；支持对电话录音、相册、短信等本地信息的「安全记忆」与调取，引入任务排队与插队机制，并针对远场与嘈杂环境优化语音唤醒。首款搭载机型努比亚 NaviX Ultra 已开启预约，9月16日正式开售。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://o.doubao.com/" target="_blank" rel="noopener">豆包手机助手官网 · 正式发布</a>
+<span class="sep">·</span>
+<a href="https://www.jiemian.com/article/15090045.html" target="_blank" rel="noopener">界面新闻 · 豆包手机助手消费者版正式发布</a>
+<span class="sep">·</span>
+<a href="https://tech.ifeng.com/c/8wPNRVMeSzH" target="_blank" rel="noopener">凤凰网科技 · 豆包手机助手发布消费者版本：首款新机9月16日开售，新增实体&quot;AI键&quot;</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">8</span><h3>「那就让他们放慢吧」：美总统科学技术顾问委员会联合主席萨克斯炮轰 OpenAI、Anthropic「监管要挟」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 14:37（北京时间，IT之家发文时刻；萨克斯当日发文，原文未注具体时刻）</p>
+<p>美国总统科学技术顾问委员会（PCAST）联合主席戴维·奥利弗·萨克斯发文抨击「放缓」论调：两家公司已形成前沿 AI「双头垄断」，「那就让他们放慢吧」；但别假装需要反垄断豁免以组成卡特尔、别要凌驾于产品责任之上的审批、也别假称 METR 独立；「如果你们想按自己的偏好制定监管框架，作为放缓发展的交换条件——这种行为在公众和政治体系里，基本上等于敲诈」。他还称，Hugging Face 事件后用部分原始能力换取可靠性，「本来就是一门好生意」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/002/063.htm" target="_blank" rel="noopener">IT之家 · 美国总统科技顾问委员会主席炮轰 OpenAI、Anthropic：别借放缓之名寻求监管保护</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>全球 AI 概念股集体下挫：软银一度暴跌 13.2%，芯片与算力股全线下行</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（北京时间；亚太市场交易时段，IT之家 17:29 发布报道；美股尚未开盘）</p>
+<p>据路透社与 IT之家报道，受「AI 减速」言论与奥特曼确认今年不上市等影响，AI 概念股周一集体下挫：亚洲时段纳斯达克小型期货跌 1.3%；软银在日本市场一度暴跌 13.2%；铠侠开盘一度跌 9.8%、韩国 SK 海力士跌 6.35%、三星电子跌 4.05%、台积电跌 1.2%；A 股长鑫存储跌 3.95%、中芯国际跌 2.84%；港股中际旭创一度跌 6.7%、MiniMax 最大跌幅 7.8%。「大空头」投资人迈克尔·伯里则称这些风险警告是「炒作与浮夸之词」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/002/224.htm" target="_blank" rel="noopener">IT之家 · 多家美国顶尖 AI 企业 CEO 呼吁放缓技术发展，全球 AI 概念股集体下挫</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/t/2026-09-14/doc-iniruare7250567.shtml" target="_blank" rel="noopener">新浪财经 · OpenAI推迟上市叠加AI风险警示 软银集团股价大跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>代码揭示 iOS 27 的 Siri 可「换脑」：Claude、ChatGPT 乃至 GPT-5.6 均可接入</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 19:37（北京时间，MacRumors 发文时刻，即美西时间 04:37）</p>
+<p>代码研究者「pdfu」在 iOS 27 与 macOS「Golden Gate」私有框架中发现，苹果新 Siri 被设计为对第三方模型深度可插拔：「Model Delegation」机制可让 Claude 像现有 ChatGPT 扩展一样出现在「Ask…」菜单中接管请求、必要时再把任务交回 Siri；另一「推理提供」协议甚至允许用 GPT-5.6 整体替换 Siri 服务端模型。报道称，这套设计可能受欧盟 DMA 对 Siri 的开放要求影响；iOS 27 正式版今日发布，但目前该入口仅限 ChatGPT。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/" target="_blank" rel="noopener">MacRumors · Apple&#x27;s Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49695409" target="_blank" rel="noopener">Hacker News 讨论</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-14-早间版.html">← 2026-09-14-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-14 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

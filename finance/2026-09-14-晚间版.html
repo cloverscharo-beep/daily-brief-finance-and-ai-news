@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 14 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;国新办吹风会详解中小企业“回款难”治理新规,央行隔夜逆回购工具首日投放5040亿元;全球AI“减速”呼声引爆科技与存储股抛售,KOSPI收跌3.26%、现货黄金跌破4300美元,美联储议息临近。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>国新办吹风会:五部门联手治理中小企业“回款难”,大型企业最长付款期限压至60日</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 15:00(北京时间,吹风会举行时间)</p>
+<p>摘要:国新办9月14日15时举行国务院政策例行吹风会,工信部副部长柯吉欣和中国人民银行、国务院国资委、市场监管总局、中国证监会有关负责人介绍加强中小企业回款难问题治理有关工作情况。国办近日印发的《关于加强中小企业回款难问题治理有关工作的通知》提出4方面10条措施:分行业明确合理账期、大型企业最长付款期限压缩至60日以内,引导龙头企业带头践行自交付之日起60日内以现金方式支付账款的承诺;市场监管总局表示将对变相延长账期等行为依法依规严厉处罚,中央企业带头对中小企业全部采用现金支付。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cztv.com/newsDetail/902733" target="_blank" rel="noopener">新蓝网 · 央企带头及时支付账款!五部门联手治理中小企业“回款难”</a>
+<span class="sep">·</span>
+<a href="https://m.jrj.com.cn/madapter/stock/2026/09/14153358426772.shtml" target="_blank" rel="noopener">金融界 · 工信部:引导龙头企业带头及时付款 让中小企业回款可期</a>
+<span class="sep">·</span>
+<a href="https://www.news.cn/politics/20260910/8454d7c2d2d74703b323791ab0db3d7d/c.html" target="_blank" rel="noopener">新华网 · 国务院办公厅印发《关于加强中小企业回款难问题治理有关工作的通知》</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行:9月14日7天期逆回购操作量为零,开展5040亿元隔夜逆回购</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日上午(北京时间,央行公开市场业务公告;原文未注具体时刻)</p>
+<p>摘要:央行9月14日公告,根据公开市场业务一级交易商的需求,当日7天期逆回购操作量为零,同时开展5040亿元隔夜逆回购操作;当日有5亿元7天期逆回购到期。这是央行此前公告的9月14日至17日隔夜逆回购操作安排的首个操作日,该工具采用固定利率、数量招标,每日操作量不超过6000亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4183465.html" target="_blank" rel="noopener">证券时报 · 9月14日7天期逆回购操作量为零</a>
+<span class="sep">·</span>
+<a href="https://www.yicai.com/news/103362673.html" target="_blank" rel="noopener">第一财经 · 央行:9月14日7天期逆回购操作量为零</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4180116.html" target="_blank" rel="noopener">证券时报 · 央行:将在9月14日至17日开展隔夜逆回购操作,每日操作量不超6000亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>生态环境部:争取尽快引入首批金融机构参与全国碳市场</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 12:48(北京时间,21财经发稿时点;专访于近日进行)</p>
+<p>摘要:生态环境部应对气候变化司副司长逯世泽接受21世纪经济报道专访时介绍,截至2026年8月底,全国碳排放权交易市场配额累计成交量9.61亿吨、成交额656.99亿元;“十五五”期间将逐步把石化、化工等行业纳入全国碳市场、逐步收紧配额总量,并逐步让各类非履约主体合规进场交易,争取尽快引入首批金融机构参与碳市场。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.21jingji.com/article/20260914/herald/44310f6765f1be64d9ce6686c90c250b.html" target="_blank" rel="noopener">21财经 · 专访生态环境部逯世泽:争取尽快引入首批金融机构参与碳市场</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>人民币对美元中间价报6.7698,上调45个基点</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 9:15(北京时间,中国外汇交易中心公布)</p>
+<p>摘要:中国人民银行授权中国外汇交易中心公布,9月14日银行间外汇市场人民币兑美元汇率中间价报6.7698元,较上一交易日上调45个基点。另据披露,9月11日CFETS人民币汇率指数为101.49,按周下跌0.15。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/cj/2026/09-14/10695910.shtml" target="_blank" rel="noopener">中国新闻网 · 9月14日人民币对美元中间价报6.7698 上调45个基点</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1075702502_120988576" target="_blank" rel="noopener">上海证券报 · 9月14日人民币兑美元中间价上调45个基点</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股缩量分化:沪指跌0.07%,创业板指跌1.1%,超3100只个股上涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 15:00(北京时间,收盘)</p>
+<p>摘要:9月14日A股三大指数集体收跌:上证指数跌0.07%报3885.33点,深证成指跌0.64%报13384.57点,创业板指跌1.1%报3285.58点;两市成交额1.63万亿元,较上一交易日缩量3427亿元,全市场3126只个股上涨。培育钻石、CRO、MLCC等概念涨幅居前,兵装重组、转基因概念走弱。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609143873399414.html" target="_blank" rel="noopener">东方财富网 · A股收评:创业板指下跌1.1%,CRO概念表现强势</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202609143873389840.html" target="_blank" rel="noopener">东方财富网 · 沪深两市成交额1.63万亿元,较上一交易日缩量3427亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股止步五连跌:恒指涨0.45%,汽车与生物医药板块领涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 16:00(香港时间,收盘)</p>
+<p>摘要:港股9月14日低开高走,恒生指数收涨0.45%报24917.6点、终结五连跌,恒生科技指数跌0.06%报4317.94点。板块方面,汽车股普涨(广汽集团涨超8%、零跑汽车涨超4%),生物医药走强(乐普生物涨超6%、药明康德涨近5%);大模型概念下挫,智谱跌超9%;光通信、半导体板块走弱。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4184107.html" target="_blank" rel="noopener">证券时报 · 港股收评:恒生指数收涨0.45% 恒生科技指数跌0.06%</a>
+<span class="sep">·</span>
+<a href="http://hkstock.cnfol.com/shichangfenxi/20260914/32369087.shtml" target="_blank" rel="noopener">中金在线 · 港股收评:恒指、国指终结5连跌!生物医药股狂欢,存储芯片股承压</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260914/herald/6ca85ecab450b89306cb00871ad57251.html" target="_blank" rel="noopener">第一财经 · 美股半导体股,盘前集体大跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>“AI减速”呼声发酵:亚太AI与存储芯片股重挫,KOSPI收跌3.26%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 15:30(韩国当地时间,KRX收盘;对应北京时间14:30)</p>
+<p>摘要:上周末Anthropic CEO阿莫代伊公开呼吁主动放慢最前沿模型的迭代速度,OpenAI的奥特曼与xAI的马斯克相继表态支持;相关担忧周一传导至市场,韩国KOSPI指数收跌3.26%报6684.38点(SK海力士跌6.34%、三星电子跌4.04%),日经225指数收跌0.81%。另据韩联社报道,三星电子与SK海力士拒绝了韩国电力公社提出的五年合计预缴25万亿韩元电费方案,加剧市场担忧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-14/doc-inirupfe4700143.shtml" target="_blank" rel="noopener">新浪财经 · 韩国综合股价指数收盘大跌3.26% AI支出担忧重创科技股</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260914/herald/9de55239a4852b1252c22da7e51c9fab.html" target="_blank" rel="noopener">21财经 · 巨头呼吁AI减速:一场行业自救,而非技术停滞</a>
+<span class="sep">·</span>
+<a href="http://www.stcn.com/article/detail/4183803.html" target="_blank" rel="noopener">证券时报 · 日韩股市主要股指收跌 韩国KOSPI指数跌3.26%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>欧股开盘普跌、美股期指与半导体盘前齐挫</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日(欧股开盘时段,欧洲当地时间;美股盘前数据截至美东时间5:03,即北京时间17:03)</p>
+<p>摘要:欧股9月14日开盘普跌:德国DAX30指数跌0.37%、法国CAC40指数跌0.52%、英国富时100指数涨0.21%;受芯片股拖累,欧洲科技股指数与斯托克600指数跌1.3%、触及六周新低,能源与医疗保健板块逆势上涨。美股盘前三大期指齐跌,纳斯达克100指数期货跌1.6%、标普500指数期货跌0.63%、道指期货跌0.09%;半导体个股普挫,SK海力士ADR、迈威尔科技跌逾6%,美光、英特尔、闪迪跌超5%,英伟达跌超2%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guandian.cn/article/20260914/601230.html" target="_blank" rel="noopener">观点网 · 欧洲股市开盘普跌 科技股指数及STOXX 600跌1.3%</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260914/herald/6ca85ecab450b89306cb00871ad57251.html" target="_blank" rel="noopener">第一财经 · 美股半导体股,盘前集体大跌</a>
+<span class="sep">·</span>
+<a href="https://www.jwview.com/jingwei/html/09-14/688246.shtml" target="_blank" rel="noopener">中新经纬 · AI三巨头集体喊“减速”,美股大型科技股、半导体盘前“崩”了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>国际油价高位运行:布油盘中触及108.65美元,沙特供应中断风险持续发酵</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日(北京时间;布油盘中高点与机构报告均在9月14日出现,原文未注具体时刻)</p>
+<p>摘要:布伦特原油期货9月14日盘中一度上涨逾4美元、触及108.65美元/桶高位。报道称,遭袭停运的沙特东西输油管道此前每日改道约400万桶原油至红海延布港、相当于全球供应的约4%,若数日内不能恢复,全球石油供应面临约4%缺口;伯恩斯坦分析师将布伦特目标区间上调至每桶120至150美元,并称短期内局势缓和的可能性十分有限。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L6Q62GN30512B07B.html" target="_blank" rel="noopener">每日经济新闻 · 布伦特原油期货一度上涨逾4美元至盘中高位每桶108.65美元</a>
+<span class="sep">·</span>
+<a href="https://xinwen.bjd.com.cn/content/s6aa78d7ce4b039a8e2f10cac.html" target="_blank" rel="noopener">北京日报 · 沙特管道停运威胁全球4%石油供应</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2482377" target="_blank" rel="noopener">财联社 · 全球央行加息风险骤增?伯恩斯坦警告:油价恐暴涨至150美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>现货黄金跌破4300美元,日内跌逾1%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 20:13(北京时间,英为财情实时数据时点)</p>
+<p>摘要:据英为财情数据,现货黄金9月14日持续走弱,截至北京时间20:13报4295.26美元/盎司,日内下跌1.23%(-53.67美元),自日内高点4355.26美元一路回落、最低下探4278.64美元。美联储9月议息会议本周临近,加息预期持续压制金价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cn.investing.com/currencies/xau-usd" target="_blank" rel="noopener">英为财情 · XAU/USD 黄金现货实时行情</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-14-早间版.html">← 2026-09-14-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-14 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
