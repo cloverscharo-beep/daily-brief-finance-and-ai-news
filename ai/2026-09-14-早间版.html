@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 14 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：AI「减速」之争转入政治与治理落地——特朗普、约翰逊公开回击阿莫迪的「踩刹车」主张，纳德拉宣布微软将以《行为准则》+公开征求意见加入治理阵营，Anthropic 则被曝冲刺约 2 万亿美元估值的历史最大 IPO；中国方面，习近平宣布中方将率先建设金砖国家 AI 开源专区，蚂蚁灵波同步开源 1.3B 实时世界模型。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>习近平：中方将率先建设金砖国家人工智能开源专区，提出五项合作倡议</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日（新德里当地时间；新华社、央视新闻当日报道，原文未注具体时刻）</p>
+<p>习近平在金砖国家领导人第十八次会晤第二阶段会议提出深化金砖合作五项倡议，首项即「人工智能开源普惠倡议」——中方将率先建设金砖国家人工智能开源专区，支持大语言模型开发和应用合作、开展 AI 专题研修培训，构建人工智能开放生态；其余四项涵盖贸易投资便利化、数字产业合作、智能制造合作与科技育才，并称要「让新兴技术照亮共同繁荣之路」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.moj.gov.cn/pub/sfbgw/gwxw/ttxw/202609/t20260913_539591.html" target="_blank" rel="noopener">司法部 · 习近平在金砖国家领导人第十八次会晤第二阶段会议的讲话（全文）</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260913-9669379" target="_blank" rel="noopener">联合早报 · 习近平：中国将建金砖国家AI开源专区</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>蚂蚁灵波开源三款 LingBot-World 2.0 世界模型，1.3B「小杯」可单卡实时生成</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 22:34（北京时间，IT之家发布报道时刻；原文未注官方发布具体时刻）</p>
+<p>继 7 月开源 14B 版本后，蚂蚁灵波科技本周再开源三款模型：LingBot-World 2.0 Small（1.3B，面向消费级单卡 GPU、可在单卡实现实时生成）、Bidirectional（面向实时世界模型训练，提供蒸馏源）与 Causal Pretrain（因果预训练底座）。该实时交互世界模型支持小时级连续生成，可响应攻击、射箭、施法等角色动作与下雪、下雨等环境事件，在更高算力配置下可达 720P / 60FPS。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/863.htm" target="_blank" rel="noopener">IT之家 · 蚂蚁灵波开源三款 LingBot-World 2.0 世界模型</a>
+<span class="sep">·</span>
+<a href="https://github.com/robbyant/lingbot-world-v2" target="_blank" rel="noopener">GitHub · robbyant/lingbot-world-v2</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>OpenAI 官方客户案例：Perplexity 把 GPT-6 Astra 用于端到端系统</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（openai.com 官方页面标注日期；原文未注具体时刻）</p>
+<p>OpenAI 发布 Perplexity 使用 GPT-6 Astra 的客户案例：其联合创始人 Johnny Ho 称，Astra 让团队可以「撰写沟通内容、修改真实世界系统、监控生产软件」，还能构建小型测试程序模拟外部服务、端到端验证工作流；「我们能把完整端到端系统托付给它，且检查频率远低于以往任何一代模型」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/perplexity-improving-accuracy-with-astra/" target="_blank" rel="noopener">OpenAI · Perplexity trusts GPT-6 Astra with end-to-end systems</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>微软把 xAI 的 Grok 装进 Word / Excel / PowerPoint 的 Copilot</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:59（北京时间，IT之家发布报道时刻；微软官方博客与 Microsoft 365 官方 X 帖发布于 9 月 12 日，帖文标注 9 月 12 日 15:09 UTC）</p>
+<p>微软宣布扩大 Copilot 的模型选择：xAI 的 Grok 已陆续登陆 Word、Excel、PowerPoint 的 Copilot，经 Microsoft Frontier 计划限量预览，暂不向欧盟、EFTA 成员国及英国客户开放；企业管理员需在「在线服务子处理器」名单中主动启用，并可查看、管控由 xAI 处理的数据。微软未公布具体 Grok 型号，称引入前会进行测试、安全验证与负责任 AI 审查。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/expanding-model-choice-in-copilot-with-grok/4555749" target="_blank" rel="noopener">Microsoft 365 博客 · Expanding model choice in Copilot with Grok</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/001/875.htm" target="_blank" rel="noopener">IT之家 · 微软宣布将 xAI 旗下 Grok 模型整合进 Office 三件套</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>微软 CEO 纳德拉：欢迎「审慎放慢」，将公布 MAI 模型《行为准则》并公开征求意见</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日（美东时间，Unite.AI 报道日期；IT之家于北京时间 9 月 14 日 07:00 发布中文报道；帖文未注具体时刻）</p>
+<p>纳德拉发文称：若所构建的 AI 不能帮助人类、不受人类控制，就不值得追求；微软欢迎对齐所需的「审慎放慢」，以及「嵌入式评估员」、独立审计等让讨论落地的机制，并强调这不应由少数实体掌控，开源与闭源模型需共同繁荣。微软将公布支撑自研 MAI 模型的《行为准则》并面向公众征求意见，同时让企业掌控自身学习闭环、不必依赖单一模型供应商。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://x.com/satyanadella/status/2099220712024408084" target="_blank" rel="noopener">Satya Nadella · X 帖文</a>
+<span class="sep">·</span>
+<a href="https://www.unite.ai/nadella-announces-public-consultation-on-microsofts-mai-model-rules/" target="_blank" rel="noopener">Unite.AI · Nadella Announces Public Consultation on Microsoft&#x27;s MAI Model Rules</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/001/876.htm" target="_blank" rel="noopener">IT之家 · 微软 CEO 纳德拉：支持 AI 审慎发展与独立审计</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>特朗普称「负面力量」夸大担忧，约翰逊提议先与 AI 领袖会面再谈立法</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 03:41（北京时间，The Verge 发文时刻，即美东时间 9 月 13 日 15:41；特朗普表态与约翰逊 CNN 访谈均为美东时间 9 月 13 日）</p>
+<p>在阿莫迪「踩刹车」文章获奥尔特曼、马斯克、哈萨比斯声援后，特朗普与美众议长约翰逊公开唱反调：特朗普对《金融时报》称「我们在 AI 上领先中国，我想保持下去，因为谁赢得 AI 谁就赢得一切」，并把担忧称为「负面力量」的夸大；约翰逊在 CNN 上称仓促监管或构成「国家安全威胁」，主张先与 AI 领袖会面再谈立法。另据 CNBC，阿莫迪同日回应称，其方案「最难的部分」是中国不跟进怎么办。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting" target="_blank" rel="noopener">The Verge · Trump and Mike Johnson think the AI industry is overreacting</a>
+<span class="sep">·</span>
+<a href="https://www.ft.com/content/cae60732-f929-4735-a627-db8c14e7c7ed" target="_blank" rel="noopener">FT · President Trump dismisses calls for an AI slowdown</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html" target="_blank" rel="noopener">CNBC · Amodei on the China dilemma</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>Anthropic 冲刺「史上最大 IPO」：曝选定纳斯达克、目标估值约 2 万亿美元，并预告连续第二季度盈利</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:41（北京时间，IT之家发布报道时刻；Business Insider 同日发布；《金融时报》报道为当地时间 9 月 13 日）</p>
+<p>据 Business Insider，Anthropic 已选定纳斯达克为 IPO 地点，预计 10 月启动路演、目标在 11 月美国中期选举前挂牌，目标估值约 2 万亿美元——若成真将超越 SpaceX、成为史上最大 IPO。《金融时报》同日报道，Anthropic 已告知股东其 Q3 有望继续录得正的经调整营业利润（连续第二个季度盈利）；其 7 月底年化营收达 650 亿美元，毛利率（未计分销伙伴分成与训练成本）超 80%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/001/871.htm" target="_blank" rel="noopener">IT之家 · 冲击全球最大 IPO：曝 Anthropic 选定纳斯达克上市，目标估值约 2 万亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/" target="_blank" rel="noopener">Reuters · Anthropic tells investors it will be profitable for second straight quarter</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/001/894.htm" target="_blank" rel="noopener">IT之家 · 消息称 Anthropic 预计自身有望连续第二个季度实现盈利</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>报道：Anthropic、OpenAI 与谷歌秘密商讨组建 AI 行业标准机构</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日（The Information 报道日期；KuCoin 快讯同日转发，原文未注具体时刻）</p>
+<p>据 The Information，Anthropic、OpenAI 与谷歌自 7 月起持续举行工作组会议，商讨组建行业主导的 AI 标准机构：由阿莫迪推动，目标是建立前沿模型的技术测试与发布前审计框架；奥尔特曼支持在缺乏政府支持时由主要实验室「独立建立」标准机构，三方对政府介入与行业自律的界限仍存分歧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theinformation.com/articles/inside-ai-industrys-behind-scenes-push-police" target="_blank" rel="noopener">The Information · Anthropic, OpenAI, Google Quietly Discussed an AI Safety Standards Body</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/alerts/anthropic-openai-google-meet-since-july-on-ai-standards-body" target="_blank" rel="noopener">AI Weekly · Anthropic, OpenAI, Google Meet Since July on AI Standards Body</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>博主实验：Claude Fable 5.1 一天破解 370 年古密文，讨论登 Hacker News 榜首</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（Hacker News 讨论帖当日登上首页榜首，抓取时显示「3 小时前」；原始博文发布于 8 月 31 日；原文未注具体时刻）</p>
+<p>评测机构 Vals.ai 把 370 年未解的《Cyphral Distich》密文整体交给 Claude Fable 5.1：44 分钟、17.6 万 token、零人工提示后，模型给出明文「O GOD UPHOLD KING CHARLS THE SECOND…」。突破口是作者对「32」与「心愿」的反复暗示——按编号逐条到 32 条 Proquiritations 取词首字母。博文称解法「事后看来很简单」，难得的是模型持续搜索的耐力；该讨论今日登上 Hacker News 榜首。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.vals.ai/blogs/fable-solves-cyphral-distich" target="_blank" rel="noopener">Vals.ai · Claude Fable 5.1 Solves the Cyphral Distich</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49688695" target="_blank" rel="noopener">Hacker News 讨论帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>Claude Code 周限额今日「明升暗降」：新标准对比当前额度净减约 17%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（新限额生效日；Anthropic 于 8 月 29 日发布公告、后删原帖并补充说明；原文未注具体生效时刻）</p>
+<p>今日起，Anthropic 把 Claude Code 标准周限额对 Pro、Max、Team 及按席位计费的 Enterprise 计划永久上调 25%，以替代 9 月 13 日结束的 50% 限时加成；Anthropic 确认新限额相较当前实际可用额度净减约 17%。公司还表示正开发让用户更透明地查看与控制 Claude 用量的新功能。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/" target="_blank" rel="noopener">BleepingComputer · Anthropic is cutting Claude Code&#x27;s current weekly limits by 17 percent</a>
+<span class="sep">·</span>
+<a href="https://windowsreport.com/claude-code-users-are-losing-17-of-their-current-weekly-limits/" target="_blank" rel="noopener">Windows Report · Claude Code Users Are Losing 17% of Their Current Weekly Limits</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-13-晚间版.html">← 2026-09-13-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-14 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

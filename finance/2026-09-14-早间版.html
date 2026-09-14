@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 14 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;霍尔木兹海峡航道磋商会议突然延期,叠加沙特输油管道停运与也门冲突升级,周一亚市国际油价跳涨、布油一度突破108美元;美联储议息周开启——市场定价本周加息概率86.2%,美股期货与日经指数承压,今日15时国新办将就&quot;中小企业回款难&quot;治理举行吹风会。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>阿曼外交部:原定14日举行的地区会议(霍尔木兹航道磋商)延期</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日晚(阿曼当地时间;北京时间9月14日凌晨,央广网、证券时报9月14日晨播报)</p>
+<p>摘要:阿曼外交部当地时间13日晚宣布,原定于14日在阿曼南部港口城市塞拉莱举行的地区会议将推迟,日期另行确定;声明称此举旨在为建设性对话创造适宜条件。该会议原拟由伊朗、阿曼及波斯湾沿岸国家磋商霍尔木兹海峡临时航运通道安排、并向海湾国家通报伊阿磋商结果,延期正值地区局势持续升级。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnr.cn/newscenter/sq/20260914/t20260914_527812977.shtml" target="_blank" rel="noopener">央广网 · 阿曼外交部:原定于14日举行的地区会议延期</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4183276.html" target="_blank" rel="noopener">证券时报 · 同题报道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>国新办今日15时举行政策例行吹风会,聚焦"中小企业回款难"治理</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 15:00(北京时间,吹风会举行时间;新浪财经7x24于06:50发布"周一重要财经信息提醒")</p>
+<p>摘要:国务院新闻办定于9月14日15时举行国务院政策例行吹风会,工业和信息化部副部长柯吉欣和中国人民银行、国务院国资委、市场监管总局、中国证监会有关负责人将介绍加强中小企业回款难问题治理有关工作情况,并答记者问。相关通知曾提出引导大型企业带头承诺自交付之日起60日内以现金方式向中小企业支付账款。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.scio.gov.cn/xwfb/fbhyg_13737/zxyg/202609/t20260912_1007694.html" target="_blank" rel="noopener">国务院新闻办公室 · 吹风会预告</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091804" target="_blank" rel="noopener">新浪财经7x24 · 周一重要财经信息提醒</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>韩国交易所今日起正式开启盘后交易:交易延长至晚8点,亚洲主要交易所首例</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:07(北京时间,新浪财经发布;韩国交易所公告规定自9月14日起实施)</p>
+<p>摘要:韩国交易所(KRX)自9月14日(周一)起推出股票盘后交易:常规交易(韩国时间9:00—15:30)结束后,16:00—20:00新增盘后连续撮合市场,覆盖KOSPI、KOSDAQ约2400只股票,ETF与ETN除外。该安排为亚洲主要交易所中首例,旨在应对全球交易所延长交易时段的竞争、吸引国际投资者。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-14/doc-inirtwik4061937.shtml" target="_blank" rel="noopener">新浪财经 · 韩国股市今日起有大变化:正式开启夜盘</a>
+<span class="sep">·</span>
+<a href="https://news.futunn.com/flash/20738057/the-korea-exchange-will-launch-after-hours-stock-trading-on" target="_blank" rel="noopener">富途资讯 · 韩国交易所周一将推出股票盘后交易</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>特朗普:要求乌克兰"必须停止"袭击俄炼油厂,重申伊朗战事将于中期选举后结束</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日 23:16(北京时间,每日经济新闻快讯;特朗普当地时间13日在爱尔兰对媒体表态)</p>
+<p>摘要:美国总统特朗普当地时间13日表示,乌克兰总统泽连斯基"必须停止"对俄罗斯炼油厂的攻击,称已就此与泽连斯基沟通过;他并重申伊朗战事将在11月美国国会中期选举后立即结束、届时"汽油价格将会快速下跌",还称伊朗方面"非常希望达成协议"。(据新华社、央视新闻)</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-13/4580256.html" target="_blank" rel="noopener">每日经济新闻 · 特朗普称泽连斯基&quot;必须停止&quot;攻击俄罗斯炼油厂</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091789" target="_blank" rel="noopener">新浪财经7x24 · 特朗普:已要求泽连斯基不要袭击(俄)柴油炼油厂</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>超声电子、金安国纪深夜澄清"英伟达供货/认证"传闻</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月13日晚间(北京时间,公司公告;每日经济新闻9月14日早参、财联社"盘后公告集锦"汇总)</p>
+<p>摘要:9月13日晚,超声电子与金安国纪相继发布股票交易异常波动公告:超声电子澄清"高频板通过英伟达认证"情况不属实、目前无产品供货给英伟达,并提示交易过热风险;金安国纪称网上传播的产品纳入英伟达、华为供应链体系认证等信息均为不实信息,公司未与英伟达、华为有过接触。此前两股分别录得5天3板与年内近四倍涨幅。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481732" target="_blank" rel="noopener">财联社 · 两只PCB概念股公告澄清涉英伟达传闻|盘后公告集锦</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-13/4580239.html" target="_blank" rel="noopener">每日经济新闻 · 每经早参</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>周一亚市:美股股指期货低开、日经225跌幅扩大至2%,避险与加息预期压制风险资产</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:03—08:29(北京时间;财联社播报美股期货开盘与日经行情,新浪财经7x24于06:06播报)</p>
+<p>摘要:美股股指期货周一开盘走低:道琼斯指数期货跌0.25%、标普500指数期货跌0.50%、纳斯达克100指数期货跌1.06%;亚市早盘日本股市同步走弱,日经225指数跌幅扩大至2%。汇市方面,美元兑日元处于153关口附近,投机交易商自2月以来首次转为日元净多头。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481794" target="_blank" rel="noopener">财联社 · 纳斯达克100指数期货周一开盘跌超1%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481847" target="_blank" rel="noopener">财联社 · 日经225指数跌幅扩大至2%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091776" target="_blank" rel="noopener">新浪财经7x24 · 标普500股指期货下跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价亚市跳涨:布油一度突破108美元、WTI破103美元,欧洲天然气涨3.8%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:01—06:10(北京时间,新浪财经7x24、财联社滚动快讯;伊朗爆炸消息由每经于05:23播报)</p>
+<p>摘要:受沙特关键输油管道遇袭停运、霍尔木兹航道磋商会议推迟影响,布伦特原油一度突破108美元/桶(日内涨3.37%)、WTI原油突破103美元/桶(涨约3%),欧洲天然气上涨3.8%;交易商警告若沙特管道数日内不能恢复,全球石油供应恐损失4%。伊朗霍尔木兹甘省锡里克地区(邻近霍尔木兹海峡)当地时间14日凌晨传出数声爆炸巨响,性质尚未明确。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481792" target="_blank" rel="noopener">财联社 · 沙特输油管道中断 WTI原油期货涨幅扩大至2%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091780" target="_blank" rel="noopener">新浪财经7x24 · 布伦特原油突破108美元/桶</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-14/4580280.html" target="_blank" rel="noopener">每日经济新闻 · 伊朗锡里克地区传出数声爆炸巨响</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美联储议息周:CME显示本周加息概率86.2%;金价亚市4340附近承压,中信建投称"利空出尽后有望触底回升"</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 05:55—07:13(北京时间;新浪财经7x24于05:55播报CME数据,汇通财经07:13早餐播报亚市金价)</p>
+<p>摘要:据CME"美联储观察",美联储9月会议维持利率不变概率13.8%、加息25个基点概率86.2%。周一亚市现货黄金交投于4340美元/盎司附近、小幅承压,上周五收于4348.35美元(涨逾1%)、全周累跌1.86%;中信建投认为近端加息预期已基本打满,只要美联储不释放持续加息信号,黄金利空出尽后有望触底回升。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091758" target="_blank" rel="noopener">新浪财经7x24 · 美联储本周加息的概率为86.2%</a>
+<span class="sep">·</span>
+<a href="https://www.fx678.com/202609132056162464.shtml" target="_blank" rel="noopener">汇通财经 · 9月14日财经早餐</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481829" target="_blank" rel="noopener">财联社 · 中信建投:加息预期充分定价 黄金有望触底回升</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Anthropic:据悉选定纳斯达克作为IPO地点,并告知投资者将连续第二个季度盈利</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:31(北京时间,新浪财经7x24播报盈利消息;上市地点消息见财联社9月14日电)</p>
+<p>摘要:据Business Insider,Anthropic已选择纳斯达克作为其潜在IPO的上市地点,该公司计划于10月上市。另据报道,Anthropic向投资者表示预计将连续第二个季度实现盈利:二季度营收升至115亿美元以上、为创立以来首个盈利季度,算力效率提升是利润率改善的核心驱动;公司同时警示未来季度盈利无法保证。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2481773" target="_blank" rel="noopener">财联社 · Anthropic据悉选择在纳斯达克上市进行IPO</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091795" target="_blank" rel="noopener">新浪财经7x24 · Anthropic将连续第二个季度实现盈利</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>戴尔家族办公室据报接近溢价私有化鲍德温保险集团</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 06:18—07:24(北京时间;新浪财经7x24于06:18播报,民视新闻07:24援引《金融时报》报道)</p>
+<p>摘要:据英国《金融时报》报道,戴尔公司首席执行官迈克尔·戴尔旗下家族办公室DFO Management正接近达成将保险经纪公司鲍德温保险集团私有化的收购协议,且预计以溢价成交;交易规模与条款尚未披露,以公司正式公告为准。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://news.ftv.com.tw/news/detail/2026914W0110" target="_blank" rel="noopener">民视新闻 · 传戴尔执行长旗下投资公司拟溢价私有化鲍德温保险集团</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5091786" target="_blank" rel="noopener">新浪财经7x24 · 戴尔家族办公室接近达成对鲍德温集团的私有化交易</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-13-晚间版.html">← 2026-09-13-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-14 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
