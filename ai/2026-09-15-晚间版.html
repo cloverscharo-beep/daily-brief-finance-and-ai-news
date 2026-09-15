@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-15</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 15 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：「AI 该不该刹车」从硅谷 CEO 之争蔓延到政治与地缘战线——桑德斯与班农罕见同台呼吁限制 AI，前 DeepMind 研究员加入「AI 可能杀死全人类」的警告；太平洋另一侧，距习近平 9 月 24 日访美峰会不到十天，AI 安全护栏成为议程焦点。而技术与产业没有停下：联发科发布首颗 2nm 旗舰芯片天玑 9600 Pro，开源 AI 已在儿童心脏手术规划中落地。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>联发科发布首颗 2nm 旗舰芯片天玑 9600 Pro，主打端侧代理式 AI</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 15:30（台北时间，即北京时间 15:30；新闻稿页面标注 "Sep 15, 2026 - 03:30 PM"）</p>
+<p>联发科发布天玑 9600 Pro，首个采用 2nm 制程的旗舰 SoC：2+3+3 全大核架构，多核功耗降 61%、单核/多核性能较上代提升约 17%/15%，官方称其「原生 AI 架构」面向代理式 AI 体验；同步预告天玑 9600M，首批机型预计本季度上市。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mediatek.com/press-room/mediatek-dimensity-9600-pro-sets-new-standard-for-flagship-smartphone-chips" target="_blank" rel="noopener">MediaTek Press Room · MediaTek Dimensity 9600 Pro Sets New Standard for Flagship Smartphone Chips</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Cloudflare 新的 AI 爬虫默认今日生效：含广告页面默认拦截训练与代理类爬虫</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日生效（原文表述为 "On September 15, 2026, we'll be setting new defaults"；博客未注具体时刻）</p>
+<p>Cloudflare 今日起为新接入域名启用 AI 流量新默认：把机器人按 Search/Agent/Training 三类管理，在展示广告的页面默认拦截 Training 与 Agent 类爬虫，Search 保持放行；「搜索+训练」多用途爬虫将按最严格规则处理（Googlebot、Applebot、BingBot 等会被选择屏蔽训练用途的站点拦下），站点可在安全设置中提前选择退出。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blog.cloudflare.com/content-independence-day-ai-options/" target="_blank" rel="noopener">Cloudflare Blog · Your site, your rules: new AI traffic options for all customers</a>
+<span class="sep">·</span>
+<a href="https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options/" target="_blank" rel="noopener">Cloudflare Changelog · New options to manage AI traffic</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>荣耀发布 MagicOS 11：行业首个系统级 Agent Harness 商用落地</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 19:00起（北京时间，荣耀开发者大会官方页面公布发布会安排；新浪财经快讯于 19:51 发布）</p>
+<p>荣耀开发者大会上发布 MagicOS 11，称其为行业首个真正实现系统级 Agent Harness（智能体运行框架）商用落地的手机操作系统：能理解复杂意图、记住用户日常习惯，把「自动执行」与「主动服务」融为一体；荣耀 CEO 李健在会上表示，AI 正在重写手机操作系统的未来。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://developer.honor.com/cn/hgdc2026/" target="_blank" rel="noopener">荣耀开发者大会官网 · 2026荣耀开发者大会</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5095348" target="_blank" rel="noopener">新浪财经 7×24 · 荣耀MagicOS 11发布 CEO李健：AI正重写手机操作系统未来</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>NVIDIA 博客：费城儿童医院用开源 NVIDIA AI，秒级生成患儿心脏模型</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；NVIDIA 博客署期 2026-09-15，原文未注具体时刻）</p>
+<p>NVIDIA 博客介绍，费城儿童医院（CHOP）基于 MONAI 开源医学影像框架，把患儿已有的 CT、MRI 与 3D 超声影像在数秒内生成解剖精确的心脏模型，用于先天性心脏病术前规划；全美已有 20 多家儿童医院开展心脏建模项目，波士顿儿童医院逾半数心脏手术（约 500 例/年）使用该技术。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/" target="_blank" rel="noopener">NVIDIA Blog · Heart of the Matter: How a Major Children&#x27;s Hospital Uses Open Source NVIDIA AI for Cardiac Care</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>智谱拟配股+可转债融资约 50 亿美元，港股股价承压</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（北京时间；财闻称当日公布配售及可转债公告、股价盘中跌超 5%，原文未注具体时刻）</p>
+<p>智谱（Z.AI）拟同步开展 H 股配售及约 30 亿美元零息可转债发行，合计融资规模约 50 亿美元；配售价 714 港元/股，较前一交易日收盘折让 9.96%。据财闻，9 月 15 日智谱港股盘中跌超 5%；前一交易日（9 月 14 日）收报 720 港元、跌 9.21%，已跌破配售价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.caiwennews.com/article/1602732.shtml" target="_blank" rel="noopener">财闻 · 智谱盘中跌超5%，拟融资50亿美元</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/s/2026-09-14/doc-inirvkku4363870.shtml" target="_blank" rel="noopener">新浪财经 · 老股东还没解套，智谱新一轮50亿美元融资落地！股价还在跌</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>量子位：Meta 新研究「字节级蒸馏」——把学习单位从 token 换成 byte，外推上限反超 token 蒸馏</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 14:37（北京时间，量子位发稿时刻）</p>
+<p>Meta FAIR 与华盛顿大学论文《突破 Token 天花板：蒸馏出更小、更强的字节模型》提出「字节级蒸馏」：用 Marginalize-It 与 End-Of-Token 两种方法把教师的 token 概率分布逐字节分解。以 Llama 3-8B 为教师的外推显示，字节蒸馏下游平均准确率上限达 52.4%，较 token 蒸馏的 48.4% 高约 4 个百分点，训练文本用量约为后者六分之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/489337.html" target="_blank" rel="noopener">量子位 · Meta新研究：字节模型蒸馏后，天花板破了</a>
+<span class="sep">·</span>
+<a href="https://arxiv.org/pdf/2609.12303" target="_blank" rel="noopener">arXiv 论文 PDF</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>量子位：OpenAI 前「后训练 VP」回应陶哲轩——「说 AI 毁了数学，可能还是太小瞧 AI 了」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 13:39（北京时间，量子位发稿时刻）</p>
+<p>OpenAI 前「后训练 VP」Liam Fedus 在 X 回应陶哲轩等 25 位菲尔兹奖得主 9 月 11 日发布的《人工智能在数学中的严重错位》声明：他赞同应重视概念理解，但认为不该以今天 AI 的能力边界框定未来，AI 未来也能提出洞见、建立概念框架；双方真正的分歧在于机器能否参与创造数学知识。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/489288.html" target="_blank" rel="noopener">量子位 · 前OpenAI后训练VP回应陶哲轩：说AI毁了数学，可能还是太小瞧AI了</a>
+<span class="sep">·</span>
+<a href="https://x.com/LiamFedus/status/2099123244640989213" target="_blank" rel="noopener">Liam Fedus 在 X 的回应帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>桑德斯与班农罕见同台，将在华盛顿集会呼吁限制 AI</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间，集会于周二举行；新浪财经快讯于北京时间 19:29 发稿，集会具体时刻原文未注）</p>
+<p>美国左翼参议员桑德斯与右翼播客班农将在华盛顿同一集会上共同呼吁限制 AI，两位长期政敌围绕「AI 可能伤害人类」罕见站到一起；班农批评特朗普的 AI 监管立场，称「美国人民不会做科技寡头的恳求者」；工会联合会与福音派领袖也将发言。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.cj.sina.cn/pc/7x24/5095297" target="_blank" rel="noopener">新浪财经 7×24 · 美国左右翼政客联手呼吁加强人工智能（AI）监管</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/legal/legalindustry/us-senator-sanders-podcaster-bannon-longtime-foes-urge-ai-restrictions-2026-09-14/" target="_blank" rel="noopener">Reuters · US Senator Sanders and podcaster Bannon, longtime foes, to urge AI restrictions</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>前谷歌 DeepMind 研究员加入警告：AI「可能杀死我们所有人」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；路透当日发稿，其辞职声明于美东 9 月 14 日发布于 X，原文未注具体时刻）</p>
+<p>前 Google DeepMind 研究工程师 Bilal Chughtai 在 X 宣布辞职，称「我真诚地相信 AI 有潜力杀死我们所有人，而我们可能正在耗尽避免这一结局的时间」；他主张把 AI 发展放慢到社会可承受的速度、避免企业间的「疯狂竞赛」。此前 Anthropic 研究员 Jacob Coxon 辞职、以及 Anthropic 科学家 Evan Hubinger 称十年内杀灭人类概率超 10%，已接连引发关注。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/technology/ex-google-deepmind-researcher-adds-warnings-that-ai-could-kill-all-humans-2026-09-15/" target="_blank" rel="noopener">Reuters · Ex-Google DeepMind researcher adds to warnings that AI could &#x27;kill all humans&#x27;</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>距习特会不到十天：美方推动 AI 安全护栏，中美拟先行 AI 安全对话</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（北京时间；RFA 报道发布日，原文未注具体时刻）</p>
+<p>距特朗普与习近平 9 月 24 日华盛顿峰会不到十天，AI 安全与治理成为核心议题：RFA 报道称美方推动为前沿 AI 设安全护栏，特朗普 9 月 14 日淡化 AI 失控风险、反对以安全为由减速；中方主张 AI 治理不应制造对抗。路透此前报道，中美正筹备 9 月中旬举行特朗普第二任期以来首次聚焦 AI 的正式双边对话，可能涉及监测 AI 引发的网络攻击。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://rfa.org/mandarin/zhengzhi/waijiao/2026/09/15/china-us-relations-xi-jinping-trump-ai-artificial-intelligence/" target="_blank" rel="noopener">RFA · 习近平访美：美国推动AI安全护栏 北京能否回应</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260905-9632319" target="_blank" rel="noopener">联合早报 · 中美筹备AI安全对话 分析：面对超越地缘政治风险寻有限共识</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-15-早间版.html">← 2026-09-15-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-15 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

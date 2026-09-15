@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-15</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 15 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：8月经济数据与房价数据同日出炉——规上工业增加值同比增长5.2%、一线城市新房价格环比转涨0.1%；A股缩量至年内新低、沪指跌0.54%；美联储议息会议开幕在即，30年期美债收益率盘中升至5.40%创2007年6月以来新高，布伦特油价逼近108美元/桶。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>统计局发布8月经济数据：规上工业增加值同比增长5.2%，服务业生产指数增长4.1%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 10:00（北京时间，国新办新闻发布会；国家统计局当日发布数据）</p>
+<p>摘要：8月份全国规模以上工业增加值同比增长5.2%、比上月加快0.7个百分点，全国服务业生产指数同比增长4.1%，货物进出口总额同比增长19.8%。1—8月社会消费品零售总额同比增长1.1%，含服务的商品和服务零售总额增长2.5%（其中服务零售额增长4.9%）；全国固定资产投资同比下降7.2%。高技术制造业增加值增长16.7%、装备制造业增长12.1%，新动能贡献突出；统计局同时表示，外部环境不利影响加深、国内供强需弱矛盾突出，经济稳中向好的基础还需巩固。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/fortune/20260915/99eaf035086146e9ad68ca26e181c52c/c.html" target="_blank" rel="noopener">新华网 · 8月国民经济运行平稳、发展向新向优</a>
+<span class="sep">·</span>
+<a href="https://jnzstatic.cs.com.cn/zzb/htmlInfo/133299.html" target="_blank" rel="noopener">中国证券报 · 8月经济数据出炉，国家统计局最新发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>8月70城房价：一线城市新房价格环比由持平转为上涨0.1%，上海同比上涨3.0%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（北京时间，国家统计局发布；原文未注具体时刻）</p>
+<p>摘要：8月份一线城市新建商品住宅销售价格环比由上月持平转为上涨0.1%，各线城市同比降幅继续收窄；上海新房价格同比上涨3.0%，是70城中唯一新房价格同比上涨的一线城市。8月新房价格环比上涨或持平的城市有21个、比上月减少2个，一线城市二手住宅价格环比上涨0.1%；1—8月全国新建商品房销售面积同比下降12.1%、销售额下降13.0%，房地产开发投资下降19.9%。严跃进分析称，预计"金九银十"期间房价上涨城市数量会有所增加。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/fortune/20260915/0e811ec8470c49c4999a1444e1797567/c.html" target="_blank" rel="noopener">新华网 · 8月份70城房价数据显示房地产市场保持稳的态势</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260915/herald/3598ab5271acc372f89b42aaac45a9d6.html" target="_blank" rel="noopener">21财经 · 8月70城房价出炉：一线城市环比转涨，二手房同比跌幅收窄</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>央行公开市场"收长放短"：7天期逆回购操作量为零，同时开展5970亿元隔夜逆回购、5000亿元买断式逆回购等量续做</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（北京时间，央行公开市场业务公告；原文未注具体时刻）</p>
+<p>摘要：央行公告，根据公开市场业务一级交易商的需求，9月15日7天期逆回购操作量为零，同时开展5970亿元隔夜逆回购操作；当日还开展了5000亿元6个月期买断式逆回购操作，与9月到期规模持平、实现等量续做、未再加量。报道分析称，央行公开市场操作呈现"收长放短"特征，以隔夜资金对冲到期、保持银行体系流动性平稳充裕。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/cj/2026/09-15/10696554.shtml" target="_blank" rel="noopener">中国新闻网 · 央行公开市场开展5970亿元隔夜逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-15/doc-inirxats8588263.shtml" target="_blank" rel="noopener">新浪财经 · 流动性&quot;收长放短&quot;，9月买断式逆回购停止加量</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>人民币对美元中间价报6.7670，较上一交易日上调28个基点</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（北京时间，中国人民银行授权中国外汇交易中心公布；原文未注具体时刻）</p>
+<p>摘要：9月15日，人民币对美元汇率中间价报6.7670元，较上一交易日上调28个基点，人民币对美元小幅走强。当日公布的主要货币汇价显示：100美元兑676.70元人民币，100欧元兑778.11元人民币，100英镑兑909.92元人民币。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/cj/2026/09-15/10696525.shtml" target="_blank" rel="noopener">中国新闻网 · 9月15日人民币对美元中间价报6.7670 上调28个基点</a>
+<span class="sep">·</span>
+<a href="http://www.xinhuanet.com/fortune/20260915/c7b4f201dcc44527b454e95e7d75f218/c.html" target="_blank" rel="noopener">新华网 · 人民币市场汇价（9月15日）</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股缩量调整：沪指跌0.54%报3864.28点，两市成交1.61万亿元创年内新低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 15:00（北京时间，收盘；财联社于当日收盘后发布收评）</p>
+<p>摘要：A股9月15日冲高回落，上证指数跌0.54%报3864.28点，深证成指跌0.72%，创业板指跌1.15%，科创50指数逆势上涨1.55%；全市场超4300只个股下跌，沪深两市成交额1.61万亿元、创年内新低，较上一交易日缩量165亿元。锂电池龙头宁德时代跌超6%、股价创近1年新低；风电设备、稀土、电子化学品等板块涨幅居前，旅游及景区、一般零售、酒店餐饮等跌幅居前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2483582" target="_blank" rel="noopener">财联社 · 收评：创业板指冲高回落跌超1% 宁德时代股价创近1年以来新低</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202609153874652822.html" target="_blank" rel="noopener">东方财富 · 沪指跌0.54% 科创50指数涨1.55% 成交额仅1.62万亿</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收跌：恒指跌1.0%报24667.24点，南向资金净买入8.81亿港元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 16:00（北京时间，港股收盘）</p>
+<p>摘要：恒生指数9月15日跌250.36点、跌幅1.0%，收报24667.24点，全天成交1872.01亿港元；恒生科技指数跌0.62%，蓝筹股中腾讯控股涨1.9%、收报438.8港元，香港交易所跌0.91%。南向资金当日净买入港股8.81亿港元、成交额746.08亿港元，其中净买入智谱逾7亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.eastmoney.com/a/202609153874699154.html" target="_blank" rel="noopener">东方财富 · 9月15日港股收盘：恒指跌1.0% 恒生科技指数跌0.62%</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609153874774289.html" target="_blank" rel="noopener">东方财富 · 9月15日南向资金净买近9亿港元，逾7亿抢筹智谱</a>
+<span class="sep">·</span>
+<a href="https://hk.finance.yahoo.com/news/恒指全日收報24667-24點-跌-1-00-081500036.html" target="_blank" rel="noopener">Yahoo财经 · 恒指全日收報24667.24點 跌1.00% 成交1,872.01億元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>美联储议息会议启幕：美股期指盘前走低，30年期美债收益率盘中升至5.40%创2007年6月以来新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 17:29（北京时间，中新经纬发稿时点；美联储会议为美东时间9月15—16日）</p>
+<p>摘要：美联储当地时间9月15—16日举行为期两天的议息会议，市场分析其三年来首次重启紧缩几成定局，叠加欧洲央行与日本央行的接连行动，全球主要央行有望进入加息轨道。北京时间15日盘前，道指期货跌0.66%、纳指期货跌0.46%、标普500指数期货跌0.50%，大型科技股盘前多数下挫，存储芯片与光通信板块盘前上涨；美国30年期国债收益率持续上行、盘中最高升至5.40%，创2007年6月以来新高。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.21jingji.com/article/20260915/herald/f1798279e2bd3415b51391f10ee26ef0.html" target="_blank" rel="noopener">21财经（中新经纬） · 美股盘前速递：存储芯片、光通信上涨；美联储将召开议息会议；三大股指期货集体下跌，大型科技股多数下挫</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-15/doc-inirxaty3706920.shtml" target="_blank" rel="noopener">新浪财经 · 美股期货下跌，存储、光通信板块逆势走强，美联储议息会议召开在即</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>大宗商品：国际油价两连涨、布伦特报107.63美元，伦敦金现跌0.57%至4272.65美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 17:29（北京时间，中新经纬发稿时点；欧洲交易时段財訊快報亦显示布油位于107美元附近）</p>
+<p>摘要：国际油价上涨，截至北京时间15日17:29，WTI原油期货涨1.91%报103.33美元/桶，布伦特原油期货涨1.85%报107.63美元/桶；布伦特本月累计涨幅已超18%，沙特关键东西向输油管道仍处关闭状态、恢复时间有待观察，交易员继续权衡中东供应风险。贵金属走弱，伦敦金现跌0.57%报4272.65美元/盎司，伦敦银现跌0.87%报62.62美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.21jingji.com/article/20260915/herald/f1798279e2bd3415b51391f10ee26ef0.html" target="_blank" rel="noopener">21财经（中新经纬） · 美股盘前速递：……金银下跌，国际油价涨逾1%</a>
+<span class="sep">·</span>
+<a href="https://www.investor.com.tw/onlinenews/NewsContent.asp?articleNo=14202609150151" target="_blank" rel="noopener">財訊快報 · 金融服務類股疲弱，道瓊歐洲600指數週二開盤下滑，三大股市齊黑</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>欧股盘初下滑、日韩收跌：STOXX 600盘初跌0.38%，日经几乎收平、KOSPI跌0.85%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（欧洲中部时间上午盘初的欧股数据，財訊快報于台北时间15:28发稿；日经、KOSPI为当地时间当日收盘）</p>
+<p>摘要：欧洲股市周二盘初下跌，道琼欧洲STOXX 600指数盘初跌0.38%报633.58点，英国富时100指数跌0.38%、法国CAC40指数跌0.41%、德国DAX指数跌0.25%；能源价格上涨加剧通胀担忧、强化美联储加息预期，金融服务类股指数领跌。亚太市场方面，日经225指数收跌0.01%报63484.10点，韩国KOSPI指数收跌0.85%报6627.26点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.investor.com.tw/onlinenews/NewsContent.asp?articleNo=14202609150151" target="_blank" rel="noopener">財訊快報 · 金融服務類股疲弱，道瓊歐洲600指數週二開盤下滑，三大股市齊黑</a>
+<span class="sep">·</span>
+<a href="https://finance.jrj.com.cn/2026/09/15143358439721.shtml" target="_blank" rel="noopener">金融界（财华社） · 日韩股市收盘双双下跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>博主复盘：成交创年内新低后，A股"情绪转冷还是抛压接近衰竭"引发讨论</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 16:45（北京时间，新浪财经发稿时点）</p>
+<p>摘要：新浪财经博主薛洪言复盘称，9月15日A股延续缩量震荡、成交再创年内新低，"情绪转冷还是抛压接近衰竭"成为市场分歧焦点。其统计显示结构性活跃方向仍在：稀土、钨等战略资源板块走强，风电设备（海力风电、大金重工、天顺风能）活跃，覆铜板与电子布、先进封装与半导体材料方向延续涨价扩散逻辑；零售、农业等板块继续调整。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cj.sina.cn/articles/view/1231727234/496aaa8200101cdu8" target="_blank" rel="noopener">新浪财经（薛洪言） · 4300股下跌，成交创年内新低！情绪转冷，还是抛压接近衰竭？</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L6SM8TOT0556K0JC.html" target="_blank" rel="noopener">网易（天元证券） · 9月15日A股复盘：4300余股下跌，科创50逆势上涨</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-15-早间版.html">← 2026-09-15-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-15 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
