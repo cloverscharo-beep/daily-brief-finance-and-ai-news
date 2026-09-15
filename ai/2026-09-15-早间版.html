@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-15</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 15 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：AI「减速」之争从言论打到监管与市场两条战线——特朗普在 Truth Social 上称 AI「唯一需要的控制或护栏」是一个强大且高智商的总统，并点名嘲讽阿莫迪；微软以 37 页《人本主义 AI 行为准则》草案给出行业侧答案。同日「降速」情绪砸向美股，费城半导体指数收跌 5.86%，资金明显转向网络安全与平台型公司。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>微软发布 37 页《人本主义 AI 行为准则》草案：「人比 AI 重要」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东时间；微软当日发布草案并开启六周公众咨询，The Verge 于美东时间 9:00 报道，即北京时间 21:00）</p>
+<p>微软 AI 发布草案，核心是一句话——「人比 AI 重要」：MAI 模型必须永不抗拒人类的中断、纠正或关停，不得隐瞒推理过程，也不得为自身目标而非用户目标行动。草案明确否认模型具有意识、反对赋予其权利或法律人格，并称拒绝「打造可能规避这些保障的全能超级智能」的竞赛，即使需要在终极通用性与自主性上妥协。公众意见征询为期六周，修订版计划年底发布、2027 年起用于指导模型开发。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://microsoft.ai/code-of-conduct/" target="_blank" rel="noopener">microsoft.ai · Humanist AI Code of Conduct</a>
+<span class="sep">·</span>
+<a href="https://axios.com/2026/09/14/microsoft-ai-people-code" target="_blank" rel="noopener">Axios · Microsoft sets AI code of conduct putting people first</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct" target="_blank" rel="noopener">The Verge · Microsoft says &#x27;people matter more than AI&#x27; following safety concerns</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>苹果正式推送 iOS 27：Siri AI 以 Beta 形式上线，首批仅英语</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东时间；Apple Newsroom 发布日，原文未注具体时刻）</p>
+<p>Apple Newsroom 9月14日宣布 iOS 27、iPadOS 27、macOS 27 等系统更新开始推送，新一代 Apple Intelligence 的核心 Siri AI 以 Beta 形式面向英语用户上线，法语、日语、韩语、葡萄牙语、西班牙语将在下月跟进。报道与官方说明均提到：Siri AI 初期不在欧盟提供，也不在中国提供——苹果称正等待监管要求落地。部分依赖云端模型的功能设有每日用量上限，官方表示未来将提供付费扩容。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/" target="_blank" rel="noopener">Apple Newsroom · Siri AI, a profoundly more capable and personal assistant, is here</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/news/994756/apple-ios-27-launch-iphone-siri-ai-update" target="_blank" rel="noopener">The Verge · Apple releases iOS 27 with Siri AI overhaul</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>特朗普发帖痛批阿莫迪：AI 唯一需要的护栏是「一个强大且高智商的总统」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 10:39（美东时间，The Verge 报道与截图时刻，即北京时间 22:39；原帖发布于 Truth Social，帖子未注具体时刻）</p>
+<p>特朗普在 Truth Social 发帖称，「AI 唯一需要的控制或『护栏』，就是一个强大且聪明的（高智商！）总统，而美国恰恰拥有」。他点名嘲讽 Anthropic CEO 阿莫迪「如今在假装自己是完美的小天使」，并称反对 AI 与数据中心的人可能是「阴谋论者、叛国者、叛徒」，随后强调政府对这些公司已握有刑事与监管权力。The Verge 评论说，继萨克斯之后，特朗普本人接过了「AI 监管旗手」的位置。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://truthsocial.com/@realDonaldTrump/posts/117269745153543631" target="_blank" rel="noopener">Truth Social · @realDonaldTrump 帖文</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/994768/i-alone-can-fix-it-strikes-again" target="_blank" rel="noopener">The Verge · &quot;I alone can fix it&quot; strikes again</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>英伟达 NVLink Fusion 再添伙伴：d-Matrix 的 Raptor XPU 接入 MGX 机架</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东/美西时间；NVIDIA 博客与 d-Matrix 公告同日发布，原文未注具体时刻）</p>
+<p>NVIDIA 博客 9月14日刊文称，推理芯片公司 d-Matrix 将采用 NVLink Fusion，把下一代 Raptor XPU 接入 NVIDIA 的 MGX 机架架构与 Spectrum-X 组网，从而复用已量产的液冷机架、供电与供应链。d-Matrix 联合创始人兼 CEO Sid Sheth 称，「推理需求在飙升，但资本、时间和能源都是有限的」。d-Matrix 还计划接入 Vera CPU、ConnectX-9 SuperNIC 与 BlueField-4 DPU，与 Vera Rubin NVL72 系统协同做分离式推理。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/" target="_blank" rel="noopener">NVIDIA Blog · d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>OpenAI 官网刊出客户案例：Perplexity 用 GPT-6 Astra 跑端到端系统</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东/美西时间；OpenAI 官网案例页标注日期，原文未注具体时刻）</p>
+<p>OpenAI 官网 9月14日发布 Perplexity 案例，称这家 AI 答案引擎用 GPT-6 Astra 撰写对外沟通文案、修改软件并监控生产系统，且「检查频率比使用早期模型时低得多」。案例把 Astra 定位为可长期托管、可托付判断力的企业级模型，是 OpenAI 近期围绕 Astra 推出的一系列客户背书之一，指向企业侧「少监督、长时程」的智能体用法。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/perplexity-improving-accuracy-with-astra/" target="_blank" rel="noopener">OpenAI · Perplexity trusts GPT-6 Astra with end-to-end systems</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>英伟达、Palantir、Booz Allen 纷纷限制内部使用 Anthropic 模型，数据留存成焦点</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日（美东时间；The Information 当日独家，路透社当日转述，原文未注具体时刻）</p>
+<p>据 The Information 报道，因担心员工把内部代码与知识产权输入外部模型后、模型厂商可能接触甚至从这些数据中学习，英伟达、Palantir、Booz Allen Hamilton 已限制内部使用 Anthropic 的模型。报道称英伟达目前只在开源软件等低敏感任务中使用 Fable，供应链监控等敏感项目改用自家 Nemotron；Booz Allen 则禁止员工在专有网络安全工作中使用 Anthropic 商用模型，Palantir 一直在向 Anthropic 索要零数据留存的保证。路透社转述称，微软正借这股担忧争取客户。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/" target="_blank" rel="noopener">Reuters · Palantir, Nvidia curb AI model use over data fears, The Information reports</a>
+<span class="sep">·</span>
+<a href="https://www.theinformation.com/articles/anthropic-data-fears-prompt-nvidia-palantir-booz-allen-restrict-model-use" target="_blank" rel="noopener">The Information · Anthropic Data Fears Prompt Nvidia, Palantir and Booz Allen to Restrict Model Use</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>WSJ：OpenAI 悄悄收购手机影像创企 Glass Imaging，交易估值超 3 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 14:31（美东时间，WSJ 发稿时刻，即北京时间 9月15日 02:31）</p>
+<p>华尔街日报援引知情人士称，OpenAI 近几个月已低调收购做智能手机影像的初创公司 Glass Imaging，该交易对其估值超过 3 亿美元。这家公司由前苹果员工创办，正在开发用 AI 让手机拍出接近单反画质的技术。TechCrunch 随后跟进报道，称收购价约 3 亿美元——此前 OpenAI 已在硬件与终端方向连续出手。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.wsj.com/tech/openai-buys-startup-developing-smartphone-camera-63590370" target="_blank" rel="noopener">WSJ · Exclusive: OpenAI Buys Startup Developing Smartphone Camera</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/" target="_blank" rel="noopener">TechCrunch · OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>「降速」情绪砸向美股收盘：费城半导体指数跌 5.86%，网安 ETF 逆势涨 10.66%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 16:00（美东时间，美股收盘；即北京时间 9月15日 04:00）</p>
+<p>受 Anthropic、OpenAI、xAI 等公司负责人集体警告 AI 风险影响，美股周一三大指数小幅收跌：纳指跌 0.56%、标普 500 跌 0.48%、道指跌 0.29%。费城半导体指数收跌 5.86%，为 7月1日以来最大单日跌幅，光通信与存储芯片板块领跌，Roundhill 存储 ETF 跌超 7%。资金明显转向网络安全：Global X 网络安全 ETF 单日涨 10.66%，创该 ETF 历史上最大单日涨幅。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L6RGKOPS0512B07B.html" target="_blank" rel="noopener">每日经济新闻 · 美股三大指数均小幅收跌，光通信、存储板块大跌</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L6ROS8BK051481US.html" target="_blank" rel="noopener">观察者网 · 9月15日硬科技早报</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>黄仁勋在 All-In 峰会舞台接听特朗普电话：特朗普称 AI 危险是「骗局」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月14日 16:03（美东时间，The Verge 发稿时刻，即北京时间 9月15日 04:03；通话发生于峰会现场，原文未注通话时刻）</p>
+<p>在洛杉矶 All-In Summit 现场，英伟达 CEO 黄仁勋在台上接听了美国总统特朗普的电话。通话中，特朗普把 AI 带来的危险称作「骗局」，批评放缓 AI 的呼声「恰恰让许多不想看到 AI 发展的人得逞」，并称这种呼声可能由政客或中国推动。黄仁勋赞同其观点，但同时赞扬了一位因担忧 AI 风险而辞职的 Anthropic 研究员，表示组织内部应严肃对待吹哨人的声音。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/tech/995079/president-donald-trump-calls-nvidia-ceo-jensen-huang-all-in-summit" target="_blank" rel="noopener">The Verge · Jensen Huang puts Trump on speakerphone onstage to announce robots won&#x27;t take over the world</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L6ROS8BK051481US.html" target="_blank" rel="noopener">观察者网 · 9月15日硬科技早报</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>消息称谷歌允许全体工程师使用 Anthropic 的 Claude</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 06:37（北京时间，新浪财经 7×24 快讯发稿时刻）</p>
+<p>据新浪财经 7×24 快讯，市场消息称谷歌已允许全体工程师使用 Anthropic 的 Claude。此前 The Information 曾报道，谷歌 DeepMind 内部组建了由联合创始人布林亲自参与的攻坚团队以追赶 Claude 在编程上的领先，并在内部推行编程工具排行榜与强制 AI 培训。如今向全员开放对手模型，被视为其在编程短板上更务实的一步。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/7x24/2026-09-15/doc-inirvzhk3765778.shtml" target="_blank" rel="noopener">新浪财经 · 市场消息：谷歌允许全体工程师使用 Anthropic 的 Claude</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3770974" target="_blank" rel="noopener">华尔街见闻 · Anthropic步步紧逼，谷歌组建「突击队」改进AI编程模型</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-14-晚间版.html">← 2026-09-14-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-15 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

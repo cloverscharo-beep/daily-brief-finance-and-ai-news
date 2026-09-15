@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-15</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 15 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：美联储9月议息会议启幕（决议与新闻发布会定于北京时间9月17日凌晨），“加息前夜”美股半导体、存储与光通信板块重挫、10年期美债收益率盘中触及5.01%；国内方面央行披露8月金融数据、今日将开展5000亿元买断式逆回购，10时国新办发布会聚焦8月经济运行，广汽集团与中金公司重组同日进入停牌实施阶段。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>央行披露8月金融数据：M2同比增长7.5%，社融存量同比增长7.2%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日（北京时间，中国人民银行发布；原文未注具体时刻，央广网、新华网当晚21:58—22:19先后发稿）</p>
+<p>摘要：央行9月14日发布8月金融统计数据：8月末广义货币（M2）余额356.81万亿元、同比增长7.5%；社会融资规模存量464.8万亿元、同比增长7.2%。前8个月社融增量累计23.91万亿元、比上年同期少2.64万亿元，债券和股票融资在社融增量中的占比升至50.31%、已超过贷款占比。机构认为社融与M2增速仍高于名义GDP增速，社会融资条件较为宽松。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/20260914/378e9209f15d4cb0833b6af9cc7e259e/c.html" target="_blank" rel="noopener">新华网 · 财经聚焦｜8月金融数据出炉，释放哪些信息</a>
+<span class="sep">·</span>
+<a href="http://www.stcn.com/article/detail/4184816.html" target="_blank" rel="noopener">证券时报 · 前8月股债融资“挑大梁” 社融增量占比过半</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2482469" target="_blank" rel="noopener">财联社 · 8月金融数据出炉：社融规模存量同比增7.2%，信贷资源更多流向科技创新</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行：今日开展5000亿元买断式逆回购操作，9月实现等量续作</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日 18:59（北京时间，澎湃新闻发稿时点；央行公告原文未注具体时刻）</p>
+<p>摘要：央行9月14日公告，为保持银行体系流动性充裕，2026年9月15日将以固定数量、利率招标、多重价位中标方式开展5000亿元买断式逆回购操作，期限6个月（181天）、到期日为2027年3月15日。因9月有同规模6个月期买断式逆回购到期，本次操作将实现等量续作。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.thepaper.cn/newsDetail_forward_34067714" target="_blank" rel="noopener">澎湃新闻 · 央行：9月15日将开展5000亿元6个月期限买断式逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-14/doc-inirutpa4627744.shtml" target="_blank" rel="noopener">新浪财经 · 央行：9月15日将开展5000亿元买断式逆回购操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>国新办今日10时发布会：统计局介绍8月国民经济运行情况</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 10:00（北京时间，发布会预定时间；预告于9月14日发布）</p>
+<p>摘要：国务院新闻办定于9月15日（星期二）上午10时举行新闻发布会，由国家统计局新闻发言人、总经济师、国民经济综合统计司司长付凌晖介绍2026年8月份国民经济运行情况并答记者问。市场关注8月工业增加值、固定资产投资、社会消费品零售总额等数据表现。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.scio.gov.cn/xwfb/fbhyg_13737/zxyg/202609/t20260914_1007748.html" target="_blank" rel="noopener">国务院新闻办公室 · 发布会预告</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609143873171738.html" target="_blank" rel="noopener">东方财富 · 国新办将于9月15日举行新闻发布会介绍2026年8月份国民经济运行情况</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>广汽集团：拟发行股份购买一汽股份所持整车合资公司部分股权，A股已停牌</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日晚间（北京时间，公司公告）</p>
+<p>摘要：广汽集团9月14日晚公告，公司与中国第一汽车股份有限公司签署《意向协议》，筹划以发行股份方式购买一汽股份持有的某整车合资公司部分股权并募集配套资金，以促进地方国企与央企产业资源优化整合。本次交易预计构成重大资产重组及关联交易、不构成实际控制人变更，公司A股股票已自9月14日开市起停牌，预计停牌不超过10个交易日。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-14/doc-inirvkkq7179613.shtml" target="_blank" rel="noopener">新浪财经 · 广汽集团公告停牌原因：拟发行股份收购一汽股份旗下整车合资公司部分股权</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609143873772564.html" target="_blank" rel="noopener">东方财富 · 央地国企整合提速！广汽拟发行股份买一汽合资资产</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>中金公司换股吸并东兴、信达进入实施：三家A股今日起停牌</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日开市起（北京时间，停牌安排自今日生效；三公司相关公告于9月7日晚发布）</p>
+<p>摘要：中金公司换股吸收合并东兴证券、信达证券获证监会核准后进入实施阶段：三家A股股票自9月15日开市起连续停牌，东兴证券、信达证券停牌后不再复牌、9月14日为其最后交易日，此后将申请终止上市；中金公司将新增约31.04亿股A股，停牌至刊登异议股东收购请求权申报结果公告当日复牌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-08/doc-inirauhw9290550.shtml" target="_blank" rel="noopener">每日经济新闻 · “新中金公司”要来了！股民注意：东兴证券、信达证券交易进入倒计时</a>
+<span class="sep">·</span>
+<a href="https://www.chnfund.com/article/7a05cd4e-0691-aa9a-a44e-3a239cbc4e80" target="_blank" rel="noopener">中国基金报 · 中金、东兴、信达同日公告，9月15日起停牌！</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股9月14日收盘：三大指数小幅收跌，半导体、存储与光通信板块重挫，网络安全股逆势创纪录</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日 16:00（美东时间，收盘；即北京时间9月15日凌晨4:00）</p>
+<p>摘要：美股周一收跌：道指跌0.29%、标普500指数跌0.48%、纳指跌0.56%；费城半导体指数收跌5.86%、创7月1日以来最大跌幅，康宁跌超13%、Coherent跌超12%、SK海力士与迈威尔科技跌超7%、英特尔与美光科技跌超5%，美国银行跌超5%、创2025年4月以来最大跌幅。网络安全股逆势大涨，Global X网络安全ETF涨10.66%、创该ETF历史最大单日涨幅，CrowdStrike涨近14%创新高；纳斯达克中国金龙指数涨0.36%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2482877" target="_blank" rel="noopener">财联社 · 美股收盘：光通信、存储芯片板块大跌 Roundhill存储ETF跌超7% 网络安全股逆势走强</a>
+<span class="sep">·</span>
+<a href="https://stock.10jqka.com.cn/usstock/20260915/c679897730.shtml" target="_blank" rel="noopener">同花顺财经 · 深夜，美股半导体、光通信、存储芯片股集体重挫！泰瑞达、康宁跌超13%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>10年期美债收益率盘中触及5.01%逼近近三年高位，市场定价美联储加息概率约九成</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日 22:26（北京时间，10年期美债收益率触及日内高点时点；美市尾盘数据）</p>
+<p>摘要：纽约尾盘10年期美债收益率涨0.62个基点报4.9731%，盘中一度触及5.0121%、逼近2023年10月23日盘中高点；2年期收益率报4.6451%。市场普遍预计美联储9月15—16日会议将加息25个基点（概率约九成），决议与沃什主席新闻发布会将在北京时间9月17日凌晨2:00、2:30先后进行；美元指数涨0.27%收于99.388。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609143873765792.html" target="_blank" rel="noopener">东方财富 · 东方财富财经早餐 9月15日周二</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2481743" target="_blank" rel="noopener">财联社 · 下周资本市场大事提醒：中国8月经济数据来袭；美联储、日央行加息悬念待揭晓</a>
+<span class="sep">·</span>
+<a href="http://intl.ce.cn/sjjj/qy/202609/t20260914_3211054.shtml" target="_blank" rel="noopener">中国经济网 · 美联储9月加息“箭在弦上”</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>黄金白银隔夜收跌：现货黄金跌1.14%报4299美元/盎司</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日（美东时间，收盘；即北京时间9月15日凌晨）</p>
+<p>摘要：国际金银隔夜收跌：现货黄金下跌49.78美元、跌1.14%，报4299.15美元/盎司；现货白银跌1.97%报63.24美元/盎司；COMEX黄金期货当月连续合约跌1.56%报4340.0美元/盎司。美联储加息预期升温与美债收益率走高持续压制贵金属表现。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609143873765792.html" target="_blank" rel="noopener">东方财富 · 东方财富财经早餐 9月15日周二</a>
+<span class="sep">·</span>
+<a href="https://stock.10jqka.com.cn/usstock/20260915/c679897730.shtml" target="_blank" rel="noopener">同花顺财经 · 深夜，美股半导体、光通信、存储芯片股集体重挫！泰瑞达、康宁跌超13%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>国际油价收涨：WTI报101.39美元，沙特关键管道运力将停运数周；特朗普称俄乌同意互不攻击能源目标</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月14日（美东时间，原油收盘；特朗普社交媒体表态为美东时间同日，即北京时间9月15日凌晨前后）</p>
+<p>摘要：国际油价周一上涨，WTI 10月合约收涨1.34%报101.39美元/桶，布伦特11月合约收涨1.02%报105.68美元/桶。报道称沙特东西输油管道上周遇袭受损、主力运力将停运数周，该管道最大日输油量可达700万桶。美国总统特朗普14日表示，俄乌已同意互不攻击对方的能源目标，并称全球柴油价格上涨主要由俄乌冲突造成（据新华社报道）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.10jqka.com.cn/usstock/20260915/c679897730.shtml" target="_blank" rel="noopener">同花顺财经 · 深夜，美股半导体、光通信、存储芯片股集体重挫！泰瑞达、康宁跌超13%</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609143873765792.html" target="_blank" rel="noopener">东方财富 · 东方财富财经早餐 9月15日周二</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1076025256_267106" target="_blank" rel="noopener">新华社（搜狐转载） · 特朗普称俄乌同意互不攻击能源目标</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>机构预警：若美联储本周加息落地，标普500指数或回调8%—10%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（北京时间，财联社、中国基金报发稿播报；原文未注具体时刻）</p>
+<p>摘要：据Macro Risk Advisors分析，本周可能启动的美联储加息或将引发美股回调，标普500指数预计回调8%—10%、12月可能迎来第二波下跌；企业利润率收窄将冲击盈利前景，而市场对波动的防备尚不充分。该机构称，若周三加息落地，市场将承受更大压力。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2482900" target="_blank" rel="noopener">财联社 · 机构：美联储加息或致标普500下跌10%</a>
+<span class="sep">·</span>
+<a href="https://wap.cj.sina.cn/7x24/5093899" target="_blank" rel="noopener">新浪财经7x24 · 机构：美联储加息或致标普500下跌10%</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-14-晚间版.html">← 2026-09-14-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-15 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
