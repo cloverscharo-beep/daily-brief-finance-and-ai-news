@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-16</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 16 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：A股放量反弹、科创50指数涨超4%，算力硬件与半导体链在存储涨价与海外合作消息共振下领涨，港股同步收涨；美联储9月利率决议将于北京时间9月17日凌晨揭晓，市场以约九成概率定价加息25个基点，焦点转向点阵图与沃什发布会。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>央行开展1100亿元7天期与6000亿元隔夜逆回购，单日净投放1130亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日（北京时间，央行公开市场业务公告；原文未注具体时刻）</p>
+<p>摘要：中国人民银行9月16日以固定利率、数量招标方式开展1100亿元7天期逆回购操作，全额满足一级交易商需求；同时开展6000亿元隔夜逆回购操作。当日有5970亿元隔夜逆回购到期，公开市场实现净投放1130亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609163875803757.html" target="_blank" rel="noopener">东方财富（上海证券报）·人民银行9月16日开展1100亿元7天期和6000亿元隔夜期逆回购操作 公开市场实现净投放1130亿元</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8wSdG8ti7F3" target="_blank" rel="noopener">凤凰网·央行今日开展1100亿元7天期逆回购操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>香港首个五年规划正式公布：支持优质企业赴港上市，人工智能列为重要产业</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日上午（北京时间，李家超在立法会公布；观察者网11:23发稿）</p>
+<p>摘要：香港特区政府9月16日正式公布《香港特别行政区经济和社会发展第一个五年规划（2026—2030年）》，李家超在立法会公布规划并随之发表《行政长官2026年施政报告》。规划提出支持内地及海外行业龙头及优质新兴产业企业赴港上市，并把人工智能作为香港未来发展的重要产业。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guancha.cn/ZhengZhi/2026_09_16_900830.shtml" target="_blank" rel="noopener">观察者网·来了！香港首个五年规划正式公布</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2484567" target="_blank" rel="noopener">财联社·财联社9月16日午间新闻精选</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>平陆运河正式建成通航：新中国首条通江达海的运河，总投资约727亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日上午（北京时间，财联社午间报道称"今天上午"正式通航）</p>
+<p>摘要：西部陆海新通道骨干工程平陆运河9月16日正式建成通航。运河2022年8月28日开工建设，全长134.2公里、总投资约727亿元，按内河Ⅰ级航道标准建设、可通航5000吨级船舶，是新中国成立以来第一条国家层面统筹建设的通江达海运河工程。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2484567" target="_blank" rel="noopener">财联社·财联社9月16日午间新闻精选</a>
+<span class="sep">·</span>
+<a href="https://www.news.cn/politics/20260907/a0d38cc5fd8349f48d66cde06539015a/c.html" target="_blank" rel="noopener">新华网·平陆运河将于9月16日建成通航</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">4</span><h3>A股放量反弹：沪指涨0.71%、科创50指数涨超4%，算力硬件与半导体领涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 15:00（北京时间，收盘；财联社当日发布收评）</p>
+<p>摘要：A股9月16日震荡走高：沪指涨0.71%报3891.60点，深成指涨1.26%报13454.74点，创业板指涨1.96%报3311.47点，科创50指数涨4.14%；两市成交额1.84万亿元、较上日放量2264亿元。算力硬件与半导体领涨，全市场超4100只个股上涨、91只涨停；工程机械板块走弱。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202609163876106771.html" target="_blank" rel="noopener">东方财富（财联社）·【每日收评】科创50指数涨超4%，全市场超4100股飘红，算力硬件、半导体双双领涨</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L6VE0PN505198CJN.html" target="_blank" rel="noopener">网易（财联社焦点复盘）·「焦点复盘」创业板指低开高走涨近2% 硬科技成长主导放量普涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>港股收涨：恒指涨0.19%、恒生科技指数涨0.79%，半导体与光通信走强</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 16:00（北京时间，收盘；新华社18:03发稿）</p>
+<p>摘要：恒生指数9月16日涨46.54点、涨幅0.19%，收报24713.78点；恒生科技指数涨34.11点、涨幅0.79%，收报4325.45点；全日主板成交1810.85亿港元。半导体、光通信板块走强（剑桥科技涨超10%、上海复旦涨超8%），黄金股普涨；医药股下挫，腾讯控股跌1.23%收报433.4港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L6VF3IFT05346RC6.html" target="_blank" rel="noopener">网易（新华社）·港股16日涨0.19% 收报24713.78点</a>
+<span class="sep">·</span>
+<a href="https://www.21jingji.com/article/20260916/herald/89c91825789db8375012a9ff2019b0a2.html" target="_blank" rel="noopener">21经济网·异动速递丨收评：香港恒生指数收涨0.19% 半导体、光通信板块走强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>宁德时代盘中跌破300元续创一年新低，主力净卖出居两市首位</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 10:28（北京时间，21经济网盘中播报时点）</p>
+<p>摘要：宁德时代9月16日开盘跳水，盘中一度跌超5%、跌破300元关口（最低报299元），续创一年来新低；收盘报305.48元、跌3.44%，成交约240亿元，A+H总市值缩水至约1.41万亿元，主力资金净卖出23.30亿元、居两市首位；H股盘中一度跌5.74%。同日欣旺达盘中一度大涨超17%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.21jingji.com/article/20260916/herald/89c91825789db8375012a9ff2019b0a2.html" target="_blank" rel="noopener">21经济网·异动速递（10:28）</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609163876018159.html" target="_blank" rel="noopener">东方财富Choice数据·主力复盘：20.32亿流入光迅科技 23.30亿流出宁德时代</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>SK海力士被曝与英特尔洽谈在美生产存储芯片，当晚回应"尚无确定计划"</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日（北京时间，路透社消息经财联社等当日报道；SK海力士当晚发布官网公告）</p>
+<p>摘要：据路透社援引知情人士消息，SK海力士正与英特尔洽谈首次在美国本土生产存储芯片，方案包括租用英特尔俄亥俄州工厂部分产能，或联合英特尔与大型云厂商成立合资企业，谈判尚处探索阶段。16日晚间SK海力士官网公告称相关洽谈"尚无任何确定的计划"；消息带动SK海力士韩股收涨4.08%、KOSPI涨1.37%报6717.97点，英特尔美股盘前涨超5%，A股存储芯片概念午后异动拉升。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2484688" target="_blank" rel="noopener">财联社·报道称SK海力士正与英特尔洽谈在美国生产存储芯片</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8wTJ3swUyts" target="_blank" rel="noopener">凤凰网财经·大幅拉升，芯片巨头，突爆大消息</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609163876079428.html" target="_blank" rel="noopener">东方财富（上海证券报）·美股盘前，英特尔、SK海力士携手上涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美股盘前三大期指齐涨、英特尔涨超5%，携程财报后涨超4%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 17:25（北京时间，每日经济新闻发稿时点；对应美东时间9月16日盘前）</p>
+<p>摘要：美股盘前三大期指齐涨：纳指期货涨0.42%、标普500指数期货涨0.22%、道指期货涨0.08%；英特尔涨超5%、SK海力士ADR涨超3%，光通信股普涨。中概股携程涨超4%——其二季度净营业收入157亿元、同比增长6%，受反垄断处罚影响净亏损24亿元（剔除处罚后净利润27亿元），国际平台收入同比增长超50%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609163876126093.html" target="_blank" rel="noopener">东方财富（每日经济新闻）·【美股盘前】美联储凌晨公布利率决议；英特尔涨超5%，SK海力士涨超3%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2484979" target="_blank" rel="noopener">财联社·美国标普500 E-MINI指数期货上涨0.19%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>美联储决议前瞻：北京时间17日凌晨2:00公布，市场定价加息25个基点</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 15:36（北京时间，财联社发文时点；决议公布时点为北京时间9月17日凌晨2:00）</p>
+<p>摘要：美联储将于北京时间9月17日凌晨2:00公布9月利率决议及利率点阵图，2:30主席沃什举行新闻发布会。交易员目前以约九成的概率押注本次加息25个基点，联邦基金利率目标区间或由3.50%—3.75%上调至3.75%—4.00%；因加息已被充分定价，市场焦点转向点阵图（年内加息一次还是两次）及沃什对后续政策路径的表态。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609163876026493.html" target="_blank" rel="noopener">东方财富（财联社）·就在今晚！美联储&quot;加息之锤&quot;即将落下？</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609163876126093.html" target="_blank" rel="noopener">东方财富（每日经济新闻）·【美股盘前】美联储凌晨公布利率决议</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>黄金欧洲时段回升至4330美元附近，布伦特原油自高位回落</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 15:28（北京时间，汇通网报道时点，金价为欧洲时段价格；油价为当日早间数据，原文未注时刻）</p>
+<p>摘要：现货黄金9月16日欧洲时段震荡走高至4330美元/盎司附近，美联储决议前多头谨慎，高盛与渣打齐声看多黄金中长期。原油方面，布伦特原油期货当日早间跌幅一度扩大至1%、报107.665美元/桶，较前一日108.75美元的结算价有所回落，市场聚焦美联储决议与中东供应风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.fx678.com/202609161528099111.shtml" target="_blank" rel="noopener">汇通网·高盛与渣打齐看多黄金中长期，但短线命运握在美联储手里</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2484322" target="_blank" rel="noopener">财联社·布伦特原油期货跌幅扩大至1%，报107.665美元/桶</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-16-早间版.html">← 2026-09-16-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-16 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
