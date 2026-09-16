@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-16</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 16 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：美联储9月议息会议决议进入倒计时（北京时间9月17日凌晨公布），市场定价加息25个基点概率超九成；美债收益率续创2007年以来新高、美股三大指数收跌标普创8月份以来收盘新低、国际油价结算大涨且美国柴油期货创历史新高；国内方面，发改委召开民营企业座谈会释放稳民间投资信号。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美联储议息会议进入第二天：利率决议明日凌晨揭晓，加息概率超九成</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月15日至16日（会议会期）；利率决议定于北京时间9月17日凌晨公布（新浪财经报道）</p>
+<p>摘要：美联储9月议息会议于当地时间15日至16日举行，利率决议将于北京时间17日凌晨揭晓（新浪财经）。市场普遍预期加息25个基点，CME定价概率已超九成（财闻称由上周初约50%升至超92%；每日经济新闻称93.5%）；若落地，将是美联储自2023年7月以来首次加息。市场聚焦沃什发布会是否释放后续持续加息信号。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.caiwennews.com/article/1603894.shtml" target="_blank" rel="noopener">财闻 · 美联储将举行9月议息会议，美股三大股指期货持续走低</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/jjxw/2026-09-15/doc-inirxaty3758631.shtml" target="_blank" rel="noopener">每日经济新闻（新浪财经转载） · 美联储加息概率达93.5%！IMF前首席经济学家莫里斯：现在加息不会显著抬升衰退风险，但会招致特朗普的愤怒</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/jjxw/2026-09-15/doc-inirxhzq8486041.shtml" target="_blank" rel="noopener">新浪财经 · 10年期美债收益率突破5%，向美联储发出“警告信号”？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>国家发展改革委召开民营企业座谈会：优化发展环境、拓展投资空间</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 19:25（北京时间，每经网转载发展改革委官网通稿时点）</p>
+<p>摘要：国家发展改革委主任郑栅洁9月15日主持召开民营企业座谈会，围绕优化发展环境、拓展投资空间听取意见建议，来自电气设备、算力基础设施、文化旅游服务、养老服务、商业航天领域的德力西集团、润泽科技、清明上河园、瑞芝康健、蓝箭航天等5家企业负责人参会。郑栅洁表示，民间投资是扩大有效投资的有力支撑，将分行业分领域常态化推介优质投资项目、有序开放重点领域应用场景。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-15/4582274.html" target="_blank" rel="noopener">每日经济新闻 · 郑栅洁主任主持召开民营企业座谈会 围绕优化发展环境、拓展投资空间听取意见建议</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4186311.html" target="_blank" rel="noopener">证券时报 · 国家发改委主任郑栅洁主持召开民营企业座谈会 围绕优化发展环境、拓展投资空间听取意见建议</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>中钢协联合45家钢企发布自律控产降库存倡议书</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日（北京时间，中新社、新华财经、澎湃新闻当日报道；原文未注具体时刻）</p>
+<p>摘要：中国钢铁工业协会9月15日发布《钢铁行业全面开展自律控产降库存的倡议书》，提出严格落实产量调控、坚持自律控产降库存、发挥行业价格监督员作用三项倡议，由中国宝武、鞍钢集团、河钢集团、首钢集团等45家钢铁企业联署，直指行业“强供给、弱需求，低价格、弱盈利”困局。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.thepaper.cn/newsDetail_forward_34075978" target="_blank" rel="noopener">澎湃新闻 · 规模空前！45家钢企联署“控产降库存”</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/money/bond/2026-09-15/doc-inirxats8587145.shtml" target="_blank" rel="noopener">新华财经（新浪财经转载） · 钢铁行业倡议钢铁行业全面开展自律控产降库存</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美参议院程序性投票未过60票门槛，《清晰法案》立法陷入停滞</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月15日（参议院程序性投票；财联社9月16日07:39发稿）</p>
+<p>摘要：美国参议院就推进《清晰法案》进行的程序性投票以50票赞成、49票反对未能通过，远低于所需60票门槛，加密市场监管立法陷入停滞。消息公布后比特币短线下跌逾3%，Coinbase跌逾10%、Circle跌近11%。距中期选举仅剩七周，法案年内重启难度加大。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://jw.jwview.com/jwview/content.jsp?id=688582" target="_blank" rel="noopener">中新经纬（转载财联社） · 60票门槛未过！美国参议院阻击《清晰法案》 加密监管立法陷入停滞</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美债续创2007年以来新高：10年期收益率升破5%、30年期突破5.40%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月15日（盘中持续上行；新浪财经、财联社9月15—16日报道）</p>
+<p>摘要：美国国债收益率续创2007年以来新高：10年期收益率升至5.033%（财联社）、盘中一度触及5.041%（新浪财经）；30年期收益率突破5.40%（财联社）。分析称，除美联储加息预期外，国债发行规模较大、经济韧性及财政前景担忧亦推动长端利率走高。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2484307" target="_blank" rel="noopener">财联社 · 财联社9月16日早间新闻精选</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/jjxw/2026-09-15/doc-inirxhzq8486041.shtml" target="_blank" rel="noopener">新浪财经 · 10年期美债收益率突破5%，向美联储发出“警告信号”？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股三大指数集体收跌：标普500创8月份以来收盘新低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月15日（收盘，对应北京时间9月16日凌晨）</p>
+<p>摘要：道指跌328.09点、跌幅0.63%报52093.10点；标普500指数跌34.25点、跌幅0.45%报7585.73点，创8月份以来收盘新低；纳指跌204.84点、跌幅0.78%报25981.57点（新浪财经）。盘面分化：存储、光通信板块一度逆势走高（华尔街见闻），加密货币概念股普跌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-09-16/doc-iniryefe8114192.shtml" target="_blank" rel="noopener">新浪财经 · 9月16日美股收盘：三大指数收跌 油价回升 10年期美债收益率触及19年高位</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3781779" target="_blank" rel="noopener">华尔街见闻 · 油价飙升加剧通胀担忧，美股低开，存储芯片、光通信股逆势走高，10年期美债收益率破5%创2007年来新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价结算价大幅收涨：WTI报105.83美元/桶，美国柴油期货创历史新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月15日（原油结算价；中国基金报9月16日报道）</p>
+<p>摘要：WTI原油10月合约涨4.38%、结算价报105.83美元/桶；布伦特11月合约涨2.9%、报108.75美元/桶；美国柴油期货结算价升至每加仑5.26美元之上，创历史新高。美国能源部长赖特表示，沙特东西向输油管道预计将在数天内恢复运行（财联社）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chnfund.com/article/7a1343bc-4268-dd50-0f1d-3a23b890ae1d" target="_blank" rel="noopener">中国基金报 · 国际原油期货大幅上涨，美国柴油期货创历史新高</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-16/doc-inirykph3353240.shtml" target="_blank" rel="noopener">新浪财经 · 国际原油期货结算价大幅收涨，美国柴油期货结算价创新高</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2484307" target="_blank" rel="noopener">财联社 · 财联社9月16日早间新闻精选</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>存储涨价潮延续：传苹果接受三星2027年一季度报价，涨幅30%～40%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月15日 10:39（北京时间，IT之家报道时点；界面新闻同日报道）</p>
+<p>摘要：据报道，苹果已接受三星电子2027年一季度存储芯片报价：DRAM接近2.0美元/Gb、NAND接近0.33美元/Gb，较2026年三季度报价上涨30%～40%。集邦咨询称，三星、SK海力士、美光2027年DRAM及HBM产能已基本分配完毕，客户实获配额约为申请量的六至七成。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/002/464.htm" target="_blank" rel="noopener">IT之家 · 苹果被曝已接受三星2027年一季度存储报价，较2026年Q3上涨30~40%</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260915/herald/fe5e37a2da82ba83a895083273d232b5.html" target="_blank" rel="noopener">21财经 · 连苹果也得接受涨价！三星存储报价涨超30%，存储板块集体走强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>OpenAI据悉洽谈新一轮融资：IPO前估值或超1.2万亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日（北京时间，财联社报道；原文未注具体时刻）</p>
+<p>摘要：据报道，OpenAI正与投资者就新一轮融资展开初步磋商，此轮融资或使其IPO前估值超过1.2万亿美元；磋商由投资者发起，能否推进取决于OpenAI最终确定的上市时间。此前OpenAI已确认2026年内不会IPO。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/t/2026-09-16/doc-inirykpa8019695.shtml" target="_blank" rel="noopener">新浪财经 · OpenAI据悉考虑新一轮融资 估值或超1.2万亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2484307" target="_blank" rel="noopener">财联社 · 财联社9月16日早间新闻精选</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>博主复盘：缩量磨底待“靴子落地”，资金抱团算力硬件</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月16日 08:22（北京时间，东方财富网财富号“飞杨看市168”发文时点）</p>
+<p>摘要：东方财富网博主“飞杨看市168”复盘称：昨日A股继续缩量、三大股指冲高回落，跌停家数增多；下午跳水与30年期美债收益率创2007年以来新高有关；市场等待北京时间周四凌晨议息结果落地，重点看沃什讲话偏鹰还是偏鸽。其建议缩量阶段“多看少动”，关注PCB、半导体等科技主线的轮动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://caifuhao.eastmoney.com/news/20260916082216062488980" target="_blank" rel="noopener">东方财富网财富号 · 飞杨看市168：缩量阶段多看少动 等靴子落地</a>
+<span class="sep">·</span>
+<a href="https://caifuhao.eastmoney.com/news/20260916051540738975580" target="_blank" rel="noopener">东方财富网财富号 · 股市有财富：美股再跌上证破3850点吗！</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-15-晚间版.html">← 2026-09-15-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-16 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

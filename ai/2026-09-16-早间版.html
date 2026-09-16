@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-16</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 16 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：围绕 AI「降速」的博弈蔓延到监管与合作两条线——黄仁勋在 Dreamforce 公开反对新增安全立法，OpenAI 被曝与 Anthropic、Google 私下推进安全协调；而产业竞赛照旧：Meta One 订阅上线、Gemini 3.8 Live 发布、DeepSeek 首任 CFO 敲定、豆包手机助手首款新机今日开售。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Meta 上线订阅服务「Meta One」：把 Muse 系 AI 能力打包收费</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；Meta 官方宣布，TechCrunch 同日 10:05 AM PDT 发稿、路透快讯约上午取用，官方未注具体时刻）</p>
+<p>Meta 推出订阅服务 Meta One，覆盖 Facebook、Instagram、WhatsApp 与 Meta AI：个人档 Core 7.99 美元/月、Premium 19.99 美元/月，主打更多 Muse 图像生成与 Restyle 等 AI 用量；创作者与企业档 14.99 起、最高 499 美元/月，含业务代理与账号协作。官方称核心应用与 Meta AI 保持免费，分阶段测试期已累计超 1500 万订阅/试用。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/" target="_blank" rel="noopener">Meta Newsroom · Introducing Meta One</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans" target="_blank" rel="noopener">TechCrunch · Meta expands subscription push with new AI-focused plans</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Google 发布 Gemini 3.8 Live 与 3.8 Live 扩展思考版</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；Google 官方博客署期 Sep 15, 2026，原文未注具体时刻）</p>
+<p>Google 推出两个实时对话模型：Gemini 3.8 Live 面向生产级语音代理与实时视觉理解，3.8 Live Extended Thinking 面向高复杂度任务的「边对话边推理」。官方称后者以 82.6 登顶 Artificial Analysis 语音到语音质量指数，τ-Voice 代理任务完成率 68.6%、Big Bench Audio 97.7%；即日起在 Gemini API、Google Workspace、Search 与 Gemini 应用提供。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Google Blog · Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>NVIDIA 在 AI Infra Summit：以「每瓦 Token 数」定义 AI 工厂能效</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；NVIDIA 博客署期 Sep 15, 2026，文中演讲于当日「周二」进行，未注具体时刻）</p>
+<p>在圣克拉拉 AI Infra Summit 上，NVIDIA 展示 Vera Rubin 平台与 DSX 平台的能效进展，以「每瓦 Token 数」衡量 AI 工厂产出；同期博客以「从兆瓦到 Token」披露 AI 工厂参与电网需求响应等调度实践。官方称该路线旨在提升 AI 工厂的能效与单位产出。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/" target="_blank" rel="noopener">NVIDIA Blog · AI Infra Summit: Vera Rubin and DSX Advancements Showcase Energy Efficiencies</a>
+<span class="sep">·</span>
+<a href="https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/" target="_blank" rel="noopener">NVIDIA Blog · From Megawatts to Tokens</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>生数科技发布 Vidu S2：实时交互与实时视频编辑双模型</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 22:08（北京时间，新浪财经发稿时刻；生数科技称「正式发布并全量开放」体验，官方未注具体时刻）</p>
+<p>生数科技发布 Vidu S2 并全量开放：S2-Avatar 面向持续交互的数字角色（实时输出升至 720P，互动中可随时加入参考图），S2-Editing 可对输入视频流实时修改风格、服装、人物与背景，并探索把实时生成/编辑结果转成空间视频（VR 头显观看）。官方称 S2-Avatar 在 StreamAV-Bench 九项指标均取得最优。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.vidu.com/zh/vidu-stream" target="_blank" rel="noopener">VIDU 官网 · Vidu S2 实时交互与编辑模型</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/stock/jdts/2026-09-15/detail-inirxpiu3586791.d.html" target="_blank" rel="noopener">新浪财经 · 生数科技发布Vidu S2双模型，支持实时视频生成与编辑</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>黄仁勋 Dreamforce 表态：AI 安全至关重要，但「不需要新的法律」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美西时间，旧金山 Salesforce Dreamforce 大会；财联社北京时间 9月16日凌晨转引，原文未注具体时刻）</p>
+<p>黄仁勋在会上称，AI 企业可自行控制推进节奏、直到确信产品能获市场认可，「市场力量本身已经存在」，行业不需要新增法律或监管。该表态正值 OpenAI、Anthropic 掌门人公开呼吁放慢前沿 AI 竞赛、美国业界「减速」争论升温之际。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2484215" target="_blank" rel="noopener">财联社 · 黄仁勋：AI安全至关重要 但无需制定新的法律</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/t/2026-09-16/doc-iniryefn3274812.shtml" target="_blank" rel="noopener">新浪财经 · 黄仁勋：AI安全无需新立法，市场力量已足够</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>路透：DeepSeek 将聘首任 CFO；量子位起底「90后」严文韬</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日 21:53（北京时间，量子位发稿时刻；消息源自路透社 9月14日报道）</p>
+<p>据路透社，DeepSeek 拟聘请高瓴创投合伙人严文韬（1991年生）任首任 CFO；量子位梳理其履历：投中过字节跳动、小红书、极兔，以及智谱与 MiniMax。其首场硬仗或是上市——公司已聘中信证券筹备科创板 IPO，二轮融资估值据报道约 5000 亿元、远高于当前 ARR。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/489707.html" target="_blank" rel="noopener">量子位 · 梁文锋CFO到位！投过智谱MiniMax</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/legal/government/chinas-deepseek-hires-dealmaker-cfo-ahead-possible-ipo-2026-09-14/" target="_blank" rel="noopener">Reuters · China&#x27;s DeepSeek hires dealmaker CFO ahead of possible IPO</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>彭博：OpenAI 正与 Anthropic、Google 就 AI 安全协调合作</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美东时间；彭博社报道、路透社同日转引，OpenAI 全球政策主管 Chris Lehane 在华盛顿简报会上表态，原文未注具体时刻）</p>
+<p>Lehane 称 OpenAI 已与 Anthropic、Google 就安全议题商谈数周，认为三家公司协调安全无需反垄断豁免，并称支持任何旨在降低灾难性 AI 风险的跨党派立法。此前 CEO 奥尔特曼于周末与阿莫迪、哈萨比斯等就「放慢前沿」公开互相呼应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://virginiabusiness.com/openai-anthropic-google-collaborate-ai-safety/" target="_blank" rel="noopener">Reuters（Virginia Business 刊载）· OpenAI is working with Anthropic, Google on AI safety, Bloomberg News reports</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>豆包手机助手首款机型今日开售：努比亚 NaviX Ultra</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月16日（北京时间，正式开售日；消费者版本发布于 9月14日，开售具体时刻原文未注）</p>
+<p>豆包手机助手消费者版的首款搭载机型——努比亚 NaviX Ultra 今日正式开售。该版本以豆包 App 为基础与手机厂商系统级合作：支持语音、带指纹鉴权的专属 AI 键唤醒，可做屏幕问答与跨应用任务执行；「操作手机」功能以 Beta 开放，并推出屏幕自动化操作声明协议 SAEP（30 天规则公示）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stdaily.com/web/gdxw/2026-09/14/content_580572.html" target="_blank" rel="noopener">中国科技网（科技日报）· 豆包手机助手发布消费者版本 首款新机将于9月16日正式开售</a>
+<span class="sep">·</span>
+<a href="https://news.qq.com/rain/a/20260914A05WPG00" target="_blank" rel="noopener">腾讯新闻 · 豆包手机助手消费者版正式发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>达里奥·阿莫代伊：企业 AI 实际价值仅约 5%-10% 被利用</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（美西时间，Dreamforce 大会；群益期货 9月16日快讯转引，原文未注具体时刻）</p>
+<p>Anthropic CEO 阿莫代伊与 Salesforce CEO 贝尼奥夫在会上表示，企业对 AI 的应用仍处早期：阿莫代伊估计 AI 在经济中的实际价值目前仅约 5%-10% 被利用，大型企业距全面应用尚有距离；Salesforce 此前已扩大与 Anthropic 合作、将 Claude 整合进其产品体系。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/BreakingNewsArticle?ContentId=C26091600100" target="_blank" rel="noopener">群益期货 · 達里奧稱企業AI應用仍處早期 需要更多支持</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>HN 热帖：Navier-Stokes 之后仍看空 LLM——「纯数学恰是最好的情形」</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月15日（原文署期 2026-09-15；北京时间 9月16日清晨登上 Hacker News 首页，原文未注具体时刻）</p>
+<p>博主 jay kruer 在 Hacker News 首页热帖中写道：前沿实验室的估值押注「知识工作者的全自动替代」，但当前模型即便最简单任务仍需繁重监督与护栏，且只在训练任务邻近分布内泛化；奖励黑客须靠领域专家做严格规格化，而规格化成本常远超直接实现——Navier-Stokes 这类纯数学恰是代理工作最乐观的情形。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://dank.systems/posts/2026-09-15-ai-bear.html" target="_blank" rel="noopener">dank.systems · why i&#x27;m still bearish on LLMs after navier-stokes</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49715927" target="_blank" rel="noopener">Hacker News 讨论帖</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-15-晚间版.html">← 2026-09-15-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-16 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
