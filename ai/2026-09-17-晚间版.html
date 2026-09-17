@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-17</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 17 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：华为全联接大会开幕，昇腾 960 芯片「超预期提前」并发布全球首个 NPO 光互联超节点；国内厂商密集交卷——智谱披露 GLM 自建推理基础设施的 RSI 早期案例、小米直播 MiMo-V2.6 强化学习训练、字节发布「豆包座舱助手」；Anthropic 将 Cowork 与 Chat 合并为单一 Claude 入口，并首次上线文档与幻灯片功能。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>华为全联接大会开幕：昇腾 960 芯片提前就绪，发布全球首个 NPO 光互联超节点</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日 上午（北京时间；第十一届大会当日于上海开幕，观察者网 10:47 发稿，原文未注演讲具体时刻）</p>
+<p>华为轮值董事长汪涛在 HC 2026 宣布昇腾 960 研发超预期、性能翻番：960DT 提前至 2027 年一季度（较原计划提前三个季度）、960PR 提前至 2027 年三季度，此后一年一代（970/980 计划 2028/2029 年推出）。同期发布业界首个采用 NPO（近封装光学）的昇腾 960 超节点——单超节点 4096 卡、最大 8 EFLOPS FP8 算力，用 5500 个 Hi-ONE 替代原本的 4.8 万颗 800G 光模块；昇腾超节点已部署超 1000 套、客户 370 多家。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guancha.cn/CaiJing/2026_09_17_900965.shtml" target="_blank" rel="noopener">观察者网 · 华为：昇腾960芯片研发超预期</a>
+<span class="sep">·</span>
+<a href="https://www.eet-china.com/news/202609173089.html" target="_blank" rel="noopener">电子工程专辑 · 华为全联接大会2026开幕：昇腾960芯片提前至2027年Q1发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>智谱披露 RSI 早期案例：GLM-5.3 的 Infra Agent 在 10 万卡国产集群上自建推理系统</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；z.ai 博客署期当日、原文未注具体时刻；量子位 16:28 发稿，唐杰当日 X 发帖）</p>
+<p>智谱官方博客与创始人唐杰同步披露：GLM-5.3 驱动的 Infra Agent 在超 10 万张国产芯片集群上从零搭建生产级推理系统，不到两周将端到端吞吐提升至初始基线约 3 倍，并定位出 Python GIL 导致的并发阻塞、拿到 KDA 算子 1.71× 的性能优化。GLM-5.3-Flash 曾以匿名模型「Ox-Alpha」在 OpenCode/OpenRouter 六天消耗超 62 万亿 token；官方强调「尚未实现 RSI」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://z.ai/blog/glm-built-its-inference-infrastructure" target="_blank" rel="noopener">z.ai · Toward Recursive Self-Improvement: How GLM Built Its Own Inference Infrastructure</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/09/491357.html" target="_blank" rel="noopener">量子位 · 刚刚，唐杰发布智谱RSI首个成果</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>Anthropic 将 Cowork 与 Chat 合并为单一 Claude，首发 Claude Docs 与 Slides</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月16日（美东时间；Claude 官方博客当日宣布「即日起」合并；量子位于北京时间 9月17日 17:07 发稿称「刚刚」宣布——两源时刻表述不一，未采信单一精确时刻）</p>
+<p>Anthropic 宣布把 Cowork 与 Chat 两个入口合并为同一个 Claude：聊天、Cowork 与 Artifacts 汇于同一窗口，由 Claude 自动判断该直接回答还是调用更复杂能力。同时首次推出 Claude Docs（协作文档）与 Claude Slides（生成、编辑、演示幻灯片，可导出 PowerPoint/PDF），Claude Design 也进入对话界面；新功能率先向 Pro/Max 分批开放，Team 与 Free 随后跟进。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://claude.com/blog/cowork-is-now-claude" target="_blank" rel="noopener">Claude Blog · Claude Cowork and chat are now one Claude</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/09/491391.html" target="_blank" rel="noopener">量子位 · Claude双入口合并，原生Office上线！硅谷AI办公大战也开始了</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/" target="_blank" rel="noopener">TechCrunch · Anthropic merges Claude chat and Cowork in one interface</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>小米直播 MiMo-V2.6 强化学习训练：罗福莉称半年只研究「RL 能扩展到多远」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；量子位 09:09 发稿；官方训练看板实时更新，自 Pro 模型开训已约 36 小时）</p>
+<p>小米把 MiMo-V2.6（Flash/Pro）的强化学习训练过程做成公开实时看板：训练花费（约 3 万美元/小时）、奖励曲线、显卡故障等全部可查。团队围绕「RL 能否像预训练一样 Scaling」提出三个扩展维度——训练计算量、环境与执行框架、评分计算量，单个训练 Step 处理约 20 亿 token；负责人罗福莉称过去半年只研究了一件事：强化学习能扩展到多远。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://mimo.xiaomi.com/rl" target="_blank" rel="noopener">小米 MiMo · RL 训练实时看板</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/09/490950.html" target="_blank" rel="noopener">量子位 · 罗福莉沉寂半年官宣小米强化学习！直播新模型训练过程，一小时烧3万美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>火山引擎发布车载「豆包座舱助手」，首搭上汽荣威家越 07</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；火山引擎当日宣布，驱动中国当日发稿，原文未注具体时刻）</p>
+<p>字节跳动旗下火山引擎正式发布车载 AI 助手「豆包座舱助手」：以「手车互联」支持车主在豆包 App 远程控车、查询车况、把对话中的行程推送至车机；作为整车统一「大脑」，可感知数百种车辆信号、联动数千个整车原子能力。产品支持多音区识别、长期记忆与个性化「小习惯」，并推出车载「豆包屏」。首款搭载车型荣威家越 07 即将开启预售，上汽奥迪相关车型年内亮相。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.qq.com/rain/a/20260917A0AMS100" target="_blank" rel="noopener">腾讯新闻（驱动中国）· 字节火山引擎发布豆包座舱助手 上汽荣威家越07首发</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>vivo 开发者大会：以「大模型 + Harness」构建个人化智能底座，蓝心端云矩阵亮相</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；量子位当日 20:03 发稿、称大会「刚刚结束」，原文未注大会具体时刻）</p>
+<p>vivo 在 VDC 2026 人工智能分会场提出以「大模型+Harness」构建个人化智能：亮相蓝心端云模型矩阵——端到端语音 BlueLM-Realtime、端侧 BlueLM-Nano、云侧 Flash/Pro 按任务自动调度，端侧上下文扩展至 32K；并推出「Agent 原生系统级 Harness 开发者平台」，含 6000+ 系统级工具及 MCP、A2A 等接入，蓝心小 V 升级至 Pro 模式。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/491649.html" target="_blank" rel="noopener">量子位 · 从“会回答”到“会办事”，vivo如何解AI手机这道题？</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>中国电信 TeleAgent 杀进 IDC 首份企业级通用 Agent 评估前三，成本效率拿最高分</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；量子位 17:39 发稿；IDC 报告发布时刻原文未注）</p>
+<p>IDC 发布国内首份《中国企业级通用 Agent 产品技术评估》，以近百道非公开任务考察「端到端把事情办完」的能力：中国电信 TeleAgent 常规任务 3.49 分、复杂任务 3.36 分，任务表现拿 5 分满分、成本效率为此次测评最高分。产品用户规模已接近 120 万，内置 ModelRouter 智能路由可把推理成本降低约 40%，内部 Skill 广场上架技能 5.6 万个。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/491454.html" target="_blank" rel="noopener">量子位 · 央企做了个通用Agent，直接杀进IDC实测前三！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>图形学宗师童欣加盟 Meshy 任首席科学家，胡渊鸣同发「Mora」框架</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；量子位 17:42 发稿，原文未注具体时刻）</p>
+<p>在微软亚洲研究院工作 25 年、曾任全球研究合伙人的图形学学者童欣正式加入 AI 3D 公司 Meshy 出任首席科学家，负责制定长期科研战略；创始人胡渊鸣同期发布「Mora」（多模态开放世界实时架构），以 Coding Agent + 3D 生成 + 视频模型三块拼图瞄准「超越世界模型」。Meshy 目前用户达 1200 万，今年 7 月完成近 4 亿美元 B 轮融资。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/491522.html" target="_blank" rel="noopener">量子位 · 图形学宗师童欣加盟Meshy，要做“AI for Fun”的头号玩家</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>菲尔兹奖联名信继续发酵：Gowers 撰文解释「我为何没有签字」</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日 07:55（博客署名时刻，原文未注明时区；北京时间当日下午该文登上 Hacker News 首页，HN 提交时间为 16:51）</p>
+<p>菲尔兹奖得主 Timothy Gowers 发文解释自己为何没签「25 位菲尔兹奖得主」关于 AI 与数学的联名信：他认同信中许多内容、也认同「我们正面临危机」，但选择像《莱顿宣言》时一样单独撰文阐述立场，并明确不希望数学界因此撕裂。文中披露他与 OpenAI 数学团队有联系、获过模型早期访问，但从未受雇于 OpenAI。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/" target="_blank" rel="noopener">Gowers&#x27;s Weblog · Why I didn’t sign the Fields medallists’ letter</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49738091" target="_blank" rel="noopener">Hacker News 讨论帖</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>技术社区拆解 DeepSeek-V4.1 Flash：把 KV 缓存压缩「推到极限」</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；该解读文当日 09:39 登上 Hacker News 首页，所析技术报告的发布时间原文未注）</p>
+<p>一篇对《DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression》技术报告的拆解在 HN 获 120 余点：V4.1 Flash 的 40 层中仅 20 层参与 Prefill（Prefill 激活参数约 8B、Decode 约 16B），并采用 FP4 KV 缓存与跨层压缩等方案，在保持任务质量前提下把 KV 缓存进一步压缩约 4 倍；作者实测速度接近 420 tokens/s，感叹「它该叫 V5 Flash」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://zartbot.github.io/blog/model_arch/dsv41flash_arch/en.html" target="_blank" rel="noopener">zartbot · DeepSeek-V4.1 Flash: Pushing the Limits of KV Cache Compression</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49735410" target="_blank" rel="noopener">Hacker News 讨论帖</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-17-早间版.html">← 2026-09-17-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-17 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
