@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-18</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 18 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：美股走出美联储加息阴霾——周四三大指数集体反弹、纳指涨1.69%，芯片与AI硬件股领涨，10年期美债收益率回落至5%下方；地缘与政策面，特朗普称美伊战事面临“关键转折点”，美方批准伊朗高层赴联大，今日午间日本央行料加息至1.25%创31年新高。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>王毅同美国国务卿鲁比奥通电话：着重讨论两国高层交往，“元首外交是定盘星”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日 22:02（北京时间，财联社电报发布时点；新华社北京9月17日电）</p>
+<p>摘要：中共中央政治局委员、外交部长王毅17日同美国国务卿鲁比奥通电话，双方着重就两国高层交往进行了深入讨论。王毅强调元首外交是中美关系的定盘星，双方要本着平等、尊重、互惠的精神筹备好下阶段高层交往，加强沟通、推进合作、管控分歧，尊重彼此核心利益。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2486525" target="_blank" rel="noopener">财联社·王毅同美国国务卿鲁比奥通电话</a>
+<span class="sep">·</span>
+<a href="https://app.xinhuanet.com/news/article.html?articleId=202609171963b7e4df784678b3b40f86eb3090d3" target="_blank" rel="noopener">新华社·王毅同美国国务卿鲁比奥通电话</a>
+<span class="sep">·</span>
+<a href="https://www.mfa.gov.cn/wjbzhd/202609/t20260917_12024847.shtml" target="_blank" rel="noopener">外交部·王毅同美国国务卿鲁比奥通电话</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>特朗普：美伊战事面临“关键转折点”，将决定是否重启大规模攻势</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（美东时间，Axios报道；北京时间9月18日凌晨财联社转发，原文未注具体时刻）</p>
+<p>摘要：据Axios当地时间17日报道，特朗普表示他正面临对伊战事的关键转折点，需要决定是否重启大规模攻势、以期结束这场冲突；他还定于下周二（9月22日）纽约联大期间会见沙特、阿联酋、卡塔尔等海湾六国领导人，讨论战争下一阶段安排。美国国会预算办公室估算，截至8月1日与伊朗冲突相关成本约380亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L72U21JJ05198CJN.html" target="_blank" rel="noopener">财联社（网易转载）·特朗普称将决定是否恢复对伊朗大规模作战</a>
+<span class="sep">·</span>
+<a href="https://xnews.jin10.com/details/230399" target="_blank" rel="noopener">金十数据·特朗普：伊朗战争下一步，“一个大决定”就要来了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>美方批准伊朗总统、外长等赴纽约出席联合国大会</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日 21:03（北京时间，快讯发布时点；美国国务院当地时间9月17日表示）</p>
+<p>摘要：美国国务院9月17日表示，尽管美伊仍处于交战状态，仍将允许伊朗高层官员下周赴纽约出席第81届联大高级别周活动；据报道美方已向伊朗总统佩泽希齐扬、外长阿拉格齐等签发签证。美方称该代表团将受旅行限制、规模小于去年，伊朗方面暂未回应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_09_18_901081.shtml" target="_blank" rel="noopener">观察者网·美批准伊总统、外长赴纽约出席联合国大会</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L73ADAS60512B07B.html" target="_blank" rel="noopener">每经早参（网易转载）·美称批准伊朗高层领导人签证</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>金融产品网络营销新规落地倒计时：监管明确六大要求，严禁与“网络大V”合作</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（北京时间，上海证监局下发落实通知；原文未注具体时刻）</p>
+<p>摘要：《金融产品网络营销管理办法》9月30日实施前，上海证监局9月17日向辖区基金管理人、资产管理机构、基金销售机构下发落实通知，明确六大要求：不得与第三方互联网平台以外的任何组织或个人（含“网络大V”）合作开展金融产品网络营销，与平台合作费用不得挂钩业务指标，并启动自查整改。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-17/4584510.html" target="_blank" rel="noopener">每日经济新闻·不得与网络大V合作、第三方平台合作费用不得挂钩业务指标！监管再明确金融产品网络营销六大要求</a>
+<span class="sep">·</span>
+<a href="https://www.chnfund.com/article/ARe4209d7c-c289-2cd5-ae9b-3a23c194c80c" target="_blank" rel="noopener">中国基金报·基金行业明确网络营销六大要求，严禁与“网络大V”等非平台主体合作</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股收盘：纳指涨1.69%，AI硬件与芯片股大涨，走出加息阴霾</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日 16:00 收盘（美东时间，对应北京时间9月18日4:00）</p>
+<p>摘要：美股周四反弹、收复前一日失地：纳指涨439.88点、涨幅1.69%，标普500指数涨1.14%，道指涨0.61%，费城半导体指数涨3.14%；AI硬件与芯片股领涨，英特尔涨超7%、Arm涨超8%、AMD涨超6%，英伟达涨超2%；10年期美债收益率回落至5%下方（4.945%），美元指数走低。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2486627" target="_blank" rel="noopener">财联社·美股收盘：纳指、标普500指数涨超1% AI硬件股、芯片半导体股大涨</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-18/doc-inisesms8814301.shtml" target="_blank" rel="noopener">新浪财经·9月18日美股收盘：三大股指收涨 科技股推动大盘走高 油价下跌同样提振股市</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>国际油价收跌：美油报101.09美元/桶、布油报104.1美元/桶，供应担忧缓解</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（美东时间收盘；北京时间9月18日凌晨，原文未注具体时刻）</p>
+<p>摘要：国际油价集体收跌：美油主力合约跌1.31%、报101.09美元/桶，布油主力合约跌1.63%、报104.1美元/桶。因沙特正通过阿曼苏哈尔港附近船对船转运向亚洲炼油商提供更多原油，受损管道造成的出口中断或没有最初担心的严重，油价自本周早些时候布油突破109美元的高位回落。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L73ADAS60512B07B.html" target="_blank" rel="noopener">每经早参（网易转载）·国际油价集体收跌</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-18/doc-inisesms8814301.shtml" target="_blank" rel="noopener">新浪财经·9月18日美股收盘：三大股指收涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>贵金属收涨：现货黄金涨1.84%报4341.01美元，现货白银涨3.52%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（美东时间收盘；每经早参数据截至北京时间9月18日凌晨5点）</p>
+<p>摘要：国际贵金属价格多数上涨：现货黄金涨1.84%、报4341.01美元/盎司；现货白银涨3.52%、报65.18美元/盎司；COMEX黄金期货跌0.16%、报4380.60美元/盎司；COMEX白银期货涨1.23%、报65.72美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L73ADAS60512B07B.html" target="_blank" rel="noopener">每经早参（网易转载）·国际贵金属价格多数上涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>KKR上调美债收益率预期：预计美联储将更久维持高利率</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 3:42（北京时间，财联社电报发布时点）</p>
+<p>摘要：KKR &amp; Co.上调对美国长期国债收益率的预测：预计10年期美债收益率今年年底在5.1%（此前预测5.0%），2027年底达4.9%（此前预测4.7%）；理由是美联储主席沃什对持续通胀感到担忧，预计基准利率将在高于此前预期的水平维持更久。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2486624" target="_blank" rel="noopener">财联社·KKR上调美国国债收益率预期 认为美联储将把高利率维持更久</a>
+<span class="sep">·</span>
+<a href="https://zijing.com.cn/web/article/1550351409775587328/web/content_1550351409775587328.html" target="_blank" rel="noopener">中国基金报·KKR上调美债收益率预期，称美联储将更久维持高利率</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>日本央行今日料加息至1.25%创31年新高：市场已完全定价</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（共同社9月17日电；利率决议定于9月18日公布，原文未注具体时刻）</p>
+<p>摘要：日本央行17日起召开为期两天的货币政策会议，市场已完全定价其18日将把政策利率上调25个基点至1.25%、创31年新高，也是继6月后三个月内再度加息；近一周日元升破153创2月以来最高，10年期日债收益率升至30年最高。市场聚焦植田和男发布会措辞与同日发布的8月CPI。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://china.kyodonews.net/articles/-/15786" target="_blank" rel="noopener">共同社·日本央行召开货币政策会议 预计将加息至1.25%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3781691" target="_blank" rel="noopener">华尔街见闻·日本央行加息或已无悬念，关键在于如何应对高市政府和贝森特的压力</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>GPU云服务掀涨价潮：Nebius自10月1日起再提价约20%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月17日（北京时间，据Nebius发给客户的通知；原文未注具体时刻）</p>
+<p>摘要：Nebius宣布自10月1日起全面上调GPU云服务定价，平均涨幅约20%：H100、H200、B200、B300每小时价格分别升至4.50、5.40、8.50、9.50美元，涨幅约17%—21%；为今年5月以来第二轮涨价，B300累计涨幅约56%。公司称客户需求能见度已超24个月，算力供给持续偏紧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3781962" target="_blank" rel="noopener">华尔街见闻·GPU云服务掀涨价潮：Nebius再提价20%，算力供给侧迎议价权反转</a>
+<span class="sep">·</span>
+<a href="https://www.jiemian.com/article/15108504.html" target="_blank" rel="noopener">界面新闻·Nebius将于10月1日起上调部分GPU算力价格</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-17-晚间版.html">← 2026-09-17-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-18 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

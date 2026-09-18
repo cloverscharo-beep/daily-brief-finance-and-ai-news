@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-18</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 18 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：OpenAI 把 GPT-6 Astra 配置成面向律所的「Astra for Law」，正面进军法律行业；Anthropic 一天内连发「AI 研发节奏」测量框架与 Claude Code 云端多代理版 Projects，Google 则把 CC 升级为家庭共享 AI 管家；安全与监管争论继续升温——查尔斯三世在苏格兰召集 AI 高管、黄仁勋预计明年芯片销量翻倍，美国联邦公报被曝曾用千问做检索再添中美 AI 张力。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>OpenAI 发布「Astra for Law」：把 GPT-6 Astra 配置成法律行业底座</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；OpenAI 官方博客署期当日，原文未注具体时刻；SiliconANGLE 当日 19:17 更新报道）</p>
+<p>OpenAI 推出 Astra for Law——并非新模型，而是把 GPT-6 Astra 与法律检索索引、分析/写作指令打包成「法律 AI 底座」：索引覆盖美国判例法、法规、法院规则与行政决定超 2.3 亿条 URL。在 Vals AI 法律研究基准 200 题上整体正确率 54.0%（对照 GPT-6 Astra+网页搜索 38.7%），判例检索多找 24%。首批面向 Am Law 200 律所经 Trusted Access 提供（API 零数据保留），Harvey、Legora 可基于其构建；同步上线 26 个合作插件，ChatGPT for Word 同日正式可用。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/astra-for-law/" target="_blank" rel="noopener">OpenAI · Introducing Astra for Law</a>
+<span class="sep">·</span>
+<a href="https://siliconangle.com/2026/09/17/openai-launches-astra-for-law-a-gpt-6-configuration-for-legal-research" target="_blank" rel="noopener">SiliconANGLE · OpenAI launches Astra for Law, a GPT-6 configuration for legal research</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 提出「测量前沿实验室研发节奏」三组指标，并公开内部快照</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；Anthropic 官网新闻页署期当日，原文未注具体时刻；路透社当晚 18:10 发稿）</p>
+<p>Anthropic 发文提出三类可对外公开的测量工具：AI 自建 AI 的程度、对内部 agent 行动的监督能力、算力投向构成，并给出自家快照——截至 8 月，Claude「主导」（AL4：接到高层级提示即可端到端完成）其 26% 的 AI 研发任务（2 月时不足 1%），九成以上工作达到「协作」级；最常用内部平台同时约有 3 万个 agent 作业，在线监控覆盖 100% 行动、拦截率约 0.002%。官方称将引入独立第三方评估方核验这些指标。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/institute/measuring-pace-of-ai-development" target="_blank" rel="noopener">Anthropic · Measurements for understanding the pace of AI development inside frontier labs</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/" target="_blank" rel="noopener">Reuters · Anthropic says Claude now leads a quarter of work building its next AI models</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>Anthropic 重做 Claude Code「Projects」：一个项目统筹多路云端 agent</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；Claude 官方博客署期当日、未注具体时刻；The Verge 当日 14:58 报道）</p>
+<p>Claude Code 的 Projects 从「文件夹」改为「对话式项目」并进入 beta：每个项目内有多个并行线程与一名协调者（coordinator），每条线程都是独立的云端 Claude Code 会话（各自分支与仓库副本），冲突按 PR 合并冲突处理；线程可从共享记忆与文件库取用上下文，还能再拆给子 agent 并行推进。首批面向部分 Pro/Max 云会话用户，本周扩围，本地/终端支持「很快」跟上。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://claude.com/blog/projects-redesigned" target="_blank" rel="noopener">Claude Blog · Projects redesigned: from folder to conversation</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects" target="_blank" rel="noopener">The Verge · Claude Code relaunches Projects to manage multiple AI agents in the cloud</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Google 把实验性 agent「CC」升级为全家的共享 AI 管家</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美国时间；Google 官方博客署期当日，原文未注具体时刻）</p>
+<p>Google Labs 宣布 CC 从个人 agent 升级为面向家庭/群组的共享 agent：拥有独立 Google 账号与权限模型，最多 6 名成员协作；每天推送共享「Your Day Ahead」简报，自动追踪重要日期与待办、连接 Calendar/Tasks，还能代填许可单、生成开学购物清单与每周菜谱。其运行在 Google 自研 agentic harness「Antigravity」与最新 Gemini 模型之上，先在美国向 18 岁以上用户开放。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/" target="_blank" rel="noopener">Google Blog · The new CC, an AI agent built for families</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/997281/googles-revamping-its-cc-ai-as-an-organizing-agent-for-families" target="_blank" rel="noopener">The Verge · Google&#x27;s revamping its &#x27;CC&#x27; AI as an organizing agent for families</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>千问新增医学专业知识库与营养数据库（补录）</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；新华网等当日发稿，原文未注具体时刻；本条为补录，此前两版均未收录）</p>
+<p>千问宣布新增接入人卫医学专业知识库与 NutriData 营养数据库，在已接入的国家药监局药品说明书、中国营养学会知识库等权威资源之上，把健康问答能力扩展到疾病知识、检查检验、用药参考到营养膳食的全链条，并支持答案溯源到原文。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.news.cn/tech/20260917/eb42f7cd5283418ebb93f465aeac64b7/c.html" target="_blank" rel="noopener">新华网 · 千问再度加码健康专业能力，新增医学知识库与营养数据库</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/stockzmt/2026-09-17/doc-iniscqxx4033951.shtml" target="_blank" rel="noopener">新浪财经 · 千问新增两大专业知识库，AI健康问答的专业化走到哪了</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美联邦公报网站被曝曾用阿里千问做检索，在 FBI 抄袭指控背景下引争议</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；路透社当日 15:58 发稿；相关检索功能于 9月16日（周三）被撤下）</p>
+<p>路透社报道：美国联邦公报网站（国家档案局运营）的检索选项中出现过阿里千问模型驱动的搜索，周三在社媒出现相关帖文前后被撤下，部署时间不明。此事发生在 FBI 指控阿里「恶意」抄袭 Anthropic 技术、中美领导人下周将会晤的背景下；专家称未必有国安风险但质疑联邦政府「自相矛盾」，中国驻美使馆称抄袭指控「毫无根据」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/legal/litigation/us-government-website-used-ai-search-tool-china-that-fbi-said-copied-anthropic-2026-09-17/" target="_blank" rel="noopener">Reuters · US government website used AI search tool from China that FBI said copied Anthropic</a>
+<span class="sep">·</span>
+<a href="https://global.hk01.com/%E5%8D%B3%E6%97%B6%E5%9B%BD%E9%99%85/60391170/fbi%E6%8C%87%E9%98%BF%E9%87%8C%E6%8A%84%E8%A2%ADanthropic%E5%90%8E-%E7%BE%8E%E6%94%BF%E5%BA%9C%E7%BD%91%E7%AB%99%E8%A2%AB%E5%8F%91%E7%8E%B0%E7%94%A8%E4%B8%AD%E5%9B%BDai%E6%90%9C%E5%AF%BB%E5%B7%A5%E5%85%B7" target="_blank" rel="noopener">香港01 · FBI指阿里抄袭Anthropic后 美政府网站被发现用中国AI搜寻工具</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>查尔斯三世苏格兰召集 AI 高管：黄仁勋称「不准备好就别发布」，并预计明年芯片销量翻倍</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（英国当地时间；会议当日举行、原文未注具体时刻；黄仁勋在场边对记者表态）</p>
+<p>英国国王查尔斯三世在苏格兰邓弗里斯宫（Dumfries House）召集 AI 高管会议，英伟达黄仁勋、Google DeepMind 哈萨比斯、OpenAI CFO Sarah Friar、Anthropic 的 Tino Cuéllar 与英国 AI 大臣 Narayan 等出席；查尔斯警告 AI「落入坏人之手」的生存性危险、「需要在一切太晚之前拥有足够的控制手段」。黄仁勋称 AI 要「负责任的乐观」、产品没准备好就应「先扣下」；并预计公司 2027 年芯片销量约为 2026 年的两倍。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/world/uk/king-charles-urge-ai-leaders-protect-humanity-scottish-meeting-2026-09-17/" target="_blank" rel="noopener">Reuters · King Charles warns tech leaders of &#x27;existential dangers&#x27; from AI</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-09-17/doc-inisefvv0349237.shtml" target="_blank" rel="noopener">新浪财经 · 英伟达CEO黄仁勋预计明年芯片销量将翻一番</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>纽约时报诉 OpenAI/微软案解封：高管内部言论被指「摧毁」合理使用抗辩</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；法院文件当日解封，路透社当日发稿未注具体时刻）</p>
+<p>此前遮盖的法院文件公开了 OpenAI 与微软高管的内部言论：OpenAI 的 ChatGPT 负责人 Nick Turley 称出版商面临其产品的「生存威胁」、产品「大部分是替代性的」；联合创始人 Brockman 称大模型「非常擅长新闻」，听闻有绕过 NYT 付费墙的「hack」时回复「ah nice」；纳德拉在证词中承认对话机器人「替代了」人们访问原网站。原告称这些证据「摧毁」合理使用抗辩，微软回应称高管言论与公司法律立场「完全一致」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/business/media-telecom/openai-microsoft-executives-quotes-ai-training-threaten-copyright-defense-news-2026-09-17/" target="_blank" rel="noopener">Reuters · OpenAI, Microsoft executives&#x27; quotes on AI training threaten copyright defense, news outlets argue</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/997312/a-microsoft-exec-called-ai-scraping-theft-of-unprecedented-proportions" target="_blank" rel="noopener">The Verge · A Microsoft exec called AI scraping &#x27;theft of unprecedented proportions.&#x27;</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>华为徐直军：中国 AI 或还没强到能「感知」前沿风险，需加速发展到那个水平</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（北京时间；徐直军在华为全联接大会期间对记者表示，路透社当日发稿，原文未注具体时刻）</p>
+<p>华为轮值董事长徐直军在上海全联接大会期间对记者称，美国主流模型厂商因算力庞大、可能只有他们自己感知得到某些风险，「中国开发者或许要加速，直到也能感受到 AI 发展带来的风险」；他强调要在发展与风险管理间求平衡。华为本周还预计 2035 年全球 AI 处理流量中 agent 占比将超九成，徐直军同日称 AI 算力设备供不应求。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/world/china/huaweis-xu-says-chinese-ai-not-powerful-enough-yet-see-frontier-risks-2026-09-17/" target="_blank" rel="noopener">Reuters · Chinese AI not powerful enough to see rogue-AI risks, says Huawei</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>安全「刹车」之争继续：扎克伯格称 Meta 主动推迟 Muse 发布，WSJ 曝三人劝特朗普放手</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（TechCrunch 当日 13:19（太平洋时间）发稿；The Verge 当日 15:47（美东时间）转述 WSJ，扎克伯格发帖时间原文仅称「本周」）</p>
+<p>在阿莫迪「控速」长文引发的争论中，扎克伯格本周在 X 表态：「信任与对齐正迅速成为区分 agent 与模型的最重要能力」，并称 Meta 为安全把 Muse 的发布推迟了数月、且没有要求别人先这么做；《华尔街日报》同日报道称，扎克伯格、黄仁勋与马斯克劝特朗普对 AI 保持放手，并「成功搁置」了哈萨比斯提议的行业资助监管机构方案。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/" target="_blank" rel="noopener">TechCrunch · Is the AI safety debate about safety or control?</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/997192/mark-zuckerberg-jensen-huang-and-elon-musk-reportedly-have-trumps-ear-on-ai" target="_blank" rel="noopener">The Verge · Mark Zuckerberg, Jensen Huang, and Elon Musk reportedly have Trump&#x27;s ear on AI</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-17-晚间版.html">← 2026-09-17-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-18 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
