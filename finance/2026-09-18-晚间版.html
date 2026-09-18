@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-18</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 18 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：日本央行加息25个基点至1.25%创31年新高，美联储、欧洲央行、日本央行首次在同一个月加息；A股、港股双双收涨——创业板指涨2.25%、恒生科技涨2.20%，半导体产业链与大模型概念领涨；住建部表态“房地产进入存量时代、现房销售大势所趋”；金价逼近4400美元、油价续跌至95美元附近。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>日本央行加息25个基点至1.25%创31年新高：7比2投票通过，“日美欧首次同月加息”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 午前（北京时间，利率决议公布；确切公布时刻原文未注，当日14:30召开记者会）</p>
+<p>摘要：日本央行18日将政策利率由1.00%上调至1.25%，为1995年以来最高（31年新高）、符合市场预期，以7比2投票通过，审议委员浅田统一郎与佐藤绫野投下反对票。此次距上次加息仅3个月、为1990年以来最短间隔，也标志日本央行、美联储、欧洲央行首次在同一个月加息。决议后日元不升反跌，美元兑日元一度涨0.72%报157.09，市场认为两张反对票显示央行不够鹰派；行长植田和男在记者会上表示“不排除任何特定政策措施”、没有预设加息步伐。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2486964" target="_blank" rel="noopener">财联社·36年来最快紧缩步伐！日本央行加息25基点 利率升至1995年来新高</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609183878591779.html" target="_blank" rel="noopener">东方财富（新华财经）·日本央行行长植田和男：货币政策进入新阶段 金融环境仍宽松</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>住建部“十五五”发布会表态：房地产进入存量时代，现房销售是大势所趋</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 10:13（北京时间，财联社首条发稿时点；国新办发布会当日举行）</p>
+<p>摘要：国新办18日举行“开局起步‘十五五’”发布会。住建部表示，房地产市场出现“两个转变”：供求关系发生重大变化、进入存量时代——二手房交易占比从2020年的27%提高到2025年的46%、今年前8个月已达52%；下一步将落地项目公司制、主办银行制、现房销售制三项基础性制度，“现房销售是大势所趋”。“十五五”将拓宽公积金提取使用范围（提取情形从6种增至9种，支持租房、购房、修房、养房），新修订的《住房公积金管理条例》9月20日起实施。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2486828" target="_blank" rel="noopener">财联社·住建部：我国房地产进入存量时代</a>
+<span class="sep">·</span>
+<a href="http://finance.people.com.cn/n1/2026/0918/c1004-40801264.html" target="_blank" rel="noopener">人民网·进入存量时代：住建部谈房地产市场“两个转变”</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>新华传媒拟发行股份购买界面财联社100%股权：发行价3.93元/股，下周一复牌</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 16:30（北京时间，财联社电报发布时点；公司当日公告）</p>
+<p>摘要：新华传媒（600825.SH）公告，拟以发行股份方式购买上海界面财联社科技股份有限公司100%股权，发行价格确定为3.93元/股，预计构成重大资产重组及关联交易。公司9月7日起停牌时曾仅筹划购买“控股权”，本次确定为收购全部股权；股票将于9月21日（下周一）复牌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487241" target="_blank" rel="noopener">财联社·新华传媒：拟发行股份购买界面财联社100%股权 股票下周一复牌</a>
+<span class="sep">·</span>
+<a href="https://m.jiemian.com/article/15113603.html" target="_blank" rel="noopener">界面新闻·新华传媒：拟发行股份购买界面财联社100%股权，股票下周一复牌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>人民币兑美元中间价调升59个基点至6.7521</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 9:16（北京时间，人民财讯发稿时点；中国外汇交易中心当日公布）</p>
+<p>摘要：9月18日，人民币兑美元中间价报6.7521，较上一交易日（6.7580）调升59个基点。其他货币对方面：欧元/人民币报7.7257、100日元/人民币报4.3173、英镑/人民币报8.9958、港元/人民币报0.86062。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4190014.html" target="_blank" rel="noopener">证券时报·9月18日人民币对美元中间价调升59个基点</a>
+<span class="sep">·</span>
+<a href="http://www.xinhuanet.com/20260918/2894c72f058844b6b34bde025c36107a/c.html" target="_blank" rel="noopener">新华网·人民币市场汇价（9月18日）</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股收盘：三大指数集体收涨，创业板指涨2.25%，半导体产业链全天强势</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 15:00（北京时间，A股收盘）</p>
+<p>摘要：沪指涨0.94%报3911.87点，深证成指涨1.72%报13640.87点，创业板指涨2.25%报3372.68点，科创50涨2.88%报1652.63点；沪深两市成交约2.08万亿元、较前一交易日放量约2540亿元，全市场超4200只个股上涨。半导体产业链（算力芯片、光刻机）领涨，近端次新股集体大涨（C沈鼓上市第2日收涨177.74%、盘中一度涨近300%），地产股活跃（万科A涨停）；汽车、煤炭、银行小幅回调。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-09-18/doc-inisftxe8459856.shtml" target="_blank" rel="noopener">新浪财经·A股收评 | 三大指数集体收涨 创业板指涨2.25% 半导体产业链领涨</a>
+<span class="sep">·</span>
+<a href="https://www.21jingji.com/article/20260918/herald/6d42ef885207f22f121a2ecffbb3e6f2.html" target="_blank" rel="noopener">21世纪经济报道·A股收评：创业板指涨2.25%、科创50涨2.88%，近端次新股、半导体芯片及大消费股走高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收盘：恒生科技涨2.20%，大模型概念与“LLM概念股”溜溜梅大涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 16:00（北京时间，港股收盘）</p>
+<p>摘要：恒生指数收报24750.78点、涨0.60%；恒生科技指数收报4405.50点、涨2.20%。大模型概念强势，MiniMax涨超18%、智谱涨超5%，联想集团涨超9%创历史新高；次新股溜溜梅因简称拼音“LLM”与大语言模型重合被市场热炒，盘中一度涨超25%创上市新高、收盘涨17.53%。南向资金净买入超11亿港元、为9月7日以来连续第10个交易日净买入。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609183878646420.html" target="_blank" rel="noopener">东方财富（每日经济新闻）·港股复盘|一度暴涨25% 股价创历史新高 港股惊现“无厘头”炒作</a>
+<span class="sep">·</span>
+<a href="https://m.163.com/dy/article/L74H8M210519DDQ2.html" target="_blank" rel="noopener">网易财经·美股芯片、科技股，盘前集体上涨（含港股收盘数据）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>日韩股市收涨：日经225指数涨1.38%报65018.95点，KOSPI涨2.68%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 14:00（北京时间，日经225指数收盘；韩国KOSPI于14:30收盘）</p>
+<p>摘要：日本央行加息落地后日股照涨：日经225指数收涨882.70点、涨幅1.38%，报65018.95点，软银涨超1%；韩国KOSPI指数收涨2.68%报6895.55点，SK海力士涨6.42%、三星电子涨3.37%。日债收益率分化：10年期跌1.5个基点至2.975%、40年期升2.0个基点至4.135%；韩国财政部称美联储加息对韩国市场影响有限。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.caiwennews.com/article/1612094.shtml" target="_blank" rel="noopener">财闻网·加息落地股市照涨！日本央行上调利率，日韩股市集体走强，AI材料迎来重磅扩产</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>欧股开盘走低、盘中跌幅扩大；美股盘前三大股指期货集体上涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 15:00（北京时间，欧股开盘时点；斯托克600盘中跌幅扩大与美股盘前动态原文未注具体时刻）</p>
+<p>摘要：欧股周五低开，德国DAX开盘跌0.42%报25625.68点、法国CAC40跌0.39%报8154.81点、英国富时100跌0.21%报10793.73点，随后欧洲斯托克600指数跌幅一度扩大至1%。美股盘前三大股指期货集体上涨，道指期货涨0.26%、纳斯达克100期货涨0.64%、标普500期货涨0.36%；半导体与科技股走强，英特尔涨超2%、SK海力士涨2%，闪迪、美光科技等涨超1%，谷歌涨近2%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.ifeng.com/c/8TBixNxfbo8" target="_blank" rel="noopener">凤凰网（财联社）·欧洲斯托克600指数跌幅扩大至1%</a>
+<span class="sep">·</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/BreakingNewsArticle?ContentId=C26091800630" target="_blank" rel="noopener">台湾资本期货快讯·德国DAX30指数9月18日开盘下跌107.58点</a>
+<span class="sep">·</span>
+<a href="https://m.163.com/dy/article/L74H8M210519DDQ2.html" target="_blank" rel="noopener">网易财经·美股芯片、科技股，盘前集体上涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>金价逼近4400美元关口：高盛、瑞银无惧“鹰派加息”坚守看多</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日 16:38（北京时间，财联社/新浪财经发稿时点）</p>
+<p>摘要：受美元走软与油价下跌提振，国际金价周五延续反弹：欧盘时段现货黄金报4366美元附近（涨0.46%），晚间涨幅扩大至1.27%、逼近4400美元/盎司关口。机构方面，高盛维持2027年底5400美元/盎司目标价不变，称紧缩政策或放缓涨势但不会使其脱轨；瑞银认为金价向4000美元的回调“提供了增加敞口的机会”，预计各国央行年购金750至1000公吨构成结构性支撑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/2026-09-18/detail-inisftxc0305596.d.html" target="_blank" rel="noopener">新浪财经（财联社）·黄金牛市逻辑不改！无惧美联储“鹰派加息” 高盛、瑞银坚守看多阵营</a>
+<span class="sep">·</span>
+<a href="https://www.cngold.org/c/2026-09-18/c10767961.html" target="_blank" rel="noopener">金投网·9月18日金市晚评：连涨两日却破不了高点 现货黄金卡在一个“两难”里</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>国际油价续跌：WTI报95.28美元/桶跌2.01%，沙特抢修输油管道</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月18日（北京时间晚间，东方财富“截至发稿”时段；原文未注具体时刻）</p>
+<p>摘要：国际油价周五继续下挫：WTI原油期货跌2.01%报95.28美元/桶，布伦特原油期货跌1.71%报98.22美元/桶。沙特正抢修遭袭的东西向输油管道、计划数日内恢复约一半输送能力，并增加经阿曼一侧的出口，市场对中东供应中断的担忧持续缓解；机构提醒潜在供应风险仍未消失。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609183878630291.html" target="_blank" rel="noopener">东方财富·美股盘前：存储芯片、光通信板块走强，SK海力士、闪迪涨2%；三大股指期货集体上涨；国际油价下挫</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/stock/usstock/c/2026-09-18/doc-inisesmm3657181.shtml" target="_blank" rel="noopener">新浪财经·原油：油价下跌 中东供应忧虑缓解但市场仍偏紧</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-18-早间版.html">← 2026-09-18-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-18 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
