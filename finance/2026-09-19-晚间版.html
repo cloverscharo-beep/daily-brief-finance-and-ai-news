@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-19</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 19 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：商务部宣布何立峰9月19日—23日率团赴美举行中美经贸磋商，并回应美方将《格雷厄姆制裁俄罗斯和伊朗法案》签署成法；北京市监局对飞猪、同程、途家、美团酒旅立案调查；AI巨头Anthropic将“史上最大IPO”推迟至11月、目标估值约2万亿美元。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>商务部：何立峰将于9月19日—23日率团赴美举行经贸磋商</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 09:12（北京时间，央视新闻发布、证券时报网转载）</p>
+<p>摘要：商务部新闻发言人在答记者问中表示，经中美双方商定，中共中央政治局委员、国务院副总理何立峰将于9月19日—23日率团赴美国与美方举行经贸磋商，双方将以两国元首重要共识为引领，就彼此关心的经贸问题开展磋商。此前中美双方经贸团队正就300亿美元相互降低关税安排等议题保持密切交流。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4191582.html" target="_blank" rel="noopener">证券时报网（央视新闻）·商务部新闻发言人就中美经贸磋商有关问题答记者问</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-19/4586044.html" target="_blank" rel="noopener">每日经济新闻·商务部新闻发言人就中美经贸磋商有关问题答记者问</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>商务部就美方将《格雷厄姆制裁俄罗斯和伊朗法案》签署成法答记者问：反对“次级制裁”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 19:56（北京时间，财联社电报）</p>
+<p>摘要：针对美东时间9月18日美方将《2026年格雷厄姆制裁俄罗斯和伊朗法案》签署成法、并明确可对进口俄罗斯石油或天然气的第三国加征最高100%所谓“次级关税”，商务部新闻发言人回应称，中方一贯反对缺乏联合国授权和国际法依据的单边制裁，反对以涉及第三方为由对他国采取所谓“次级制裁”；中方将继续密切关注美方后续举措，保留采取一切必要措施的权利。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487904" target="_blank" rel="noopener">财联社·美方将《2026年格雷厄姆制裁俄罗斯和伊朗法案》签署成法 商务部回应</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>北京市场监管局立案调查飞猪、同程、途家、美团酒旅，四平台火速回应</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 13:07（北京时间，证券时报网发稿；据央视新闻）</p>
+<p>摘要：北京市市场监督管理局近日对杭州淘美航空服务有限公司（飞猪）、同程网络科技股份有限公司、途家在线信息技术（天津）有限公司、北京三快信息科技有限公司（美团）涉嫌相关违法行为立案调查。四家公司当日回应称高度重视、将积极配合调查，目前业务运行正常；中国饭店协会发文表示支持，并倡议平台规则公开、算法透明、摒弃不当竞争。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4191652.html" target="_blank" rel="noopener">证券时报网·火速回应！四家平台被立案调查</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>资产规模约20万亿元的国开行迎来新行长：黄志强任党委副书记、副董事长、行长</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 13:13（北京时间，人民财讯发稿；国开行官网“领导班子”栏目更新）</p>
+<p>摘要：据国家开发银行网站“领导班子”栏目显示，黄志强已任国开行党委副书记、副董事长、行长。公开信息显示，黄志强，1970年6月生，在职研究生学历，二十届中央候补委员。国家开发银行为资产规模约20万亿元的政策性银行。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609193879202428.html" target="_blank" rel="noopener">东方财富网·黄志强已任国家开发银行行长</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609193879208939.html" target="_blank" rel="noopener">东方财富网·20万亿元资产国开行迎来新行长</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>Anthropic将“史上最大IPO”推迟至11月：目标估值约2万亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 11:26（北京时间，证券时报网发稿；转引《华尔街日报》等外媒）</p>
+<p>摘要：据多家外媒报道，Anthropic已将IPO时间从原计划的10月推迟至11月，修订后的时间表使其得以公布三季度财务业绩、证明竞争地位；公司预计今年年化营收将超过1000亿美元（截至7月为650亿美元），目标估值约2万亿美元、最高或筹集1000亿美元。投资者还预期其到今年年底可用算力约5吉瓦、明年底大体翻倍。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4191625.html" target="_blank" rel="noopener">证券时报网·突然！史上最大IPO，推迟！</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-19/doc-inisinhh9974498.shtml" target="_blank" rel="noopener">新浪财经·史上最大规模IPO推迟，Anthropic将上市时间延后至11月</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>法兴银行Q4展望：超配股票和大宗商品，尤其看好黄金和铜</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 15:48（北京时间，财联社发稿）</p>
+<p>摘要：法国兴业银行发布2026年四季度资产配置展望：维持超配股票和大宗商品、尤其看好黄金和铜；黄金与大宗商品持仓各维持10%，股票配置比例从55%上调至58%、政府债券从15%下调至12%。该行指出全球黄金ETF持有量已回升至约3000吨，并预测金价四季度达4750美元/盎司、2027年二季度达5000美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487827" target="_blank" rel="noopener">财联社·法兴银行展望Q4：超配股票和大宗商品，尤其看好黄金和铜！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>2026清华五道口首席经济学家论坛举行：聚焦全球再平衡与国际货币体系重构</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 15:10（北京时间，东方财富网发稿；论坛当日在清华大学举行）</p>
+<p>摘要：论坛于9月19日举行，林毅夫、余永定、朱民、黄益平等20位海内外学者出席。IMF前副总裁朱民表示，人民币国际化将通过全球资源配置、国际定价、风险管理、安全保障四大机制支持中国经济高质量发展；中金首席经济学家缪延亮指出，美元作为全球资产的信任基础被侵蚀，人民币国际化面临四个“根本性不同”的历史条件。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609193879216362.html" target="_blank" rel="noopener">东方财富网（南方财经网）·朱民：以人民币计价的深度金融市场能降低中企全球经营的不确定性</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609193879223128.html" target="_blank" rel="noopener">东方财富网（人民财讯）·缪延亮：人民币国际化历史条件出现四个根本性不同</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>喜力据悉洽购英国最大酒吧运营商Stonegate旗下300家酒吧</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 18:35（北京时间，财联社电报）</p>
+<p>摘要：财联社9月19日电，喜力集团据悉洽购英国最大酒吧运营商Stonegate旗下300家酒吧。目前该交易金额等进一步细节尚未见披露。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487877" target="_blank" rel="noopener">财联社·喜力集团据悉洽购英国最大酒吧运营商Stonegate旗下300家酒吧</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>欧洲机构调整美债配置：挪威央行建议下调政府债券基准中政府债占比</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日 13:29（北京时间，东方财富网快讯）</p>
+<p>摘要：美国10年期国债收益率日前突破5%、为2007年以来最高，联邦政府债务总额8月突破40万亿美元。挪威央行投资管理公司建议将政府债券在其债券投资基准中的比重从70%降至50%；路透社测算，若调整实施，该基金约2150亿美元的美国国债持仓可能减少近800亿美元。瑞士、英国资管机构也相继降低美国长期国债配置或维持低配。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609193879207219.html" target="_blank" rel="noopener">东方财富网（央视财经）·欧洲机构调整美债配置释放信号</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>本周A股回顾：主要指数全线收涨、科创综指涨7.18%，沈鼓集团周涨177.74%领涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日（北京时间，新浪财经发布；原文未注具体时刻）</p>
+<p>摘要：本周（9月14日—18日）A股主要指数全线收涨：沪指累计涨0.61%、深成指涨1.26%、创业板指涨1.52%、科创综指涨7.18%；全周28只个股涨幅超30%，上市两日的沈鼓集团以177.74%的累计涨幅居首。资金面上半导体产业链获主力大举流入（沐曦股份净流入34.17亿元居首），宁德时代以63.79亿元净流出居全市场首位、周跌8.64%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/wm/2026-09-19/doc-inisifyf2724072.shtml" target="_blank" rel="noopener">新浪财经·本周十大牛熊股出炉</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-19/doc-inisinhk7824693.shtml" target="_blank" rel="noopener">新浪财经·单周失血近64亿！宁德时代遭主力资金抛售，沐曦股份获大额抢筹</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-19-早间版.html">← 2026-09-19-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-19 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
