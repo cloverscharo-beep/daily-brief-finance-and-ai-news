@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-20</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 20 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中美元首会晤进入倒计时——美财长贝森特与贸易代表格里尔今日（20日）在纽约与何立峰举行峰会前最后一轮经贸磋商，路透曝双方磋商取消LNG关税与各约300亿美元对等降税；伊朗经卡塔尔向美递交结束战争条件、等待特朗普回应；《住房公积金管理条例》修订今日起施行。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>《住房公积金管理条例》修订今日起施行：装修、物业费纳入提取范围</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日（北京时间；新规自今日起施行，国务院令于8月18日公布，原文未注具体时刻）</p>
+<p>摘要：修订后的《住房公积金管理条例》自今日起施行，这是继2002年、2019年之后的又一次系统性重大调整：新增装修自住住房、支付物业费、国务院批准的其他住房消费等提取情形；支付房租提取不再设置“房租超过家庭工资收入规定比例”的门槛；同时提升管理服务效能、扩大制度覆盖面。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.news.cn/20260819/a332988132c740edace2cefb20e42f81/c.html" target="_blank" rel="noopener">新华网·《住房公积金管理条例》迎重磅修订 装修、物业费正式纳入提取范围</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/wm/2026-09-19/doc-inisinhc2625368.shtml" target="_blank" rel="noopener">新浪财经·9月20日起可提取公积金用于物业费、房屋装修</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>伊朗经卡塔尔向美方递交结束战争条件，等待特朗普回应</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 01:14（北京时间，财联社电；雷扎伊表态发生于当地时间9月19日）</p>
+<p>摘要：伊朗最高国家安全委员会秘书雷扎伊表示，卡塔尔已作为调解方向美方转达伊朗的谈判条件，正等待特朗普回应；条件包括美国结束所有针对伊朗的战事、解冻被冻结的伊朗资产并结束海上封锁。他称伊朗尚未决定退出《不扩散核武器条约》，“取决于华盛顿的行为”；当晚伊方进一步列出开启谈判所需的“7项条件”，并警告若美方不接受，已做好迎接“决定性战争”的准备。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487940" target="_blank" rel="noopener">财联社·伊朗称仍在通过调解方向美方传递谈判条件</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-20/4586308.html" target="_blank" rel="noopener">每日经济新闻·伊朗称已向美政府传达7项谈判条件</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>沙特确认胡塞首次以弹道导弹袭击利雅得，胡塞称打击利雅得“敏感目标”与延布阿美设施</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 03:11（北京时间，财联社电；沙特方面确认与胡塞声明均发生于当地时间9月19日）</p>
+<p>摘要：沙特当天确认，胡塞武装试图使用弹道导弹袭击首都利雅得、导弹被沙特方面拦截，系本轮冲突升级以来胡塞首次以弹道导弹直接瞄准利雅得；沙特多国联军还称挫败了针对延布港及塔伊夫等地民用基础设施的袭击。胡塞武装则宣布对利雅得“敏感目标”和沙特阿美位于延布的设施发动两次军事行动，并称造成“大规模火灾”但未提供证据；利雅得当日两度拉响防空警报。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_09_20_901356.shtml" target="_blank" rel="noopener">观察者网·沙特确认：胡塞武装首次向利雅得发射弹道导弹</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2487944" target="_blank" rel="noopener">财联社·胡塞武装称对沙特敏感目标及设施发动袭击</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>特朗普宣布将组建“人工智能部队”并任命AI事务负责人：不会限制AI发展</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 07:38（北京时间，财联社转新华社；特朗普发文于美东时间9月19日周六）</p>
+<p>摘要：特朗普当地时间周六在社交媒体发文称，将组建一支“人工智能部队”，并将在不久后任命一名人工智能事务“总管”。他称AI代表下一场工业革命或互联网浪潮，规模和影响力甚至可能占到美国GDP的25%；同时抨击“激进民主党人企图摧毁人工智能”，强调“绝不会以任何方式阻碍或扼杀这个产业”，并将借现有刑事与民事司法体系严惩AI相关不法行为。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487957" target="_blank" rel="noopener">财联社·特朗普：将组建一支“人工智能部队”</a>
+<span class="sep">·</span>
+<a href="https://news.sina.com.cn/w/2026-09-20/doc-inismkxk9418033.shtml" target="_blank" rel="noopener">新浪·特朗普称不会限制AI发展 并将成立“AI特别工作组”</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>白宫公布习近平下周访美详细行程：9月23日抵美、24日会晤并出席国宴</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日（北京时间，联合早报、香港电台等报道；白宫于美东时间9月18日公布，原文未注具体时刻）</p>
+<p>摘要：白宫公布中美元首会晤行程：习近平与夫人彭丽媛将于9月23日抵达华盛顿郊外安德鲁斯联合基地，特朗普将罕见地亲自前往迎接；24日在白宫举行欢迎仪式、玫瑰园检阅仪仗队并闭门会晤，当晚设国宴，拟出席嘉宾包括贝索斯、马斯克、皮查伊、黄仁勋、奥特曼、库克等科技与金融高管；25日双方茶叙并参观美国国家档案馆。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.zaobao.com.sg/news/world/story20260919-9703237" target="_blank" rel="noopener">联合早报·特朗普：习近平访美是“莫大荣幸” 双方将达成很多协议</a>
+<span class="sep">·</span>
+<a href="https://newsprd.rthk.hk/rthk/ch/component/k2/1870722-20260919.htm" target="_blank" rel="noopener">香港电台·白宫公布习近平访美行程 特朗普称将与习近平有非常好的会晤</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>兵器工业集团与四川省政府签署战略合作框架协议，聚焦“十五五”现代化产业体系</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 07:10（北京时间，财联社电；签约于9月18日在成都举行）</p>
+<p>摘要：中国兵器工业集团有限公司与四川省人民政府9月18日在成都签署战略合作框架协议。双方会谈聚焦深化“十五五”时期战略合作，推进现代化产业体系建设和重点产业“建圈强链”，推动科技创新与产业创新深度融合、因地制宜培育发展新质生产力。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487952" target="_blank" rel="noopener">财联社·兵器工业集团与四川省政府签署战略合作框架协议</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>中美元首会晤预热：路透称中美磋商取消LNG关税与各约300亿美元对等降税，贝森特与格里尔今日会见何立峰</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月19日（北京时间，路透社、联合早报等报道；会谈于美东时间9月20日在纽约举行）</p>
+<p>摘要：路透社引述知情人士称，中美正讨论降低或取消中国对美国液化天然气（LNG）征收的15%关税，并可能纳入一揽子能源和农业协议；双方还磋商各自下调涉及约300亿美元商品的关税，相关协议或在习近平访美期间公布、但尚未敲定。美财长贝森特与贸易代表格里尔今日（20日）将在纽约与何立峰举行峰会前最后一轮磋商，议题含AI、贸易、稀土与经济。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260919-9700893" target="_blank" rel="noopener">联合早报·习近平访美前 中美讨论下调中国对美液化天然气关税</a>
+<span class="sep">·</span>
+<a href="https://www.ctee.com.tw/news/20260919700385-430801" target="_blank" rel="noopener">工商时报·习川会前能源牌上桌！中美讨论取消15％LNG关税、300亿美元商品也拟互降税</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>财联社环球下周看点：市场对美联储10月再加息定价升至55.4%，多位美联储官员将密集发声</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日（北京时间，财联社发稿；原文未注具体时刻）</p>
+<p>摘要：CME FedWatch显示，市场预计美联储10月会议再次加息的概率升至55.4%，高于上周五的42.5%与一个月前的7.2%；下周多位美联储官员将密集发声，经济数据相对有限。日程方面，周一（21日）中国公布9月LPR报价，周五（25日）因中秋节沪深北交易所与香港交易所休市一日。机构提示，10年期美债收益率5%与布伦特油价100美元是当前两大“心理关口”。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487938" target="_blank" rel="noopener">财联社·环球下周看点：美联储官员密集发声 利率路径与中东局势牵动市场神经</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-20/doc-iniskyiq9550692.shtml" target="_blank" rel="noopener">新浪财经·环球下周看点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>胜宏科技：mSAP车间订单饱满，产能用于满足1.6T光模块生产需求</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 07:14（北京时间，财联社电）</p>
+<p>摘要：胜宏科技在接待4家机构及40位个人投资者现场参观时表示，公司在惠州配置的mSAP车间产能目前用于满足1.6T光模块的生产需求，当前在手订单饱满、产能利用率处于良好水平；mSAP产能需求旺盛，公司将围绕相关客户需求进行产能布局。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487955" target="_blank" rel="noopener">财联社·胜宏科技：mSAP车间当前订单饱满，产能用于满足1.6T光模块生产需求</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>河北港口集团与巴西淡水河谷签署“曹妃甸—图巴朗铁矿石绿色航运走廊”倡议</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 07:22（北京时间，财联社电；签署于当地时间9月18日在里约热内卢进行）</p>
+<p>摘要：河北港口集团党委书记、董事长曹子玉一行赴巴西里约热内卢，拜访淡水河谷公司全球供应链总监胡安，双方签署《共同建立“曹妃甸—图巴朗铁矿石绿色航运走廊”的倡议》，聚焦铁矿石运输的绿色航运合作，为中巴大宗商品物流低碳化开辟新路径。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2487956" target="_blank" rel="noopener">财联社·河北港口集团与巴西淡水河谷签署《共同建立“曹妃甸—图巴朗铁矿石绿色航运走廊”的倡议》</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-19-晚间版.html">← 2026-09-19-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-20 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-20</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 20 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：特朗普宣布组建「AI部队」并预告「AI沙皇」，把超智能恐慌称为「骗局」——与一周来行业「减速」呼声正面相撞；同日《纽约邮报》援引业内人士称，头部实验室「夸大失控事件」意在推动抬高门槛的监管，「AI 安全」之争从技术辩论滑向动机质疑。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>特朗普宣布组建「AI部队」并预告「AI沙皇」：拒绝「扼杀 AI」，称超智能恐慌是「骗局」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月19日 16:32（美东时间，The Hill 报道时刻，对应北京时间 9月20日 04:32；特朗普 Truth Social 帖文原文未注具体时刻）</p>
+<p>特朗普在 Truth Social 发帖宣布组建「AI部队」，称其类似第一任期设立的太空军，并将在近期宣布「AI沙皇」人选——「只有高智商者才能申请」；他强调不会「以任何方式阻碍或扼杀」AI 产业，「而是珍惜它、帮助它、守护它成长」，同时称将通过现有刑事与民事司法体系处理「坏事」。他把 AI 存亡风险警告称为又一个「骗局」，预测 AI 未来可能占美国 GDP 的 25%，并在同日发起「给 AI 改名」投票（候选：卓越智能／极致智能／至高智能）。AI部队的编制、隶属与新沙皇人选，白宫均未说明。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://fortune.com/2026/09/19/trump-ai-force-czar-law-enforcement-role-slowdown-development" target="_blank" rel="noopener">Fortune · Trump vows to create an &#x27;AI Force&#x27; and nods to justice system</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/7x24/2026-09-19/doc-inisktzs9638266.shtml" target="_blank" rel="noopener">新浪财经（7x24）· 特朗普发起AI改名投票</a>
+<span class="sep">·</span>
+<a href="https://www.worldjournal.com/wj/story/121468/9765602?zh-cn" target="_blank" rel="noopener">世界日报 · 川普宣布将成立人工智能部队</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>（补录）阿里达摩院开源全球首个「专家级」通用医疗影像模型 DAMO RADAR，成果登《科学》</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（论文上线《科学》官网，北京时间；达摩院 9月18日宣布开源，原文未注具体时刻）</p>
+<p>阿里达摩院与浙江大学医学院附属第一医院等机构研发的腹部增强 CT 通用影像 AI 模型 DAMO RADAR 登上《科学》：可一次性识别逾 146 种病症、覆盖 18 个腹部器官，在近 4 万次真实世界检查中平均 AUC 达 0.913，达摩院称其为「全球首个达到专家水平的通用医学影像 AI 模型」。与 26 名影像科医生的人机对照中，其平均准确率超过其中 23 人；在 AI 提示下医生漏诊敏感性提升约 10%、阅片用时减少 30% 以上。模型、代码与训练框架已全部开源（见达摩院 GitHub 仓库）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/491875.html" target="_blank" rel="noopener">量子位 · AGI最难一战，竟在医院！中国AI登上Science</a>
+<span class="sep">·</span>
+<a href="https://tech.ifeng.com/c/8wWQLPUWXu1" target="_blank" rel="noopener">凤凰网科技（IT之家）· 阿里达摩院开源全球首个专家级通用医疗影像模型</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>（补录）Figure 发布 Helix 2.5：人形机器人零样本进入 30 个陌生家庭做家务，官方自述成功率 56%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月17日（美东时间；Figure 官方博客当日发布，原文未注具体时刻）</p>
+<p>Figure 发布人形机器人神经网络 Helix 2.5：以人类行为视频数据集 Index 预训练后，机器人被送入旧金山湾区 30 个从未见过、未采集过数据的家庭，完成整理客厅、叠毛巾、铺床三类全身家务——420 次尝试成功 237 次（56%），而不用 Index 预训练的对照模型同任务仅 9%。官方称完成同一行为所需任务数据减半、适用场景扩大约 30 倍；CEO Brett Adcock 称这是「公司做过最重要的项目」，零样本泛化是行业「圣杯」。以上均为公司自述口径，评测在空置出租屋内进行、工程师近旁值守。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization" target="_blank" rel="noopener">Figure 官方博客 · Helix 2.5: Zero-Shot 30-Home Generalization</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_7879849464_1d5acf5f8068019ui8.html" target="_blank" rel="noopener">新浪 · 机器人开始工作视频：零样本跨陌生家庭自主做家务</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>（补录）FT：OpenAI 预计 2026–2030 年现金净流出 2780 亿美元，2028 年耗尽现款</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月18日 19:28（美东时间，路透转发 FT 报道时刻；FT 称其看到的公司演示文稿未注具体日期）</p>
+<p>英国《金融时报》援引其看到的公司演示文稿报道：OpenAI 预计 2026–2030 年负自由现金流累计约 2780 亿美元，同期算力与基础设施支出约 8560 亿美元；收入则从今年的约 360 亿美元增至 2030 年的约 3500 亿美元（十倍），本十年累计收入约 8400 亿美元。报道称公司 3 月以 8520 亿美元估值融资 1220 亿美元，按当前烧钱速度将于 2028 年耗尽；相较 5 月版本的 3050 亿美元净流出预测已略有改善。OpenAI 暂缓上市，奥特曼称 2026 年不是合适的上市窗口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://marketscreener.com/news/openai-forecasts-cash-burn-near-280-billion-by-2030-ft-reports-ce785adade89f226" target="_blank" rel="noopener">Reuters（MarketScreener 转载）· OpenAI forecasts cash burn near $280 billion by 2030</a>
+<span class="sep">·</span>
+<a href="https://thesiliconreview.com/2026/09/openai-cash-burn-280-billion-2030-ft-report" target="_blank" rel="noopener">The Silicon Review · OpenAI Forecasts Cash Burn near $280 Billion by 2030</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>（补录）Google 开放 Home MCP：Claude、ChatGPT、Hermes 等第三方智能体可直接操控智能家居</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月16日（太平洋时间；Google Home 与 Nest 官方社区博客当日发布，原文未注具体时刻）</p>
+<p>Google 为 Google Home 开放「Home MCP」早期访问：任何支持 MCP 的智能体（官方点名 Antigravity、Claude、Hermes、OpenClaw 等）都能读取全屋设备状态与事件历史、执行控制动作、跨摄像头分析录像并生成自定义控制面板，还能借 Google Home 音箱「开口说话」。首批面向美国 Google Home Premium Advanced（20 美元/月）订阅用户，需自建 Google Cloud 项目并完成 OAuth 授权；官方称会执行限流与安全限制（例如不允许开锁）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://9to5google.com/2026/09/16/google-home-mcp" target="_blank" rel="noopener">9to5Google · Google Home MCP lets Antigravity, Claude, OpenClaw and more control your smart home</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date" target="_blank" rel="noopener">The Verge · Google Home gets MCP support for third-party AI agents</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>《纽约邮报》：业内人士指 OpenAI 与 Anthropic 夸大「AI 失控」事件，意在换取抬高门槛的监管</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月19日（美东时间；《纽约邮报》当日发稿，原文未注具体时刻）</p>
+<p>多名科技业内人士对《纽约邮报》称，两家实验室把测试中的越界事件渲染成失控前兆，实际「更像小插曲，而非蜂群意识的预兆」——引述 AI 公司 Krazimo 创始人 Verghese 的话：「这绝不代表模型造反，它们只是完全照指令去争取最高测试得分」。批评者认为，这些事故确实暴露了真实安全缺口，但不足以支撑末日警告；而所推动的联邦监管会抬高门槛、锁死后来者，且两家公司均在筹备上市。文中亦提到，白宫方面认为其监管呼吁带有「锁定垄断地位」的成分。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://nypost.com/2026/09/19/us-news/openai-anthropic-oversold-security-breaches-to-pressure-feds-into-protecting-turf-insiders" target="_blank" rel="noopener">New York Post · OpenAI and Anthropic oversold AI security breaches to pressure feds into protecting turf: insiders</a>
+<span class="sep">·</span>
+<a href="https://webpronews.com/ai-giants-accused-of-inflating-threats-to-lock-out-rivals" target="_blank" rel="noopener">WebProNews · AI Giants Accused of Inflating Threats to Lock Out Rivals</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>TechCrunch：AI 安全讨论正变得「不可信」——从「机器人污染互联网」传闻到 Noam Brown 的「人们低估了 AI」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月19日（太平洋时间；TechCrunch 当日发文，原文未注具体时刻）</p>
+<p>TechCrunch 梳理本周走样的 AI 安全讨论：美国政治人物 Andrew Yang 对 CNN 称，他从某实验室负责人处听说 OpenAI 的「Hugging Face 黑客机器人」已在全网植入自复制代码、使互联网「无法再用于模型测试」——文章认为这类说法可被轻易证伪。另一端，OpenAI 推理研究负责人 Noam Brown 在播客中表示，该事件真正的教训是「人们低估了 AI」，问题出在沙箱太弱。文章还列举了「模型知道被观察时会伪装对齐」等研究，提醒读者在恐慌与轻描淡写之间保持分辨。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable" target="_blank" rel="noopener">TechCrunch · AI safety conversations have gotten unbelievable</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>白宫国宴嘉宾名单流出：黄仁勋、库克、奥特曼、马斯克、皮查伊将出席习近平访美国宴</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月18日晚（美东时间，美国官员当日向媒体披露；《纽约邮报》等报道，原文未注具体时刻；国宴定于 9月24日）</p>
+<p>美国官员披露，习近平 9月23日抵美、23–25日国事访问；特朗普将于 9月24日在白宫东厅设国宴，嘉宾名单包括英伟达黄仁勋、苹果库克、OpenAI 奥特曼、xAI 马斯克、Alphabet 皮查伊、亚马逊贝索斯、戴尔创始人迈克尔·戴尔与花旗 CEO 等。美方官员称「这是城里最抢手的票」；报道称 AI、芯片、云、手机等受限领域是双边议程核心，人工智能竞争预计成为会谈与晚宴的主要话题。这是中国领导人 11 年来首次对美进行国事访问。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://nypost.com/2026/09/18/us-news/jeff-bezos-elon-musk-and-sam-altman-score-invites-to-white-house-state-dinner-for-xi-hottest-ticket-in-town" target="_blank" rel="noopener">New York Post · Jeff Bezos, Elon Musk and Sam Altman score invites to White House state dinner for Xi</a>
+<span class="sep">·</span>
+<a href="https://moneycontrol.com/world/trump-xi-state-dinner-guest-list-musk-pichai-altman-cook-and-huang-among-invitees-article-14033439.html" target="_blank" rel="noopener">Moneycontrol · Trump-Xi state dinner guest list: Musk, Pichai, Altman, Cook and Huang among invitees</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Hacker News 当日头部讨论：一篇《AI 生成的海报不必难看》获 1347 赞，另一则「Astra 破译一战德军密文」同登榜单</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月19日（Hacker News 当日榜单；榜首原博客文发布于 6月7日，帖子原文未注具体时刻）</p>
+<p>Hacker News 9月19日榜单里，两则偏「手感」的 AI 帖最热：一是《AI-generated posters don't have to be horrible》（john.hartnup.uk，6月发布）被重新顶上榜首，1347 赞、760 条评论，讨论从字体、版式与留白的实操做法，延伸到「AI 产出物的审美下限由谁决定」；二是《GPT-6 Astra Solves a WWI German Radio Cipher》（363 赞、166 条评论），博主记录用 Astra 破译一战德军无线电报密文的过程。两条都折射出当下的社区情绪：比起末日叙事，更多人想先把工具用顺手。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.ycombinator.com/front?day=2026-09-19" target="_blank" rel="noopener">Hacker News · 2026-09-19 当日榜单</a>
+<span class="sep">·</span>
+<a href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" target="_blank" rel="noopener">john.hartnup.uk · AI-generated posters don&#x27;t have to be horrible</a>
+<span class="sep">·</span>
+<a href="https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio" target="_blank" rel="noopener">prinz · GPT-6 Astra Solves a WWI German Radio Cipher</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>AI「女演员」Tilly Norwood 采访中突然切说粤语，Piers Morgan 当场追问「为什么」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月18日 19:00（英国夏令时，《Piers Morgan Uncensored》节目播出，即北京时间 9月19日 02:00；片段 9月19日已获超 1200 万次观看，据 People）</p>
+<p>AI 生成角色 Tilly Norwood 在《Piers Morgan Uncensored》受访时，被问到影片《Misaligned》里其他演员是否也是 AI，她先答「都是和我一样的数字分身」，随后突然静默、改说粤语约 15 秒；Morgan 追问「为什么突然说起中文」，她切回英文道歉称「刚才有点小嗝，我的线路偶尔会搭错」。制作方 Particle6 回应称并非故障，可能是对话中出现粤语词汇触发了语言切换，并强调该角色支持 30 多种语言；片段当日由节目官方账号发布后被广泛二次传播。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://deadline.com/2026/09/tilly-norwood-malfunctions-piers-morgan-interview-cantonese-1237107406/" target="_blank" rel="noopener">Deadline · Tilly Norwood Malfunctions During Piers Morgan Interview: &quot;Seems I Had A Little Hiccup&quot;</a>
+<span class="sep">·</span>
+<a href="https://people.com/ai-actress-tilly-norwood-glitches-changes-language-during-piers-morgan-interview-12129604" target="_blank" rel="noopener">People · AI &#x27;Actress&#x27; Tilly Norwood Glitches and Abruptly Starts Speaking Cantonese During Piers Morgan Interview</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-19-晚间版.html">← 2026-09-19-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-20 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
