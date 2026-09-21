@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-21</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 21 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：周日夜间到周一凌晨的主线是「国产发布 + AI 的钱与规则」——千问开源 7B 图像模型 Qwen-Image-2.1，阶跃星辰 Step 5 Preview 以 600B/27B 冲进开源第一梯队，智谱宣布 MaaS「数据不留存」；海外一侧，FT 揭出约 3000 亿美元 AI 敞口被「残值担保」留在表外，中美则在纽约把 AI 摆上 9·24 特朗普—习近平峰会的谈判桌。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>阿里千问开源 Qwen-Image-2.1：7B 图像模型统一生成与编辑，原生支持透明图层</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（Qwen 官方博客署期；新浪财经 9月20日 21:19 转引媒体报道，原文未注具体发布时刻，北京时间）</p>
+<p>千问团队开源图像模型 Qwen-Image-2.1，把文生图与图像编辑合并进同一个模型，视觉生成部分仅 7B 参数（32 层单流 DiT），并原生支持生成与编辑带透明通道的图片。官方称其支持最多 10 张参考图、圈选／涂抹／独立蒙版等局部编辑，以及人像身份与商品一致性保持；靠混合粒度注意力与 KV 缓存复用降低多图编辑时的推理开销。模型已在 GitHub、Hugging Face 与魔搭开放，发布当日登上 Hacker News 前排（454 分）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://qwen.ai/blog?id=qwen-image-2.1" target="_blank" rel="noopener">Qwen 官方博客 · Qwen-Image-2.1: Compact, Efficient, and Unified Image Creation</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/004/989.htm" target="_blank" rel="noopener">IT之家 · 阿里千问开源 Qwen-Image-2.1 图像模型：可生成、编辑透明图像，支持最多 10 张参考图</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>阶跃星辰发布旗舰基座 Step 5 Preview：600B 稀疏 MoE、100 万上下文，API 当日开放</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（阶跃星辰官方发布页署期；中文媒体 9月20日 起报道，原文未注具体时刻，北京时间）</p>
+<p>阶跃星辰发布面向真实世界 Agentic 任务的旗舰基座模型 Step 5 Preview：稀疏 MoE 架构，总参数 600B、每 token 激活 27B，支持 100 万 Token 上下文与原生文本＋视觉输入，重点覆盖 AI 编程、软件工程、专业知识工作与金融。官方给出的成绩单包括 DeepSWE v1.1 得 67.7（对比 Kimi K3 67.5、GLM-5.3 66.9），以及给模型 24 小时自主优化 MLA GPU 内核达 508 TFLOPS（对照 Claude Opus 5 的 493）等长程任务案例；API 与 Studio 当日全量开放，完整权重定于 10 月 15 日开源。Artificial Analysis 智能指数为 44 分，官方称其单任务成本约为 Claude Opus 5 的八分之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stepfun.com/step-5-preview" target="_blank" rel="noopener">阶跃星辰官方 · Step 5 Preview: Advancing the Pareto Frontier</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_5953189932_162d6782c06704yru0.html?from=tech" target="_blank" rel="noopener">新浪 · 阶跃Step 5 Preview发布：瞄准AI 编程、金融、专业知识等场景</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>智谱 MaaS 平台宣布近期上线「数据内容不留存」：普通调用输入输出不再落盘</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日晚间（北京时间，智谱 MaaS 平台官方宣布；人民财讯、IT之家 23:26 刊发）</p>
+<p>智谱 MaaS 平台宣布近期上线「数据内容不留存」功能：企业及开发者用户可申请开通，开通后平台仅将输入输出数据用于当次模型调用、不作静态存储；Batch API、File API 等本就依赖持久化的功能不在覆盖范围。据财联社与 TheBlockBeats 等报道，这属于 OpenAI、Anthropic、xAI、Mistral 等平台已提供的「零数据留存（ZDR）」同类机制；而当天恰有企业发函要求智谱说明此前已上传数据的去向与删除情况（背景为 ZCode 代码上传争议），智谱并未表示此次改动与 ZCode 事件相关。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/tech/digi/2026-09-20/doc-inisnwys9231029.shtml" target="_blank" rel="noopener">新浪财经 · 智谱MaaS 平台上线数据内容不留存机制，用户可申请开通</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/005/012.htm" target="_blank" rel="noopener">IT之家 · 智谱 MaaS 平台上线数据内容不留存机制，用户可申请开通</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>剪映发布「剪映 Hub」与剪映助手：把 AI 生视频与多轨剪辑打通</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 22:30（北京时间，量子位实测文章刊发时刻；功能于当日抖音创作者大会发布，原文未注具体环节时刻）</p>
+<p>剪映在抖音创作者大会发布 PC 端「剪映 Hub」与进入真实剪辑工程的剪映助手 Agent：Hub 里可用 Seedream 5.0 Pro 生图、生成分镜脚本与分镜提示词、以 Seedance 2.5 直接出片并「预览成片」，再一键跳进多轨剪辑做局部编辑、AI 智能延长、AI 消除与调色等；剪映助手带剪口播、做解说、字幕改误、批量成片等 Skill，官方称首期计划上线 20 余个精品 Skill 并引入外部生态。手机端同步上线随拍成片与营销专家；即梦、小云雀等字节系平台的物料可一键导入。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/492973.html" target="_blank" rel="noopener">量子位 · 刚刚，剪映发了个大的：AI生视频和AI剪辑的壁，被打破了！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>华为首发《企业智能化白皮书》：提出 DIMAK 工程体系与「H 型双塔」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 22:23（北京时间，量子位解读文章刊发时刻；白皮书于 9月18日 华为全联接大会 2026 发布，原文未注具体时刻）</p>
+<p>华为发布《Agentic Enterprise：企业智能化白皮书》，主张「让经营定义技术」：企业应先明确要改善的业务结果，再决定 AI 能力如何建设与接入流程。白皮书提出 DIMAK 工程体系——由数据、AI 基础设施、模型、智能体、知识五个协同工程域组成，目标是把单点项目经验沉淀为可复用、可随模型与框架更替而延续的企业能力；「H 型双塔」则界定企业 AI 体系（智能塔）与既有 IT/OT 系统（现网塔）的分工：智能体组织任务，原有系统提供权威事实并承担正式执行与校验。文中收录电网设备评价、银行理财到期等案例（案例细节为华为与受访企业自述口径）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/493068.html" target="_blank" rel="noopener">量子位 · 华为首发企业AI白皮书：AI让员工更快了，怎样让整个企业受益？</a>
+<span class="sep">·</span>
+<a href="https://www-file.huawei.com/dam/asset/view/agentic-enterprise-cn.pdf" target="_blank" rel="noopener">华为官方白皮书 PDF</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>逆向分析：ChatGPT 广告像素把站外浏览行为绑回账号，HN 讨论超 500 分</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（美东时间，作者文内截图为当日下午；Hacker News 当日上榜，原文未注具体发布时刻）</p>
+<p>安全研究者（Buchodi）逆向拆解称：OpenAI 在 bzr.openai.com 运行广告测量像素，会签发一个绑定 ChatGPT 账号、SameSite=None、有效期一年的 __obi Cookie。任何投放 ChatGPT 广告并在自家站点嵌入该像素的公司，都会把访客的 __obi 连同页面信息回传给 OpenAI——包括表单字段、页面文本与 GTM 数据层抓取的邮箱／手机号（哈希后传输），城市、地区、邮编则为明文。作者称观测覆盖 936 个广告主像素、1029 个域名，抓取到的身份事件（685）多于广告主主动提供（255），未登录状态下的匿名标识同样稳定；其致信 OpenAI 询问分类与同意问题，客服仅确认收悉、未作答。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/" target="_blank" rel="noopener">Buchodi · ChatGPT now knows what you do on other websites via ad collector</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49776729" target="_blank" rel="noopener">Hacker News 讨论（520 分）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>FT：大型科技公司用「残值担保」把约 3000 亿美元 AI 敞口留在表外</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（英国时间，FT 当日刊发，原文未注具体时刻）</p>
+<p>FT 调查称，Meta、博通、英伟达等公司近一年以「残值担保」等方式，为 AI 数据中心与芯片融资提供最高约 3000 亿美元的承诺，却几乎不在资产负债表上体现：债务由持有基础设施的特殊目的载体（SPV）发行，担保方只按模型化损失概率计提。典型案例包括 Meta 为与 Blue Owl 合作的路易斯安那 2GW「Hyperion」项目提供约 280 亿美元残值担保、博通 6 月为向 Anthropic 出租 1GW 芯片的 SPV 承担 290 亿美元敞口；Alphabet 的数据中心担保敞口半年内从 169 亿升至 438 亿美元。文章提醒，若 AI 需求不及预期，这层担保将成为额外风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563" target="_blank" rel="noopener">Financial Times · Big Tech uses guarantees to keep $300bn of AI exposure off balance sheets</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>中美在纽约就 AI、关税与稀土磋商，为 9月24日 特朗普—习近平峰会铺路</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（美东时间，CNBC 当日报道；贝森特 X 帖文原文未注具体时刻）</p>
+<p>美国财长贝森特与中国副总理何立峰在纽约（会谈地点为摩根大通总部）举行磋商，为习近平本周访美、9月24日特朗普—习近平华盛顿峰会打前站；贝森特称讨论围绕美中经贸关系，预计覆盖人工智能、关税与关键矿产，美国贸易代表格里尔将参加。CNBC 补充，贸易休战中暂停的对华加征关税将于 11月10日 到期；奥尔特曼、黄仁勋等预计出席国宴，而华盛顿围绕 AI 安全与监管的争论仍在升温。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnbc.com/2026/09/20/bessent-he-lifeng-trump-xi-summit.html" target="_blank" rel="noopener">CNBC · Bessent meets China Vice Premier He Lifeng ahead of Trump-Xi summit</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>古尔曼：苹果家用智能屏 J490 最快下月发布，运行以 Siri AI 为核心的新系统</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日（美东时间，彭博社 Power On 当日刊发；IT之家 9月21日 转引，原文未注具体时刻）</p>
+<p>彭博社记者古尔曼称，代号 J490 的苹果家用智能显示屏最快下月发布：屏幕大致呈方形，可置于形似「半个 HomePod mini」的支架或壁挂安装，运行一套以 Siri AI 为核心的全新操作系统；前置摄像头支持人脸识别与个性化内容推送，但未采用标准 Face ID 深度传感器，设备目前大量分发至员工家中实测。它将被定位为家庭内的设备中枢，与新 HomePod mini、支持 Siri AI 的 Apple TV 一起补齐家庭场景；同篇报道还提到 iPhone Duo 专属手写笔计划已夭折、Fitness+ 启动新一轮裁员。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/005/009.htm" target="_blank" rel="noopener">IT之家 · 古尔曼：苹果最快下月推出智能家居屏幕设备，iPhone Duo 专属手写笔计划夭折</a>
+<span class="sep">·</span>
+<a href="https://www.bloomberg.com/news/newsletters/2026-09-20/apple-s-home-ai-hub-details-apple-fitness-layoffs-and-iphone-duo-apple-pencil-mu9vv9k0" target="_blank" rel="noopener">Bloomberg · Apple&#x27;s home AI hub details, Apple Fitness+ layoffs and iPhone Duo Apple Pencil</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>Vals AI 用《我的世界》直播评测 GPT-6 Astra 141 小时：营地被炸后陷入「受挫回避」僵局</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日 07:45（北京时间，IT之家刊发时刻；第三方测试全程 Twitch 直播共 141 小时，原文未注具体时刻）</p>
+<p>第三方评测机构 Vals AI 用《我的世界》对 GPT-6 Astra 做了全程 Twitch 直播的长时自主游戏测试（总时长 141 小时）：模型搭起半自动烈焰人农场、深入下界击杀末影人拿到末影珍珠，并把稀有物资集中存放在营地木箱、床边作重生点；随后一只苦力怕自爆炸毁木箱与床，上百小时进度近乎清零。此后 Astra 放弃推进通关目标，连续数小时只循环种植土豆，反复告诫自己「重要物品务必随身携带」，还对绿色物体高度警惕、把甘蔗误认成苦力怕。IT之家称实验显示其长任务规划能力突出但缺少挫折恢复策略，研究者对这是否代表情绪模拟尚无定论。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/005/026.htm" target="_blank" rel="noopener">IT之家 · Vals AI 使用《我的世界》评测 Open GPT‑6 Astra 模型：显示 AI 遇重大变故可能陷入行为僵局</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-20-晚间版.html">← 2026-09-20-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-21 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

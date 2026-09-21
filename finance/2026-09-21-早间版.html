@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-21</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 21 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中美元首会晤（9月23—25日）前最后一轮中美经贸磋商在纽约登场，何立峰与贝森特、格里尔就贸易、AI安全与稀土等议题会谈；9月LPR连续16个月不变；亚太早盘原油走高、金价持稳，日本股市休市至周四。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>中美经贸磋商在纽约开始举行，为9月24日元首会晤做最后准备</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 美东时间上午（纽约当地，谈判开始；贝森特当日在X发文时间为美东时间15:10，即北京时间21日03:10）</p>
+<p>摘要：当地时间9月20日上午，中美两国经贸团队在纽约开始举行中美经贸磋商，中方牵头人何立峰与美财长贝森特、美国贸易代表格里尔会谈，议题涉及贸易休战延长（11月10日到期）、关税、AI安全与稀土供应等，为习近平9月23—25日访美、24日白宫会晤铺路。贝森特随后在X上表示，他与何立峰“继续就美中经贸关系进行磋商，为历史性峰会做准备”。商务部此前答记者问表示，何立峰于9月19日—23日率团赴美与美方举行经贸磋商。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cztv.com/newsDetail/904204" target="_blank" rel="noopener">新蓝网 · 中美经贸磋商在美国纽约开始举行</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609203879461881.html" target="_blank" rel="noopener">东方财富 · 财经早餐 9月21日周一</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>9月LPR报价出炉：1年期3.00%、5年期以上3.50%，连续16个月不变</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日 09:10（北京时间，澎湃新闻发稿时间；央行授权公布的LPR报价日为2026年9月20日）</p>
+<p>摘要：央行授权全国银行间同业拆借中心公布，2026年9月贷款市场报价利率（LPR）为1年期3.00%、5年期以上3.50%，均与上月持平，连续16个月不变。作为主要政策利率的7天期逆回购利率自2025年5月下调后未再调整，本月LPR定价基础未变；最新数据显示8月新发放企业贷款加权平均利率略低于3%、新发放个人住房贷款加权平均利率约3.1%，均处历史低位。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.qq.com/rain/a/20260920A04FMT00" target="_blank" rel="noopener">澎湃新闻（腾讯新闻） · 9月LPR不变：1年期3.0%，5年期以上3.5%</a>
+<span class="sep">·</span>
+<a href="https://finance.cctv.com/2026/09/20/ARTIQ2jOvfQyHGo9IwSNQsrH260920.shtml" target="_blank" rel="noopener">央视网财经 · LPR连续16个月“按兵不动”，年内还会降息吗？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>泽连斯基称与特朗普通话，双方商定在纽约举行会晤</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日（乌克兰当地时间；央视新闻9月21日发稿，原文未注具体时刻）</p>
+<p>摘要：乌克兰总统泽连斯基表示，他当天与美国总统特朗普通了电话，双方商定在美国纽约举行会晤。泽连斯基称，这次会晤“可能带来重要改变”。相关表态发布之际，美方在中东与俄乌等议题上的外交斡旋同步推进，会晤具体时间与议题尚未见公开信息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.cctv.com/2026/09/21/ARTIkUnR356hzdhopFgziZFO260921.shtml" target="_blank" rel="noopener">央视网 · 泽连斯基称与特朗普通话 双方商定在纽约会晤</a>
+<span class="sep">·</span>
+<a href="https://news.sina.com.cn/w/2026-09-21/doc-inispiqn9061031.shtml" target="_blank" rel="noopener">新浪新闻 · 泽连斯基称与特朗普通话双方商定在纽约会晤</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>德国选择党赢得梅前州议会选举，默茨基民盟首次未过5%门槛</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日凌晨（德国当地时间，梅前州选举管理部门公布初步计票结果；选举投票于9月20日举行）</p>
+<p>摘要：初步计票结果显示，德国选择党在梅克伦堡-前波美拉尼亚州议会选举中获38.2%选票、在71个席位中获32席，首次成为该州议会第一大党；现任州长施韦西格所属社民党获35.5%居次（29席），总理默茨领导的基民盟仅获4.9%、首次在州议会选举中未达5%门槛而无缘新一届州议会。市场对德国政局变动反应相对平静，欧元兑美元汇率变动不大。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cls.cn/telegraph" target="_blank" rel="noopener">财联社电报（9月21日）</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7B2ILMF05566WVY.html" target="_blank" rel="noopener">格隆汇（网易） · 原油期货大幅走高，美股期货走弱</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>卡塔尔能源大臣驳斥贝森特“霍尔木兹海峡一文不值”说法，伊朗称海峡暂不会重新开放</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日（纽约当地时间周日，卡塔尔经济论坛发表；新浪财经9月21日发稿）</p>
+<p>摘要：卡塔尔能源大臣兼卡塔尔能源公司CEO萨阿德·卡比表示，美财长贝森特关于霍尔木兹海峡将在两年内变得“一文不值”的说法“完全错误”，“通过霍尔木兹海峡进行的贸易不可能过时”；他称海峡一旦重新开放，卡塔尔可在数周内恢复正常天然气运营，Golden Pass项目第二、三条生产线将于2027年投运。此前贝森特称绕开海峡的输油管道建成后该通道重要性将回落；伊朗议会议长卡利巴夫20日亦表态，在伊方条件获满足、美方履行承诺前，霍尔木兹海峡不会重新开放。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-21/doc-inispuec0895915.shtml" target="_blank" rel="noopener">新浪财经 · 卡塔尔能源掌门人驳斥贝森特：霍尔木兹海峡绝不会“一文不值”</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7AUV7240519QIKK.html" target="_blank" rel="noopener">网易 · 卡塔尔能源大臣称美国财长贝森特说法错误，经霍尔木兹海峡贸易不可能过时</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>亚太早盘：原油走高、美股期货小幅回落，金银基本持稳</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 周一开盘（北京时间亚市早盘；原文标注“周一开盘”，未注具体时刻）</p>
+<p>摘要：周一早盘，WTI原油期货涨0.97%、报97.015美元/桶，布伦特与WTI原油合约大幅走高；现货黄金跌0.05%、报4376.03美元/盎司，现货白银涨0.06%、报66.29美元/盎司。美国股指期货较上周五尾盘有所回落，美债期货与比特币价格保持平稳。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cls.cn/telegraph" target="_blank" rel="noopener">财联社电报（9月21日）</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/bxjj/2026-09-21/doc-inisppwk9014974.shtml" target="_blank" rel="noopener">新浪财经 · 原油期货大幅走高，美股期货走弱</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>亚太股市：韩国KOSPI开盘上涨0.64%，日本股市休市至周四</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 韩国市场周一开盘（韩国当地时间；原文标注“周一开盘”，未注具体时刻）</p>
+<p>摘要：据财联社，韩国KOSPI指数周一开盘上涨0.64%、至6938.34点；日本股市因假期休市、本周四恢复交易，亚太早盘交投相对清淡。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cls.cn/telegraph" target="_blank" rel="noopener">财联社电报（9月21日）</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7B2ILMF05566WVY.html" target="_blank" rel="noopener">格隆汇（网易） · 原油期货大幅走高，美股期货走弱</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>央行公开市场本周2720亿元逆回购到期，机构预计资金面平稳跨月跨季</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间，证券时报当日发稿；数据来自Wind，原文未注具体时刻）</p>
+<p>摘要：Wind数据显示，本周（9月21日至24日）央行公开市场有2720亿元7天期逆回购到期，其中周一、周二到期量为0，周三1100亿元、周四1620亿元；此外周二还有1800亿元3个月期国库现金定存到期。上周央行公开市场累计净投放8588亿元。专家表示，央行流动性投放更趋灵活精细、力度充足，预计资金面平稳跨月跨季，市场利率料保持平稳。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4192365.html" target="_blank" rel="noopener">证券时报 · 央行运用多种工具灵活对冲 资金面料平稳跨月跨季</a>
+<span class="sep">·</span>
+<a href="https://www.yicai.com/news/103371348.html" target="_blank" rel="noopener">第一财经 · 下周央行公开市场将有2720亿元逆回购到期</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>8月公募基金规模回升至39.63万亿元，单月增超5200亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间，上海证券报报道；中基协8月末数据，原文未注具体时刻）</p>
+<p>摘要：中基协数据显示，截至8月末公募基金资产净值合计39.63万亿元，较7月末增长5293.09亿元、环比增1.35%，8月新增117只基金、数量再创新高；混合型基金单月增长2567.93亿元，成为规模反弹主力。业内认为公募规模突破40万亿元指日可待，当前有超130只基金正在或即将发行，权益类基金是重点布局方向。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://fund.10jqka.com.cn/20260921/c680098938.shtml" target="_blank" rel="noopener">上海证券报（同花顺） · 权益市场回暖助推 8月公募规模增长超5000亿元</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4191966.html" target="_blank" rel="noopener">证券时报 · 单月增近5300亿！8月公募数据出炉，混合基金成“反弹先锋”</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>景旺电子启动H股全球发售：最高发售价69.88港元，预计9月29日上市</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日早间（北京时间，景旺电子于港交所发布公告；招股期为9月21日至24日）</p>
+<p>摘要：景旺电子(03228.HK)早间在港交所公告，拟全球发售7294.43万股H股（香港公开发售约10%、国际发售约90%），最高发售价每股69.88港元，9月21日至24日招股、预计9月25日定价、9月29日开始在联交所买卖；基石投资者包括CPE Redwood、中际旭创、易方达基金等。按最高发售价计算，公司募资净额约49.6亿港元，其中约60%将用于扩大及升级高附加值产品产能以满足AI驱动的需求。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.jiemian.com/article/15119169.html" target="_blank" rel="noopener">界面新闻 · 景旺电子：拟全球发售7294.43万股H股，发售价不超69.88港元</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7B6Q81G05198ETO.html" target="_blank" rel="noopener">格隆汇（网易） · 景旺电子(03228.HK)拟全球发售7294.43万股H股 预计9月29日上市</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-20-晚间版.html">← 2026-09-20-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-21 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
