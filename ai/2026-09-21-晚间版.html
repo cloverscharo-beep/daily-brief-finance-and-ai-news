@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-21</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 21 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：周一的主题是「资本与代理」——软银启动逾 110 亿美元债券发行为 OpenAI 第三期投资输血，剑指亚太史上最大非金融公司债；产品端同日密集落地：月之暗面把 Kimi Code 搬上桌面、Google 开源的智能体编排器 AX 登顶 Hacker News；而 Amazon 用一纸弹窗把 Meta 的 Muse 代购代理挡在门外，为「代理时代谁说了算」再添一例。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>月之暗面发布 Kimi Code Desktop：编程智能体迎来官方桌面客户端</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，月之暗面当日宣布；原文未注具体时刻）</p>
+<p>Kimi Code Desktop 正式上线，macOS 与 Windows 版同步推出，可从 kimi.com/code 安装。作为 Kimi Code 的官方桌面客户端，用户可在桌面端直接调用其 AI Agent 读写代码、运行命令、完成自动化任务，并通过图形界面集中管理项目、查看 Agent 每一步执行；还内置终端、浏览器与 Git 状态视图，可审阅改动、关联 PR 状态。官方称本地 CLI 任务会直接出现在桌面端，1.0 只是开始。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/tech/digi/2026-09-21/doc-inisqriw8859436.shtml" target="_blank" rel="noopener">新浪科技（IT之家转载） · 月之暗面发布 Kimi Code Desktop 桌面客户端，macOS 和 Windows 版同步上线</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-21/doc-inisqriv2145490.shtml" target="_blank" rel="noopener">上海证券报 · 月之暗面推出 Kimi Code Desktop</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Google 开源智能体编排器 AX：声明式任务、亚秒级挂起恢复，登顶 Hacker News</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，当日登顶 Hacker News；仓库属 Google 官方 GitHub 组织，原文未注具体时刻）</p>
+<p>Google 开源的智能体编排运行时 AX（Agent Executor）当日冲上 Hacker News 榜首。它把 Agent 视为轻量 Actor，在 Kubernetes 与 Agent Substrate 之上提供四个原语——Task（隔离执行）、Workspace（仓库／MCP／技能）、Gateway（网络与凭据）、Model（模型参数集中配置）；宣称单集群可承载数十亿并发会话、空闲任务亚秒级挂起恢复、密集复用降低闲置成本，还支持「生成式工作区」：用自然语言描述环境，Agent 自行安装工具链。项目以 Apache 2.0 开源，被形容为「不替代 LangGraph/CrewAI，而是运行在它们之下」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://agentexecutor.io" target="_blank" rel="noopener">AX 官方网站</a>
+<span class="sep">·</span>
+<a href="https://explainx.ai/blog/google-ax-agentic-orchestrator-kubernetes-2026" target="_blank" rel="noopener">explainx.ai · Google AX Explained: Open Agentic Orchestrator</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>OpenAI 官方通告：9月24日 移除 Videos API 与全部 Sora 2 模型，无替代方案</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，多家媒体与开发者社区当日刊发迁移提醒；OpenAI 于 3月24日 发出弃用通知，下线生效日为 9月24日）</p>
+<p>据 OpenAI 官方弃用表：Videos API（/v1/videos）与 sora-2、sora-2-pro 及三个日期快照将于 9月24日 一并移除，「推荐替代」一栏为空，官方未指定任何后继视频模型。消费者端 Sora 网页／App 已于 4月26日 停服，API 是最后一块拼图；下线后相关数据将被删除，已购积分可改用 Codex。多家媒体当日发布迁移指南，建议先把成品素材导回自有系统，再转向 Seedance 2.5、Wan 3.0、MiniMax H3 等第三方模型。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://developers.openai.com/api/docs/deprecations" target="_blank" rel="noopener">OpenAI 官方弃用表 · Deprecations</a>
+<span class="sep">·</span>
+<a href="https://groundtruth.day/news/openai-videos-api-sora-2-shutdown.html" target="_blank" rel="noopener">Ground Truth · OpenAI will remove the Videos API and Sora 2 models on 24 September</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>软银启动逾 110 亿美元债券发行，为 OpenAI 第三期投资输血，或创亚太纪录</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间上午，路透社自香港发稿；日本当日休市，软银未予置评）</p>
+<p>据路透审阅的条款书，软银当日启动 100 亿美元美元债与 10 亿欧元债发行：美元部分分 3.5／5.5／7.5 年三档，欧元部分分 4／6 年两档；所得款项用于 10月1日 交割的第三期 100 亿美元 OpenAI 投资并取消既有 100 亿美元过桥贷款，定价定于 9月24日、交割 9月29日。若按计划完成，将成亚太及日本史上最大非金融公司债（超过 7-Eleven 2021年 的 109.3 亿美元），Fitch 给予 BB+ 评级；完成后软银对 OpenAI 累计投资约 646 亿美元、持股约 13%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.thestate.com/news/business/article317318388.html" target="_blank" rel="noopener">路透社（The State 转载） · Softbank Group launches over $10 billion in bonds for OpenAI investment, term sheet shows</a>
+<span class="sep">·</span>
+<a href="https://techstartups.com/2026/09/21/softbank-launches-11-billion-bond-sale-to-fund-openai-investment" target="_blank" rel="noopener">Tech Startups · SoftBank launches $11 billion bond sale to fund OpenAI investment</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>Amazon 封禁 Meta 的 Muse 代理代购：下单弹出「未经授权的 AI 代理」警告</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 周日晚间（美东时间，拦截自周日晚间生效，对应北京时间 9月21日 上午；GeekWire 当日报道）</p>
+<p>GeekWire 报道，Amazon 已阻止 Meta 的 Muse 个人代理代用户在 Amazon.com 下单：从周日晚间起，Muse 用户会看到弹窗「未经授权的 AI 代理继续访问违反 Amazon 使用条件」。Amazon 称事先未被告知 Muse 会接入其商店，且代理不表明身份即移动账户、处理交易「不可接受」，要求 Meta 将 Amazon 从该体验中移除；Meta 未回应置评。此前 Amazon 起诉 Perplexity 的同类官司 8月4日 被第九巡回法院判负、9月10日 被驳回重审，此役则转向「使用条款」这张牌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping" target="_blank" rel="noopener">GeekWire · Amazon blocks Meta&#x27;s Muse AI assistant in new standoff over agentic shopping</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/998078/amazon-blocks-meta-muse-ai-agent-shopping" target="_blank" rel="noopener">The Verge · Amazon doesn&#x27;t trust Meta&#x27;s Muse AI agent</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>硅基流动完成 B+ 轮二期与 C 轮融资：投资方含中网投、国新基金、中国移动链长基金等</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，《科创板日报》讯；融资完成时间表述为「近日」，原文未注具体时刻）</p>
+<p>《科创板日报》9月21日讯，北京硅基流动科技股份有限公司近日完成 B+ 轮二期和 C 轮融资，投资方包括中国互联网投资基金、国新基金、中国移动链长基金、京能基金、建投华科、成都科创投等数十家机构。公司 2023 年成立，创始人袁进辉出身清华、曾任微软亚洲研究院主管研究员，主攻大模型推理降本。报道同时引述中国电信研究院报告：预计 2026 年我国 Token 年消耗量达 10 亿亿，2030 年超 3500 亿亿，2029 年推理算力市场占比将达 80%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinastarmarket.cn/detail/2488370" target="_blank" rel="noopener">科创板日报 · 硅基流动完成B+轮二期及C轮融资</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>（补录）中国电信开源全栈国产轻量代码智能体模型 Xing4.0-29B-A4B：单张 3090 可跑</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月20日 20:22（北京时间，量子位 实测文章刊发时刻；模型为当日前后最新开源，官方发布具体时刻原文未注）</p>
+<p>中国电信 AI 开源 Xing4.0-29B-A4B：MoE 架构，290 亿总参数、每次推理激活约 40 亿，采用 MLA 注意力、多 Token 预测（MTP）与 DeepSeek 同款 mHC 流形约束超连接；4-bit 量化后显存占用从约 60GB 压到约 15GB（降约 75%），一张 RTX 3090 即可运行。从国产芯片、训练框架到部署整条链路做了国产化适配，并针对 OpenCode、Claude Code、OpenClaw、Hermes 等 Agent/Harness 框架完成定向适配，兼容 LLaMA-Factory、MindFormers、SGLang、vLLM、KTransformers 等工具链，瞄准数据不出域企业的本地 AI 办公需求。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/492946.html" target="_blank" rel="noopener">量子位 · 一张3090就能跑！全栈国产模型，把AI办公搬到企业本地</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/wm/2026-09-20/doc-inisnnkt1440968.shtml" target="_blank" rel="noopener">新浪财经转载</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">8</span><h3>微软 AI 负责人苏莱曼：不应以「中国 AI 发展太快」为由反对监管</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，IT之家 刊发；苏莱曼受访于 CNN《Fareed Zakaria GPS》节目，节目播出时刻原文未注）</p>
+<p>IT之家 9月21日 消息，微软 AI 负责人苏莱曼在 CNN《Fareed Zakaria GPS》节目中表示：对中国 AI 进展的担忧不应成为反对设置 AI 防护措施的理由。他主张每个开发者都应为 AI 设定受「人文主义准则」约束的目标与明确防护措施，监管不应被视为「坏事」，而是「创建共同规范与标准」，且「不一定会拖慢我们的速度」。其表态与特朗普「AI 安全是骗局」的立场形成鲜明对比；微软 AI 团队上周二刚发布一份以「人类始终掌控 AI」为指导的宣言。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/005/138.htm" target="_blank" rel="noopener">IT之家 · 微软 AI 负责人苏莱曼：美国不应该以中国 AI 发展太快为理由反对监管</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>「Pirate Face」把开源模型做成磁力链接：Hugging Face 删档后由 P2P 蜂群续命</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，Hacker News 当日热门条目；站点于 9月20日 增补 tracker 与 DHT 发现层，原文未注具体时刻）</p>
+<p>新上线的 Pirate Face 将 Hugging Face 上宽松许可的模型打包为带 web-seed 的 BitTorrent 磁力链接：每个权重文件校验官方 SHA-256，HF 在线时直连下载、删档后自动回落到 P2P 蜂群，并把这类模型标记为「Rescued」；设置 HF_ENDPOINT 即可让现有流水线无缝切换。站点自称目录覆盖 66.9 万余个「可镜像」仓库，页面亦提示目前仍依赖 HF 与社区。有分析提醒：目录数只是「资格数」，并不等于当年被真正确保留存的模型量。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://pirateface.co/" target="_blank" rel="noopener">Pirate Face · Turn AI into torrents that live forever</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49776699" target="_blank" rel="noopener">Hacker News 讨论</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>传闻 Gemini 4 Pro 现身竞技场：泄露跑分称胜过 GPT-6 Astra 与 Claude Fable 5.1</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月21日（北京时间，TechBriefly 报道刊发；模型于 9月17日 以「gemini-3.8-flash」之名现身 Arena，原文未注具体时刻）</p>
+<p>TechBriefly 报道称，开发者怀疑一个未公布的 Gemini 4 Pro（内部代号 Argon）于 9月17日 以「gemini-3.8-flash」名义出现在 Arena 评测平台，流传的跑分为：DeepSWE v1.1 88%、Terminal-bench 2.1 95.3%、OSWorld-2.0 86.8%，据称在编程、推理与 Agent 任务上超过 GPT-6 Astra 与 Claude Fable 5.1。背景是《华尔街日报》曾报道 Gemini 3.5 Pro 因提升不足被砍、DeepMind 7月21日 宣布启动「史上最雄心勃勃」的 Gemini 4 预训练。Google 未确认相关信息，社区估计公开发布或在 10月 前后。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techbriefly.com/2026/09/21/gemini-4-pro-benchmarks-beat-gpt-6-astra-claude" target="_blank" rel="noopener">TechBriefly · Leaked Gemini 4 Pro benchmarks show it beating GPT-6 Astra and Claude</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-21-早间版.html">← 2026-09-21-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-21 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

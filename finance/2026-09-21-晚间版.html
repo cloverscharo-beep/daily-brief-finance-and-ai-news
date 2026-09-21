@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-21</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 21 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中美元首会晤前最后一轮经贸磋商在纽约举行，新华社通稿确认双方就人工智能问题举行对话；A股放量收涨、沪指逼近3950点，成交连续两日超2万亿；晚间美股期指走高、存储半导体盘前走强，金银油齐跌、比特币站上8.5万美元。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>新华社通稿：中美经贸磋商在纽约举行，双方就人工智能问题举行对话</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月20日（纽约当地时间，原文未注具体时刻；新华社"纽约9月20日电"，人民网、证券时报9月21日发布转发）</p>
+<p>摘要：据新华社，当地时间9月20日，中美经贸中方牵头人、国务院副总理何立峰与美方牵头人、美国财政部长贝森特和贸易代表格里尔在纽约举行经贸磋商。双方围绕落实历次经贸磋商共识、促进双边贸易投资等进行了"坦诚、深入、富有建设性的交流"，并就人工智能有关问题举行对话，为9月24日中美元首会晤作最后准备。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://politics.people.com.cn/n1/2026/0921/c1001-40802764.html" target="_blank" rel="noopener">人民网 · 中美经贸磋商在美国纽约举行</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4192647.html" target="_blank" rel="noopener">证券时报 · 中美经贸磋商在美国纽约举行</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行开展1650亿元7天期逆回购操作，公开市场净投放1650亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 09:23（北京时间，汇通网实时快讯标注时间；央行当日公告，中新网10:16发稿）</p>
+<p>摘要：央行9月21日以固定利率、数量招标方式开展1650亿元7天期逆回购操作，操作利率1.40%、与此前持平，全额满足一级交易商需求；因当日无逆回购到期，公开市场实现净投放1650亿元。本周三、周四将分别有1100亿元、1620亿元逆回购到期。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/cj/2026/09-21/10700546.shtml" target="_blank" rel="noopener">中新网 · 9月21日央行开展1650亿元7天逆回购操作</a>
+<span class="sep">·</span>
+<a href="http://stock.10jqka.com.cn/20260921/c680109727.shtml" target="_blank" rel="noopener">上海证券报（同花顺） · 人民银行开展1650亿元7天期逆回购操作 实现净投放1650亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>央行：将于9月23日在香港发行600亿元6个月期央票</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 09:35（北京时间，中国基金报发稿；央行当日公告）</p>
+<p>摘要：央行9月21日公告，将于2026年9月23日（周三）通过香港金管局债务工具中央结算系统（CMU）债券投标平台，招标发行2026年第九期中央银行票据。本期票据期限6个月（182天）、发行量600亿元人民币，起息日9月28日、到期日2027年3月29日，旨在丰富香港高信用等级人民币金融产品、完善香港人民币收益率曲线。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chnfund.com/article/77139dbf-f31a-dd07-1c41-3a23d3c7c6c6" target="_blank" rel="noopener">中国基金报 · 央行将于9月23日在港发行600亿元6个月期央票</a>
+<span class="sep">·</span>
+<a href="https://www.guandian.cn/article/20260921/604721.html" target="_blank" rel="noopener">观点网 · 央行将于9月23日在香港招标发行600亿元六个月期央票</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>9月21日人民币对美元中间价报6.7487</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间，中国外汇交易中心当日受权公布；原文未注具体时刻）</p>
+<p>摘要：中国外汇交易中心9月21日受权公布人民币市场汇价：人民币对美元汇率中间价报6.7487（100美元兑674.87元人民币），100欧元兑771.92元人民币，100港元兑86.025元人民币。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/20260921/a2a6a09fb98f411b8473f09500ca863d/c.html" target="_blank" rel="noopener">新华网 · 人民币市场汇价（9月21日）</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股三大指数集体收涨：沪指涨0.97%报3949.91点，成交连续两日超2万亿</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 15:00（北京时间，A股收盘；北京日报客户端等15:06起发稿）</p>
+<p>摘要：9月21日A股高开高走，截至收盘，上证指数涨0.97%报3949.91点，深证成指涨0.65%报13730.02点，创业板指涨0.80%报3399.59点；沪深北三市合计成交20481亿元、连续两个交易日站上2万亿，超4500只个股上涨。医药生物板块掀涨停潮，房地产板块午后走强，万科A、绿地控股收获2连板。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xinwen.bjd.com.cn/content/s6ab0db3de4b0e42f8f009894.html" target="_blank" rel="noopener">北京日报客户端 · 9月21日A股收评：超4500只个股飘红，三大指数集体收涨</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7C261AR0519QIKK.html" target="_blank" rel="noopener">格隆汇（网易） · 9月21日A股宽基指数全线上涨，国证2000涨幅居首（+1.38%），科创50涨幅最小（+0.29%）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收涨：恒生指数涨1.18%，南向资金连续11日净买入</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 16:15（北京时间，人民财讯/证券时报发稿；港股已于16:00收盘）</p>
+<p>摘要：9月21日港股收盘，恒生指数涨1.18%，恒生科技指数涨0.40%。南向资金全天成交921.84亿港元、净买入40.74亿港元，连续11个交易日净买入；光通信及算力硬件板块表现抢眼，广合科技涨超14%、胜宏科技涨超12%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4193130.html" target="_blank" rel="noopener">证券时报网 · 港股收评：恒生指数涨1.18%，恒生科技指数涨0.4%</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7CA3R4S053469RG.html" target="_blank" rel="noopener">网易（证券时报·数据宝） · 南向资金今日净买入40.74亿港元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>欧股周一集体高开：欧洲斯托克50指数涨0.77%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 15:02（北京时间，财联社快讯；欧洲当地时间上午开盘）</p>
+<p>摘要：财联社9月21日电，欧股开盘集体走高：欧洲斯托克50指数开盘涨0.77%，德国DAX指数涨0.73%，英国富时100指数涨0.22%，法国CAC40指数涨0.58%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2488847" target="_blank" rel="noopener">财联社 · 欧股集体高开</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-21/4587314.html" target="_blank" rel="noopener">每日经济新闻 · 欧股集体高开</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美股期指齐涨、存储半导体盘前走强；比特币站上8.5万美元，金银油齐跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 17:57（北京时间，同花顺财经"截至发稿"数据）</p>
+<p>摘要：截至北京时间17:57，美股三大指数期货齐涨，纳指期货涨超1%，道指、标普500指数期货涨约0.6%；英特尔因携手友达布局Micro LED先进封装盘前涨超6%，AMD、美光、闪迪、SK海力士等存储半导体股普涨。大宗商品方面，国际金银原油集体下跌，现货黄金一度失守4340美元/盎司、跌0.78%；比特币站上85000美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://stock.10jqka.com.cn/usstock/20260921/c680133256.shtml" target="_blank" rel="noopener">同花顺财经 · 比特币升破8.5万美元，金银油集体下跌，美股存储半导体盘前走强，英特尔涨超6%</a>
+<span class="sep">·</span>
+<a href="http://futures.10jqka.com.cn/20260921/c680123769.shtml" target="_blank" rel="noopener">每日经济新闻（同花顺期货） · 美国标普500指数期货涨0.6%，纳斯达克100期货涨0.9%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>大众汽车盈利预警发酵：股价延续大跌，9月21日起被剔除欧洲斯托克50指数</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（欧洲当地时间，斯托克50指数调整当日生效；财闻援引路透社报道、北京时间15:44发稿）</p>
+<p>摘要：继上周五（9月18日）发布盈利预警、对所持保时捷股份计提60亿欧元减值并再次下调2026年利润率预期后，大众汽车股价周一在欧洲市场延续大跌，保时捷同步走低。指数编制机构斯托克自9月21日起将大众汽车剔除出欧洲斯托克50指数，空缺由诺基亚接替。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://stock.10jqka.com.cn/usstock/20260921/c680121784.shtml" target="_blank" rel="noopener">同花顺财经（财闻） · 15年来首次被剔除蓝筹股！大幅下调利润率预期，大众、保时捷延续大跌</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7C6M9MQ0519C6T9.html" target="_blank" rel="noopener">网易 · 大众，被剔欧洲重要蓝筹股指数，15年来首次</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>杨德龙：美联储加息靴子落地，A股新一轮行情呼之欲出</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日 17:16（北京时间，同花顺财经发稿）</p>
+<p>摘要：前海开源基金杨德龙表示，周一沪深两市整体呈现震荡反弹走势，前期调整幅度比较大的科技板块明显回升、人形机器人等板块轮番表现，市场信心回升；他认为美联储加息靴子落地、"利空出尽"，A股有望展开新一轮行情。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://news.10jqka.com.cn/20260921/c680130489.shtml" target="_blank" rel="noopener">同花顺财经 · 杨德龙：美联储加息靴子落地 新一轮行情呼之欲出</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-21-早间版.html">← 2026-09-21-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-21 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
