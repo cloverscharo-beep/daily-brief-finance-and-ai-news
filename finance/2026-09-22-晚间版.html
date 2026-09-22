@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-22</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 22 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：A股冲高回落、沪指微涨0.06%，南向资金净买入126.91亿港元创近一个月新高；国际油价跳水、WTI两周来首次跌破90美元；中金公司换股吸收合并东兴证券、信达证券落定，A股股票9月23日复牌。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>外交部：中方愿同美方一道丰富中美建设性战略稳定关系内涵；中美将在未来几周就AI安全风险举行会谈</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 15:21（北京时间，外交部例行记者会）</p>
+<p>摘要：外交部发言人郭嘉昆22日表示，中方愿同美方一道，丰富中美建设性战略稳定关系内涵，加强对话合作、妥善管控分歧；就媒体称中美将在未来几周内就人工智能安全风险举行会谈，他表示各方应共同推动人工智能开放、包容、普惠、向善发展。习近平将于9月23日至25日对美国进行国事访问。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4194795.html" target="_blank" rel="noopener">证券时报 · 外交部：中方愿同美方一道 丰富中美建设性战略稳定关系内涵</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490033" target="_blank" rel="noopener">财联社 · 外交部：各方应该共同推动人工智能开放、包容、普惠、向善发展</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>国新办“十五五”自然资源专场：2030年全国海洋生产总值将破13万亿元，我国发现超大型规模铜金矿</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日上午（北京时间；相关消息10:07—11:26陆续发布，发布会开始时刻原文未注）</p>
+<p>摘要：自然资源部在国新办发布会上介绍，预计到2030年全国海洋生产总值突破13万亿元、海上风电装机翻番至1亿千瓦；1—8月全国石油新增可采储量近7000万吨、天然气6100亿立方米，安徽茶亭铜金矿、贵州猪拱塘铅锌矿新增资源量达超大型规模；前8个月全国探矿权出让成交金额同比增长133.5%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4195222.html" target="_blank" rel="noopener">证券时报 · 最新发布！新一轮找矿突破战略行动成绩单来了</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2489755" target="_blank" rel="noopener">财联社 · 到2030年 全国海洋生产总值将突破13万亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>国家发改委：推动北斗产业规模五年内突破1万亿元，向民企推介36个项目拟引民资156亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日上午（北京时间，国家发改委9月份新闻发布会；原文未注具体时刻）</p>
+<p>摘要：发改委政策研究室副主任李超表示，“十五五”时期将推动北斗产业规模五年内突破1万亿元，并加快推动《中华人民共和国卫星导航条例》出台实施；近期发改委向民间资本推介36个项目、预计总投资614亿元、拟引入民间资本156亿元，涉及铁路、储能、充电设施等。他同时提示，今年秋冬季将出现一次超强厄尔尼诺事件。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489698" target="_blank" rel="noopener">财联社 · 国家发改委：“十五五”时期将推动北斗产业规模超过1万亿元</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3168611" target="_blank" rel="noopener">华尔街见闻 · 国家发改委：近期向民营企业推介36个项目，拟引入民间资本156亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>中金公司换股吸收合并东兴证券、信达证券落定，A股股票9月23日复牌</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 18:11（北京时间，财联社报道时刻；公司公告当日披露）</p>
+<p>摘要：中金公司22日公告，公司拟通过向东兴证券、信达证券全体A股换股股东发行A股股票的方式换股吸收合并两家券商，异议股东收购请求权有效申报股份732.19万股；经向上交所申请，公司A股股票将于9月23日开市起复牌。东兴证券、信达证券已于9月15日起停牌、此后终止上市不再复牌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490280" target="_blank" rel="noopener">财联社 · 中金公司：换股吸收合并有效申报异议股份732.19万股 A股股票明日复牌</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4195270.html" target="_blank" rel="noopener">证券时报 · 中金公司：A股股票将于9月23日复牌</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股收盘：沪指微涨0.06%报3952.13点、成交2.14万亿元，AI应用活跃、航运股下挫</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 15:00（北京时间收盘）</p>
+<p>摘要：A股22日冲高回落、三大指数尾盘集体下挫：沪指涨0.06%报3952.13点，深证成指跌0.05%，创业板指涨0.01%（盘中一度涨超2%）。沪深两市成交额2.14万亿元、较上一交易日放量1040亿元，全市场超3000只个股下跌；AI应用、算力芯片、传媒等方向局部活跃，航运概念走弱。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489993" target="_blank" rel="noopener">财联社 · 收评：创业板指冲高回落微涨 AI应用概念股集体走强</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3168737" target="_blank" rel="noopener">华尔街见闻 · 9月22日收评：创业板指冲高回落微涨，AI应用方向集体走强</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收盘：恒指涨0.18%报25087.75点、腾讯涨超5%；南向资金净买入126.91亿港元创近一个月新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 16:10（北京时间收盘）；南向数据17:45披露</p>
+<p>摘要：香港恒生指数22日收涨0.18%报25087.75点，恒生科技指数涨0.34%；科网股走强，腾讯控股涨超5%，存储、半导体板块多数上涨，大模型概念股下挫（智谱跌超6%）。南向资金全天净买入126.91亿港元，为8月19日以来单日新高，已连续12个交易日净流入、合计约488.78亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490099" target="_blank" rel="noopener">财联社 · 香港恒生指数收涨0.18% 腾讯控股涨超5%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490231" target="_blank" rel="noopener">财联社 · 南向资金今日净买入约127亿港元 创近一个月单日新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价跳水：WTI两周来首次跌破90美元创9月4日以来新低，黄金白银同步走低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 17:54—20:29（北京时间，盘中行情）</p>
+<p>摘要：WTI原油期货22日跌破90美元/桶、盘中跌幅一度扩大至3%、报89.576美元，创9月4日以来新低；布伦特原油跌2%报94.318美元。驱动因素包括沙特重启东西向输油管道、准备恢复延布港出口，以及伊朗总统赴美出席联大令中东地缘担忧缓和。现货黄金日内一度跌1%失守4300美元、随后反弹，20:29报4332.66美元（-0.25%）；现货白银日内一度跌2%失守65美元，20:29报65.62美元（-0.58%）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490245" target="_blank" rel="noopener">财联社 · WTI原油期货时隔两周跌破90美元/桶</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4195174.html" target="_blank" rel="noopener">证券时报 · 直线跳水！伊朗，传出大消息！油价大跌，欧美股市集体拉升</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>人民币：中间价报6.7459上调28点，在岸即期收盘6.7019</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 09:16（中间价）/ 16:32（在岸收盘）（北京时间）</p>
+<p>摘要：人民币兑美元中间价22日报6.7459，较上一交易日上调28个基点；在岸人民币兑美元即期汇率16:32收盘报6.7019，较上一交易日回落64个基点。在习近平9月23日启程访美前，人民币仍处于三年半高位附近，离岸人民币晚间在6.70附近波动（约6.699）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489604" target="_blank" rel="noopener">财联社 · 人民币兑美元中间价报6.7459</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490129" target="_blank" rel="noopener">财联社 · 在岸人民币兑美元收盘报6.7019</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>欧美市场：欧洲三大股指盘中上涨、美股期指盘前基本持稳；英伟达预期市盈率降至十多年来最低</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 20:29（北京时间，美股盘前；欧股为盘中数据）</p>
+<p>摘要：欧洲三大股指22日盘中集体上涨：英国富时100涨0.04%、法国CAC40涨0.41%、德国DAX30涨0.51%；美股三大股指期货盘前基本持稳，道指期货涨0.40%、标普500期货涨0.08%、纳指100期货跌0.06%。英伟达当前股价对应未来12个月预估获利的市盈率已低于17倍，处于十多年来最低水平，市场对其利润增长的确定性存疑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490398" target="_blank" rel="noopener">财联社 · 美股盘前要闻一览：英伟达市盈率降至十多年来最低</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4195174.html" target="_blank" rel="noopener">证券时报 · 直线跳水！伊朗，传出大消息！油价大跌，欧美股市集体拉升</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>云栖大会：阿里云目标2032年数据中心规模超20GW，平头哥发布真武V900、千问推出Qwen Intelligence</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 10:19—17:51（北京时间，云栖大会现场披露）</p>
+<p>摘要：阿里巴巴CEO吴泳铭在云栖大会表示客户AI需求非常强劲，将全力投入AI基础设施建设，目标到2032年阿里云全球数据中心规模超过20GW；平头哥发布国产AI芯片真武V900（算力提升至真武M890的3倍），并公布倚天720/730/750三代服务器CPU规划；千问发布AI手机全栈解决方案Qwen Intelligence，荣耀Magic9系列将成首批搭载机型。阿里巴巴港股盘中涨5%、美股盘前涨超3%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489689" target="_blank" rel="noopener">财联社 · 阿里巴巴：将全力投入AI基础设施建设 2032年阿里云数据中心规模将超20GW</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490113" target="_blank" rel="noopener">财联社 · 千问发布AI手机全栈解决方案Qwen Intelligence</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-22-早间版.html">← 2026-09-22-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-22 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
