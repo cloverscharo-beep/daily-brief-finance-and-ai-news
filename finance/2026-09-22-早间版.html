@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-22</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 22 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：外交部确认习近平将于9月23—25日对美国进行国事访问、24日白宫会晤；美股与半导体齐创新高、AMD市值首破1万亿美元，国际油价单日重挫逾4%。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>外交部：习近平将于9月23日至25日对美国进行国事访问</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间，外交部例行记者会披露；原文未注具体时刻）</p>
+<p>摘要：外交部发言人郭嘉昆21日介绍，应美国总统特朗普邀请，国家主席习近平将于9月23日至25日对美国进行国事访问，期间将同特朗普就中美关系及世界和平发展的重大问题深入交换意见。随着9月24日白宫会晤临近，双方正讨论将11月10日到期的贸易休战延长，美方倾向先延长3—6个月。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609213880362928.html" target="_blank" rel="noopener">东方财富 · 财经早餐 9月22日周二</a>
+<span class="sep">·</span>
+<a href="https://www.caus.com/all-articles/news/430915/" target="_blank" rel="noopener">加美财经 · 中美准备讨论延长贸易休战：中国希望延至特朗普任期结束，美方倾向先延长六个月</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行召开外资金融机构座谈会，潘功胜重申“实施好适度宽松的货币政策”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间，央行消息当晚19时许披露；原文未注具体会议时刻）</p>
+<p>摘要：央行9月21日召开外资金融机构座谈会，听取意见建议，研究进一步优化营商环境、推动金融业高水平对外开放有关工作。行长潘功胜出席会议并讲话，表示将实施好适度宽松的货币政策，稳步扩大金融市场双向开放、优化跨境支付服务、更加便利人民币国际使用。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4193621.html" target="_blank" rel="noopener">证券时报 · 中国人民银行召开外资金融机构座谈会</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/money/bank/2026-09-21/doc-inisqvsc6027712.shtml" target="_blank" rel="noopener">新浪财经 · 中国人民银行召开外资金融机构座谈会</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>央行等四部门负责人今日下午3点出席国新办发布会，介绍“十四五”金融业发展成就</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 15:00（北京时间）</p>
+<p>摘要：据财联社9月22日早间新闻精选，央行、金融监管总局、证监会、外汇局负责人将于今日下午3点召开新闻发布会，介绍“十四五”时期金融业发展成就。四大金融管理部门负责人同台发布，是观察下一步货币金融政策取向与资本市场改革开放表述的重要窗口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.ifeng.com/c/8mqi9TVDQYq" target="_blank" rel="noopener">凤凰网财经 · 财联社9月22日早间新闻精选</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>派拉蒙天舞与加州等12州达成和解，1100亿美元收购华纳兄弟探索扫清障碍</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：当地时间9月21日（美东时间）</p>
+<p>摘要：派拉蒙天舞当地时间21日与加州等12个此前起诉阻止其收购华纳兄弟探索的州达成和解，这笔约1100亿美元、被称“好莱坞史上最大并购之一”的交易扫除关键法律障碍，预计10月初完成。周一华纳兄弟探索收涨10.79%（盘中最高30.57美元），派拉蒙天舞盘中一度涨近9%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-22/doc-inisrxcm7226010.shtml" target="_blank" rel="noopener">新浪财经 · 派拉蒙天舞就收购华纳兄弟案与12州达成和解</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609223880389385.html" target="_blank" rel="noopener">东方财富 · 千亿美元巨额并购扫清最后障碍！派拉蒙与美国12州达成和解</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>芝加哥联储主席古尔斯比：若通胀源自需求过热，或需“更激进、更前置”的加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月21日（周一；原文未注具体时刻）</p>
+<p>摘要：古尔斯比周一表示，如果当前通胀主要来自需求过热而非供应端约束，美联储可能需要采取更加激进、更加前置的加息行动。美联储上周实施三年多来首次加息（利率区间升至3.75%—4.00%），芝商所FedWatch显示交易员预计下月（10月）再加息概率约50%，本周还有约10位央行官员将发表讲话。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4193853.html" target="_blank" rel="noopener">证券时报 · 科技巨头，集体飙涨！美联储加息，新消息</a>
+<span class="sep">·</span>
+<a href="https://in.marketscreener.com/news/wall-street-ends-sharply-higher-as-ai-optimism-reignites-and-treasury-yields-retreat-ce785adbd18bf627" target="_blank" rel="noopener">Reuters（MarketScreener转载）· Wall Street ends sharply higher as AI optimism reignites and Treasury yields retreat</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股周一集体收涨：纳指创收盘历史新高，费城半导体指数涨4.29%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月21日 16:00收盘（北京时间9月22日 4:00）</p>
+<p>摘要：美股周一高开高走，纳指涨2.26%报27122.09点创收盘历史新高，标普500指数涨1.49%报7764.70点，道指涨0.71%报52048.83点；费城半导体指数涨4.29%，创8月4日以来最佳单日表现。大型科技股普涨（Meta+11.43%、特斯拉+3.03%、英伟达+2.30%）；纳斯达克中国金龙指数涨0.71%，百度涨2.54%、阿里巴巴涨2.22%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489491" target="_blank" rel="noopener">财联社 · 美股收盘：三大指数高开高走、纳指涨超2% 多只半导体芯片股大涨超10%</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202609223880398061.html" target="_blank" rel="noopener">东方财富 · 全球市场：纳指涨超2%创收盘历史新高 芯片半导体股大涨 国际油价跌超4%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>AMD市值首次突破1万亿美元，成为第四家跻身“万亿美元俱乐部”的美国芯片公司</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月21日（周一）收盘（北京时间9月22日 4:00）</p>
+<p>摘要：AMD周一收涨9.95%、报615.52美元，市值首次突破1万亿美元，居全球上市公司总市值第16位，成为继英伟达、博通、美光之后第四家跨越该门槛的美国芯片公司。Meta旗下AI智能体Muse走红提振服务器CPU需求预期，英特尔涨12.14%、Arm涨17.16%、高通涨9.29%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2489460" target="_blank" rel="noopener">财联社 · AMD市值首破万亿美元！Meta智能体热潮点燃CPU行情</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202609223880380835.html" target="_blank" rel="noopener">东方财富（转载财联社）· AMD市值首破万亿美元！Meta智能体热潮点燃CPU行情</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>国际油价单日重挫逾4%、金银期货收跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（美东时间，当日收盘价；北京时间约为9月22日凌晨）</p>
+<p>摘要：截至周一收盘，WTI 10月合约跌4.52美元、收报95.78美元/桶（-4.51%），布伦特11月合约跌3.53美元、收报100.34美元/桶（-3.4%），跌至11日以来低位；报道称市场猜测本周联合国会议期间中东谈判或有突破，特朗普周日与泽连斯基通话时敦促其停止袭击俄罗斯炼油厂。COMEX黄金期货跌0.99%报4381.00美元/盎司、白银跌0.92%报66.53美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://oil.fx678.com/news/202609220321421127" target="_blank" rel="noopener">汇通网 · 国际油价9月21日出现明显下行</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7DQ657E0519C6T9.html" target="_blank" rel="noopener">网易 · 经纬早班车（中新经纬）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>路透：人民币升至三年半高位，在岸收报6.6955</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月21日（北京时间；路透报道，原文未注具体时刻）</p>
+<p>摘要：路透报道称，在特朗普与习近平会晤前，中国央行允许人民币中间价走强，人民币升至三年半以来的最高水平：在岸人民币盘中最高触及6.6950、收报6.6955，离岸人民币约6.6946，美元指数约100.2；美元兑日元小幅走弱至约157.1，日本市场因节假日休市。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/world/asia-pacific/yuan-hits-fresh-multi-year-peak-pboc-eases-curb-ahead-trump-xi-summit-2026-09-21/" target="_blank" rel="noopener">Reuters · Yuan hits fresh multi-year peak as PBOC eases curb ahead of Trump-Xi summit</a>
+<span class="sep">·</span>
+<a href="https://www.moomoo.com/hans/community/feed/u-s-market-global-news-review-21-september-2026-117309205184518" target="_blank" rel="noopener">moomoo社区 · 美股市场与全球新闻回顾（2026年9月21日，引路透）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>2026云栖大会今日在杭州开幕，AI产业催化密集</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日（北京时间，大会会期9月22日—24日，今日开幕）</p>
+<p>摘要：2026云栖大会今日起在杭州举行，以“智以致用”为主题、以Agentic AI为核心锚点，串起芯片、云基础设施、模型能力与应用链路，会上将发布阿里云核心技术及年度产品。受云栖大会等产业催化影响，周一港股AI硬件股走强，京信通信、壁仞科技、光合科技等涨逾10%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609213879982160.html" target="_blank" rel="noopener">东方财富（财联社）· 2026云栖大会等产业催化密集 港股AI板块走强多股涨逾10%</a>
+<span class="sep">·</span>
+<a href="https://yunqi.aliyun.com/" target="_blank" rel="noopener">阿里云 · 2026云栖大会官网</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-21-晚间版.html">← 2026-09-21-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-22 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
