@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-23</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 23 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：习近平下午乘专机离京开启对美国事访问、为9月24日&quot;习特会&quot;铺路；A股缩量收跌、港股失守25000点，中金公司&quot;三合一&quot;重组复牌落地；现货黄金失守4320美元后进一步跌破4310，国际油价维持弱势，市场继续消化美联储&quot;更高更久&quot;的利率前景。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>习近平乘专机离京，对美国进行国事访问</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日下午（北京时间；央视网17:04转发新华社快讯）</p>
+<p>摘要：应美国总统特朗普邀请，国家主席习近平23日下午乘专机离开北京，对美国进行国事访问（9月23日至25日）。陪同出访的有习近平主席夫人彭丽媛、中共中央办公厅主任蔡奇、外交部长王毅等。按白宫公布安排，特朗普将于美东时间23日赴安德鲁斯联合基地迎接，24日举行元首会晤及国宴。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.cctv.com/2026/09/23/ARTIYMJxYBFo63FlG6BjwD78260923.shtml" target="_blank" rel="noopener">央视网（新华网） · 习近平离京对美国进行国事访问</a>
+<span class="sep">·</span>
+<a href="https://cn.chinadaily.com.cn/a/202609/23/WS6ab39a10e4b09a165c78c4ea.html" target="_blank" rel="noopener">中国日报 · 习近平离京对美国进行国事访问</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>中国驻美大使谢锋在《人民日报》撰文：台湾问题等四条红线不容挑战</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（北京时间，《人民日报》当日刊发；原文未注具体时刻）</p>
+<p>摘要：这篇题为《推动中美建设性战略稳定关系落地落实》的署名文章指出，此访是习近平时隔11年再次对美进行国事访问，也是两国元首在半年内实现国事互访。文章强调"中国的主权、安全和发展利益不容侵犯，台湾问题、民主人权、道路制度、发展权利四条红线不容挑战"，要求美方停止以"国家安全""经济失衡""强迫劳动"等名目对华滥施遏制打压。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.jiemian.com/article/15129897.html" target="_blank" rel="noopener">界面新闻 · 中国驻美大使谢锋在《人民日报》发文</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/china/story20260923-9719932" target="_blank" rel="noopener">联合早报 · 习近平访美前夕 谢锋重申台湾等四条红线不容挑战</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>国新办"十五五"教育发布会：启动教师发展国家行动、建设1000所以上优质高中</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 10:00（北京时间，国新办发布会开始时间）</p>
+<p>摘要：教育部副部长杜江峰等在"开局起步'十五五'"发布会介绍，我国已建成世界规模最大的教育体系：学前教育毛入园率92.9%、义务教育巩固率96.1%、高中阶段毛入学率92%，接受过高等教育人口达2.7亿。"十五五"期间将启动教师发展国家行动、推进高校分类改革与本科"优本扩容"（重点支持人工智能、集成电路等学科），并建设1000所以上优质高中。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.bjd.com.cn/2026/09/23/11970694.shtml" target="_blank" rel="noopener">北京日报 · 图文实录｜加快推进教育强国建设有关情况</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4192717.html" target="_blank" rel="noopener">证券时报 · 预告：国新办23日举行新闻发布会</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>OECD上调2026年全球经济增长预期至2.9%，警告能源冲击拖累明年</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（原文未注具体时刻；路透当日北京时间16:01发稿）</p>
+<p>摘要：OECD中期经济展望把2026年全球经济增长预期由6月的2.8%上调至2.9%，2027年预期由3.1%下调至3.0%，对中国增速预测维持在4.5%。报告称数据中心、半导体等AI基础设施投资是今年经济韧性的关键支柱，但G20今年通胀预期升至4.1%；若能源市场动荡等风险兑现，明年全球增速或再被拖累0.7个百分点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233882476961.html" target="_blank" rel="noopener">东方财富（财联社） · 经合组织上调2026年全球经济增长预期至2.9%</a>
+<span class="sep">·</span>
+<a href="https://www.iol.co.za/business/economy/2026-09-23-global-growth-forecast-lifted-to-29-despite-mideast-war-oecd-says" target="_blank" rel="noopener">Reuters via iol.co.za · Global growth forecast lifted to 2.9% despite Mideast war, OECD says</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>中金公司"三合一"复牌：新增约31.04亿股换股吸并东兴、信达，合并后总资产破万亿</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 09:30（北京时间，公司A股开市起复牌）</p>
+<p>摘要：中金公司A股9月23日复牌，本次以新增发行约31.04亿股、交易总额约1139亿元换股吸收合并东兴证券、信达证券，合并后总资产将突破万亿元、营业网点增至441家，东兴证券与信达证券将终止上市。复牌首日股价高开，开盘报32.18元/股、涨1.19%，盘中涨幅一度扩大至3%以上；仅732.19万股有效申报行使收购请求权，绝大多数股东选择留下换股。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.10jqka.com.cn/20260923/c680221128.shtml" target="_blank" rel="noopener">同花顺 · 中金公司今日复牌：近年来券商行业最大并购重组案进入&quot;换手实施&quot;阶段</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7GML61805129QAF.html" target="_blank" rel="noopener">南都湾财社 · 中金公司复牌，&quot;汇金系&quot;券商三合一重组进入收官阶段</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>A股缩量收跌：沪指报3936.52点跌0.39%，两市成交额较上日缩量3705亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 15:00（北京时间收盘）</p>
+<p>摘要：沪指跌0.39%报3936.52点，深证成指跌0.64%，创业板指跌0.60%，北证50涨2.60%、科创50跌0.25%；全市场成交额17831亿元、较上日缩量3705亿元，超3500只个股下跌。PCB、玻璃基板、CRO、量子科技等逆势活跃，传媒影视与高位人气股走弱；媒体称缩量或显示"节前效应"开启、资金观望情绪升温。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.jrj.com.cn/2026/09/23152958522992.shtml" target="_blank" rel="noopener">金融界（格隆汇） · A股收评：创业板指跌0.6%！AI硬件强势，煤炭股下挫</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260923/herald/9bda12ee5763821c682a4d194206a1be.html" target="_blank" rel="noopener">21财经（每日经济新闻） · 突然缩量3700亿，A股进入&quot;节前模式&quot;，多只高位股跳水跌停</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>港股回吐：恒指跌1.01%失守25000点，南向资金净买入约34.5亿港元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 16:00（北京时间收盘）</p>
+<p>摘要：港股连升三日后回调，恒生指数跌1.01%或253.63点报24834.12点，恒生国企指数跌1.06%报8273.81点，恒生科技指数跌1.33%报4379.07点，全日成交1843.07亿港元。大型科网股与AI应用承压（阿里巴巴跌超4%、智谱跌超12%），内房股逆市走强（融信中国涨超22%、万科企业涨约4%），南向资金净买入34.49亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://hkstock.cnfol.com/shichangfenxi/20260923/32379061.shtml" target="_blank" rel="noopener">中金在线（格隆汇） · 港股收评：恒指失守25000点！科网股、AI应用齐挫，内房股逆市走强</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-09-23/doc-inisvivx8501104.shtml" target="_blank" rel="noopener">新浪财经（每日经济新闻） · 港股反弹&quot;熄火&quot;？恒指跌超1%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美股盘前：科技七巨头全线上涨，存储芯片股多数下跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 17:16—17:35（北京时间，21世纪经济报道发稿时的盘前数据）</p>
+<p>摘要：美股三大股指期货涨跌不一，道指期货、标普500指数期货翻红微涨，纳指期货微跌；科技七巨头盘前全线上涨，微软涨0.56%领跑，亚马逊、Meta、谷歌、特斯拉、英伟达、苹果跟涨。存储芯片股盘前多数下跌，SK海力士跌超2%，ARM跌超1%，西部数据、博通、高通、美光科技等跌幅居前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L7HHPLKR05199NPP.html" target="_blank" rel="noopener">21世纪经济报道（网易） · 美股科技七巨头盘前全线上涨，存储芯片股盘前多数下跌</a>
+<span class="sep">·</span>
+<a href="https://m.21jingji.com/article/20260923/herald/4cb1642f3147b41b28099650f68b54c8.html" target="_blank" rel="noopener">21财经 · 布油重回95美元，白银跳水超2%，美股存储芯片股盘前普跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>欧股集体高开，欧元区9月综合PMI初值升至53.1创近三年半新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 15:01（北京时间，欧股开盘）；欧元区PMI初值为当日公布（原文未注具体时刻）</p>
+<p>摘要：欧洲主要股指集体高开：欧洲斯托克50指数开盘涨0.48%，德国DAX指数涨0.36%，英国富时100指数涨0.32%，法国CAC40指数涨0.36%。同日标普全球数据显示，欧元区9月综合PMI初值升至53.1，高于市场预期的51.7与8月的52.0，为近三年半来最高；服务业PMI升至53.0，制造业PMI持平于52.7，新订单以四年多来最快速度增长。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2491081" target="_blank" rel="noopener">财联社 · 欧股集体高开</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisvcpz8561495.shtml" target="_blank" rel="noopener">新浪财经（新华财经） · 环球财经｜欧元区9月综合PMI升至53.1，经济活动增速创近三年半新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>大宗商品：现货黄金失守4320美元、白银跌超2%，国际油价维持弱势</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日 15:40（北京时间，现货金银报价时点）；WTI、布油分别为北京时间16:11、17:35</p>
+<p>摘要：现货黄金盘中一度突破4360美元，随后失守4320美元，15:40报4319.62美元/盎司、跌0.89%，现货白银跌2.30%报65.49美元/盎司，晚间金价进一步跌破4310美元；市场将跌势归因于美联储年内再加息预期升温与全球债券收益率高企。原油方面，美伊纽约间接会谈与霍尔木兹海峡通航预期压制油价，北京时间16:11 WTI报90.11美元/桶，17:35布伦特报95.8美元/桶。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nbd.com.cn/articles/2026-09-23/4590081.html" target="_blank" rel="noopener">每日经济新闻 · 现货黄金失守4320美元/盎司</a>
+<span class="sep">·</span>
+<a href="http://gold.cnfol.com/guojiyuanyousc/20260923/32379034.shtml" target="_blank" rel="noopener">中金在线（汇通网） · 美伊和谈进行时，霍尔木兹通航曙光初现</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-23-早间版.html">← 2026-09-23-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-23 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-09-23</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 23 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：云栖大会第二天，阿里云端出「AI 智能体电脑」Qwen Book，斑马智能发布全模态端侧大模型 AutoOmni 2.0；DeepSeek 公开 Agent 训练沙盒系统 DSec 论文（梁文锋署名），把「训练 Agent 先造环境」的工程细节摊开。大洋彼岸，三巨头 CEO 今日下午将向联合国安理会简报 AI 风险，路透披露 Altman 将呼吁各国采用 AI 能力基准、美中在特朗普-习会晤前讨论 AI 事件通报机制；Meta Connect 与第五届数贸会同日开幕，主题演讲分别为北京时间明晨与未来四天。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>DeepSeek 公开 Agent 训练沙盒系统 DSec 论文，梁文锋署名</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（北京时间；量子位当日 15:29 报道，论文发布时间原文未注）</p>
+<p>DeepSeek 发布技术论文《DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale》。DSec 用统一 Python SDK 提供函数调用、容器、MicroVM（Firecracker）与全虚拟机（QEMU）四种沙盒后端，单集群约 160 节点；论文称其每日可创建约 300 万个沙盒、峰值支持逾 38 万个并发、每秒新建超 5,000 个沙盒，并披露多起 Agent 在训练中自发发现的 reward hacking（奖励作弊）手段。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/496393.html" target="_blank" rel="noopener">量子位 · DeepSeek新论文公开Agent训练！梁文锋署名</a>
+<span class="sep">·</span>
+<a href="https://arxiv.org/pdf/2609.22978" target="_blank" rel="noopener">arXiv · DeepSeek Elastic Compute (DSec)</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>NVIDIA 新加坡 AI Day：Sea 成东盟首个 Vera Rubin 企业客户，新加坡 HTX 落地 GB300</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（新加坡时间；NVIDIA 官方博客标注发布 2026-09-23 02:30 UTC，即北京时间 10:30；海峡时报报道为当日活动现场宣布）</p>
+<p>NVIDIA AI Day Singapore（9月22—23日）公布一批东南亚落地项目：Sea Limited 宣布采用 Vera Rubin 架构支撑自主 AI 智能体，成为东盟首个采用该平台的企业；新加坡内政团队科技局（HTX）则成为该国首个部署 GB300 芯片的机构，用于公共安全机器人与多模态模型训练。此外，泰国 iApp 与泰国大数据研究院基于 Nemotron 3 Nano 推出开源法律模型 OpenThai 2.0 Legal，Viettel AI、FPT、YTL AI Labs 等也在基于 Nemotron 微调本地化模型。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/ai-day-singapore/" target="_blank" rel="noopener">NVIDIA 博客 · At AI Day Singapore, NVIDIA and Partners Showcase AI Advancements Across Southeast Asia</a>
+<span class="sep">·</span>
+<a href="https://straitstimes.com/singapore/singapore-home-team-uses-nvidias-latest-ai-chips-to-supercharge-public-safety-robots" target="_blank" rel="noopener">海峡时报 · Home Team uses NVIDIA&#x27;s latest AI chips to supercharge public safety robots</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>阿里云「Qwen Book」AI 智能体电脑云栖首秀，同期获多家投行看多</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（北京时间；财闻网当日 15:06 报道，发布/亮相时刻原文未注）</p>
+<p>云栖大会第二天，阿里云旗下 AI 智能体电脑 Qwen Book 首次亮相：搭载 Skill 键盘阵列、全局 AI 按键、语音手写笔等交互入口，提供 7×24 小时执行重度任务的操作空间，并宣布与开源项目 Omarchy 合作探索面向 Agent 的新一代桌面操作系统。同期，千问 AI 平台宣布全面升级（新增 Agent 服务、行业 AI 解决方案与 Agent Studio 等能力）；美银、野村、摩根士丹利、华源证券等多家机构在云栖后维持或重申阿里「买入/增持」评级。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.caiwennews.com/article/1622296.shtml" target="_blank" rel="noopener">财闻网 · 云栖大会释放重磅信号！阿里获多家投行集体看多</a>
+<span class="sep">·</span>
+<a href="https://yunqi.aliyun.com/2026/" target="_blank" rel="noopener">阿里巴巴云栖大会官网</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（北京时间；云栖大会期间发布，原文未注具体时刻）</p>
+<p>斑马智能在云栖大会发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，采用 MoE 混合专家架构，官方称智能座舱普通任务能力堪比 10 倍参数量的云模型、复杂任务达其 80%—90%；同场展示端云一体 Agent 架构的 AutoClaw 2.0 实车方案。官方称 AutoOmni 已合作国内外 10 家芯片企业，大模型推理加速 5—6 倍、量化保真度超 99%，并正从单体智能向「群体智能」的 EdgeOmni 演进。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L7HFF3VL05564B6E.html" target="_blank" rel="noopener">网易 · 斑马智能发布端模型AutoOmni2.0，让元神AI更懂「我的世界」</a>
+<span class="sep">·</span>
+<a href="https://sz.ifeng.com/c/8wd2wdSlBUG" target="_blank" rel="noopener">凤凰网 · AI需要掌握感知与交互能力，斑马智能AutoOmni成端侧落地样本</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>OpenAI 招揽 Patreon 三位高管，组建「创作者产品」部门</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（美东时间；Sam Yam 当日于 X 宣布，The Verge、The Decoder 当日报道，原文未注具体时刻）</p>
+<p>Patreon 联合创始人、前 CTO Sam Yam 宣布加入 OpenAI，领导新设的 Creator Product（创作者产品）部门；Patreon 前产品负责人 Drew Rowny 与工程负责人 Shannon Ma 一同加入。Yam 称将与创作者一起构建、提供新工具的早期访问，并提示关注 9月29日的 OpenAI DevDay；他同时表示人类创造力仍然「至高无上」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam" target="_blank" rel="noopener">The Verge · OpenAI nabs key Patreon execs ahead of upcoming announcement</a>
+<span class="sep">·</span>
+<a href="https://the-decoder.com/openai-hires-patreon-co-founder-sam-yam-to-lead-a-new-creator-product-division" target="_blank" rel="noopener">The Decoder · OpenAI hires Patreon co-founder Sam Yam to lead a new Creator Product division</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>路透：Altman 将在安理会呼吁建立 AI 能力基准，美中讨论 AI 事件通报机制</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（美东时间 6:05 / 北京时间 18:05；原文标注 September 23, 2026 3:05 AM PDT）</p>
+<p>路透报道，OpenAI 的 Altman、Anthropic 的 Amodei 与 Hugging Face 的 Delangue 定于周三向联合国安理会简报，会议聚焦先进 AI 可能「自我改进并脱离人类控制」的安全风险，由法国外长巴罗主持，安理会成员中的美国与中国也将发言。据 OpenAI 高管向记者吹风，Altman 将敦促各国采用衡量 AI 能力与安全保障的基准；报道并称美中已讨论建立覆盖国家安全级 AI 事件的通报机制，赶在周四特朗普与习近平会晤之前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/business/ai-leaders-brief-un-amid-warnings-technology-could-slip-beyond-human-control-2026-09-23/" target="_blank" rel="noopener">Reuters · AI leaders to brief UN amid warnings the technology could slip beyond human control</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>AICC2026 在京举行：工信部等 20 余家单位发布面向 Agent 时代的「可靠AI」测评体系</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日 10:00（北京时间；财联社发布时刻）</p>
+<p>2026 人工智能计算大会（AICC2026）在北京中关村国际创新中心举行。工信部电子第五研究所联合北京智源研究院、浪潮信息、摩尔线程、沐曦股份、百度智能云、阿里云等 20 余家单位发布面向 Agent 时代的「可靠AI」测评体系，覆盖芯片、整机与互联、框架与系统、模型、数据、应用等全链路；大会同期发布 2026 年中国人工智能城市排行榜，北京、杭州、深圳位列前三。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490764" target="_blank" rel="noopener">财联社 · 智能体加速落地，算力产业如何破局？｜直击AICC2026</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>马斯克接受央视财经专访：中国大模型「单位算力产出性能几乎是全球顶尖水平」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日 13:36（北京时间；证券时报转载央视财经，采访时刻原文未注）</p>
+<p>马斯克在央视财经专访中评价中国 AI 大模型「整体而言非常出色，单位算力产出的性能几乎是全球顶尖水平」。他承认中国目前仍受先进 AI 芯片出口限制影响，但认为中国企业正以更高效率使用现有芯片，并预计中国大约 2—3 年内可依靠光刻技术与芯片制造补齐算力缺口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.stcn.com/article/detail/4196302.html" target="_blank" rel="noopener">证券时报 · 马斯克惊叹中国AI大模型「单位算力产出性能几乎是全球顶尖水平」</a>
+<span class="sep">·</span>
+<a href="https://www.eet-china.com/news/202609232196.html" target="_blank" rel="noopener">电子工程专辑 · 马斯克接受央视财经专访，盛赞中国AI大模型</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>第五届全球数字贸易博览会今日在杭州开幕，AI 成最大底色</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（北京时间；会期 9月23—27日，新浪新闻等当日报道，开幕具体时刻原文未注）</p>
+<p>第五届数贸会今日在杭州大会展中心开幕，年度主题「在数贸会遇见AI未来」，展览面积 17 万平方米、参展商超 2000 家。本届首设词元（Token）主题 AI 未来展区，按「算力底座—模型服务—场景应用」布局，数百个大模型与近千家 AI 企业参展；据证券时报记者报道，预筹订单中 AI 类订单占比超过一半。展会与云栖大会等实现票证互认，并首办具身智能挑战赛（100 多支队伍）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.sina.com.cn/zx/gj/2026-09-23/doc-inisvcqf1251436.shtml" target="_blank" rel="noopener">新浪新闻 · 第五届数贸会今日开幕！逛展攻略来了</a>
+<span class="sep">·</span>
+<a href="http://www.zj.xinhuanet.com/20260917/f96fe7b43abd4df3bedda86072e0e29f/c.html" target="_blank" rel="noopener">新华网 · 在数贸会遇见AI未来</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>Meta Connect 2026 今日开幕：主题演讲北京时间明晨举行，AI 眼镜是主角</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月23日（美东时间；Meta 官方议程标注主题演讲为太平洋时间下午 4 点，即北京时间 9月24日 7 点，本刊发稿时尚未开始）</p>
+<p>Meta Connect 2026 于当地时间 9月23日在门洛帕克开幕，为期两天。官方议程显示，扎克伯格的主题演讲定于太平洋时间 23 日下午 4 点（北京时间 24 日 7 点），开发者专场在 24 日 10 点；官方口径是分享「AI 技术、AI 眼镜与 VR」的最新进展。据多家媒体会前报道，预计发布新一代 Ray-Ban Meta 眼镜与无摄像头的「Luna」款（据称六麦克风、主打隐私），并可能预览代号 Phoenix 的轻量混合现实头显——上述产品细节 Meta 尚未确认。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.meta.com/connect/agenda/" target="_blank" rel="noopener">Meta 官方 · Connect 2026 议程</a>
+<span class="sep">·</span>
+<a href="https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/" target="_blank" rel="noopener">Engadget · What to expect at Meta Connect 2026</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-23-早间版.html">← 2026-09-23-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-23 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
