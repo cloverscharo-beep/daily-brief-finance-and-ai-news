@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-09-23</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 9 月 23 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Anthropic 与 OpenAI 在同一天（9月22日）各自发布更便宜的模型——Claude Opus 5.5 与 GPT-6 Sol / Luna，这是两家在「放缓前沿」呼吁之后的首次发布，价格战直接对准更便宜的开源权重对手；同日联合国安理会预告将于今天下午举行首次专门针对 AI 安全风险的高级别简报，奥特曼现场、阿莫迪远程出席。中国一侧，小米 MiMo-V2.6「炼丹直播」收官并登顶开源第一，Kimi K3 则以收入分成模式登上亚马逊 Bedrock。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Anthropic 发布 Claude Opus 5.5：多数任务比肩 Fable 5.1，运行成本降四成</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（美东时间；Anthropic 官方公告标注 September 22, 2026，原文未注具体时刻）</p>
+<p>Anthropic 发布 Claude 5.5 家族首个模型 Opus 5.5，官方称其在多数工作上达到旗舰 Fable 5.1 的水平，运行成本较 Opus 5 低约 40%，输出速度提升 30% 以上。API 定价为输入 4 美元、输出 20 美元每百万 token（均比 Opus 5 低 20%），缓存读取 0.2 美元（低 60%）。官方基准：Terminal-Bench 4.0 得 66.4%（GPT-6 Astra 为 57.9%）、CursorBench 4.0 为 57.8%、OSWorld 2.0 为 81.8%。官方称这是其自动化行为审计中表现最好的模型，并配了与 Fable 5.1 同级的网络安全、生物与蒸馏防护；Sonnet 5.5 与 Haiku 5.5 将在数周内跟进。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Anthropic 官方 · Introducing Claude Opus 5.5</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/" target="_blank" rel="noopener">Reuters · Anthropic unveils Claude Opus 5.5</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>OpenAI 发布 GPT-6 Sol 与 Luna：API 价格砍半，Sol 主攻复杂编码</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（美东时间；OpenAI 官方博客当日发布，VentureBeat 报道为 11:22 am PT）</p>
+<p>OpenAI 为 GPT-6 家族新增两个层级：Sol 面向编程等复杂工作负载，Luna 面向提取、摘要等高频任务。相较 GPT-5.6 的促销价，两者 API 价格均降 50%——Sol 输入 2 美元、输出 10 美元每百万 token，Luna 为 0.1 美元与 0.5 美元；OpenAI 向 VentureBeat 确认这是永久价格而非促销价。官方称缓存命中率与推理效率的提升让其能把成本下降传导给用户，缓存输入读取有 90% 折扣。两个模型已在 ChatGPT Work 与 Codex 上线。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">OpenAI 官方 · Introducing GPT-6 Sol and Luna</a>
+<span class="sep">·</span>
+<a href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more" target="_blank" rel="noopener">VentureBeat · OpenAI releases GPT-6 Sol and Luna models, slashing API costs 50% or more</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>OpenAI 公布第三方评估原则：让外部机构更早介入模型训练与发布</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（美东时间；OpenAI 官方博客标注 September 22, 2026，原文未注具体时刻）</p>
+<p>OpenAI 发布《Priorities and principles for effective third party assessments》，称将推动独立机构在训练、评估与部署全过程获得「更深层的访问权限」，并把此前主要发生在发布前的第三方评估前移到开发周期更早的阶段。官方列出四项优先事项：强有力的独立机制、科学严谨性、稳健的安全实践与明确的责任。据新浪财经转引报道，负责该公司大部分外部专家合作安全审查的 Lama Ahmad 表示，此前 OpenAI 通常主要在模型发布前引入这类机构进行安全评估。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/priorities-principles-third-party-assessments/" target="_blank" rel="noopener">OpenAI 官方 · Priorities and principles for effective third party assessments</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/world/2026-09-23/doc-inistvut5498947.shtml" target="_blank" rel="noopener">新浪财经 · OpenAI将让第三方机构更早介入AI模型安全评估</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>高通骁龙峰会发布两款旗舰芯片：端侧可跑小模型，主打 AI 智能体</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（夏威夷时间上午 9 点，即北京时间 9月23日 3 点；据 IT之家、TechCrunch 现场报道）</p>
+<p>高通在 2026 骁龙峰会上发布 Snapdragon 8 Elite Gen 6 与 Snapdragon 8 Elite Extreme Gen 6 两款旗舰手机处理器，重点强化 AI 智能体与个性化能力。官方称新芯片的传感中枢可本地运行最高 2 亿参数的小模型，并能完整跑通「语音进、语音出」的智能体；新加速单元用于更高效地运行模型，两款芯片还可用 AI 增强人声并降噪。摩托罗拉同场宣布搭载 Extreme Gen 6 的 Motorola Signature 27。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/" target="_blank" rel="noopener">TechCrunch · Qualcomm launches two new smartphone chips with emphasis on AI</a>
+<span class="sep">·</span>
+<a href="http://finance.sina.com.cn/tech/digi/2026-09-23/doc-inistvur8745240.shtml" target="_blank" rel="noopener">新浪财经 · 高通宣布全球 Snapdragon Insider 项目成员数量突破 2300 万</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>小米 MiMo-V2.6「炼丹直播」收官：训练成本 350 万美元，Pro 登顶开源第一</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（北京时间；量子位、网易等 9月22日 晚间报道，原文未注具体时刻）</p>
+<p>为期六天的小米大模型强化学习训练直播收官，MiMo-V2.6 的 Pro 与 Flash 双双完成 30 个训练 Step，最终训练成本锁定在 350 万美元（约合人民币 2344 万元）。MiMo-V2.6-Pro 以 1.02 万亿总参数、420 亿激活参数，在 Artificial Analysis Intelligence Index 上拿到 46 分，位列开源模型第一；两个模型在训练任务上的平均通过率分别相对提升 25% 与 12%。小米称这是目前国产开源模型中强化学习训练规模最大的一次探索之一。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/494179.html" target="_blank" rel="noopener">量子位 · 6天烧光2000多万，拿下开源第一！小米史无前例「炼丹直播」收官</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L7FASH500519QIKK.html" target="_blank" rel="noopener">网易 · MiMo-V2.6-Pro居综合智能指数全球开源大模型第一</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>Kimi K3 登陆亚马逊 Bedrock：中国大模型首次以分成模式进入海外主流云（补录）</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:9月18—19日（美东时间；AWS 官方博客公告 Kimi K3 在 Amazon Bedrock 正式可用，中国媒体 9月23日 报道确认，均未注具体时刻）</p>
+<p>AWS 官方博客宣布 Moonshot AI 的 Kimi K3 在 Amazon Bedrock 正式可用。Kimi K3 是首个参数规模达到 2.8 万亿的开源模型，具备原生视觉能力与 100 万 token 上下文窗口，也是 Bedrock 上首个支持显式提示缓存的开放权重模型。《每日经济新闻》9月21日从月之暗面确认，此前市场传言的 Kimi 与海外云厂商收入分成合作正式落地——这是中国大模型公司首次以分成模式向全球三大云厂商输出模型能力；Kimi K3 此前已上架阿里云百炼。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock" target="_blank" rel="noopener">AWS 官方博客 · Introducing Kimi K3 on Amazon Bedrock</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-23/doc-inistvut5479873.shtml" target="_blank" rel="noopener">新浪财经／每日经济新闻 · Kimi K3落地亚马逊旗下大模型服务平台 中国大模型站上全球博弈牌桌</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>联合国安理会今天下午首次专门就 AI 安全风险举行高级别简报</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:会议定于 9月23日下午（美东时间）；据 Security Council Report 与 CNBC 于 9月22日 的预告，原文未注具体时刻</p>
+<p>据 Security Council Report，安理会将于 9月23日下午在「维护国际和平与安全」议题下举行人工智能高级别简报，预计出席的简报人为联合国独立国际 AI 科学小组联合主席 Yoshua Bengio、OpenAI CEO Sam Altman（现场发言）、Anthropic CEO Dario Amodei（据彭博，远程）与 Hugging Face CEO Clément Delangue。这将是安理会首次专门聚焦「日益强大的 AI 系统所带来的安全风险，包括潜在的人类失去控制」，此前安理会已就 AI 举行过六次正式与非正式会议。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php" target="_blank" rel="noopener">Security Council Report · Artificial Intelligence: High-level Briefing</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html" target="_blank" rel="noopener">CNBC · Altman, Amodei expected to join UN Security Council meeting about AI</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Snorkel AI 融资 3.5 亿美元、估值 35 亿：AI 训练数据成为基础设施层</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（美东时间；路透独家报道发布于当日 9:07 am ET）</p>
+<p>数据初创公司 Snorkel AI 完成 3.5 亿美元融资，投后估值 35 亿美元，由 Insight Partners 与 S32 联合领投，现有股东 Addition、Greylock、Wells Fargo 等参与。CEO Alex Ratner 向路透表示，前沿实验室对复杂训练数据与仿真环境的需求推动收入快速上升——年化收入运行率已从一年前的约 2000 万美元升至超过 3.5 亿美元，估值约为其 2025年5月 上一轮（13 亿美元）的近三倍。当日另有多笔 AI 相关融资落地，包括 Cyera 的 4 亿美元、Heidi Health 的 3.4 亿美元与 Verda 的 1.89 亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.yahoo.com/technology/ai/articles/exclusive-snorkel-ai-valued-3-130706155.html" target="_blank" rel="noopener">Reuters／Yahoo Finance · Exclusive-Snorkel AI valued at $3.5 billion amid surging demand for complex AI training data</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/" target="_blank" rel="noopener">TechCrunch · Snorkel AI triples valuation to $3.5B as demand for AI training data booms</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>WebArena 作者 Shuyan Zhou 入职 Meta 超级智能实验室</h3></div>
+<span class="tag">🏷 博主解读（中文媒体）</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（北京时间；量子位当日报道，原文未注具体时刻）</p>
+<p>量子位报道，WebArena 作者 Shuyan Zhou 已入职 Meta 超级智能实验室（Meta Superintelligence Labs）。WebArena 是评测网页智能体的常用基准之一，报道称其「梦想是做能帮妈妈订机票的 AI 浏览器」。这是 Meta 近期在智能体与浏览器方向持续补强人才的一例；报道未披露其前一任职机构与入职生效时间。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/09/493653.html" target="_blank" rel="noopener">量子位 · WebArena作者Shuyan Zhou入职Meta超级智能实验室</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>前沿 AI 从业者心理负担加重：英国 AISI 多人休病假，研究者因压力离职</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:9月22日（北京时间；新浪财经 9月22日 22时热点收录，原文未注具体时刻，原报道为彭博）</p>
+<p>据报道，英国人工智能安全研究所（AISI）多名员工因压力过大休病假并接受心理咨询；四名知情人士称，待测未发布模型的测试排期紧张，叠加对这类新兴技术快速落地、能力持续增强的担忧，导致员工士气低落、职业倦怠。报道并称 Anthropic、OpenAI 与谷歌 DeepMind 的员工也曾公开反映同类问题，大量顶尖研究者因心理压力离职，或认定自己参与研发的产品不宜向公众开放。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.sina.com.cn/stock/usstock/c/2026-09-22/doc-inistexc1966024.shtml" target="_blank" rel="noopener">新浪财经 · 全球头部AI从业者担忧技术威胁社会 心理负担日益加重</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-22-晚间版.html">← 2026-09-22-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-09-23 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

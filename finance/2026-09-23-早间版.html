@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-23</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 23 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：纳指连续第二日创收盘新高、存储芯片股接棒领涨，但银行股重挫与2年期/10年期美债利差收窄至约18个基点，折射市场对继续加息与银行净息差的担忧；国际油价五连跌、布伦特失守100美元；Anthropic与OpenAI同日发布低价新模型掀起&quot;价格战&quot;；国内政策主线落在&quot;人工智能+制造&quot;与新兴产业、未来产业。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>李强在上海调研：纵深推进"人工智能+制造"，加快培育壮大新兴产业和未来产业</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日 19:36—19:43（北京时间，新华社发稿；调研为当日）</p>
+<p>摘要：国务院总理李强22日在上海调研，考察上海电气国家人工智能应用中试基地与专注未来产业的上海未来启点社区，察看专用机器人、脑机接口、量子计算等技术产品。他强调推进科技创新与产业创新深度融合，纵深推进"人工智能+制造"，推动研发、生产、管理全流程智能升级。针对未来产业周期长、风险大的特点，他提出大力发展创业投资、壮大耐心资本，建立投入增长和风险分担机制。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://politics.people.com.cn/n1/2026/0922/c1024-40803721.html" target="_blank" rel="noopener">人民网 · 李强在上海调研时强调 加快培育壮大新兴产业和未来产业 持续做大做强先进制造业</a>
+<span class="sep">·</span>
+<a href="http://www.stcn.com/article/detail/4195411.html" target="_blank" rel="noopener">证券时报 · 同题报道</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>商务部等5部门调整出口易制毒化学品管理目录：新增2个品种，向美墨加出口相关化学品须申请许可</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日（商务部公告2026年第40号发文日期；原文未注具体时刻）</p>
+<p>摘要：商务部、公安部、应急管理部、海关总署、国家药监局22日联合发布公告，新增1-苯乙基-4-氧-3-哌啶甲酸甲酯等2个品种至目录附件1第一部分。自公告发布之日起，向美国、墨西哥、加拿大出口附件1第一部分所列化学品，须按《向特定国家（地区）出口易制毒化学品暂行管理规定》申请许可；向其他国家（地区）出口无需申请许可。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_7dad5aea5c7a40c992c99aedfa7d2ebd.html" target="_blank" rel="noopener">商务部 · 商务部等5部门关于调整《向特定国家（地区）出口易制毒化学品管理目录》的公告</a>
+<span class="sep">·</span>
+<a href="https://www.bjnews.com.cn/detail/1790060719129612.html" target="_blank" rel="noopener">新京报 · 商务部等5部门调整向特定国家（地区）出口易制毒化学品管理目录</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>美联储官员巴尔金：通胀风险大于就业风险，市场预计10月加息概率约53%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月22日（巴尔金在巴尔的摩讲话；原文未注具体时刻）</p>
+<p>摘要：里士满联储主席巴尔金表示，美国经济状况"如果说发生了什么变化，那就是正在增强"，消费支出保持韧性；但能源、关税等冲击未迅速消退，价格压力更持久，因此当前"通胀风险大于充分就业面临的风险"，上周加息是合适的，是否继续加息要"走着看"。利率期货市场显示，交易员预计美联储10月议息会议至少加息25个基点的概率约53%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233881663327.html" target="_blank" rel="noopener">第一财经 · 纳指续创新高！存储芯片走强，国际油价五连跌，银行股拖累道指</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>特朗普证实美伊官员纽约会谈"富有成效"、计划很快再谈；伊朗称会晤系传达重开霍尔木兹海峡条件</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月22日（特朗普当日在联大期间对媒体表态；伊美会晤同日举行）</p>
+<p>摘要：据新华社报道，美国总统特朗普22日证实美伊官员当天在纽约进行了3小时会谈，称会谈"非常顺利""富有成效"，并计划不久后再举行一次。伊朗方面称，此次伊美会晤旨在向美方传达重开霍尔木兹海峡的条件。伊朗总统佩泽希齐扬22日已飞赴纽约出席第81届联大高级别周活动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233881637937.html" target="_blank" rel="noopener">东方财富 · 伊朗外长与美特使在纽约会晤</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490628" target="_blank" rel="noopener">财联社 · 【早报】美股存储股，集体上涨；伊外长与美特使在纽约会晤</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美国与丹麦及格陵兰岛签署安全协议，称"加强北极和北大西洋地区安全"</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美国时间9月22日（财联社9月23日早报报道；原文未注具体时刻）</p>
+<p>摘要：据财联社早报报道，美国22日与丹麦及其自治领地格陵兰岛签署一项安全协议，以"加强北极和北大西洋地区的安全"。三方9月18日曾宣布达成协议，内容包括禁止美国对手国家在格陵兰岛建立军事基地或进行敏感领域投资、美方将扩大在岛上的军事存在。丹麦方面表示，协议承认丹麦王国的主权和领土完整以及格陵兰岛人民的自决权。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490628" target="_blank" rel="noopener">财联社 · 【早报】美股存储股，集体上涨；伊外长与美特使在纽约会晤</a>
+<span class="sep">·</span>
+<a href="https://international.caixin.com/2026-09-19/102486437.html" target="_blank" rel="noopener">财新网 · 美国丹麦和格陵兰将签协议 欲在岛上禁止美对手国家的军事存在和敏感投资</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股收盘：纳指连续第二日创收盘新高，存储芯片股领涨、费城半导体指数涨超2%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月22日 16:00 收盘（北京时间9月23日 04:00）</p>
+<p>摘要：道指跌185.14点（-0.36%）报51863.69点；纳指涨122.19点（+0.45%）报27244.28点，连续第二个交易日刷新收盘纪录；标普500指数微跌0.06点报7764.64点、基本收平。费城半导体指数涨2.06%，闪迪涨6.82%、美光科技涨5.00%、希捷科技涨4.85%、西部数据涨3.67%。纳斯达克中国金龙指数涨0.32%报5846.90点，利弗莫尔中概股龙头指数涨1.09%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233881663327.html" target="_blank" rel="noopener">第一财经 · 纳指续创新高！存储芯片走强，国际油价五连跌，银行股拖累道指</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490628" target="_blank" rel="noopener">财联社 · 【早报】美股存储股，集体上涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>银行股重挫拖累道指：标普500金融板块跌1.68%，2年/10年期美债利差收窄至约18个基点</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月22日（当日行情与债市数据）</p>
+<p>摘要：标普500金融板块22日跌1.68%、银行指数跌约3%，摩根大通跌3.42%、美国银行跌3.04%、花旗集团跌1.91%。随着短端美债收益率回落幅度大于长端（2年期收益率报4.71%、下行5个基点，10年期持平于4.96%），2年期与10年期利差一度收窄至约18个基点，为2025年3月以来最小水平，收益率曲线趋平引发市场对银行净息差的担忧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233881663327.html" target="_blank" rel="noopener">第一财经 · 纳指续创新高！存储芯片走强，国际油价五连跌，银行股拖累道指</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/news/market-movers/262181268-market-movers-bac-20260922" target="_blank" rel="noopener">TradingKey · 美国银行(BAC)股票9月22日收盘下跌3.04%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>大宗商品：国际油价连续第五日下跌、布伦特失守100美元，金银期货收涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间9月22日（当日结算价；原文未注具体时刻）</p>
+<p>摘要：WTI 10月原油期货跌1.24%报94.59美元/桶，布伦特11月期货跌1.09%报99.25美元/桶，自9月8日以来首次收于100美元下方，国际油价连续第五个交易日下跌、创一年多来最长连跌纪录。数家亚洲炼油商称已收到沙特阿美非正式通知，很快可在红海延布港接运原油。COMEX黄金期货结算涨0.28%报4396.2美元/盎司，白银期货涨1.8%报67.61美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202609233881663327.html" target="_blank" rel="noopener">第一财经 · 纳指续创新高！存储芯片走强，国际油价五连跌，银行股拖累道指</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2490628" target="_blank" rel="noopener">财联社 · 【早报】原油跳水，五连跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>AI模型价格战：Anthropic发布Claude Opus 5.5、OpenAI同日推出GPT-6 Sol与Luna，双双降价</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美西时间9月22日（财联社北京时间9月23日 04:10发稿）</p>
+<p>摘要：Anthropic发布新一代Claude Opus 5.5，称其性能接近旗舰Fable 5.1、典型工作负载成本较Opus 5低40%，输入/输出定价降至每百万token 4美元/20美元。约一小时后，OpenAI推出GPT-6 Sol与Luna，价格较GPT-5.6版本下调约50%，其中Luna输入价为每百万token 0.10美元。两家均强调新模型在安全与对齐上的改进，被解读为AI模型价格战进一步升级。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490587" target="_blank" rel="noopener">财联社 · Opus 5.5与GPT-6新品同日亮相，AI模型价格战愈演愈烈</a>
+<span class="sep">·</span>
+<a href="https://9to5google.com/2026/09/22/claude-opus-5-5-and-openai-gpt-6-sol-luna-both-launch-today-with-lower-costs" target="_blank" rel="noopener">9to5Google · Claude Opus 5.5 and OpenAI GPT-6 Sol and Luna both launch today with lower costs</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>A股公司晚间动态：佰维存储45亿元加码晶圆级先进封测，杉杉股份拟51.06亿元投建负极基地</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月22日晚间（北京时间，沪深交易所盘后公告；原文未注具体时刻）</p>
+<p>摘要：佰维存储22日晚公告，拟与东莞松山湖高新区管委会签署合作协议，晶圆级先进封测制造项目三期总投资约45亿元（含固定资产投资40亿元），一期、二期30.9亿元投资已完成、设备陆续交付。杉杉股份拟51.06亿元投建年产15万吨锂离子电池负极材料一体化基地，奥尼电子子公司签署16.7亿元GPU算力卡采购合同。川大智胜同日公告因涉嫌信息披露违法违规被证监会立案。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2490628" target="_blank" rel="noopener">财联社 · 【早报】美股存储股，集体上涨；中金公司，今日复牌</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8wdyNpBvPez" target="_blank" rel="noopener">凤凰财经 · 10天股价翻倍，大牛股提示风险</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-22-晚间版.html">← 2026-09-22-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-23 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
