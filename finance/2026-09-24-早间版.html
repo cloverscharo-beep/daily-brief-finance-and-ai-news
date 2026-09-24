@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-09-24</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 24 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：习特会前夜——习近平抵美获罕见机场礼遇，贝森特宣布中美&quot;釜山协议&quot;休战延长至2027年1月10日；海外市场被&quot;更高更久&quot;的利率预期重新定价：美国9月PMI创逾五年新高、5年期美债收益率2007年来首破5%，美股收跌、金银重挫，而布油因伊朗强硬表态反弹重上100美元；央行今日开展8000亿元MLF、净投放2000亿元。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>习近平抵达华盛顿，特朗普亲赴机场迎接</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日约17:40（美东时间；北京时间9月24日约5:40）</p>
+<p>摘要：应美国总统特朗普邀请，习近平9月23日下午乘专机抵达华盛顿安德鲁斯联合基地，开启9月23日至25日的对美国事访问。特朗普和夫人梅拉尼娅罕见亲赴机场迎接，现场奏两国国歌并鸣放礼炮。24日上午白宫将举行正式欢迎仪式，随后双边会谈并设国宴，议题预计包括人工智能、台湾、关税与伊朗局势。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/politics/leaders/20260924/5270ec1aea9d45d7afce9a77f63f3b46/c.html" target="_blank" rel="noopener">新华网 · 习近平抵达华盛顿，特朗普机场热情迎接</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/world/story20260924-9725722" target="_blank" rel="noopener">联合早报 · 【图集】习近平时隔11年对美进行国事访问 特朗普亲自在停机坪迎接</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>贝森特宣布中美贸易休战延长至2027年1月10日</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间；贝森特当日接受福克斯新闻采访，原文未注具体时刻）</p>
+<p>摘要：美国财长贝森特宣布，将中美"釜山协议"经济休战延长两个月——由11月10日展期至2027年1月10日，为磋商更大规模协议留出时间。当日他与何立峰在华盛顿会谈约90分钟（四天内第二次会晤）；贝森特称中方已完成2500万吨大豆采购承诺，但其他农产品采购承诺推进偏慢，并预计24日峰会或公布约300亿美元非敏感商品关税互降等成果。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bbc.com/zhongwen/articles/cqvgyl2k378go/simp.amp" target="_blank" rel="noopener">BBC中文 · 习近平访美：特朗普亲迎 三天行程正式展开 贝森特宣布两国贸易战继续&quot;停火&quot;</a>
+<span class="sep">·</span>
+<a href="https://straitstimes.com/world/united-states/us-treasury-chief-says-to-extend-china-truce-until-january" target="_blank" rel="noopener">The Straits Times（路透） · US Treasury chief says to extend China trade truce until January</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>央行公告：9月24日开展8000亿元1年期MLF，净投放2000亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日发布公告（北京时间，原文未注具体时刻）；操作于9月24日开展</p>
+<p>摘要：公告显示，央行9月24日将以固定数量、利率招标、多重价位中标方式开展8000亿元1年期中期借贷便利（MLF）操作。本月MLF到期6000亿元、加量2000亿元；叠加两个期限买断式逆回购等量续作，本月中期流动性合计加量2000亿元，为连续第三个月净投放、规模较上月高1000亿元。机构称此举支持政府债券发行、体现财政货币政策协同。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jryx/bank/2026-09-23/doc-inisvcpz8612715.shtml" target="_blank" rel="noopener">新浪财经 · 央行：9月24日将开展8000亿元MLF操作 期限为1年期</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1080066551_123753/" target="_blank" rel="noopener">中新社（搜狐转载） · 中国央行：9月24日将开展8000亿元MLF操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美财政部再推至多60亿美元长债回购，30年期收益率再创2007年来新高</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间；公告未注具体时刻，回购操作定于9月24日13:40-14:00美东时间）</p>
+<p>摘要：美国财政部宣布第二轮加码回购：买入合计面值至多60亿美元的20年至30年期国债，结算日为9月25日。消息公布后长债价格续跌，30年期收益率一度升至5.41%上方、刷新2007年以来高位。财长贝森特辩护称这是市场价格"偏离均衡"后采取的行动；国际金融协会（IIF）则警告回购无法解决美国债务的结构性问题。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3782394" target="_blank" rel="noopener">华尔街见闻 · 美财政部拟再回购至多60亿美元长债，30年期收益率逼近2007年来高位</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>伊朗总统联大发言：不能允许霍尔木兹海峡被"自由使用"</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间，第81届联大一般性辩论发言；原文未注具体时刻）</p>
+<p>摘要：伊朗总统佩泽希齐扬称，伊朗不会屈服于军事力量，相信外交途径可以结束冲突，并准备在不使用武力的情况下谈判；他强调伊朗需要的是核能而非核武器，在伊朗受到制裁时不能允许一些国家一边利用霍尔木兹海峡、一边用它向伊朗运送武器。美国国务卿鲁比奥称美伊联大期间会谈未取得重大进展，市场对和谈的乐观预期随之降温。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3782393" target="_blank" rel="noopener">华尔街见闻 · 伊朗总统联大发言：在受到制裁时，无法允许自由使用霍尔木兹海峡</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股三大指数集体收跌，纳指告别纪录高位；AI"去中介化"担忧冲击在线旅游股</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日16:00收盘（美东时间；北京时间9月24日04:00）</p>
+<p>摘要：美股三大指数集体收跌：道指跌0.68%，标普500跌0.75%、创一个多月最大单日跌幅，纳指跌1.13%报26936.04点、告别连续两日的收盘纪录高位。Meta旗下AI智能体Muse持续发酵，市场担忧旅游聚合平台被绕开，Expedia、爱彼迎跌近8%、谷歌跌3.8%；能源板块受油价反弹提振成标普唯一上涨板块，纳斯达克中国金龙指数收跌1.43%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2491731" target="_blank" rel="noopener">财联社 · 美股收盘：美债抛售潮再起 纳指告别纪录高位跌超1%</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1080209667_130887" target="_blank" rel="noopener">华尔街见闻早餐FM-Radio（2026年9月24日）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>美债抛售加剧：5年期收益率2007年来首破5%，10年期升至5.104%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间；财联社北京时间24日05:29发稿）</p>
+<p>摘要：美国9月标普全球综合PMI初值升至58.4（预期55.3）、创2021年7月以来最高，叠加美联储理事巴尔"可能仍需进一步调整政策"等鹰派表态，美债收益率全线飙升：5年期上行约17个基点报4.997%、盘中首次突破5%（2007年来首次）；10年期上行约15个基点报5.104%、盘中5.135%创2007年7月以来最高。市场对10月加息至少25个基点的押注一度升至约75%、其后回落至68.6%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3782392" target="_blank" rel="noopener">华尔街见闻 · 美国9月综合PMI初值大幅超预期，创五年新高，10年期美债收益率再破5%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2491731" target="_blank" rel="noopener">财联社 · 美股收盘：美债抛售潮再起 纳指告别纪录高位跌超1%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美元指数突破101创7月底以来最高，离岸人民币回落至6.7115</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日04:59（北京时间，纽约尾盘）</p>
+<p>摘要：加息预期升温推动美元走强：美元指数9月23日涨0.51%报101.05、创7月底以来最高；美元兑日元涨0.60%报158.32，欧元兑美元跌0.55%报1.1384、英镑兑美元跌0.74%报1.3240。离岸人民币（CNH）纽约尾盘报6.7115元，较前一交易日跌127点，日内整体交投于6.6955-6.7142元区间。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2491733" target="_blank" rel="noopener">财联社 · 离岸人民币兑美元较周二纽约尾盘跌127点</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1080209667_130887" target="_blank" rel="noopener">华尔街见闻早餐FM-Radio（2026年9月24日）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>油价结束五连跌、布油重上100美元，金银大跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间收盘/盘中；原文未注具体时刻）</p>
+<p>摘要：受伊朗强硬表态影响、美伊和谈乐观预期降温，国际油价结束五连跌：WTI 11月合约涨1.81%报92.16美元/桶，布伦特11月合约涨3.86%报103.08美元/桶、重新站上100美元。美元与美债收益率齐升压制无息资产：COMEX期金跌1.23%报4322.7美元/盎司、期银跌2.4%报64.93美元/盎司；现货黄金盘中一度跌破4300美元/盎司（报4299.92美元、日内跌超1.4%）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sohu.com/a/1080209667_130887" target="_blank" rel="noopener">华尔街见闻早餐FM-Radio（2026年9月24日）</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3169611" target="_blank" rel="noopener">华尔街见闻快讯 · 现货黄金跌破4300美元/盎司</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>市场传闻：台积电2027年1月起代工报价再涨3%-6%，订单能见度至2030年</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日凌晨（北京时间，财联社04:23发稿；DIGITIMES 9月23日报道）</p>
+<p>摘要：据DIGITIMES援引供应链人士报道，台积电已确定自2027年1月起按制程调整晶圆出片（Wafer Out）报价，涨幅约3%-6%，其中2纳米、3纳米等先进制程涨幅较高，成熟及特殊制程视产品与客户分别议价。供应链称2纳米、3纳米供不应求、CoWoS先进封装吃紧，订单能见度已延伸至2030年；联电、力积电等已宣布跟进涨价策略。台积电未回应市场传闻。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2491727" target="_blank" rel="noopener">财联社 · 市场传闻：台积电2027年1月晶圆代工价格再涨3%-6%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3782403" target="_blank" rel="noopener">华尔街见闻 · 报道：台积电明年1月起上调晶圆代工价格3%至6%，订单能见度延伸至2030年</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-23-晚间版.html">← 2026-09-23-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-24 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
