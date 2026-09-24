@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-09-24</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 9 月 24 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：A股全天弱势、沪指跌1.22%报3888.37点再失3900点，福建&quot;炒地图&quot;行情午后逆势爆发；海外&quot;更高更久&quot;利率叙事延续——30年期美债收益率盘中升至5.442%创2004年来新高、美股三大期指同期全线走低；商务部披露中美第八轮经贸磋商达成多项共识，何立峰与贝森特就人工智能举行首次对话；白宫习特会定于北京时间今晚登场，全球市场屏息以待。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>商务部：中美第八轮经贸磋商达成多项共识，双方就人工智能举行首次对话</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日下午（北京时间，商务部例行新闻发布会；原文未注具体时刻）</p>
+<p>摘要：商务部新闻发言人何亚东介绍，中美两国经贸团队近日在美国举行第八轮经贸磋商，围绕落实已有经贸磋商共识、对等降税安排、建立贸易理事会和投资理事会、吉隆坡经贸磋商联合安排延期等问题进行了坦诚、深入、富有建设性的交流，达成多项共识。何立峰副总理与贝森特财长在中美经贸磋商机制下就人工智能进行了首次对话，下一步双方将就后续工作保持密切沟通。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n9y24r/index.html" target="_blank" rel="noopener">商务部 · 商务部召开例行新闻发布会（2026年9月24日）</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4198084.html" target="_blank" rel="noopener">证券时报 · 商务部：中美第八轮经贸磋商达成多项共识</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>国新办"十五五"文旅发布会：2025年文化产业营收20.8万亿元，将培育更多旅游名县与"宝藏小城"</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日10:00（北京时间，国务院新闻办发布会）</p>
+<p>摘要：文化和旅游部副部长王建华介绍，2025年全国文化产业实现营业收入20.8万亿元、"十四五"期间年均增长8.4%；2025年国内出游65.2亿人次、总花费6.3万亿元，均创历史新高；入境旅游1.54亿人次、同比增长17.1%。文旅部表示将布局32个旅游枢纽城市、33个重点旅游城市，着力发展县域旅游、培育更多旅游名县和"宝藏小城"，并将分两批建设100家左右国家文化和旅游产业发展示范区。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.163.com/dy/article/L7JR47MD0530QRMB.html" target="_blank" rel="noopener">人民网（网易转载） · 文化和旅游部：我国已成国际旅游最大客源国和主要目的地</a>
+<span class="sep">·</span>
+<a href="https://www.cnr.cn/newscenter/native/gd/20260924/t20260924_527823844.shtml" target="_blank" rel="noopener">央广网 · 我国将培育更多旅游名县和&quot;宝藏小城&quot;</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>纽约联储主席威廉姆斯：年内再次加息"合理"，10月加息押注升至约70%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日（伦敦当地时间；财联社北京时间16:16发稿）</p>
+<p>摘要：美联储"三把手"、纽约联储主席威廉姆斯在伦敦表示，美国通胀已连续五年高于2%目标，能源价格高企与AI投资推升需求，美联储控制通胀仍有"大量工作要做"，年底前再次加息是"合理"预期，但后续将取决于数据。其讲话后市场对10月加息的押注由周三约54%升至约70%。机构分歧显现：高盛预计10月27日会议是今年最后一次加息，花旗则预计10月按兵不动、2027年6月才恢复降息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2492324" target="_blank" rel="noopener">财联社 · 纽约联储主席威廉姆斯称已看到美国经济展现出显著的韧性</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4198512.html" target="_blank" rel="noopener">证券时报 · 加息，突变！美联储，最新发声！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美国ITC对DRAM设备启动337调查：美光、联想、慧与、美超微列名被告</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：9月23日（美东时间，ITC投票决定；北京时间9月24日经中国贸易救济信息网披露，原文未注具体时刻）</p>
+<p>摘要：美国国际贸易委员会（ITC）投票决定对特定动态随机存取存储器（DRAM）设备及其下游产品和组件（III）启动337调查（调查编码：337-TA-1523），申请人为内存技术公司Netlist。美光科技、美光半导体产品公司、慧与（HPE）、联想集团（中国香港）、联想（美国）及美超微电脑为列名被告。ITC将于立案后45天内确定调查结束期。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-09-24/doc-inisxtav8168597.shtml" target="_blank" rel="noopener">新浪财经 · 美国对动态随机存取存储器（DRAM）设备及下游产品和组件启动337调查</a>
+<span class="sep">·</span>
+<a href="https://www.chinaflashmarket.com/newsflash/38239" target="_blank" rel="noopener">CFM闪存市场 · ITC对DRAM设备及组件（III）启动337调查</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股缩量调整：沪指跌1.22%再失3900点，福建本地股午后逆势爆发</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日15:00收盘（北京时间）</p>
+<p>摘要：A股全天震荡走低、三大指数均以全天最低点报收：沪指跌1.22%报3888.37点，深成指跌2.34%，创业板指跌2.68%；两市成交1.65万亿元、较前一交易日缩量逾1000亿元，全市场超4300只个股下跌。板块上油气设服、福建、煤炭、风电设备领涨，福建本地股午后近十股涨停（福建水泥、海峡创新、平潭发展等）；贵金属、PCB、农业、生物制品领跌。全天52股涨停、封板率84%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnr.cn/jingji/gundong/20260924/t20260924_527823994.shtml" target="_blank" rel="noopener">央广网 · 9月24日A股收评：深成指、创业板指跌幅均超2%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2492433" target="_blank" rel="noopener">财联社 · 【焦点复盘】沪指光脚中阴再失3900点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股缩量收跌：恒指跌0.29%、南向连续14日净买入；诺诚健华32.5亿美元BD落地股价反跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日16:00收盘（北京时间）</p>
+<p>摘要：港股三大指数缩量下跌：恒生指数跌0.29%报24761.13点，恒生科技指数跌0.41%报4361.13点，全日大市成交1596亿港元；南向资金净买入29亿港元、连续14日净买入。石油股逆势活跃（中国石油股份涨近3%）；诺诚健华宣布与礼来达成最高32.5亿美元研发和授权许可合作后，股价盘中一度跌超11%、最终收跌7.87%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mrjjxw.com/articles/2026-09-24/4591518.html" target="_blank" rel="noopener">每日经济新闻 · 最高32.5亿美元大利好落地 股价却跌超7% 发生了什么？</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4198356.html" target="_blank" rel="noopener">证券时报 · 港股收评：恒生指数跌0.29%，恒生科技指数跌0.41%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>全球债市抛售延续：30年期美债收益率创2004年来新高，美股期指全线走低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日（北京时间约17:40—20:39，欧洲时段至美市盘前）</p>
+<p>摘要：全球债市抛售加剧：美国30年期国债收益率盘中升至5.442%、创2004年以来新高，10年期升至5.148%、续刷2007年以来最高水平；美股三大期指全线走低：道指期货跌约0.3%、标普500指数期货跌约0.6%、纳斯达克100指数期货跌超1%。美国上周首次申领失业金人数19.7万人、低于市场预期；美元指数升0.15%报101.26，人民币兑美元中间价报6.7489、下调21点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4198512.html" target="_blank" rel="noopener">证券时报 · 加息，突变！美联储，最新发声！</a>
+<span class="sep">·</span>
+<a href="https://www.lanjinger.com/t/2492622" target="_blank" rel="noopener">蓝鲸财经 · 美股盘前要闻一览：30年期美债收益率创2004年来新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>油价反弹逼近100美元，金银走弱</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日20:39（北京时间报道时，美市盘前）</p>
+<p>摘要：国际油价反弹：WTI原油期货涨1.95%报93.961美元/桶，布伦特原油期货涨1.91%报99.994美元/桶、重新逼近100美元关口（盘中一度升破100美元）。贵金属走弱：现货黄金跌0.43%报4268.67美元/盎司，现货白银跌1.37%报63.54美元/盎司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.lanjinger.com/t/2492622" target="_blank" rel="noopener">蓝鲸财经 · 美股盘前要闻一览</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3782452" target="_blank" rel="noopener">华尔街见闻 · 30年期美债收益率创19年新高，纳指期货跌1%，布油涨破100</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>亚太股市多数收跌、日经225逆势涨0.76%；欧洲盘中涨跌不一</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日（亚太市场收盘；欧洲股市为盘中，原文未注具体时刻）</p>
+<p>摘要：亚太主要股市收盘统计的11个指数中2涨9跌：日经225指数收涨0.76%报65513.99点（盘中最高66249.11点），韩国KOSPI指数涨0.90%，其余多数走低。欧洲股市盘中涨跌不一：英国富时100指数涨0.12%，法国CAC40指数跌0.20%、德国DAX30指数跌0.21%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L7K0GK3R0519QIKK.html" target="_blank" rel="noopener">智通财经 · 亚太股市收盘统计（网易转载）</a>
+<span class="sep">·</span>
+<a href="https://indexes.nikkei.co.jp/cz/nkave/index/profile" target="_blank" rel="noopener">日经225指数官网 · 日经平均股价指数（2026.09.24收盘）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>甲骨文就新墨西哥州数据中心发出不可抗力通知，美股盘前跌超5%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：9月24日20:28—20:39（北京时间，美股盘前）</p>
+<p>摘要：甲骨文就新墨西哥州数据中心项目（Project Jupiter）发出不可抗力通知，并寻求在项目延期情况下推迟付款；消息拖累其美股盘前一度跌超5%。该项目是甲骨文与OpenAI约3000亿美元算力合同的核心（属"星际之门"AI基建计划），此前与其相关的约180亿美元银团贷款已因施工延期与地方反对跌入压力区间。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.lanjinger.com/t/2492599" target="_blank" rel="noopener">蓝鲸财经 · 甲骨文就新墨西哥州数据中心发出不可抗力通知</a>
+<span class="sep">·</span>
+<a href="https://www.lanjinger.com/t/2492621" target="_blank" rel="noopener">蓝鲸财经 · 甲骨文美股盘前跌超5%</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-24-早间版.html">← 2026-09-24-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-09-24 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
