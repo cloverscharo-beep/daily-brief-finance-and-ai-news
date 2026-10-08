@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 8 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：节后首个交易日A股集体收跌、沪指跌0.79%报3811.90点（科创50跌4.82%、成交1.69万亿元），光芯片等半导体板块重挫、电池航运逆势走强；央行当日开展12000亿元买断式逆回购、财政部首发1500亿元注资特别国债；港股恒生科技盘中创年内新低，亚太股市普跌、国际油价大涨逾3%；晚间央行发布关于人民币汇率的政策立场，重申从不搞竞争性货币贬值。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>央行开展12000亿元买断式逆回购操作，公开市场单日净回笼6085亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（北京时间，当日操作；公告9月30日发布，原文未注具体时刻）</p>
+<p>摘要：中国人民银行公告显示，10月8日以固定数量、利率招标、多重价位中标方式开展12000亿元买断式逆回购操作（期限3个月、89天，到期日2027年1月5日），旨在保持银行体系流动性充裕。当日公开市场另开展6060亿元隔夜逆回购操作，净回笼6085亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3175090" target="_blank" rel="noopener">华尔街见闻 · 中国央行公开市场今日开展6060亿元隔夜逆回购操作</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>财政部首发1500亿元中央金融机构注资特别国债（一期）</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日11:40（北京时间，招标于10:35—11:35进行、结果11:40披露）</p>
+<p>摘要：2026年中央金融机构注资特别国债（一期）今日首发招标：5年期固定利率附息债、竞争性招标面值总额1500亿元，发行利率1.37%、投标倍数2.25倍；同日财政部还续发30年期超长期特别国债730亿元（发行利率2.1078%）。据此前披露方案，工行、农行等8家中央金融机构合计获3600亿元注资，其中财政部出资3000亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4207615.html" target="_blank" rel="noopener">证券时报 · 首期1500亿元！财政部发行中央金融机构注资特别国债</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175157" target="_blank" rel="noopener">华尔街见闻 · 中国财政部发行5年期债券，规模1500亿元，发行利率1.3700%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>国庆假期权威数据：跨区域人员流动21.42亿人次、出入境1546.2万人次</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（北京时间，多部门当日先后通报；交通部14:59、移民局14:01、电影局10:36）</p>
+<p>摘要：交通运输部通报，国庆假期（10月1日—7日）全社会跨区域人员流动量21.42亿人次、日均3.06亿人次、同比增0.6%；国家移民管理局通报，全国边检机关保障中外人员出入境1546.2万人次、同比增6.7%。国家电影局数据显示，国庆档电影票房11.65亿元、连续7天单日票房破亿。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3175240" target="_blank" rel="noopener">华尔街见闻 · 交通运输部：国庆假期全社会跨区域人员流动量21.42亿人次</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175207" target="_blank" rel="noopener">华尔街见闻 · 国家移民管理局：国庆假期出入境1546.2万人次</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175131" target="_blank" rel="noopener">华尔街见闻 · 国家电影局：国庆档票房11.65亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>台积电9月营收5118.6亿元台币，同比增长54.6%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日13:32（北京时间，公司披露月度营收）</p>
+<p>摘要：台积电公布9月销售额5118.6亿元台币、同比增长54.6%；其月度营收数据是观察全球AI与先进制程需求的重要参考。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3175186" target="_blank" rel="noopener">华尔街见闻 · 台积电：9月销售额5118.6亿元台币，同比增长54.6%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175198" target="_blank" rel="noopener">华尔街见闻 · 台积电9月营业额报告</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股节后首日集体下挫：沪指跌0.79%，科创50跌近5%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日15:00（北京时间，收盘）</p>
+<p>摘要：三大指数全天震荡调整：上证指数收报3811.90点、跌0.79%，深证成指跌2.07%，创业板指跌3.15%，科创50跌4.82%；沪深两市成交1.69万亿元，近3800只个股下跌。电池、油气、煤炭、航运板块逆势走强（工行、中行、杭州银行创历史新高），半导体芯片、算力硬件、医药生物、消费电子领跌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4207716.html" target="_blank" rel="noopener">证券时报 · 收评：沪指跌0.79% 创业板指跌3.15% 电池板块逆市走强</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175245" target="_blank" rel="noopener">华尔街见闻 · 上证指数收报3811.90点，跌0.79%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股走弱：恒生科技指数跌破4100点、盘中创年内新低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日15:39（北京时间，尾盘阶段）</p>
+<p>摘要：港股持续走弱：恒生指数跌1.37%报23799.54点，恒生科技指数跌2.74%报4079.56点、盘中跌破4100点并创年内新低；MINIMAX跌超10%、壁仞科技跌超9%。南向资金净买入额超50亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3175227" target="_blank" rel="noopener">华尔街见闻 · 恒生科技指数跌破4100点，盘中创出年内新低</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175161" target="_blank" rel="noopener">华尔街见闻 · 南向资金净买入额超50亿港元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>亚太股市普跌、欧股盘中走低：日经跌1.4%、斯托克600创近4个月低点</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日14:32—15:27（北京时间，亚太收盘至欧股盘中）</p>
+<p>摘要：亚太股市普遍收跌：日经225指数收跌1.4%报69042.11点、东证指数跌1.5%，韩国首尔综指跌2.6%报6625.93点，台湾加权指数跌1%、新加坡海峡时报指数盘中一度跌3.4%。欧股开盘续跌：斯托克50跌1.11%、德国DAX跌0.85%、法国CAC40跌0.70%、英国富时100跌0.82%；斯托克600盘中跌约1%创近4个月低点，银行股指数跌2.1%。欧洲央行管委穆兰称欧元区通胀“100%是能源驱动”、尚未现第二轮效应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3175222" target="_blank" rel="noopener">华尔街见闻 · 日经225指数收盘下跌1.4%，韩国首尔综指收跌2.6%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175248" target="_blank" rel="noopener">华尔街见闻 · 欧洲斯托克50指数开盘跌1.11%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175238" target="_blank" rel="noopener">华尔街见闻 · 欧央行管委穆兰：欧元区通胀100%是能源驱动</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>国际油价大涨逾3%、能化期货掀涨停潮，深圳水贝现跨省购金热</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日14:42—15:09（北京时间）</p>
+<p>摘要：国际油价大幅走高：WTI原油日内涨3%、突破91美元/桶，布伦特原油涨3%报103.22美元/桶；国内商品期货能化品种掀涨停潮——燃料油涨超18%，LU燃油、沥青涨超9%，原油主力涨近9%。贵金属承压：钯跌超6%、沪银跌超3%；受金价回调带动，深圳水贝首饰金挂牌价回落、大量买家跨省扫货。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-08/doc-iniupafi7691081.shtml" target="_blank" rel="noopener">新浪财经 · 收评：多个能化品种涨停 燃料油涨超18%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175246" target="_blank" rel="noopener">华尔街见闻 · WTI原油日内涨幅达3%，突破91美元/桶</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175244" target="_blank" rel="noopener">华尔街见闻 · 商品期货收盘：燃料油涨超18%、钯跌超6%</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4207705.html" target="_blank" rel="noopener">证券时报 · 大量黄金买家跨省到水贝扫货</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>光芯片板块重挫：源杰科技等20%跌停，FCC新规与降价传闻扰动</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日12:47—14:46（北京时间，盘中至午后）</p>
+<p>摘要：光芯片板块大幅下挫：本轮涨幅达36倍的源杰科技20%跌停，东山精密亦封死跌停，长光华芯、仕佳光子同步重挫。市场归因两大因素：美国FCC新规（FCC26-50）将于10月13日生效、或加大国产高速光芯片进入北美市场的难度；以及1.6T光芯片价格下滑的市场传闻。长光华芯、仕佳光子、永鼎股份回应称未获悉降价相关消息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4207608.html" target="_blank" rel="noopener">证券时报 · 突然！36倍大牛股，20%跌停！整条赛道崩跌，发生了什么？</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3175168" target="_blank" rel="noopener">华尔街见闻 · A股光芯片板块大幅下挫，三家上市公司回应：未获悉降价相关消息</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>江淮汽车罕见跌停：“尊界V800刹车踏板支架断裂”冲上热搜</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日14:46—15:29（北京时间，午后封死跌停）</p>
+<p>摘要：懂车帝测试视频称三台尊界V800在紧急制动测试中刹车踏板支架断裂，相关话题冲上热搜；江淮汽车全天封死跌停、收报24.72元、跌10.01%，跌停板封单超36万手、成交额超35亿元。江淮汽车回应称正在调查中、有结果将发布官方说明；鸿蒙智行称尚未接到相关反馈。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/marketresearch/2026-10-08/doc-iniupafi7701071.shtml" target="_blank" rel="noopener">新浪财经 · 封死跌停！江淮汽车，最新回应！</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4207686.html" target="_blank" rel="noopener">证券时报 · 超36万手封单！江淮汽车，罕见跌停</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>🆕 晚间补录（16:00—20:40） <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">11</span><h3>中国人民银行发布关于人民币汇率的政策立场：从不搞竞争性货币贬值</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日17:52（北京时间）</p>
+<p>摘要：中国人民银行发布关于人民币汇率的政策立场：中国实施以市场供求为基础、参考一篮子货币进行调节、有管理的浮动汇率制度，坚持让市场在汇率形成中发挥决定性作用；“中国没有必要，也无意通过汇率贬值获取贸易竞争优势，从不搞竞争性货币贬值”；将本国产业竞争力下降等结构性问题简单归因他国汇率，是“对自身调整责任的推诿和回避”。当日人民币走稳：在岸人民币兑美元收报6.7014、较上一交易日上涨39点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/fortune/20261008/a334b459a7814f4ebe13e4c905595825/c.html" target="_blank" rel="noopener">新华网 · 新华社权威快报丨中国人民银行发布关于人民币汇率的政策立场</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/money/bank/bank_yhfg/2026-10-08/doc-iniuphnz4337666.shtml" target="_blank" rel="noopener">新浪财经 · 中国人民银行关于人民币汇率的政策立场</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2499452" target="_blank" rel="noopener">财联社 · 在岸人民币兑美元收盘报6.7014</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">12</span><h3>欧央行公布9月会议纪要：通胀前景风险偏上行，“保持警惕至关重要”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日19:30（北京时间，欧央行按期公布）</p>
+<p>摘要：欧洲央行公布9月9—10日货币政策会议纪要：所有成员认为通胀前景风险偏向上行，并称“明智的做法是直接承认高度的不确定性”“持续保持警惕至关重要”。欧央行管委齐格曼当日表示，10月利率决议预计引发“非常激烈的讨论”；市场普遍预计欧央行10月29日会议维持利率不变、12月恢复加息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/BreakingNewsArticle?ContentId=C26100800995" target="_blank" rel="noopener">群益期货 · 欧洲央行会议纪要快讯</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/bxjj/2026-10-08/doc-iniuphpf7650342.shtml" target="_blank" rel="noopener">新浪财经 · 欧洲央行齐格曼：10月利率决议预计引发激烈讨论</a>
+<span class="sep">·</span>
+<a href="https://m.cnfin.com/yw-lb//zixun/20261008/4477938_1.html" target="_blank" rel="noopener">新华财经 · 央行圆桌汇（2026年10月8日）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">13</span><h3>美联储理事沃勒：仍需进一步加息，但无需连续加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（土耳其时间，伊斯坦布尔经济论坛；原文未注具体时刻）</p>
+<p>摘要：沃勒表示，若经济数据继续符合预期，美联储仍需进一步加息以更快推动通胀回到2%，但“加息不需要在连续的会议上进行”、“何时加息有一定灵活性”；市场普遍预计10月会议维持利率不变、下一次加息集中在12月。他称美国经济活动正在增强、不担心收紧引发严重放缓，但担心中东能源价格与AI基建投资对通胀的推动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.21jingji.com/article/20261008/herald/cc5d8ec30f76561aa48e0e30a99a2b34.html" target="_blank" rel="noopener">21财经 · 美联储理事沃勒：仍需进一步加息，但无需连续加息</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-08/doc-iniupnvc3597234.shtml" target="_blank" rel="noopener">新浪财经 · 美联储沃勒：进一步加息仍有必要 但无需连续采取行动</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">14</span><h3>美媒：美军获令为再次大规模打击伊朗做准备，中东风险溢价再起</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（美东时间，Axios报道；中文媒体10月8日转引；原文未注具体时刻）</p>
+<p>摘要：据美国阿克西奥斯新闻网（Axios）援引多名美国官员报道，五角大楼已指示美军中央司令部完成对伊朗重启大规模军事行动的准备工作；报道称行动或在美国中期选举前实施、可能包括对伊朗能源与核设施的大规模轰炸，特朗普尚未作出最终决定。美伊谈判仍未取得进展，市场对原油供应中断的担忧升温，推升地缘风险溢价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://world.people.com.cn/n1/2026/1008/c1002-40810802.html" target="_blank" rel="noopener">人民网 · 美媒：美军为再次大规模打击伊朗做准备</a>
+<span class="sep">·</span>
+<a href="https://www.guancha.cn/GuoJi%C2%B7ZhanLue/2026_10_08_903460.shtml" target="_blank" rel="noopener">观察者网 · 美军获令准备再次大规模攻打伊朗</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">15</span><h3>美股盘前：三大期指齐跌，油价涨幅扩大至逾4%、黄金企稳</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（美东时间，美股盘前时段；原文未注具体时刻）</p>
+<p>摘要：美股盘前三大股指期货集体下跌：道指期货跌0.87%、标普500期货跌0.49%、纳指100期货跌0.73%。国际油价涨幅进一步扩大：WTI涨约4.3%至92.7美元附近、布伦特涨约4.2%突破105美元；黄金在4120美元附近震荡、美元指数运行在102.30上方；比特币跌约1%报82500美元附近。个股消息：百事公司三季度营收252.7亿美元超预期但下调全年盈利指引；Palantir获高盛上调评级至“买入”。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262206163-us-premarket-oil-surge-stock-index-futures-fall-avgo-ai-chip-funding-micron-strike-tradingkey" target="_blank" rel="noopener">TradingKey · 【美股盘前】油价飙升逾4%，三大股指期货齐跌，博通500亿美元AI芯片融资及美光罢工引关注</a>
+<span class="sep">·</span>
+<a href="https://www.fx678.com/202610081825009087.shtml" target="_blank" rel="noopener">汇通网 · 美元指数与美联储加息节奏出现微妙变化：10月和12月会议有何不同？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">16</span><h3>博通据报为OpenAI定制AI芯片寻求逾500亿美元融资</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（美东时间，据《华尔街日报》报道；原文未注具体时刻；中文媒体10月8日跟进）</p>
+<p>摘要：据《华尔街日报》及彭博社报道，博通近几周一直在为OpenAI定制AI芯片项目安排逾500亿美元融资，已与阿波罗全球管理、黑石集团等私人信贷机构展开早期洽谈；谈判尚处早期、规模可能变化。据报道，甲骨文、SpaceX亦在研究大额芯片采购融资（SpaceX据称拟筹资约400亿美元购买英伟达芯片）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/010/352.htm" target="_blank" rel="noopener">IT之家 · 消息称博通拟为OpenAI定制AI芯片筹资超500亿美元，SpaceX洽谈400亿美元融资</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-08/doc-iniunrrf7618741.shtml" target="_blank" rel="noopener">新浪财经 · 大额算力融资密集传来：博通为OpenAI筹500亿</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">17</span><h3>美光桃园工会取得罢工授权，DRAM/HBM供应扰动受关注</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（台湾时间，工会宣布；美光董事会定于10月8—9日（美东时间）讨论分润方案）</p>
+<p>摘要：美光台湾桃园工会10月7日宣布罢工投票通过：2258名会员中1994人投赞成票（占实际投票者约99%），正式取得合法罢工权，拟采取“突袭式”通知方式；诉求核心是建立与公司获利挂钩的透明分润制度。美光董事会将于10月8—9日（美东时间）讨论分润方案，其结果被视为关键；桃园厂是美光DRAM生产重镇，市场关注存储供应链是否受扰动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://udn.com/news/amp/story/7238/9800687" target="_blank" rel="noopener">联合新闻网 · 不滿分潤制度…美光桃園工會取得罷工權擬「突襲罷工」</a>
+<span class="sep">·</span>
+<a href="https://www.investor.com.tw/onlineNews/NewsContent.asp?articleNo=14202610070164" target="_blank" rel="noopener">財訊快報 · 美光桃園工會取得罷工權，要求企業公平分配成果，呼籲美光董事會正視</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-08-早间版.html">← 2026-10-08-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-08 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

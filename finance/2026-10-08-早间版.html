@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 8 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：A股今日结束国庆长假复市，复市前夜两条主线交织——“利率审判”延续：美联储9月纪要显示多数官员预计年内或再加息一次、10月加息押注降至约17%，美债收益率盘中续创2002年来新高（10年期升至5.365%）；国内稳市场安排落地：央行今日开展1.2万亿元买断式逆回购，财政部发行首期1500亿元中央金融机构注资特别国债。商品端，IEA同意加快释放1亿桶石油储备并优先投放柴油，金价跌至两个月低点、美元指数走高。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美联储9月会议纪要：全体支持加息决定，多数官员预计年内或再加息一次</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日14:00（美东时间；北京时间10月8日02:00）</p>
+<p>摘要：美联储公布9月15日至16日FOMC会议纪要：对9月将联邦基金利率目标区间上调25个基点至3.75%—4.00%的决定，全体成员一致支持；多数与会者认为“在今年年底前进一步提高利率目标区间可能是合适的”，但未透露具体时间，并强调对每次会议持开放态度、决策取决于后续数据。据芝商所FedWatch，交易员预计10月加息概率约17%，并倾向将12月视为下一次加息窗口。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2498840" target="_blank" rel="noopener">财联社 · 美联储会议纪要：多数官员预计年底前再加息一次，但未透露具体时间</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3783127" target="_blank" rel="noopener">华尔街见闻 · 美联储会议纪要：全体19名决策者支持9月加息但理由不一，多数预计年内还加，暗示10月不急</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行今日开展1.2万亿元买断式逆回购，财政部同日发行首期1500亿元注资特别国债</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（北京时间；本期国债竞争性招标时段为10:35—11:35）</p>
+<p>摘要：央行公告显示，今日以固定数量、利率招标、多重价位中标方式开展1.2万亿元3个月（89天）买断式逆回购操作，实现净投放2000亿元，维护节后流动性平稳。财政部同日发行2026年中央金融机构注资特别国债（一期）：5年期固定利率附息债，竞争性招标面值总额1500亿元，票面利率由招标确定，10月9日起计息、10月13日上市交易。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2498774" target="_blank" rel="noopener">财联社 · 债市早参10月8日：央行今日将开展12000亿元3个月买断式逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4207615.html" target="_blank" rel="noopener">证券时报 · 首期1500亿元！财政部发行中央金融机构注资特别国债</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1084822306_114984" target="_blank" rel="noopener">金融界 · A股开盘在即！假期美股迭创新高，但A50、港股双双下挫</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>IEA成员国同意加快释放1亿桶石油储备，并优先投放柴油</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（欧洲时间；IEA与欧盟成员国讨论后发表声明，原文未注具体时刻）</p>
+<p>摘要：国际能源署（IEA）宣布，成员国政府同意加快执行今年3月“联合行动”中宣布的石油储备释放计划，力争尽快完成，并支持在可行范围内优先释放柴油储备——3月计划中仍有约1亿桶石油尚未投放市场。欧盟委员会表示释放须控制在3月批准的规模内，德国确认参与；法国另宣布未来3个月释放1000万桶柴油储备。IEA下周董事会会议将对计划进行评估审查。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3783133" target="_blank" rel="noopener">华尔街见闻 · IEA将加快释放石油储备，仍有1亿桶待投放</a>
+<span class="sep">·</span>
+<a href="https://news.sina.com.cn/w/2026-10-08/doc-iniumumt4602734.shtml" target="_blank" rel="noopener">新浪新闻 · 国际能源署成员国同意加快释放1亿桶石油储备</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>恒生科技指数编算修订：成份股将由30只增至50只</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（香港时间；恒指公司公布咨询总结，原文未注具体时刻）</p>
+<p>摘要：恒生指数公司公布恒生科技指数编算方法修订方案咨询总结，将从“扩大科技主题覆盖”“引入分组选股机制”两大方向实施六项修订：取消行业要求、整合拓展为六大科技主题、子主题由16个增至24个、选股范畴改为恒生综合大中型股指数成份股、采用市值与收入增长双组别选股机制、成份股由30只增至50只。修订将于截至9月30日的指数检讨中实施、并于12月的指数调整中生效。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2498915" target="_blank" rel="noopener">财联社 · 港股早报｜恒生科技指数拟扩容至50只</a>
+<span class="sep">·</span>
+<a href="https://www.mrjjxw.com/articles/2026-10-07/4597860.html" target="_blank" rel="noopener">每日经济新闻 · 每经早参</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股三大指数集体收跌：道指跌0.66%，中概金龙指数微涨0.12%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日16:00收盘（美东时间；北京时间10月8日04:00）</p>
+<p>摘要：周三美股在标普500、纳指前一日创历史收盘新高后回落：道指跌0.66%报51179.87点，标普500跌0.22%报7801.77点，纳指跌0.22%报27538.69点。存储股分化，美光科技涨超4%、超微电脑涨超3%，Meta、SpaceX、高通、SK海力士跌超2%；工业与加密概念股领跌（卡特彼勒跌超5%、Coinbase跌近4%）；纳斯达克中国金龙指数涨0.12%报5638.07点；欧洲股市全线走低，欧元区股指触及四个月低点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-10-08/doc-iniumytv4173772.shtml" target="_blank" rel="noopener">新浪财经 · 10月8日收盘：三大指数收跌 10年期美债收益率创20年新高 银行与科技股承压</a>
+<span class="sep">·</span>
+<a href="https://www.mrjjxw.com/articles/2026-10-07/4597860.html" target="_blank" rel="noopener">每日经济新闻 · 每经早参</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美债收益率盘中续创2002年来新高：10年期升至5.365%、30年期升至5.732%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（美东时间；北京时间10月8日凌晨，原文未注具体时刻）</p>
+<p>摘要：美国10年期国债收益率周三盘中升至5.365%、30年期升至5.732%，均续创2002年以来最高水平；美国财政部390亿美元10年期国债招标需求强劲、投标倍数创十年最高，发售后10年期收益率自高点回落、尾盘基本持平。高利率担忧拖累银行股（高盛、美国银行均跌1%）；芝商所FedWatch显示交易员预计10月加息概率约17%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-10-08/doc-iniumytv4173772.shtml" target="_blank" rel="noopener">新浪财经 · 10月8日收盘：三大指数收跌 10年期美债收益率创20年新高 银行与科技股承压</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/world/2026-10-08/doc-iniumumt4639445.shtml" target="_blank" rel="noopener">新浪财经 · 美债收益率开始吸引投资者入场 10年期国债投标倍数创十年最高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>三星电子Q3营业利润同比飙升783%，史上首破100万亿韩元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（韩国时间；原文未注具体时刻）</p>
+<p>摘要：三星电子公布2026年第三季度初步业绩：合并营收约195万亿韩元（同比增长约127%），营业利润约107.4万亿韩元（约合801.7亿美元）、同比增长782.5%、环比增20.01%，高于市场预期的106.1万亿韩元，为公司史上首次单季营业利润突破100万亿韩元、连续第四个季度创纪录。业绩主要受AI芯片需求激增带动内存业务盈利增长；公司将于本月29日发布完整财报。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.futunn.com/flash/1000675865/samsung-s-q3-operating-profit-surged-783-driven-by-the" target="_blank" rel="noopener">富途牛牛 · 三星Q3营业利润飙升783%，AI内存热潮推动芯片业务盈利</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262205513-samsung-hbm-dram-mu-nvda-skhynix-tradingkey" target="_blank" rel="noopener">TradingKey · 三星Q3营业利润增长近8倍创新高，美光、英伟达及存储股后市怎么看？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>安踏完成收购彪马29.06%股权，正式成为第一大股东</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（北京时间；原文未注具体时刻，交割于10月5日完成）</p>
+<p>摘要：安踏体育宣布，已完成以15.055亿欧元现金对价、向Pinault家族旗下Artémis SAS收购PUMA SE 29.06%股权的交易，交易已获所有相关监管机构批准并满足交割条件，安踏正式成为彪马第一大股东。此次收购被视为安踏推进“单聚焦、多品牌、全球化”战略的重要里程碑，海外品牌布局再下一城。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.sina.cn/news/detail/5351538467277452.html" target="_blank" rel="noopener">新浪财经 · 安踏正式成为彪马第一大股东，15亿欧元现金收购29.06%股权</a>
+<span class="sep">·</span>
+<a href="https://www.mrjjxw.com/articles/2026-10-07/4597860.html" target="_blank" rel="noopener">每日经济新闻 · 每经早参</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>油价收跌、金价跌至两个月低点，美元指数走强收报102.25</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月7日（美东时间收盘/结算；北京时间10月8日凌晨）</p>
+<p>摘要：国际油价周三收跌：美油11月合约跌1.3%报88.28美元/桶，布油12月合约跌0.38%报100.20美元/桶，市场消化IEA加快释储消息。美元与美债收益率走强压制大宗商品：现货黄金跌1.28%报4110.52美元/盎司、盘中一度创两个月低点4066.30美元；美元指数涨0.42%收报102.25；离岸人民币纽约尾盘报6.7026，较前一日贬值12个基点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://forex.cnfol.com/jingjiyaowen/20261008/32389525.shtml" target="_blank" rel="noopener">中金在线外汇 · 10月8日财经早餐：美元美债双重施压，金价跌至两个月低点，油价承压于IEA加快释储</a>
+<span class="sep">·</span>
+<a href="https://www.mrjjxw.com/articles/2026-10-07/4597860.html" target="_blank" rel="noopener">每日经济新闻 · 每经早参</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/money/forex/forexinfo/2026-10-08/doc-iniunrrk5196526.shtml" target="_blank" rel="noopener">新浪财经 · 今日汇市晨报（2026年10月8日）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>A股今日复市：假期外围偏暖、A50期指走弱，机构预计迎来修复窗口</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（北京时间；原文未注具体时刻，A50为假期累计表现）</p>
+<p>摘要：A股今日结束国庆长假复市。假期外围整体偏暖：纳指、标普500期间刷新历史新高，英伟达市值逼近6万亿美元关口；但富时A50期指与港股假期走弱（A50期指累计下跌约1.3%）。券商策略报告普遍认为假期海外无重大消息面冲击、节后市场存在修复动能、有望“量价齐升”；技术派人士徐小明认为本轮调整已处于C浪下跌末期、机会大于风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sohu.com/a/1084822306_114984" target="_blank" rel="noopener">金融界（搜狐） · A股开盘在即！假期美股迭创新高，但A50、港股双双下挫，美债成全球市场“杀手”，央行节后放大招，大A开盘稳了？</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4207179.html" target="_blank" rel="noopener">上海证券报（证券时报网） · 机构：假期后A股市场有望“量价齐升” 科技主线或重新占优</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-24-晚间版.html">← 2026-09-24-晚间版</a></span><span><a href="2026-10-08-晚间版.html">2026-10-08-晚间版 →</a></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-08 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

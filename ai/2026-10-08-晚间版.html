@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-10-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 8 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：OpenAI 把 GPT-6 与「Intelligent UI」推向 ChatGPT 全体用户（免费档 10 月 8 日起）；Anthropic 同日发布 Claude Haiku 5.5 并下调 Sonnet 缓存价，小模型价格战升级；微软与英伟达在旧金山发布 Surface Laptop Ultra 与 RTX Spark，把本地智能体算力搬上 Windows PC。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>GPT-6 登陆 ChatGPT 全体用户：新增 Intelligent UI，免费档今日起推送</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 15:10（美东时间；The Verge 发稿时刻，即北京时间 10月8日 03:10；OpenAI 官方公告同日发布、原文未注具体时刻；免费与 Go 档自 10月8日起陆续推送）</p>
+<p>OpenAI 宣布 GPT-6（Sol/Luna）进入 ChatGPT 主界面：付费档自 10 月 7 日起、免费与 Go 档自 10 月 8 日起陆续完成切换。新版带来 Intelligent UI——回答可直接生成图表、按钮乃至计算器、分账工具等交互组件，官方称搜索类问题开始回答的时间较前代平均早 44%。同日发布的 10 月版部署安全报告称两版本在网络与生化领域均处 High 档，并说明了 GPT-6 在部分青少年评测中出现的回退项。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/gpt-6-for-everyone" target="_blank" rel="noopener">OpenAI · GPT-6 and Intelligent UI for everyone</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6" target="_blank" rel="noopener">The Verge · ChatGPT’s ‘Intelligent UI’ update fills its responses with pictures, charts, and buttons</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/10/501834.html" target="_blank" rel="noopener">量子位 · GPT-6今起免费用！拒答变少，话变多了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 发布 Claude Haiku 5.5：运行成本约降 75%，并下调缓存价</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 14:07（美东时间；路透社发稿时刻，即北京时间 10月8日 02:07；Anthropic 官方公告同日、原文未注具体时刻）</p>
+<p>Anthropic 推出 Claude 5.5 家族第三款模型 Haiku 5.5，面向高吞吐、成本敏感任务：官方称其平均运行成本比 Haiku 4.5 低约 75%，并首次为 Haiku 档引入 low—max 五档 effort 调节。同场把 Sonnet 5.5 缓存读取价减半（多数智能体任务成本约再降 20%），并为 Max/Team 订阅新增每月 API 额度；官方基准中多项小模型分数超过 GPT-6 Luna，被解读为正面迎击价格战。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Anthropic · Introducing Claude Haiku 5.5</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07" target="_blank" rel="noopener">Reuters · Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/10/501832.html" target="_blank" rel="noopener">量子位 · Claude新模型发布！跑分暴击GPT-6 Luna，价格比梁文谷还便宜，OpenAI只能送重置卡挽尊</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>微软×英伟达：Surface Laptop Ultra 与 RTX Spark 登场，Windows 为智能体时代重构</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（太平洋时间；微软旧金山发布会当日，TechCrunch 报道时刻 13:22 PT；英伟达官方博客同日发稿；发布会具体时刻原文未注）</p>
+<p>在旧金山举行的 Windows AI 活动上，微软与英伟达宣布：Surface Laptop Ultra（2,600 美元起、最高约 5,900 美元，最高 128GB 统一内存与 1 PFLOPS（FP4）AI 算力）与搭载 RTX Spark 的笔记本即日开启预订、10 月 16 日上市，并预览桌面级超算 DGX Station for Windows。同时宣布系统级执行容器 MXC 正式可用，为智能体提供沙箱与治理能力，目标是把「代理时代」的本地算力与安全底座搬进 Windows。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/" target="_blank" rel="noopener">NVIDIA Blog · NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/" target="_blank" rel="noopener">TechCrunch · Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced" target="_blank" rel="noopener">The Verge · Everything announced at Microsoft’s Surface Laptop Ultra event</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>OpenAI 公开 722 篇数学手稿：顾问组声明「不代表认可」，核验之争升温（补录）</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；手稿上线 GitHub 与官方博文发布日，量子位北京时间 10月7日 09:05 报道；原文未注具体时刻）</p>
+<p>OpenAI 公开了由未发布内部模型产出的 722 篇数学手稿（归为 372 组结果），覆盖准黎曼猜想、霍奇猜想、BSD 猜想、唯一游戏猜想等 17 个方向，称模型此前尝试了约 4,000 个研究问题。由九位学者（含三位菲尔兹奖得主）组成的独立顾问组随即声明：此前给过发布建议，但不代表认可这些结果或产出流程；多位数学家表示，产出速度已远超阅读与核验速度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/sharing-ai-progress-in-mathematics/" target="_blank" rel="noopener">OpenAI · Sharing AI progress in mathematics</a>
+<span class="sep">·</span>
+<a href="https://github.com/openai/math" target="_blank" rel="noopener">GitHub · openai/math</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/10/501749.html" target="_blank" rel="noopener">量子位 · OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>Manus 母公司蝴蝶效应完成超 5 亿美元融资：与 Meta 分拆后首轮</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（北京时间；公司当日宣布，路透社北京时间 15:00 发稿，IT之家 12:50 报道；公告未注具体时刻）</p>
+<p>蝴蝶效应（Manus 母公司）宣布完成超 5 亿美元新一轮融资，由博裕投资、IDG 资本领投，腾讯、红杉中国、真格基金等老股东继续加持。这是公司脱离 Meta、恢复独立运营后的首轮融资；路透社称其在 Meta 收购被阻止、按 20 亿美元估值完成回购后重新独立，创始团队继续执掌公司。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/010/457.htm" target="_blank" rel="noopener">IT之家 · Manus 母公司蝴蝶效应宣布完成超 5 亿美元新一轮融资，腾讯、红杉中国等继续加持</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/10/08/manus-fund-raise-meta-muse-tencent.html" target="_blank" rel="noopener">CNBC · Manus raises $500 million in first funding round since Meta breakup</a>
+<span class="sep">·</span>
+<a href="https://www.sacbee.com/news/business/article317536136.html" target="_blank" rel="noopener">Reuters（Sacramento Bee 转载）· Manus raises more than $500 million after Meta exit</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>The Information：Meta 与微软推动员工「少用 Claude」，转向自研模型</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 14:49（美东时间；Hacker News 讨论帖发布时刻，即北京时间 10月8日 02:49；原始报道出自 The Information，原文未注具体时刻）</p>
+<p>据 The Information 报道，微软把内部 Claude 支出预估下调超三分之一、收紧员工的 AI 预算上限，引导转向 Copilot 等自家工具；Meta 的 Claude Code 使用人数已从年初约 6 万减半至约 3 万人，报告称其最近 28 天在 Claude 上仍花费超 1.05 亿美元。报道与 HN 讨论的焦点：前沿实验室正「自产自用」自家模型，客户采购与内部使用开始分道。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cybersecuritynews.com/meta-microsoft-claude-ai" target="_blank" rel="noopener">Cybersecurity News（转引 The Information）· Meta and Microsoft Cut Employee Use of Claude AI</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=49997161" target="_blank" rel="noopener">Hacker News 讨论帖</a>
+<span class="sep">·</span>
+<a href="https://www.theinformation.com/articles/meta-microsoft-work-wean-staff-anthropics-claude" target="_blank" rel="noopener">The Information（原文，付费墙）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>彭博社：腾讯考虑发售至多 50 亿美元离岸债券，加码 AI</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 13:37（北京时间；彭博社报道时刻）</p>
+<p>彭博社援引知情人士称，腾讯正考虑发售至多 50 亿美元的离岸债券（或以美元与离岸人民币计价，最早本月发行），加入全球科技公司的 AI 融资潮；其 6 月刚发债近 47 亿美元。高盛数据显示，2026 年全球 AI 相关债券发行规模已突破 5,750 亿美元；消息公布后腾讯港股走低。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-08/tencent-mulls-5-billion-bond-offering-as-ai-push-ramps-up" target="_blank" rel="noopener">Bloomberg · Tencent Mulls $5 Billion Bond Offering as AI Push Ramps Up</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/010/495.htm" target="_blank" rel="noopener">IT之家 · 消息称腾讯考虑发售 50 亿美元债券，加大力度投资 AI</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Alphabet 旗下 Isomorphic Labs 传寻求 400–500 亿美元估值融资</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（北京时间；彭博社当日上午报道，IT之家 14:33 转引；原文未注具体时刻）</p>
+<p>彭博社报道，由诺贝尔化学奖得主 Demis Hassabis 领导的 AI 药物研发公司 Isomorphic Labs 正就新一轮融资进行早期谈判，估值至少 400 亿美元、可能达到 500 亿美元；其今年 5 月的 B 轮刚募资 21 亿美元。AI 制药仍处早期阶段，投资者押注其「AI 设计药物」管线与 DeepMind 技术背景。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-08/alphabet-s-isomorphic-labs-in-funding-talks-for-at-least-40-billion-value" target="_blank" rel="noopener">Bloomberg · Alphabet’s Isomorphic Labs in Funding Talks for at Least $40 Billion Value</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/010/516.htm" target="_blank" rel="noopener">IT之家 · 消息称 Alphabet 旗下 AI 药物研发企业 Isomorphic Labs 寻求以 400~500 亿美元估值融资</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Nous Research 确认 15 亿美元估值，推出企业级智能体</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 13:48（太平洋时间；TechCrunch 发稿时刻，即北京时间 10月8日 04:48）</p>
+<p>TechCrunch 证实 Nous Research 完成 9,000 万美元 B 轮融资、估值 15 亿美元（Robot Ventures 领投，英伟达、三星、Menlo Ventures 等参投），并推出面向企业的 Hermes for Businesses。其开源 Hermes Agent 已被克隆超 2,400 万次、据公司自述约占全球 AI token 用量 2.5%；据报道其 9 月中年化收入约 3,600 万美元、预计年底前破 1 亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/" target="_blank" rel="noopener">TechCrunch · Nous Research confirms it hit $1.5B valuation, launches AI agents for business users</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>ICANN 新一轮顶级域名申请公布：.agent、.agi 成 AI 厂商必争之地</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 14:46（美东时间；The Verge 发稿时刻，即北京时间 10月8日 02:46；ICANN 公布于当地时间 10月7日、原文未注具体时刻）</p>
+<p>ICANN 公布新一轮顶级域名申请：共 1,615 份、来自 481 个申请者。AI 相关域名成热点——.agent 获 10 份申请（含 Meta、OpenAI），.agi 获 7 份，.intelligence 4 份；OpenAI 共申请 15 个 TLD（.gpt、.codex、.chatgpt 等），Meta 提交 21 份，Anthropic 意属 .claude，Meta 还与另一家公司竞逐超长的 .superintelligence。距离正式获批至少还要等到明年。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi" target="_blank" rel="noopener">The Verge · The latest TLD applications are all about AI</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/010/462.htm" target="_blank" rel="noopener">IT之家 · 谷歌、Meta 等厂商竞逐申请 .agent 域名：OpenAI 申请.gpt、Anthropic 申请.claude</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>🕘 晚间补录（20:40 复核增补） <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">11</span><h3>OpenAI 撤回 3 篇数学手稿：一处符号错误，同步修订 14 篇</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；openai/math 仓库首份更新日志标注日期，原文未注具体时刻；北京时间 10月8 日经中文媒体与 Hacker News 讨论扩散）</p>
+<p>OpenAI 为 722 篇数学手稿发布首份更新日志：一篇论文在关键论证中把一类几何操作的符号记成 +1（按论文自身约定应为 -1），导致构造失效、依赖该构造的两篇论文被一并撤回，共 3 篇霍奇猜想相关手稿撤回，仓库总数 722→719；另修订 14 篇、更新 13 篇引用，主结果 Lean 形式化率约 42%（300/719）。官方强调撤回的是证明、不代表命题本身有误，原稿保留归档可查；数学家组织 AHM（Association for Human Mathematics）发表声明，批评这一发布是「力量展示」而非学术，呼吁同行停止与 OpenAI 合作。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://github.com/openai/math/blob/main/history.md" target="_blank" rel="noopener">GitHub · openai/math history.md</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_3996876140_ee3b7d6c001017tti.html?from=science" target="_blank" rel="noopener">机器之心（新浪转载）· 刚刚，OpenAI撤回了三篇AI数学论文，竟是因为符号写错了</a>
+<span class="sep">·</span>
+<a href="https://www.ahmath.org/statements" target="_blank" rel="noopener">AHM · Statements</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">12</span><h3>台积电三季度营收创纪录：约 1.49 万亿新台币，同比增约 50%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（台北时间；台积电当日公布 9 月及三季度合并营收，原文未注具体时刻）</p>
+<p>受 AI 应用需求推动，台积电第三季度营收约 1.49 万亿新台币（约 466.7 亿美元），同比增长约 50%，超过 LSEG 汇整分析师预估的 1.46 万亿新台币、并高于公司此前 446–458 亿美元的指引上限，创单季历史新高；9 月合并营收约 5,118.6 亿新台币、同比增 54.6%。公司将于 10 月中旬发布完整财报。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-10-08/doc-iniunvxm3841344.shtml" target="_blank" rel="noopener">新浪财经 · 台积电Q3营收同比飙升50%，超出市场预期</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/world/asia-pacific/tsmcs-third-quarter-revenue-surges-50-yy-beating-market-forecast-2026-10-08/" target="_blank" rel="noopener">Reuters · TSMC&#x27;s third-quarter revenue surges to record, beating market forecast</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">13</span><h3>英伟达支持的 Upscale AI 发布「Token Fabric」：让数据中心混用多厂商 AI 芯片</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；路透社当日发稿，原文未注具体时刻）</p>
+<p>估值 20 亿美元（6 月）的 Upscale AI 发布软硬件一体网络平台 Token Fabric：可在数据中心内连接不同供应商的 AI 芯片，客户无需自行整合多套网络系统；方案结合其自研网络芯片、采用英伟达 Spectrum-X 技术的设备与瓶颈定位软件，目标是让昂贵 AI 芯片「少等数据」。CEO Barun Kar 预计该平台明年收入达数千万美元、有望上探数亿美元；首部分四季度释出，完整平台 2027 年起分阶段铺开。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.reuters.com/business/nvidia-backed-upscale-ai-launches-platform-connect-chips-rival-suppliers-2026-10-08/" target="_blank" rel="noopener">Reuters · Nvidia-backed Upscale AI launches platform to connect chips from rival suppliers</a>
+<span class="sep">·</span>
+<a href="https://investing.com/news/stock-market-news/nvidiabacked-upscale-ai-launches-platform-to-connect-chips-from-rival-suppliers-4938802" target="_blank" rel="noopener">Investing.com（转载路透）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">14</span><h3>马斯克：Grok Bot 将按任务择优，混用 Claude、Midjourney 等外部最佳模型</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；马斯克在 X 发文说明，原文未注具体时刻；IT之家 10月8日晨转引）</p>
+<p>马斯克宣布，Grok Bot 不再局限于自研 Grok 系列，将按具体任务自动选择「最好的后端模型」——可调用 Claude Opus 5.5、Midjourney、Suno 及其他领先 API，以「最有可能给用户最佳结果」为标准，从自研优先转向任务导向的多模型混合架构。Grok Bot 是今年 8 月以测试版发布的「常驻型 AI 同事」，运行在云端电脑上，设备关机后仍会继续执行后台与定时任务。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/010/359.htm" target="_blank" rel="noopener">IT之家 · 马斯克：Grok Bot 不再只认自家模型，按用户任务择优用 Claude 等最佳 AI</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">15</span><h3>彭博社：田柯宇进军世界模型创业，公司未亮相估值已达 2 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（北京时间；彭博社早间报道，IT之家 07:36 转引，原文未注具体时刻）</p>
+<p>彭博社报道，前字节跳动实习生、NeurIPS 2024 最佳论文第一作者田柯宇进军世界模型创业：公司尚无名称与产品，已获五源资本、IDG 资本等近 3,000 万美元融资、投后估值 2 亿美元，将与李飞飞等先行者竞争。团队约 10 人，正构建含 20 万符号的 AI「词典」并计划输入 1 亿小时视频，自述可将生成 1 秒视频的成本至少降至十分之一，目标 2027 年发布完整模型。（田此前因 2024 年实习期间违规操作被字节辞退，法院认定违约、判其支付 50 万元。）</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/010/356.htm" target="_blank" rel="noopener">IT之家 · 挑战李飞飞：曾被字节辞退的实习生田柯宇进军世界模型，创业公司估值达 2 亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">16</span><h3>CrowdStrike：韩国银行系列攻击疑为在华个人所为，AI 渗透工具与 Claude Code 被用于攻击</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（首尔时间；路透社首尔电，原文未注具体时刻；CrowdStrike 报告发布于 10月7日）</p>
+<p>CrowdStrike 报告称，9 月末至 10 月初针对韩国金融业的系列攻击，疑为一名 26 岁、位于中国广东茂名的个人所为：其使用中国开发者开源的 AI 自动化渗透工具 ARTEX 与 Anthropic 的 Claude Code，并借 AI 查询韩国数据交易渠道、制作「安全研究员简历」等；评估其「很可能为中文使用者、动机为财务驱动」，置信度中等。至少 9 家韩国银行自 9 月末起被曝遭攻击，新韩银行称约 2.5 万名客户信息受影响、KB 国民银行 119 名客户数据泄露，韩国警方已展开调查。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://idahostatesman.com/news/nation-world/world/article317534299.html" target="_blank" rel="noopener">Reuters（Idaho Statesman 转载）· CrowdStrike says China-based suspect used AI tools in South Korean bank hacks</a>
+<span class="sep">·</span>
+<a href="https://time.news/crowdstrike-traces-south-korean-bank-hacks-to-china-suspect/" target="_blank" rel="noopener">Time News · CrowdStrike Traces South Korean Bank Hacks to China Suspect</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-08-早间版.html">← 2026-10-08-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-08 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

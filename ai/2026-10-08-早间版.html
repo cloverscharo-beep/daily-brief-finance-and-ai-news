@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-10-08</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 8 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：昨夜今晨主线——OpenAI 向全体 ChatGPT 用户开放 GPT-6 与可交互「智能 UI」，Anthropic 以 Haiku 5.5（成本约降 75%）再掀小模型价格战，微软×英伟达把 RTX Spark 与智能体沙箱 MXC 搬上 Windows；此外 Google 全球开放 SynthID 水印检测器，DeepSeek 锁定至少 800 亿元融资。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>OpenAI 将 GPT-6 推向全体 ChatGPT 用户，上线可交互「智能 UI」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 15:10（美东时间；The Verge 发稿时刻，即北京时间 10月8日 03:10；OpenAI 官方公告同日发布、原文未注具体时刻；免费与 Go 档自 10月8日起陆续推送）</p>
+<p>OpenAI 宣布把 GPT-6 接入 ChatGPT 主界面：Plus、Pro、Business、Enterprise 用户自 10 月 7 日起陆续用上 GPT-6 Sol，免费与 Go 用户自 10 月 8 日起陆续换用 GPT-6 Luna（替换 GPT-5.6 系列）。同步上线「Intelligent UI」——回答可内嵌可点击图表、按钮与计算器/分账工具等交互组件；官方称新模型对越狱攻击防卫更强，并发布了 10 月版部署安全报告。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/gpt-6-for-everyone/" target="_blank" rel="noopener">OpenAI · GPT-6 and Intelligent UI for everyone</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6" target="_blank" rel="noopener">The Verge · ChatGPT&#x27;s &#x27;Intelligent UI&#x27; update fills its responses with pictures, charts, and buttons</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/10/501834.html" target="_blank" rel="noopener">量子位 · GPT-6今起免费用！拒答变少，话变多了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 发布 Claude Haiku 5.5：最便宜最快小模型，运行成本较上代低约 75%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；Anthropic 官方公告标注 October 7, 2026，原文未注具体时刻）</p>
+<p>Anthropic 发布迄今最快、最便宜的小模型 Haiku 5.5：10 万 token 以内提示的输入/输出价降至每百万 token 0.10/0.50 美元（较上代最多降 90%），平均运行成本低约 75%，并首次为 Haiku 档引入五档 effort 调节。官方基准显示其在多项测试中超过 GPT-6 Luna；Anthropic 同时将 Sonnet 5.5 缓存读取价减半，并为 Max/Team 订阅用户发放每月 API 额度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Anthropic · Introducing Claude Haiku 5.5</a>
+<span class="sep">·</span>
+<a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/" target="_blank" rel="noopener">The Decoder · Claude Haiku 5.5 arrives with massive price cuts proving the AI pricing arms race is far from over</a>
+<span class="sep">·</span>
+<a href="https://www.qbitai.com/2026/10/501832.html" target="_blank" rel="noopener">量子位 · Claude新模型发布！跑分暴击GPT-6 Luna，价格比梁文谷还便宜</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>微软×英伟达：Surface Laptop Ultra 与 RTX Spark 登场，Windows 重构为「代理时代」底座</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；微软旧金山发布会当日；NVIDIA 官方博客标注 October 7, 2026，发布会具体时刻原文未注）</p>
+<p>旧金山发布会上，微软与英伟达推出搭载 RTX Spark 芯片（最高 20 核 Grace CPU、最高 128GB 统一内存、约 1 PFLOPS FP4 算力）的 Surface Laptop Ultra——2,599 美元起、10 月 16 日上市，宏碁、华硕、戴尔、惠普、联想、MSI 等将推同芯机型，并预览桌面级超算 DGX Station for Windows。Windows 11 迎来「混合智能」更新：Copilot 可直接调用本地文件执行操作、搜索栏变为聊天式入口，代理运行沙箱 MXC 宣布正式可用。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/" target="_blank" rel="noopener">NVIDIA Blog · NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced" target="_blank" rel="noopener">The Verge · Everything announced at Microsoft&#x27;s Surface Laptop Ultra event</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/" target="_blank" rel="noopener">TechCrunch · Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Google 全球开放 SynthID 检测器：超 1800 亿条媒体已带隐形水印</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；Google 发布与媒体报道日期，原文未注具体时刻）</p>
+<p>Google 向全球开放 SynthID Detector：任何人可查验图片、视频、音频是否由 Google 或其伙伴的 AI 生成；官方称已有超 1800 亿条图像/视频带 SynthID 水印，检测能力内置在搜索、Gemini 应用与 Chrome（每天约 100 万次核验请求）。OpenAI、英伟达、Kakao 等也在使用 SynthID；该工具仅识别 SynthID 水印，并非通用 AI 检测器。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://the-decoder.com/google-says-180-billion-images-and-videos-now-carry-synthid-watermarks-as-detector-goes-public/" target="_blank" rel="noopener">The Decoder · Google says 180 billion images and videos now carry SynthID watermarks as detector goes public</a>
+<span class="sep">·</span>
+<a href="https://arstechnica.com/ai/2026/10/google-rolls-out-improved-synthid-ai-content-detector-now-available-globally/" target="_blank" rel="noopener">Ars Technica · Google rolls out improved SynthID AI content detector, now available globally</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/" target="_blank" rel="noopener">TechCrunch · Google&#x27;s new SynthID website can identify AI-generated media</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>阶跃终端官宣：大模型原生智能体手机 STEPX Neo 定档 10 月 13 日</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 10:15（北京时间；量子位获授权发布时点；新浪科技、凤凰网科技当日先后报道）</p>
+<p>阶跃终端宣布，旗下首款「大模型原生智能体手机」STEPX Neo 将于 10 月 13 日 19:00 在上海发布，搭载智能体原生系统 Step AOS 与个人智能体「阶跃 Amoo」，已通过首批《人工智能终端智能化分级》国家标准 L3 级测试。官方演示中，一句话即可完成文档同步、PPT 生成甚至调度跑腿送件；拍下演唱会海报即可协助购票、拟请假条。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/10/501915.html" target="_blank" rel="noopener">量子位 · 大模型原生智能体手机STEPX Neo将于10月13日正式发布</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/tech/roll/2026-10-08/doc-iniunrri4377487.shtml" target="_blank" rel="noopener">新浪科技 · 阶跃首款大模型原生智能体手机定档！STEPX Neo官宣10月13日发布</a>
+<span class="sep">·</span>
+<a href="https://tech.ifeng.com/c/8x3HnTOm5Ku" target="_blank" rel="noopener">凤凰网科技 · 阶跃大模型智能体手机STEPX Neo定档10月13日发布</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>彭博社：DeepSeek 锁定至少 800 亿元融资，腾讯、宁德时代领投</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 08:00（北京时间；新浪财经转载 36 氪报道时点；融资消息最早于 10 月 6 日由彭博社披露，原文未注具体时刻）</p>
+<p>据彭博社及后续报道，DeepSeek 本轮融资已接近锁定至少 800 亿元人民币（约合 120 亿美元），远超最初约 500 亿元的目标，最终规模按已签署条款书或逼近 1000 亿元；宁德时代与腾讯为领投方，交易为 2027 年初潜在 IPO 铺路。报道称其初始目标估值约 5000 亿元，最新模型发布后投资者认购热情超预期、募资额一再上修。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/wm/2026-10-08/doc-iniunezt4090595.shtml" target="_blank" rel="noopener">新浪财经（36氪）· 至少800亿，DeepSeek融资新进展</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4207643.html" target="_blank" rel="noopener">证券时报（21世纪经济报道）· DeepSeek千亿融资落定前夜：钱不是问题，芯片才是</a>
+<span class="sep">·</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-06/deepseek-to-raise-at-least-12-billion-in-tencent-backed-funding" target="_blank" rel="noopener">Bloomberg · DeepSeek to Raise at Least $12 Billion in Tencent-Backed Funding</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>三星 Q3 营业利润预计约 800 亿美元、同比增近 8 倍，AI 存储景气推高</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（韩国时间；三星当日公布三季度初步业绩指引，原文未注具体时刻）</p>
+<p>三星电子初步业绩指引显示，第三季度营业利润预计约 800 亿美元，同比增长近 8 倍（约 783%），创科技公司单季利润新高；AI 服务器带动的存储芯片需求为主要推手。据 FT 报道，这凸显 AI 基础设施投资正在重塑上游半导体景气。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ft.com/content/8943785b-0919-4a49-8ab5-48e4a35a6e00" target="_blank" rel="noopener">FT · Samsung profit surges ninefold to $80bn on AI chip demand</a>
+<span class="sep">·</span>
+<a href="https://www.marketscreener.com/news/samsung-sees-operating-profit-topping-80-billion-amid-ai-boom-update-ce785ddedf8e8cf125" target="_blank" rel="noopener">MarketScreener · Samsung Sees Operating Profit Topping $80 Billion Amid AI Boom — Update</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>博通为 OpenAI 定制芯片项目寻求逾 500 亿美元融资；甲骨文、SpaceX 同步举债买芯</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 05:49（北京时间；新浪财经转引报道时点；WSJ 原文未注具体时刻）</p>
+<p>据 WSJ 报道，博通正为其与 OpenAI 合作开发的定制 AI 芯片项目安排逾 500 亿美元融资，阿波罗、黑石为洽谈中的贷款机构；甲骨文亦与阿波罗、高盛磋商为购买芯片筹资，SpaceX 则寻求大额债务融资采购英伟达 GPU。数据中心建设成本飙升之际，科技巨头正转向私募信贷等新融资工具；博通 6 月设立的融资平台首期规模为 350 亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/world/2026-10-08/doc-iniumyts5460803.shtml" target="_blank" rel="noopener">新浪财经 · 报道：博通据悉计划为OpenAI定制芯片项目融资逾500亿美元</a>
+<span class="sep">·</span>
+<a href="https://finance.yahoo.com/technology/ai/articles/broadcom-oracle-spacex-pursue-blockbuster-215828392.html" target="_blank" rel="noopener">WSJ（via Yahoo Finance）· Broadcom, Oracle, and SpaceX pursue blockbuster debt deals amid AI buildout</a>
+<span class="sep">·</span>
+<a href="https://cryptobriefing.com/broadcom-50-billion-openai-chip-financing/" target="_blank" rel="noopener">CryptoBriefing · Broadcom is lining up over $50 billion in financing for OpenAI&#x27;s custom AI chips</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Biohub 牵头 18 亿美元「虚拟细胞」计划：Google DeepMind、Meta 与 Isomorphic 合投 3 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日 10:40（美东时间；The Verge 原文标注 14:40 UTC，即北京时间 22:40）</p>
+<p>扎克伯格与妻子创立的 Biohub 牵头「虚拟生物学」计划：Google DeepMind、Meta 与 Isomorphic Labs 联合投资 3 亿美元，用于构建可「数字化提问、预测与回答生物学问题」的 AI 数据集——即「虚拟细胞」预测模型，为疾病研究服务。该计划总规模 18 亿美元，美国能源部将在五年内投入超 5 亿美元，美国国立卫生研究院（NIH）提供数据资源。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/tech/1006766/google-meta-biohub-investment-virtual-cell" target="_blank" rel="noopener">The Verge · Google invests millions in Mark Zuckerberg&#x27;s efforts to create a &#x27;virtual cell&#x27;</a>
+<span class="sep">·</span>
+<a href="https://the-decoder.com/zuckerbergs-biohub-leads-a-1-8-billion-push-to-build-ai-models-that-predict-cell-behavior/" target="_blank" rel="noopener">The Decoder · Zuckerberg&#x27;s Biohub leads a $1.8 billion push to build AI models that predict cell behavior</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>原 OpenAI 安全负责人 David Robinson 受访解释离职：称不敢再为名不副实的「安全」背书</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月7日（美东时间；Business Insider 与《纽约时报》当日发布相关报道/对谈视频，原文未注具体时刻）</p>
+<p>原 OpenAI 安全负责人 David Robinson 离职后首次公开受访（与 Ezra Klein 对谈，《纽约时报》发布视频版）：他称自己因一种「认知失调」而离开——「我不再敢为名不副实的『安全』背书，因为整个行业没有人真正愿意踩刹车」；并称该公司几乎每个周二都在发布新能力与新风险。Business Insider 以《认知失调》为题报道了这次访谈。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.businessinsider.com/david-robinson-ezra-klein-interview-cognitive-dissonance-leave-openai-2026-10" target="_blank" rel="noopener">Business Insider · David Robinson says a sense of &#x27;cognitive dissonance&#x27; led him to leave OpenAI</a>
+<span class="sep">·</span>
+<a href="https://www.nytimes.com/video/opinion/100000011191541/this-is-nuts-an-openai-insider-explains-why-he-quit.html" target="_blank" rel="noopener">The New York Times（视频）· &#x27;This Is Nuts.&#x27; An OpenAI Insider Explains Why He Quit.</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-09-24-晚间版.html">← 2026-09-24-晚间版</a></span><span><a href="2026-10-08-晚间版.html">2026-10-08-晚间版 →</a></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-08 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
