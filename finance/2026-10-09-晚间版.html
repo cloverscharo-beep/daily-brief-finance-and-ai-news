@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 9 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中欧贸易投资磋商机制第二次例会在京举行并发布联合声明、形成16项成果共识清单；财政部安排使用5500亿元地方政府债务结存限额，稳投资、保基层信号明确。市场端A股与港股双双走强（恒生科技指数涨3.06%、小米大涨9.72%），现货黄金重返4200美元/盎司、国际油价回落，美股盘前存储芯片与中概股集体反弹。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>中欧贸易投资磋商机制第二次例会发布联合声明：形成16项成果共识清单，定于2027年3月举行第三次例会</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日18时55分（北京时间，商务部网站发布）</p>
+<p>摘要：10月8日至9日，商务部部长王文涛与欧盟委员会贸易和经济安全委员谢夫乔维奇在北京举行中欧贸易投资磋商机制第二次例会。联合声明显示，双方将继续探讨在世贸组织规则框架下降低部分商品关税的可能性，经密集磋商就混动汽车贸易达成谅解，并将继续电动汽车反补贴案价格承诺和复审相关程序；中方愿通过“绿色通道”机制为稀土及永磁体对欧出口许可审批继续提供便利，双方还就出口管制列单前提前通报达成谅解。第三次例会将于2027年3月举行，此前双方将于2027年1月举行部长级视频会议。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.mofcom.gov.cn/syxwfb/art/2026/art_2a248b5e3d8345abab0690b51dae2d45.html" target="_blank" rel="noopener">商务部 · 中欧贸易投资磋商机制第二次例会联合声明</a>
+<span class="sep">·</span>
+<a href="http://www.xinhuanet.com/fortune/20261009/83645159fb904cff9c533852de984654/c.html" target="_blank" rel="noopener">新华网 · 中欧贸易投资磋商机制第二次例会联合声明</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>财政部安排使用5500亿元地方政府债务结存限额：3000亿元提高县区保障能力、2500亿元支持扩大有效投资</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间，财政部近日安排、当日经新华社报道；原文未注具体时刻）</p>
+<p>摘要：财政部近日安排使用地方政府债务结存限额5500亿元，用于提高县区一般公共预算保障能力和支持地方扩大有效投资。其中一般债务结存限额3000亿元全部分配县区使用；专项债务结存限额2500亿元分配给今年第四季度有实际项目资金需求的地区、并向经济大省倾斜，支持优先保障在建项目资金需求，新建项目聚焦“六张网”建设等重点领域。财政部将指导督促各地加快发行节奏、畅通拨付链条，尽快形成实物工作量。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/fortune/20261009/54b32faafc7b4a9fa9261e5a40d67620/c.html" target="_blank" rel="noopener">新华网 · 财政部安排使用5500亿元地方政府债务结存限额</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2500450" target="_blank" rel="noopener">财联社 · 财政部安排使用5500亿元地方政府债务结存限额</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>中证协就保代执业行为规范征求意见：全流程禁止违规入股，严禁以AI输出替代专业判断、“只签不保”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间，证券时报网独家报道；原文未注具体时刻）</p>
+<p>摘要：中证协组织起草《保荐代表人执业行为规范（征求意见稿）》并向行业征求意见，这是保荐代表人执业行为首次被单独成文的自律规范，全文六章三十一条、细化41项具体禁止情形。新规明确保代及其他从事保荐业务的人员及其配偶不得以任何名义或方式持有发行人股份（含亲属代持、信托、资管计划等变相持股），严禁以人工智能辅助工具的输出结果替代自身尽职调查与专业判断、严禁“只签不保”，并将违规入股封堵延伸至立项前“预投资”、项目终止后追溯性利益安排等隐蔽情形。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4209334.html" target="_blank" rel="noopener">证券时报 · 【独家】细化违规入股情形，中证协拟出台保代职业行为规范</a>
+<span class="sep">·</span>
+<a href="https://m.cls.cn/detail/2500287" target="_blank" rel="noopener">财联社 · 给保代单独立规，细化41项禁止行为，全流程打击违规入股</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>晚间公告密集披露：景旺电子三季度最高预增265%，交建股份、祥源文旅实控人被立案</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日盘后（北京时间，第一财经18:26发布汇总）</p>
+<p>摘要：10月9日盘后一批公司披露公告：景旺电子预计第三季度净利润同比增长205.46%—264.74%（AI数据基础设施领域高性能PCB量产出货提速），中国巨石前三季度预增100%—110%（玻纤产品量价齐升），鸿富瀚预增108%—145%（液冷板整柜模组量产交付）；金冠电气全资子公司签订不超2.96亿美元光储充项目EPC框架合同；交建股份、祥源文旅实控人俞发祥因涉嫌信息披露违法违规被证监会立案；安杰思拟以3500万—7000万元回购股份。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-09/doc-iniurruc2797554.shtml" target="_blank" rel="noopener">新浪财经（第一财经）· 晚间公告｜10月9日这些公告有看头</a>
+<span class="sep">·</span>
+<a href="https://www.yicai.com/news/103387993.html" target="_blank" rel="noopener">第一财经 · 晚间公告｜10月9日这些公告有看头</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股探底回升集体收涨：沪指涨0.05%报3813.79点，成交约1.92万亿元、影视传媒掀涨停潮</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日15:00收盘（北京时间）</p>
+<p>摘要：A股三大指数全天探底回升——早盘全线走低、创业板指一度跌超3%并失守3000点，午后“深V”翻红，沪指涨0.05%报3813.79点，深证成指涨0.17%报12641.86点，创业板指涨0.22%，科创50指数涨0.07%。全市场成交额约1.92万亿元、较上一交易日放量逾2100亿元，超3200只个股上涨。盘面上，影视传媒板块掀涨停潮，中文在线、芒果超媒20%涨停，新华传媒9连板；贵金属板块活跃，西部黄金涨停；MLCC、半导体、燃气等板块跌幅居前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610093891255288.html" target="_blank" rel="noopener">东方财富（每日经济新闻）· 10月9日A股收评：三大指数探底回升集体收涨 影视传媒板块领涨</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4210277.html" target="_blank" rel="noopener">证券时报 · 揭秘涨停丨传媒板块掀起涨停潮</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>财联社“焦点复盘”：69股涨停、封板率83%，大金融午后异动，宽基ETF放量助推“深V”反转</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日收盘后（北京时间，财联社复盘文章；原文未注具体时刻）</p>
+<p>摘要：财联社“焦点复盘”显示，10月9日全市场69股涨停、14股炸板、封板率83%（不含ST股），连板晋级率降至40%，新华传媒一字涨停晋级9连板，时代万恒、九阳股份5连板。午后大金融板块异军突起（华鑫股份、大智慧涨停），短剧、传媒板块全线回暖，叠加大批宽基ETF集中放量，主要指数走出“深V”反转，创业板指3000点整数关失而复得。财联社提示，市场量能未持续站稳2万亿关口前，对日内反弹宜保持谨慎。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2500613" target="_blank" rel="noopener">财联社 · 【焦点复盘】大金融板块强势做多提振人气，创业板指3000点大关失而复得</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-09/doc-iniurmnf2910548.shtml" target="_blank" rel="noopener">新浪财经 · 焦点复盘：大金融板块强势做多提振人气</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>港股强势反弹：恒指涨1.79%、恒生科技指数涨3.06%，小米大涨9.72%领跑，南向净买入2.91亿港元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日16:00收盘（香港时间）</p>
+<p>摘要：港股三大指数高开高走、强势反弹：恒生指数涨1.79%报24211.35点，恒生科技指数涨3.06%报4197点，国企指数涨1.71%报8147点。大型科技股领涨，小米集团-W大涨9.72%领跑蓝筹，腾讯、美团涨超3%，快手涨超5%；大金融股同步发力，友邦保险、中国银河、光大证券涨近3%；黄金股大幅反弹，潼关黄金涨超9%，紫金黄金国际涨超7%。南向资金净买入2.91亿港元，港股大市成交2091.99亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stock.eastmoney.com/a/202610093891334992.html" target="_blank" rel="noopener">东方财富（哈富证券）· 南向资金净买近3亿港元 净买入友邦保险近11亿港元</a>
+<span class="sep">·</span>
+<a href="https://caifuhao.eastmoney.com/news/20261009162031205118080" target="_blank" rel="noopener">东方财富财富号（格隆汇）· 港股收评：恒科指大涨3%，科技金融双轮驱动，小米大涨近10%领跑蓝筹</a>
+<span class="sep">·</span>
+<a href="https://www.21jingji.com/article/20261009/herald/18296e6ff40ca679823b203c0be6dec1.html" target="_blank" rel="noopener">21财经（金融界）· 港股收评：恒科指涨3.06%！科技、金融股强势，PCB概念低迷</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美股盘前：三大期指齐涨、存储芯片与光通信股反弹，中概股大涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月9日盘前（北京时间10月9日下午；原文未注具体时刻）</p>
+<p>摘要：美股盘前三大期指齐涨——标普500期货涨0.39%、纳斯达克100期货涨0.82%、道指期货涨0.17%。存储芯片股集体反弹：SK海力士、美光科技、闪迪涨超2%，英特尔涨近2%，AMD涨1.7%；光通信股Lumentum盘前涨4%（公司称光器件产能已售罄至2029年初），Coherent涨超3%。中概股盘前大涨，理想汽车涨4.4%、哔哩哔哩涨逾3%、阿里巴巴与网易涨超2%；另据报道，苹果因需求疲软削减iPhone 18 Pro系列零部件订单至少15%，苹果盘前下跌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://stock.10jqka.com.cn/usstock/20261009/c680524574.shtml" target="_blank" rel="noopener">同花顺 · 龙头释放重磅信号！美股盘前存储芯片、光通信集体上涨</a>
+<span class="sep">·</span>
+<a href="http://stock.10jqka.com.cn/usstock/20261009/c680529832.shtml" target="_blank" rel="noopener">同花顺 · 盘前拉升，存储芯片巨头集体走高！中概股大涨</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2500532" target="_blank" rel="noopener">财联社 · 财联社10月9日电，英特尔美股盘前涨2%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>日经指数微跌0.02%录三连跌、盘中一度跌逾800点，韩股因假期休市、欧股开盘涨跌互现</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日收盘（东京时间）；欧股开盘时段（北京时间下午，原文未注具体时刻）</p>
+<p>摘要：东京股市日经225指数收报69030.92点、下跌11.19点（-0.02%），为连续第三个交易日收跌：早盘受隔夜美股科技股下挫拖累一度跌逾800点，午后跌幅收窄、尾盘几乎收复；东证指数（TOPIX）涨0.33%报4104.81点。板块方面，海运营业涨逾2%领涨、银行业跌约1.5%领跌，迅销、软银集团大幅下挫。韩国股市因韩文日休市（前一交易日下跌2.62%）；欧洲主要股指开盘涨跌互现，斯托克50跌0.07%、富时100涨0.17%、DAX跌0.01%、CAC40涨0.08%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://tchina.kyodonews.net/articles/-/14681" target="_blank" rel="noopener">共同社 · 日经指数微跌0.02% AI增长预期降温拖累股市</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8dXabotyC9I" target="_blank" rel="noopener">财联社（凤凰网）· 欧洲主要股指开盘涨跌互现</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>现货黄金重回4200美元、日内涨约1.7%，国际油价回落逾1%；黄金股与国内金饰价格齐涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日13时42分前后（北京时间，现货黄金重回4200美元/盎司时点；油价数据截至13:52）</p>
+<p>摘要：10月9日现货黄金持续拉涨：上午一度涨1%报4174.73美元/盎司，午后重回4200美元/盎司上方、日内上涨约1.7%（前一日收报4131.89美元）。受此提振，A股贵金属板块午后大涨、西部黄金盘中涨停，港股黄金股集体反弹（潼关黄金涨超9%）；国内品牌金饰克价单日上涨3—6元。国际油价回落，截至13:52布油、美油均跌逾1%，WTI原油报90.57美元/桶附近。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4209534.html" target="_blank" rel="noopener">证券时报 · 现货黄金突破4200美元/盎司</a>
+<span class="sep">·</span>
+<a href="https://www.21jingji.com/article/20261009/herald/d372ec73fceccecc84cd54a3df7ec00e.html" target="_blank" rel="noopener">21财经（中新经纬）· 直线拉涨，现货黄金重回4200美元关口</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2500217" target="_blank" rel="noopener">财联社 · 财联社10月9日电，WTI原油日内跌1%，现报90.57美元/桶</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-09-早间版.html">← 2026-10-09-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-09 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

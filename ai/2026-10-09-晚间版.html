@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-10-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 9 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中共中央、国务院受权发布《关于发展新质生产力的意见》，「全面实施『人工智能+』行动」写入其中；OpenAI 营收口径风波出现后续——彭博称其预期年底年化营收达 700 亿美元、截至 9 月底约 500 亿，AI 芯片股企稳反弹；OpenAI 就解雇三名安全研究员再度发声，坚持「背信」定性。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>中共中央、国务院受权发布《关于发展新质生产力的意见》：全面实施「人工智能+」行动</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 18:02（北京时间；新华社受权发布时间）</p>
+<p>新华社受权发布《中共中央 国务院关于发展新质生产力的意见》。意见在「促进实体经济和数字经济深度融合」部分明确：全面实施「人工智能+」行动，推进人工智能对传统产业的改造，加快推进智能网联新能源汽车、人工智能手机和电脑、人形机器人等新一代智能终端场景应用；加快人工智能等数智技术创新，突破基础理论和核心技术，强化算力、算法、数据等高效供给，并因地制宜布局国家人工智能行业应用中试基地和高价值应用场景。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/politics/20261009/37bc898ce93f4c0899e926039f842891/c.html" target="_blank" rel="noopener">新华网 · 受权发布丨中共中央 国务院关于发展新质生产力的意见</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 发起「网络使命」：把最强模型与工程师送进电网、水厂防守一线（补录）</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 17:04（北京时间；anthropic.com 官网文章发布时刻；本期补录）</p>
+<p>Anthropic 宣布长期承诺「Anthropic Cyber Mission」，首批两大方向：一是关键基础设施——启动「关键基础设施防御计划」（CIDP），把前沿 Claude 模型、驻场工程师与威胁研究带给保护电力调度、供水系统、交通网络等运营技术（OT）的防守方，创始伙伴包括埃森哲、CrowdStrike、德勤、日立、Palo Alto Networks、罗克韦尔自动化等 11 家机构；二是开源软件——推出免费 OSS Scanner，用最强模型为开源项目定期扫描漏洞并提出修补建议。官方称，此前的 Project Glasswing 已并入扩容后的网络验证计划（Cyber Verification Program）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener">Anthropic · Introducing the Anthropic Cyber Mission</a>
+<span class="sep">·</span>
+<a href="https://www.axios.com/2026/10/08/anthropic-critical-infrastructure-cybersecurity" target="_blank" rel="noopener">Axios · Exclusive: Anthropic&#x27;s new plan to protect critical infrastructure</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>OpenAI 官方案例：Sophos 借「Daybreak」把威胁调查时间缩短 96%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日（美东时间；openai.com 页面标注 October 9, 2026，原文未注具体时刻）</p>
+<p>OpenAI 发布网络安全客户案例：安全厂商 Sophos 使用 OpenAI Daybreak 后，AI 智能体处理案件的平均响应时间为 89 秒、威胁调查时间减少 96%，52% 的 MDR（托管检测与响应）案件由 AI 端到端解决。案例称其将前沿模型与安全团队经验结合以加速威胁调查，并强调部署中「判断力仍保留在人类」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/sophos" target="_blank" rel="noopener">OpenAI · Sophos cuts threat investigation time by 96% with OpenAI Daybreak</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Google 调整 Gemini 档位：免费版收缩为 Flash-Lite 单模型</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日（当地时间；变更当日起生效，出自 Google Gemini Apps 帮助页；TheNextWeb 于北京时间 20:20 发稿）</p>
+<p>据 TheNextWeb，从当天起，免费个人版 Gemini 用户从三款模型收缩为仅剩 Flash-Lite；最便宜的 AI Plus 档保留 Flash-Lite 与 Flash、失去 Pro；AI Pro 与 AI Ultra 保留全部三款。该调整由 Google 10 月初更新的官方帮助页确立（9to5Google 10 月 3 日曾报道），Google 同时为各模型加入低/中/高三档「努力等级」，更高等级更快消耗使用额度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://thenextweb.com/news/gemini-flash-lite-free-users-nano-banana-2-1" target="_blank" rel="noopener">TheNextWeb · Google moves free Gemini to Flash-Lite and launches Nano Banana 2.1</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>英伟达被曝拟投资推理芯片公司 d-Matrix：把竞品拉进自家生态</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 11:23（北京时间；IT之家发稿时刻；The Information 于美东时间 10月8日率先报道）</p>
+<p>据 The Information（三位知情人士），英伟达计划投资 AI 推理芯片初创公司 d-Matrix——该公司成立七年、主打以内存为中心的服务器推理芯片，本身是英伟达的竞争对手。报道称这是英伟达推动自身技术与竞品芯片兼容、纳入其主导生态的又一动作；双方此前已达成技术合作，d-Matrix 下一代 Raptor XPU 将接入英伟达 NVLink Fusion 生态与 MGX 机架架构。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/010/847.htm" target="_blank" rel="noopener">IT之家 · 消息称英伟达拟投资 AI 推理 ASIC 企业 d-Matrix，双方此前已达成技术合作</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-10-09/doc-iniurmnf6855888.shtml" target="_blank" rel="noopener">新浪财经 · 英伟达拟投资芯片竞争对手d-Matrix</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>OpenAI 营收口径风波续：彭博称年底目标 700 亿美元，AI 芯片股企稳反弹</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 09:43（北京时间；彭博社发稿时刻，即美东时间 10月8日 21:43）</p>
+<p>彭博社援引知情人士：OpenAI 预计到 2026 年底年化收入「达到或超过 700 亿美元」，增长主要由企业业务驱动；截至 9 月底年化收入约 500 亿美元。华尔街见闻梳理称，此前「接近 700 亿」的流传数字源于投资者按 Anthropic 口径（含云伙伴渠道收入）对标调整；500 亿与 700 亿的口径差曾引发美股 AI 板块下跌，9 日盘前，此前重挫的 CoreWeave、甲骨文等出现反弹（据 Barron's）。另据彭博，OpenAI 正与包括 MGX 在内的阿联酋基金洽谈以 1.4 万亿美元投前估值募资 300 亿美元或更多。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-09/openai-expects-70-billion-in-annualized-revenue-by-end-of-2026" target="_blank" rel="noopener">Bloomberg · OpenAI Expects $70 Billion in Annualized Revenue by End of 2026</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3783271" target="_blank" rel="noopener">华尔街见闻 · OpenAI澄清年化营收：截至9月底约500亿美元，年底目标700亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.barrons.com/articles/coreweave-stock-oracle-coherent-openai-d4f7ea23" target="_blank" rel="noopener">Barron&#x27;s · CoreWeave Stock, Oracle, Coherent Rebound After OpenAI Confusion</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>OpenAI 再回应解雇安全研究员：定性「背信」，否认因安全议题打击</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 17:48（北京时间；The Verge 发稿时刻；路透社当日 14:00 发稿）</p>
+<p>报道称 OpenAI 就解雇三名安全研究员再度发声：坚持解雇原因是「背信」（breach of trust）、而非提出安全关切，与上周三名研究员的公开信（称与外部评估机构沟通属惯例、调查制造寒蝉效应）针锋相对；路透社亦报道公司确认三人因违反敏感信息处理政策被解雇。事件持续引发对公司内部安全治理的讨论。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers" target="_blank" rel="noopener">The Verge · OpenAI doubles down on decision to fire three AI safety researchers</a>
+<span class="sep">·</span>
+<a href="https://www.reuters.com/business/openai-says-it-has-fired-three-researchers-violating-sensitive-information-2026-10-09" target="_blank" rel="noopener">Reuters · OpenAI says it has fired three researchers for violating sensitive information policy</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>数学界与 OpenAI 矛盾升级：抵制倡议扩散，DeepMind 研究负责人回应</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 15:25（北京时间；India Today 发稿时刻；抵制声明由「人类数学协会」于美东时间 10月7日发出、陶哲轩同日转载，原文未注具体时刻）</p>
+<p>围绕 OpenAI 一次性发布 722 篇 AI 生成数学手稿（后因符号错误撤回 3 篇），「人类数学协会」（AHM）批评该发布「不是学术展示，而是权力展示」，呼吁数学家停止与 OpenAI 合作；菲尔兹奖得主陶哲轩 10 月 7 日在个人博客全文转载该声明，被解读为公开声援抵制。10 月 9 日，Google DeepMind 研究负责人 Pushmeet Kohli 在 X 上发文回应：数学不会被「解决」，AI 应帮助数学家推进这一领域的研究、而非取代其工作。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_5952915720_162d2490806704yxbs.html?from=science" target="_blank" rel="noopener">新浪科技（DeepTech深科技）· 陶哲轩公开声援抵制OpenAI，数学界与AI巨头矛盾升级</a>
+<span class="sep">·</span>
+<a href="https://www.indiatoday.in/technology/news/story/maths-will-never-be-solved-google-deepminds-pushmeet-kohli-says-after-mathematicians-boycott-openai-3013098-2026-10-09" target="_blank" rel="noopener">India Today · Maths will never be solved: Google DeepMind&#x27;s Pushmeet Kohli says after mathematicians boycott OpenAI</a>
+<span class="sep">·</span>
+<a href="https://m.zhidx.com/p/593417.html" target="_blank" rel="noopener">智东西 · 陶哲轩、邓煜等菲尔兹奖得主「开炮」：AI正毁掉数学</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>豆包 App 上线「生活缴费」：AI 助手开进水电燃气场景</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日 11:47（北京时间；观察者网发文时刻；据《读佳》当日报道）</p>
+<p>观察者网等报道，字节跳动旗下 AI 助手豆包正式新增「生活缴费」功能：用户以语音或文字下指令（如「交水费」），App 实时弹出现场服务卡片并跳转专属页面，直接完成水、电、燃气等费用缴纳。报道称豆包正逐步构建出行服务、生活缴费等多维生活办事能力，大模型产品的竞争重心正从文本生成与信息检索，加速转向高频真实场景的操作落地与服务闭环。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guancha.cn/CaiJing/2026_10_09_903601.shtml" target="_blank" rel="noopener">观察者网 · 豆包新增&quot;生活缴费&quot;，会成另一个超级入口吗？</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1085412215_211762" target="_blank" rel="noopener">搜狐（大力财经）· 豆包App上线生活缴费功能</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>比亚迪人形机器人外观专利公示：真容首次官方曝光</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月9日（北京时间；国家知识产权局当日公示；观点网、凤凰网科技等当日报道，原文未注具体时刻）</p>
+<p>国家知识产权局公示比亚迪自研人形机器人外观设计专利，其外观首次正式对外曝光；该机器人此前于 8 月首秀。多篇报道提到，比亚迪已与帕西尼感知科技签署战略合作并投资智元机器人等具身智能企业；分析认为其落地路径逐渐清晰，同时运动控制、感知方案自研深度与复杂场景适应能力仍是核心挑战。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.guandian.cn/article/20261009/610964.html" target="_blank" rel="noopener">观点网 · 国家知识产权局公示比亚迪人形机器人外观专利 外观首次曝光</a>
+<span class="sep">·</span>
+<a href="https://tech.ifeng.com/c/8x5GyRLhhJ1" target="_blank" rel="noopener">凤凰网科技 · 比亚迪人形机器人，真容曝光</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-09-早间版.html">← 2026-10-09-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-09 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
