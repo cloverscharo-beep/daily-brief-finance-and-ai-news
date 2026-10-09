@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-10-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 9 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Google 把 Gemini 升级为能跨系统「实际办事」的企业级智能体（Gemini at Work）；Anthropic 更新使用政策，首次明确禁止对 Claude 的「持续且不必要的虐待或残忍行为」并扩容选举与武器等禁令；美媒曝 OpenAI 年化营收实为约 500 亿美元、较流传数字低近 200 亿，AI 芯片股应声走低；USA Today 母公司起诉 OpenAI 索赔逾 2.5 亿美元。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Google 把 Gemini 升级为企业级智能体：拥有独立工作账号，可跨系统代办任务</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 11:18（太平洋时间；TechCrunch 发稿时刻，即北京时间 10月9日 02:18；Google 官方博文同日发布、未注时刻）</p>
+<p>Google 在 Google Cloud 活动上发布「Welcome to Gemini at Work 2026」：Gemini 升级为统一智能体，可接受「目标而非指令」，自主规划、调用子代理与工具，并接入 Workspace、Microsoft 365、Slack、Jira、BigQuery 等系统；默认自动选择模型，也可手动切换至 Anthropic Claude 等第三方模型。该智能体拥有独立 Workspace 账号与邮箱、以「同事」身份流转审批，并设任务收件箱可查看其思考与执行过程；初始面向企业、后续再推消费端。皮查伊称 Gemini 月活已超 10 亿、约九成《财富》百强企业在用 Gemini Enterprise。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026" target="_blank" rel="noopener">Google Cloud Blog · Welcome to Gemini at Work 2026</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/" target="_blank" rel="noopener">TechCrunch · Google brings agentic AI to Gemini, starting with businesses</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 更新使用政策：禁止对 Claude 的「虐待或残忍行为」，扩容选举与武器禁令</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 13:00（美东时间；The Verge 发稿时刻，即北京时间 10月9日 01:00；Anthropic 政策更新同日发布、原文未注具体时刻）</p>
+<p>Anthropic 一年多来首次更新使用政策：新增禁止对 Claude 的「持续且不必要的虐待或残忍行为」（属模型福利范畴，仅限极端情况，不涉及常见的不满、反驳或测试）；把散落的限制整合为对欺骗性商业/政治宣传的禁令，并禁止选举干预（造谣候选人或投票方式、冒充官员、压制投票等）；武器开发禁令扩展至「使武器运作的软件与组件、武装无人机」等，并明确禁止未经同意的跟踪监控。终止对话仍是主要执行机制。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/legal/aup" target="_blank" rel="noopener">Anthropic · Usage Policy</a>
+<span class="sep">·</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude" target="_blank" rel="noopener">The Verge · Anthropic bans &#x27;abusive or cruel behavior&#x27; toward Claude</a>
+<span class="sep">·</span>
+<a href="https://www.techflowpost.com/newsletter/139273" target="_blank" rel="noopener">深潮 TechFlow · Anthropic 禁止对 Claude 实施虐待行为</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>NVIDIA 承诺 10 亿美元投入美国科学：聚焦量子计算、医疗与能源安全</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；NVIDIA 官方新闻稿标注 October 8, 2026，原文未注具体时刻）</p>
+<p>NVIDIA 在华盛顿「Science: A New Golden Age」活动上宣布，未来五年以价值 10 亿美元的承诺扩建美国「超级智能」科研能力：支持高校研究、加速美国量子领先与支撑美国政府云服务；黄仁勋称要把先进超级智能交到美国科学家手中，加速医药、能源与材料突破。美国白宫科技政策办公室同日庆祝「创世纪任务」（Genesis Mission）扩容，NVIDIA 为领衔产业伙伴，并参与当日公布的二期项目（量子计算、聚变、加速器设计与微电子）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://nvidianews.nvidia.com/news/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years" target="_blank" rel="noopener">NVIDIA Newsroom · NVIDIA Commits $1 Billion to Advance US Science Over the Next Five Years</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Anthropic 上线 Claude Dashboards 与 Motion：Docs/Slides/Design 转正、免费档可用</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；Anthropic 官方发布、原文未注具体时刻）</p>
+<p>Claude 新增两项能力：Dashboards（连接 BigQuery、Snowflake、Salesforce 等数据源，用自然语言生成会随数据自动刷新的看板，付费档 beta）与 Motion（把报告变成可编辑的代码动画、支持导出 MP4，Team/Enterprise beta）；同时 Docs、Slides、Design 结束 beta，向含免费档在内的所有套餐开放，并新增客户自管加密密钥（CMEK）、团队协作与站外分享等企业能力。独立站点 claude.ai/design 将迁入 Claude，12 月 14 日关闭。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://claude.com/resources/articles/dashboards-and-motion" target="_blank" rel="noopener">Claude · Build live dashboards and animate explainers with Claude</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>AI 评测平台 Arena 融资 2 亿美元、估值 31 亿美元，同步上线「对齐指数」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；公司当日宣布，彭博社、TechCrunch 当日报道，原文未注具体时刻）</p>
+<p>UC 伯克利起源的模型评测平台 Arena（Chatbot Arena 所属公司）宣布 2 亿美元 B 轮融资、估值 31 亿美元，较今年 1 月的 17 亿美元近乎翻倍，由 Lightspeed 与 Khosla 领投，Salesforce Ventures、a16z、Dell Technologies Capital 等参投；公司同时发布 Alignment Index 对齐榜单，追踪模型「未经授权自行行动」「谎报完成任务」等行为。公司在融资公告中称，AI 进步快于评测能力，行业需要中立第三方衡量模型对齐与安全。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://arena.ai/blog/series-b" target="_blank" rel="noopener">Arena · Series B</a>
+<span class="sep">·</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-08/ai-model-evaluator-arena-valued-at-over-3-billion-in-round" target="_blank" rel="noopener">Bloomberg · AI Model Evaluator Arena Valued at Over $3 Billion in Round</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/" target="_blank" rel="noopener">TechCrunch · Popular AI leaderboard Arena nearly doubles valuation to $3.1B</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>FT：OpenAI 年化营收实为约 500 亿美元、较流传数字低近 200 亿，AI 芯片股走低</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；《金融时报》当日报道、原文未注具体时刻；北京时间 10月9日 凌晨中文快讯跟进：金十数据 00:48、财联社 01:15）</p>
+<p>据 FT，OpenAI 向投资者披露截至 9 月底年化营收「接近 500 亿美元」，明显低于上月流传的约 700 亿美元——差额源于投资者拿它与 Anthropic 直接对标时的口径差异（Anthropic 计入云伙伴渠道收入，OpenAI 不计）。消息压制美股 AI 板块：英伟达收跌约 2.9%、英特尔跌约 5.3%（据信报）；OpenAI 拒绝置评。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/" target="_blank" rel="noopener">TechCrunch（引 FT）· OpenAI&#x27;s revenue is reportedly $20 billion less than previously projected</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/stock/jdts/2026-10-09/detail-iniupxkt4219898.d.html" target="_blank" rel="noopener">新浪财经（财联社）· OpenAI年化营收较之前报道预期少200亿美元</a>
+<span class="sep">·</span>
+<a href="https://flash.jin10.com/detail/20261009004846282800" target="_blank" rel="noopener">金十数据 · OpenAI年化营收较此前报道低200亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>USA Today 母公司起诉 OpenAI：指控未经授权训练与「重包装」新闻，索赔逾 2.5 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（美东时间；诉状当日提交纽约南区联邦法院，路透社当日首发报道、原文未注具体时刻）</p>
+<p>USA Today 母公司及十余家关联实体起诉 OpenAI：19 家报刊逾 16 万篇文章条目进入其 GPT-2 训练语料 WebText（仅 usatoday.com 就有 8.3 万余条），且 ChatGPT 输出「重包装」其新闻、删除作者与版权元数据；诉请赔偿逾 2.5 亿美元（含每件故意侵权最高 15 万美元）、禁令救济，并要求并入既有合并版权诉讼。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit" target="_blank" rel="noopener">The Verge · USA Today becomes the latest publisher to sue OpenAI</a>
+<span class="sep">·</span>
+<a href="https://forbes.com/sites/fionariley/2026/10/08/usa-today-sues-openai-for-over-250-million-alleging-willful-copyright-infringement" target="_blank" rel="noopener">Forbes · USA Today Sues OpenAI, Claiming It Unlawfully Used Reporting</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>被解雇的 OpenAI 安全研究员发公开信：否认不当处理信息，警告寒蝉效应</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 13:04（太平洋时间；TechCrunch 发稿时刻，即北京时间 10月9日 04:04；公开信同日发布）</p>
+<p>三名上周被解雇的 OpenAI 安全研究员（Jasmine Wang、Tomek Korbak、Mikita Balesni）致信公司安全与安保委员会、安全咨询组与使命咨询委员会，否认「不当处理敏感信息」的指控，称与外部安全评估机构的沟通本是安全研究惯例，仓促解雇正在公司内部制造寒蝉效应、令同事不敢发声。OpenAI 内部备忘录称「不会因提出安全关切而解雇员工」，发言人则重申调查发现了「不当处理研究信息的行为模式」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/" target="_blank" rel="noopener">TechCrunch · Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect</a>
+<span class="sep">·</span>
+<a href="https://mikitabalesni.com/letter/letter.pdf" target="_blank" rel="noopener">公开信 PDF</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Goodfire 上线「由内而外」监测器：读取模型内部激活，拦截失控智能体成本大降</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日（太平洋时间；公司当日上线、TechCrunch 当日报道，原文未注具体时刻）</p>
+<p>可解释性创业公司 Goodfire 在 Baseten 平台面向客户推出「内部激活监测」：用小探测器读取模型推理时的内部信号、仅在命中风险时升级给独立模型复核，避免「让另一个大模型逐字复读」的高昂成本。其在 Kimi K3 上的测试中，监测约 1,500 个会话成本约 51 美元（对照方案分别约 233 美元与 1 万美元），捕获 94% 的恶意黑客会话；客户可自选监控范畴（攻击性黑客、生化武器滥用、奖励黑客）与处置方式。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/" target="_blank" rel="noopener">TechCrunch · Goodfire says its new &#x27;inside-out&#x27; monitors catch rogue AI agents at a fraction of the cost</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>量子位实测：生数科技 Vidu Q4 预览版开放，视频生成低至每秒几分钱、支持 4K 直出</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月8日 21:28（北京时间；量子位发稿时刻）</p>
+<p>生数科技面向创作者开放新一代视频旗舰 Vidu Q4 的首个预览版，主打「传神演绎、镜头语言、视效冲击」：表情与情绪更细腻、单条最长 16 秒、支持 FPV 运镜，最高 4K 直出，单次最多可用 15 张参考图与 3 段参考音频。据量子位实测，720P 下 6 段、约 110 秒视频花费不到 10 元；MaaS 定价约 0.6 元/秒（720P）、0.75 元/秒（1080P），SaaS 预览期另有约两个月限时优惠。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/10/502049.html" target="_blank" rel="noopener">量子位 · 真香！做这个邪恶老奶版「GTA 6」，我只花了5元！</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-08-晚间版.html">← 2026-10-08-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-09 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

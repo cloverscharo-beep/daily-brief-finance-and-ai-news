@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-09</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 9 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：隔夜“AI降温”与地缘、大宗交织——OpenAI披露年化营收约500亿美元、较市场预期少约200亿美元，叠加美联储官员“未来6至9个月仍需加息”的表态，美股纳指跌1.25%、存储与半导体板块重挫，英伟达市值一夜蒸发超1684亿美元；国际油价结算大涨（布伦特涨4.07%报104.28美元），金价小幅收涨、比特币跌破8.1万美元。国内方面，人社部就新就业形态劳动者权益保障办法公开征求意见，A股公司三季报预喜潮开启、东岳硅材预增超190倍。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>人社部发布新就业形态劳动者权益保障办法征求意见稿，首次以规章保障“不完全劳动关系”群体</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（北京时间，人社部网站发布并启动征求意见，原文未注具体时刻）</p>
+<p>摘要：人社部10月8日发布《新就业形态劳动者权益保障办法（征求意见稿）》，自即日起至11月8日公开征求意见——这是我国首次以部门规章形式，将企业实施劳动管理、不完全符合确立劳动关系情形的新就业形态劳动者（网约配送员、网约车司机、网络主播等约8400万人群体）纳入劳动法律制度保障，全文共54条。征求意见稿明确最低工资保障、报酬结算支付周期最长不超过1个月、不得滥用罚款、连续工作4小时应保障适当休息等底线，并要求停止派单、封禁账号等涉及重大利益的决定不得由算法自动作出、须经人工审核。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/politics/20261008/5f46506a518044ca9fb0d275015f5f2d/c.html" target="_blank" rel="noopener">新华网 · 新华视点丨新就业形态劳动者权益保障新规回应哪些关切</a>
+<span class="sep">·</span>
+<a href="http://finance.people.com.cn/n1/2026/1008/c1004-40810879.html" target="_blank" rel="noopener">人民网 · 新就业形态劳动者权益保障办法公开征求意见</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>尊界汽车发布情况说明：优化制动部件设计，为已交付用户提供免费升级</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日21:00（北京时间，尊界汽车官方微博发布情况说明）</p>
+<p>摘要：针对懂车帝对3台全新尊界V800紧急制动测试中“刹车踏板支架断裂”的视频，尊界汽车发布情况说明：制动系统按高于国家标准（GB 21670-2025、GB 7258-2026）与行业标准的要求完成全流程开发与验证；自首批车辆交付以来，用户实际使用场景中未发生制动踏板支架底座断裂故障。公司将优化该部件设计、为已交付用户提供免费升级选择，并对设计验证、试验边界与生产质量管理开展系统性复核与补强。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnr.cn/jingji/ycbd/20261008/t20261008_527836609.shtml" target="_blank" rel="noopener">央广网 · 尊界汽车回应制动踏板支架底座问题：将优化部件设计并为已交付用户提供免费升级选择</a>
+<span class="sep">·</span>
+<a href="https://www.bjnews.com.cn/detail/1791465628129851.html" target="_blank" rel="noopener">新京报 · 尊界汽车回应刹车踏板断裂测试：将优化部件设计，为用户提供免费升级</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>东岳硅材预增超190倍领衔，A股多家公司昨晚集中披露三季报预喜与回购</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日晚间（北京时间，多家公司集中公告，原文未注具体时刻）</p>
+<p>摘要：10月8日晚间多家A股公司披露三季报预告与资本运作进展：东岳硅材预计前三季度归母净利5.47亿—5.67亿元、同比预增19050%—19750%，为已披露预告中增幅最大；广汇能源预增167%—177%，行云科技扭亏为盈；雄塑科技拟收购芯源新材料不超过80%股权；美的集团累计回购约99.4亿元、宁德时代回购33.03亿元，时代新材签署近44亿元风电叶片销售合同。据Wind数据，截至当晚19时27家公司披露、预喜比例约81.5%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-08/doc-iniupnuv7587968.shtml" target="_blank" rel="noopener">新浪财经（21世纪经济报道）· 最高预增19750%，A股业绩利好</a>
+<span class="sep">·</span>
+<a href="https://www.cnr.cn/jingji/ycbd/20261008/t20261008_527836620.shtml" target="_blank" rel="noopener">央广网 · 深市公司密集披露利好公告 业绩预增、回购、大单多线开花</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>美联储穆萨莱姆：若要让通胀“及时”回到2%，未来6至9个月仍需加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（美东时间，纽约一场活动上；原文未注具体时刻，北京时间10月9日凌晨发布）</p>
+<p>摘要：圣路易斯联储主席穆萨莱姆表示，若“及时”指约18个月，未来6至9个月内可能需要在适当时机继续上调利率；通胀仍是美国经济首要问题，但经济强劲、就业稳定，有望在不明显损害就业的情况下压低通胀。被问及10月27—28日会议时，他称持开放态度、不预先判断；并称美债收益率上升反映实际利率上行与资本竞争、金融环境仍偏宽松。他今年并非FOMC投票委员。另据CME“美联储观察”数据，市场预计10月维持利率不变概率82.3%、12月加息25个基点概率67.6%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-10-09/doc-iniuqiyt3263790.shtml" target="_blank" rel="noopener">新浪财经 · 圣路易斯联储主席：未来6至9个月仍需进一步加息 通胀是美国经济首要问题</a>
+<span class="sep">·</span>
+<a href="https://zijing.com.cn/web/article/1557997793742880768/web/content_1557997793742880768.html" target="_blank" rel="noopener">紫荆网（中国基金报）· 美联储10月大概率按兵不动，维持利率不变概率达82.3%</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股涨跌不一：纳指跌1.25%，存储与半导体板块重挫，英伟达市值一夜蒸发超1.13万亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日16:00收盘（美东时间；北京时间10月9日04:00）</p>
+<p>摘要：道指涨0.1%，标普500跌0.47%，纳指跌1.25%（日内跌超300点）；费城半导体指数跌3.39%，光通信方向领跌——应用光电跌逾13%、Coherent跌超9%，康宁、Lumentum、英特尔跌超5%，闪迪、美光、SK海力士跌超4%。英伟达跌近3%、市值5.55万亿美元、单日蒸发超1684亿美元（约合人民币1.13万亿元），甲骨文跌5.6%创7月16日以来最大单日跌幅，博通跌超4%；苹果逆势涨超1%，能源股走高。纳斯达克中国金龙指数跌0.62%报5603.02点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610093890057011.html" target="_blank" rel="noopener">东方财富（每日经济新闻）· 美股纳指收跌超1% 存储、半导体板块下挫</a>
+<span class="sep">·</span>
+<a href="https://m.sfccn.com/2026/10-9/0MMDE1MjBfMjI2Mjk0Mw.html" target="_blank" rel="noopener">南方财经 · 美股半导体股全线下跌，英伟达市值一夜蒸发超万亿元，加密货币19万人爆仓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>OpenAI向投资者披露年化营收“接近500亿美元”，较此前约700亿美元预期少约200亿</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（英国时间，据《金融时报》报道；原文未注具体时刻，北京时间10月9日凌晨起被广泛转引）</p>
+<p>摘要：据《金融时报》报道，OpenAI在向投资者披露的文件中称，截至9月底年化营收接近500亿美元，低于上月末媒体广泛报道的约700亿美元，差距约200亿美元；知情人士称差异源于投资者将其与竞争对手Anthropic直接对标（后者将AWS、谷歌云等合作渠道收入计入营收，OpenAI未计入）。OpenAI同期披露三季度整体运营收入同比增长77%、企业业务增长107%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3783220" target="_blank" rel="noopener">华尔街见闻 · 相差200亿！OpenAI营收被爆巨大预期差，AI板块遭重创，甲骨文跌逾5%，应用光电跌超10%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2499918" target="_blank" rel="noopener">财联社 · OpenAI年化营收较之前报道预期少200亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价结算大涨：WTI涨3.64%报91.49美元，布伦特涨4.07%报104.28美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（美东时间，当日收盘结算；北京时间10月9日凌晨，原文未注具体时刻）</p>
+<p>摘要：WTI原油期货结算价报91.49美元/桶，较前一交易日上涨3.21美元、涨幅3.64%；布伦特原油期货收于104.28美元/桶，上涨4.08美元、涨幅4.07%。中东方面，美伊局势走向仍存变数、也门局势持续紧张，市场对原油供应中断风险的关注升温。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://zijing.com.cn/web/article/1557947965541384192/web/content_1557947965541384192.html" target="_blank" rel="noopener">紫荆网（中国基金报）· 国际油价大幅上涨，WTI与布伦特期货双双走高</a>
+<span class="sep">·</span>
+<a href="https://m.sfccn.com/2026/10-9/0MMDE1MjBfMjI2Mjk0Mw.html" target="_blank" rel="noopener">南方财经 · 美股半导体股全线下跌，英伟达市值一夜蒸发超万亿元，加密货币19万人爆仓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>特朗普称不会在中期选举前攻击伊朗；胡塞武装袭击利雅得机场、沙特航空一客机受损</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（美东时间与也门当地时间；原文未注具体时刻）</p>
+<p>摘要：特朗普表示美伊正在进行“富有成效”的磋商、美方不会在11月3日国会中期选举前攻击伊朗；此前美媒报道五角大楼已指示美军中央司令部完成相关准备，以应对可能恢复对伊朗的大规模军事行动。同日，也门胡塞武装称三次以四枚导弹袭击沙特利雅得哈立德国王国际机场；路透社援引知情人士称，沙特航空一架客机停靠该机场时因“弹片或飞行物”直接命中起火、严重损毁。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sfccn.com/2026/10-9/0MMDE1MjBfMjI2Mjk0Mw.html" target="_blank" rel="noopener">南方财经 · 美股半导体股全线下跌，英伟达市值一夜蒸发超万亿元，加密货币19万人爆仓</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L8PI037N05198CJN.html" target="_blank" rel="noopener">财联社 · 【早报】美股存储、半导体板块，全线重挫；原油飙升、黄金收涨；多家A股公司三季报预增</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>比特币深夜跌破8.1万美元、一度触及8.05万，24小时约19万人爆仓</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日晚至9日凌晨（北京时间；原文未注具体时刻）</p>
+<p>摘要：比特币接连跌破8.3万、8.2万、8.1万美元关口，日内最低触及8.05万美元/枚，后跌幅收窄报约8.18万美元；最近24小时加密货币市场约19万人被爆仓、爆仓金额近12亿美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sfccn.com/2026/10-9/0MMDE1MjBfMjI2Mjk0Mw.html" target="_blank" rel="noopener">南方财经 · 美股半导体股全线下跌，英伟达市值一夜蒸发超万亿元，加密货币19万人爆仓</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>现货金收涨0.52%报4131.89美元，白银走低；国内夜盘沪金沪银窄幅波动</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（美东时间，纽约收盘；北京时间10月9日凌晨，原文未注具体时刻）</p>
+<p>摘要：现货黄金日内最低触及4102美元/盎司，最终收涨0.52%报4131.89美元/盎司；COMEX黄金期货收涨0.43%报4158.3美元/盎司，COMEX白银期货跌1.43%报59.43美元/盎司。国内夜盘：沪金主力合约收跌0.04%报894元/克、沪银主力合约收跌1.21%报14413元/千克。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sfccn.com/2026/10-9/0MMDE1MjBfMjI2Mjk0Mw.html" target="_blank" rel="noopener">南方财经 · 美股半导体股全线下跌，英伟达市值一夜蒸发超万亿元，加密货币19万人爆仓</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2499971" target="_blank" rel="noopener">财联社 · COMEX黄金期货收涨0.43%，报4158.3美元/盎司</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-10-09/4599180.html" target="_blank" rel="noopener">每日经济新闻 · 上期所原油期货夜盘收跌0.62%，报732.8元/桶</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-08-晚间版.html">← 2026-10-08-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-09 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
