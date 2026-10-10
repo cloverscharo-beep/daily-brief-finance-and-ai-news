@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-10</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 10 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：国新办“开局起步‘十五五’”就业社保专场发布会举行——前三季度城镇新增就业1052万人、截至9月底基本养老保险参保人数达10.79亿人，我国将开展适应人工智能发展促就业行动；周末海外与市场信息密集：飓风“伊萨亚斯”逼近美国墨西哥湾致约72%海上原油产能关停，ASML对韩零部件全线上调10%，苹果折叠屏iPhone Duo获加单30%，印度央行出台系列措施支撑卢比，香港证监会称正研究延长现货市场交易时段。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>国新办就业社保专场发布会：前三季度城镇新增就业1052万人，将开展适应人工智能发展促就业行动</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日上午10时（北京时间，国新办发布会举行；新华社当日16:53发布报道）</p>
+<p>摘要：人社部新闻发言人、副部长李忠介绍，今年1至9月全国城镇新增就业1052万人、完成全年目标任务的87.7%，前8个月城镇调查失业率均值为5.2%，就业形势总体稳定；截至9月底，全国基本养老保险、失业保险、工伤保险参保人数分别达10.79亿人、2.51亿人、3.27亿人，三项社会保险基金累计结余11.2万亿元。下一步将开展适应人工智能发展促就业行动、“技能照亮前程”培训行动等，并制定出台新就业形态劳动者权益保障办法（近期已公开征求意见）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.news.cn/politics/20261010/454bf5b194de4ae68f41d0424613b454/c.html" target="_blank" rel="noopener">新华网 · 前三季度全国城镇新增就业1052万人</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202610103891939877.html" target="_blank" rel="noopener">东方财富（中国新闻网）· 人社部：今年前三季度中国城镇新增就业1052万人</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>商务部欧洲司负责人解读中欧贸易投资磋商机制第二次例会成果：欧方将考虑对华出口管制便利化措施、双方支持实质性启动相互移单流程</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日13时15分（北京时间，商务部网站发布）</p>
+<p>摘要：商务部欧洲司负责人就中欧贸易投资磋商机制第二次例会成果解读称：双方围绕医疗器械、化妆品、药品、逆变器、农食产品等议题对等解决彼此关切，探讨在世贸组织规则框架下降低部分商品关税的可能性，并就欧盟外国补贴条例开展技术对话；出口管制方面，双方同意进一步发挥对话机制作用，欧方将考虑采取可能的对华便利化措施，还同意就制裁列移单问题加强沟通、在各自法律框架下支持并实质性启动相互移单流程；第三次例会将于2027年3月举行。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_847454bbeb494400857b5e06c29137d0.html" target="_blank" rel="noopener">商务部 · 商务部欧洲司负责人解读中欧贸易投资磋商机制第二次例会成果</a>
+<span class="sep">·</span>
+<a href="http://www.xinhuanet.com/fortune/20261010/1c99f3334b42462f99d4036df248f250/c.html" target="_blank" rel="noopener">新华网 · 商务部欧洲司负责人解读中欧贸易投资磋商机制第二次例会成果</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>财政部公告两项国债续发：20年期超长期特别国债200亿元、3年期记账式附息国债1200亿元，均定于10月16日招标</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日18时22分、18时52分（北京时间，财联社、每日经济新闻分别报道）</p>
+<p>摘要：财政部拟第三次续发行2026年超长期特别国债（五期），为20年期固定利率附息债、竞争性招标面值总额200亿元、票面利率2.24%、不进行甲类成员追加投标；同时拟第二次续发行2026年记账式附息（十七期）国债，为3年期、竞争性招标面值总额1200亿元、票面利率1.23%、进行甲类成员追加投标。两期国债招标时间均为2026年10月16日上午10:35至11:35。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-10/doc-iniututh0680353.shtml" target="_blank" rel="noopener">新浪财经 · 财政部拟第三次续发行2026年超长期特别国债（五期）</a>
+<span class="sep">·</span>
+<a href="https://www.nbd.com.cn/articles/2026-10-10/4600742.html" target="_blank" rel="noopener">每日经济新闻 · 财政部拟第二次续发行2026年记账式附息（十七期）国债，招标面值总额1200亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>央行：10月10日7天期逆回购操作量为零；9月公开市场国债买卖净投放1000亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日09时28分（北京时间，证券时报网发布；9月工具数据于10月9日披露）</p>
+<p>摘要：央行公告，根据公开市场业务一级交易商的需求，2026年10月10日7天期逆回购操作量为零。此前的9月各项工具流动性投放情况显示：中期借贷便利（MLF）净投放2000亿元，常备借贷便利（SLF）净投放2亿元，抵押补充贷款（PSL）净回笼14亿元；公开市场业务方面，隔夜、7天期逆回购净回笼860亿元，公开市场国债买卖净投放1000亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4210914.html" target="_blank" rel="noopener">证券时报 · 央行：10月10日7天期逆回购操作量为零</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4210168.html" target="_blank" rel="noopener">证券时报 · 央行9月公开市场国债买卖净投放1000亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>印度央行出台系列措施支撑卢比：为三家国有石油公司设专项外汇窗口，将于10月12日启动</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日早间（印度时间，印度央行披露；原文未注具体时刻）</p>
+<p>摘要：印度央行10月10日早间披露多项支撑卢比汇率的举措：为国有石油公司设置专项外汇窗口、由央行通过指定银行供应美元，该窗口定于10月12日启动、将承接三家国有石油公司的全部日常美元需求；已注销的卢比外汇衍生品合约不再允许重新登记，对冲免于证明标的资产存在的门槛由等值1亿美元降至500万美元；银行对单笔名义金额超200万美元的交易须按20%缴存外汇风险准备金。此前该行10月7日已上调回购利率25个基点至5.50%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.jrj.com.cn/2026/10/10123358661408.shtml" target="_blank" rel="noopener">金融界 · 印度央行为三家国有石油公司设专项外汇窗口，10月12日启动承接其全部日常美元需求</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L8SO7TFR0519QIKK.html" target="_blank" rel="noopener">网易（市场资讯）· 印度央行为三家国有石油公司设专项外汇窗口，10月12日启动</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>飓风“伊萨亚斯”逼近：墨西哥湾约72%海上原油产能关停，产量损失预计达900万桶</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日晨（北京时间，格隆汇06:59、财联社09:09综合报道；停产统计截至美东时间10月9日中午）</p>
+<p>摘要：三级飓风“伊萨亚斯”（Isaias）向美国墨西哥湾沿岸逼近，预计于美东时间10月9日晚间至10日凌晨在密西西比州沿岸至佛罗里达州狭长地带之间登陆。美国海洋能源管理局数据显示，截至美东时间10月9日中午，墨西哥湾约72%的原油产能（约146万桶/日）已暂停、129座平台工作人员撤离；英国石油（BP）已关闭Thunder Horse和Na Kika平台的生产。机构模型预测，整场飓风期间墨西哥湾原油产量损失或达900万桶。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://caifuhao.eastmoney.com/news/20261010065933776413280" target="_blank" rel="noopener">东方财富财富号（格隆汇）· 飓风“伊萨亚斯”导致美国墨西哥湾72%的石油产量中断</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2501029" target="_blank" rel="noopener">财联社 · 飓风来袭！美墨西哥湾紧急停工 原油产量损失预计达900万桶</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>阿斯麦对韩国客户零部件价格全线上调10%，三星电子、SK海力士已接受</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日11时16分（北京时间，科创板日报发布；原报道为韩媒当日消息）</p>
+<p>摘要：据韩媒报道，ASML（阿斯麦）将统一上调在韩国供应的设备替换零部件价格、涨幅10%，新价格自明年1月起生效，涨价范围涵盖EUV及DUV光刻机的全部零部件。ASML总部上月初已通过韩国分公司向三星电子与SK海力士发出涨价意向，经双方采购部门协商后敲定。业界认为，此前ASML通常仅在原材料大幅涨价等情形下对个别零部件单独调价，此次“全线一次性上调10%”属异常举措。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cls.cn/detail/2501087" target="_blank" rel="noopener">财联社·科创板日报 · 统一涨价10%！光刻机巨头上调在韩零部件报价 三星、SK海力士已“买单”</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/stock/bxjj/2026-10-10/doc-iniutkci2159941.shtml" target="_blank" rel="noopener">新浪财经 · 阿斯麦零部件价格全线上调10% 三星SK海力士接受涨价</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>香港证监会：正研究延长现货市场交易时段，港交所将于第四季度发表讨论文件</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（香港时间，梁凤仪演讲）；10月10日上午媒体广泛报道</p>
+<p>摘要：香港证监会行政总裁梁凤仪在亚洲证券业与金融市场协会（ASIFMA）亚太资本市场流动性前瞻论坛发表主题演说表示，香港正研究延长证券交易时段、将率先在衍生产品市场推行，港交所将于第四季度就延长现货市场交易时段发表讨论文件；同时推进结算周期缩短至T+1，港交所将于短期内发表咨询总结及落实目标实施日期。她表示，长远将辅以代币化货币及数码港元结算安排等创新措施，让投资者更灵活地根据最新市场信息调整仓位及管理风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/wm/2026-10-10/doc-iniutcvm2187386.shtml" target="_blank" rel="noopener">新浪财经（21世纪经济报道）· 香港正在研究延长现货市场交易时段</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>证券时报独家：苹果调整新机订单结构，折叠屏iPhone Duo加单30%、18 Pro系列总订单量未变</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日15时32分（北京时间，证券时报独家报道）</p>
+<p>摘要：证券时报记者从苹果供应链公司独家获悉，苹果结构性调整2026年秋季手机新品订单量：对折叠屏iPhone Duo加单30%（总量仍未超过1000万台），对iPhone 18 Pro砍单10%—15%、对iPhone 18 Pro Max加单10%—15%，iPhone 18 Pro系列总订单量未变；供应链人士称“销量在往更高价值产品倾斜”。iPhone Duo将于10月16日晚8时开启预购、10月23日发售，起售价15999元；截至10月10日14时，京东平台预约登记人数已超201万人。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4211094.html" target="_blank" rel="noopener">证券时报 · 独家！苹果供应链公司透露：折叠屏iPhone Duo生产加单30%！</a>
+<span class="sep">·</span>
+<a href="http://www.eeo.com.cn/2026/1010/1059971.shtml" target="_blank" rel="noopener">经济观察网 · 独家！苹果供应链公司透露：折叠屏iPhoneDuo生产加单30%！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>伯恩斯坦拆解AI基建成本：建1GW数据中心投资346亿至395亿美元，下调英伟达Rubin机柜成本预期约17%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日19时37分（北京时间，财联社电报）</p>
+<p>摘要：伯恩斯坦研报显示，采用不同AI加速器架构，建设1GW数据中心所需的资本开支约为346亿至395亿美元，其中英伟达Vera Rubin架构建设成本最高、OpenAI自研ASIC架构Jalapeno相对较低。该行将英伟达Rubin NVL72单机柜成本预期从此前的910万美元下调至752万美元、降幅约17%，主要反映对HBM价格和NAND存储容量预期的调整；研报并指出，AI数据中心的主要经济负担并非电费，而是巨额资本开支及其产生的折旧。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2501328" target="_blank" rel="noopener">财联社 · 伯恩斯坦拆解AI基建成本：每吉瓦投资最高395亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2501306" target="_blank" rel="noopener">财联社（海外研选）· 伯恩斯坦拆解AI基建成本：每GW投资最高395亿美元</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-10-早间版.html">← 2026-10-10-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-10 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

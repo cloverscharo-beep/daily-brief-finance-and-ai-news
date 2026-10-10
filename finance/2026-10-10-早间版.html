@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-10</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 10 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：中共中央、国务院印发《关于发展新质生产力的意见》并登上今日《人民日报》头版，发改委称其为全国发展新质生产力确立“统一标尺”；隔夜海外风险偏好回升——美股三大指数集体收涨、中概金龙指数大涨2.69%，金银纽约收盘显著走高、离岸人民币逼近2022年7月以来最强，美国宣布放宽俄罗斯柴油制裁以平抑高企的柴油价格。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>中共中央、国务院印发《关于发展新质生产力的意见》，发改委称其为全国发展新质生产力确立“统一标尺”</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间，国家发展改革委官网消息；原文未注具体时刻；《人民日报》10月10日头版刊发）</p>
+<p>摘要：据国家发展改革委官网10月9日消息，近日，中共中央、国务院印发《关于发展新质生产力的意见》，对加快发展新质生产力作出全面系统部署。国家发展改革委有关负责同志同日就《意见》答记者问，指出《意见》“为全国发展新质生产力确立了统一思想行动的标尺”；今日出版的《人民日报》头版首条刊发该意见。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202610093891597362.html" target="_blank" rel="noopener">东方财富 · 重磅文件发布！发展新质生产力有了“统一标尺”</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/7x24/2026-10-10/detail-iniustfv7496447.d.html" target="_blank" rel="noopener">新浪财经 · 今天《人民日报》头版的主要内容</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>证监会发布修订后《公开募集证券投资基金运作管理办法（征求意见稿）》，时隔12年系统性修订</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间，证监会发布；原文未注具体时刻）</p>
+<p>摘要：证监会10月9日发布修订后的《公开募集证券投资基金运作管理办法（征求意见稿）》及其配套规则，进一步规范公募基金投资运作、支持权益类基金发展、提高运作灵活度。这是《运作办法》时隔12年启动的系统性修订，聚焦投资运作中的痛点堵点，推动行业从“规模增长”迈向“质量提升”。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/7x24/2026-10-10/detail-iniustfu0734294.d.html" target="_blank" rel="noopener">新浪财经（证券时报）· 证监会规范公募基金投资运作 推动从“规模增长”迈向“质量提升”</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>商务部就美国召集14个经济体发布“产能过剩”联合声明答记者问：反对将经贸问题政治化</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间，商务部答记者问发布；原文未注具体时刻）</p>
+<p>摘要：针对美东时间10月7日美贸易代表办公室发布公告称美国召集14个经济体共同签署应对所谓“结构性产能和生产过剩”问题部长级联合声明，商务部新闻发言人10月9日答记者问表示：看待产能问题要秉持全面、客观、公正的态度，不能将经贸问题政治化；中方反对以“产能过剩”为名行贸易保护主义之实，如有关经济体借此采取损害中方利益的措施，中方将作出必要回应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202610093891522214.html" target="_blank" rel="noopener">东方财富 · 商务部新闻发言人答记者问</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176275" target="_blank" rel="noopener">华尔街见闻 · 商务部新闻发言人答记者问</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>白宫成立委员会调查美联储理事库克，定于11月5日举行听证会</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月9日（白宫公布特朗普10月7日签署的备忘录；听证会定于11月5日）</p>
+<p>摘要：美国白宫10月9日公布总统特朗普7日签署的备忘录，宣布成立委员会调查美联储理事莉萨·库克涉嫌在抵押贷款文件中作出虚假陈述的指控，并将于11月5日在白宫举行现场听证会，被视为政府加紧解除其职务的最新升级行动。库克的律师对听证会合法性“深表怀疑”，民主党参议员沃伦称此举不合法。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202610103891650121.html" target="_blank" rel="noopener">东方财富 · 全是自己人！特朗普组建调查委员会 能否解职美联储理事库克</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176276" target="_blank" rel="noopener">华尔街见闻 · 特朗普任命委员会，调查美联储官员库克涉嫌发表虚假陈述的指控</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美国放宽俄柴油制裁：OFAC发布许可至2027年4月，特朗普称俄将向美供应“数百万桶”柴油</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月9日（美国财政部OFAC发布公告；北京时间10月10日凌晨获媒体广泛报道）</p>
+<p>摘要：美国财政部外国资产控制办公室（OFAC）10月9日发布公告，宣布未来几个月放松针对俄罗斯柴油贸易的制裁、并“立即签发一项临时通用许可，允许向全球市场供应俄罗斯柴油”，以缓解美国国内柴油供应紧张、平抑油价；特朗普同日宣布美俄领导人就俄向美国及全球市场供油达成一致。乌克兰总统泽连斯基批评该决定“既不公正，也不坦诚”，美国民主党多名参议员亦抨击该交易。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://finance.eastmoney.com/a/202610103891648714.html" target="_blank" rel="noopener">东方财富 · 美放松俄柴油贸易制裁 特朗普称俄将对美供油</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176403" target="_blank" rel="noopener">华尔街见闻 · 美国财政部发布俄罗斯柴油许可</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股周五集体收涨：道指涨0.83%、标普500涨0.59%；美光宣布12月起扩大回购至351.6亿美元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日16:00收盘（美东时间；北京时间10月10日凌晨04:00收盘数据发布）</p>
+<p>摘要：美股三大指数收涨：道指涨0.83%报51654.95点，标普500指数涨0.59%报7811.54点（本周累涨1.15%），纳指涨0.64%报27366.17点；费城半导体指数本周累跌4.30%。个股方面，亚马逊涨超3%，微软、特斯拉涨超2%，苹果跌超1%；美光科技宣布12月9日起将回购规模上限上调至351.6亿美元，其股价年内累涨约260%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3176427" target="_blank" rel="noopener">华尔街见闻 · 标普收涨约0.6%，本周半导体指数跌4.3%</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202610103891623488.html" target="_blank" rel="noopener">东方财富 · 美股三大指数集体收涨 热门科技股多数上涨</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176439" target="_blank" rel="noopener">华尔街见闻 · 美光科技12月将股票回购计划规模扩大至350亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>中概股大涨：金龙指数涨2.69%报5753.78点、本周累涨4.25%，小米ADR涨9.93%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（美东时间，中概股收盘；港股夜盘为北京时间10月10日凌晨03:00收盘）</p>
+<p>摘要：纳斯达克金龙中国指数收涨2.69%报5753.78点、本周累涨4.25%；小米集团ADR涨9.93%，金山云、理想汽车、阿里巴巴、腾讯音乐、蔚来、贝壳等涨超5%，中概互联网指数ETF（KWEB）涨3.79%。港股夜盘方面，恒生指数主连夜盘收涨0.71%报24363点、恒生科技指数主连涨0.74%报4221点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3176426" target="_blank" rel="noopener">华尔街见闻 · 中概指数收涨约2.7%，小米ADR涨超9.9%</a>
+<span class="sep">·</span>
+<a href="http://hk.eastmoney.com/a/202610103891649092.html" target="_blank" rel="noopener">东方财富 · 中概股普遍上涨 纳斯达克中国金龙指数涨2.69%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176400" target="_blank" rel="noopener">华尔街见闻 · 恒生指数主连夜盘收涨0.71%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>大宗商品走强：现货金涨1.50%报4194.69美元、白银涨2.79%，原油续涨；黄金ETF三季度净流入创历史新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（美东时间，纽约尾盘；北京时间10月10日凌晨05:04数据发布）</p>
+<p>摘要：现货黄金涨1.50%报4194.69美元/盎司（本周累涨1.31%），COMEX黄金期货报4221.10美元；现货白银涨2.79%报60.82美元/盎司，COMEX铜期货涨2.16%；沪金、沪银夜盘分别收涨1.05%、2.23%。世界黄金协会数据显示，全球黄金ETF三季度资金净流入创历史新高。原油方面，WTI 11月合约收涨0.39%报91.85美元/桶、布伦特12月合约涨0.42%报104.72美元/桶；高盛称全球原油风险溢价升至22美元、创历史月度第二高；飓风“伊萨亚斯”致墨西哥湾近四分之三原油产量关停。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3176449" target="_blank" rel="noopener">华尔街见闻 · 国际金价周五涨1.5%</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176398" target="_blank" rel="noopener">华尔街见闻 · WTI原油期货收涨</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202610103891644886.html" target="_blank" rel="noopener">东方财富 · 金价震荡调整 进一步下行空间有限</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176438" target="_blank" rel="noopener">华尔街见闻 · 飓风致墨西哥湾原油产量关停</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>人民币走强：离岸报6.6927逼近2022年7月以来最强，在岸夜盘收6.6929涨107点</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日凌晨（北京时间；在岸夜盘03:00收盘、离岸04:59纽约尾盘报价）</p>
+<p>摘要：离岸人民币（CNH）兑美元纽约尾盘报6.6927元，较周四纽约尾盘涨108点，突破9月21日最终报价、逼近2022年7月8日以来最强水平，本周累涨约0.2%；在岸人民币（CNY）北京时间03:00收报6.6929元、较上一交易日夜盘收盘涨107点。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/livenews/3176456" target="_blank" rel="noopener">华尔街见闻 · 离岸人民币（CNH）兑美元报6.6927元</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/livenews/3176402" target="_blank" rel="noopener">华尔街见闻 · 在岸人民币兑美元收报6.6929</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>A股晨间：三季报大幕开启、机构称具备修复性反弹基础；9月新开户191.19万户</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日晚间至10月10日晨（北京时间；三季报10月9日晚披露，媒体统计报道见10月10日晨）</p>
+<p>摘要：本周A股2个交易日，上证指数累计下跌0.74%、深证成指跌1.91%、创业板指跌2.93%、科创综指跌4.88%，分析人士认为短期市场具备修复性反弹基础、但反弹力度或相对温和，“业绩验证”或成主线。10月9日晚，沃华医药披露三季报、成为今年A股首家；据上交所数据，9月A股新开户191.19万户、环比下降20.25%、同比下降34.91%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.cn/7x24/2026-10-10/detail-iniustfu0735995.d.html" target="_blank" rel="noopener">新浪财经（中国证券报）· A股市场下探回升 机构称市场具备修复性反弹基础</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/7x24/2026-10-10/detail-iniustfu0734991.d.html" target="_blank" rel="noopener">新浪财经（证券日报）· 三季报大幕开启 业绩验证或将成为市场主线</a>
+<span class="sep">·</span>
+<a href="http://finance.eastmoney.com/a/202610093891542998.html" target="_blank" rel="noopener">东方财富 · 9月A股新开户191.19万户</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-09-晚间版.html">← 2026-10-09-晚间版</a></span><span><a href="2026-10-10-晚间版.html">2026-10-10-晚间版 →</a></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-10 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
