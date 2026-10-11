@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-10-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 11 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Claude Science 用一队 Agent 拼出人类首张完整紫外全天图——约三分之一天区靠模型推算、1.19 亿颗恒星逐颗叠加，「AI 接手科学杂活」再进一步；OpenAI 把 dots 智能体送进手机，个人智能体竞争从桌面延伸到口袋。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Anthropic：Claude Science 拼出首张完整紫外全天图，1.19 亿颗恒星逐颗叠上</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月8日（Anthropic 科学博客与官方 X 发布日；第三方核对文章称 X 帖发布于 20:16 UTC，对应北京时间10月9日 04:16）</p>
+<p>约翰斯·霍普金斯大学天体物理学家、Anthropic 研究员 Brice Ménard 用 Claude Science 指挥一队 Agent，整合 GALEX（约3.8万次观测）、Swift 等 50 年紫外巡天数据，把从未被紫外望远镜看过、约占三分之一的天区逐块推算补齐，再据 Gaia 数据算出 1.19 亿颗恒星的紫外亮度逐颗叠加。盲测中推算与实测仅差约 10%，每个像素都标注「实测/预测」并附不确定度；人力需数周的活儿，Claude 用了几天。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/research/the-missing-map-of-the-sky" target="_blank" rel="noopener">Anthropic · The missing map of the sky</a>
+<span class="sep">·</span>
+<a href="https://m.36kr.com/p/4018549788168066" target="_blank" rel="noopener">36氪 · 太震撼了，Claude画出首张紫外全天图，1.19亿颗星逐颗叠上</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>OpenAI：dots 全面登陆手机，掏出手机就能创建并指挥 Codex 干活</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（OpenAI 官方更新说明标注日期；原文未注具体时刻）；10月10日 06:38（新智元发稿，北京时间）</p>
+<p>OpenAI 发布 dots 更新：已获权限的用户可在 iOS/Android 版 ChatGPT 里直接创建、配置 dot（起名、外观、连接插件），不再需要回到桌面端；dot 与 Codex 协作升级——能启动任务、跟进既有线程、检索 ChatGPT 对话与自动化任务上下文，还能查看和编辑 ChatGPT Work 里的定时任务。同批更新还包括更快浏览、减少打扰通知与更简便的 Outlook 配置。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026" target="_blank" rel="noopener">ChatGPT Learn（官方）· Create your dot in the ChatGPT mobile app</a>
+<span class="sep">·</span>
+<a href="https://hub.baai.ac.cn/view/58575" target="_blank" rel="noopener">新智元 · 突发！OpenAI dots全面登陆手机，开口指挥Codex干活了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>Cloudflare 收购 Deno：Ryan Dahl 团队并入，Deno 运行时一年后停更</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（美东时间；Deno 官方博客公告日，据 TechCrunch 表述为「周五宣布」；原文未注具体时刻）</p>
+<p>Deno 官方宣布整个团队加入 Cloudflare，目标是基于 Deno 的开源项目 celld 让 workerd「自托管成为一等公民」，把 Cloudflare Workers 编程模型变成主流服务器构建方式。代价是：Deno 运行时再维护一年（bug 修复与安全更新）后停止开发，Deno Deploy 六个月后关停（付费用户协助迁往 Workers），JSR 注册表继续运营并迁入 Cloudflare。交易金额未披露。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://deno.com/blog/cloudflare" target="_blank" rel="noopener">Deno 官方博客 · Deno is joining Cloudflare</a>
+<span class="sep">·</span>
+<a href="https://techcrunch.com/2026/10/10/cloudflare-acquires-deno-to-improve-its-workers-programming-model" target="_blank" rel="noopener">TechCrunch · Cloudflare acquires Deno to improve its Workers programming model</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Sophos 借 OpenAI Daybreak 把威胁调查时间压缩 96%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（北京时间；IT时代网发稿日；Sophos 客户案例视频同日发布，原文未注具体时刻）</p>
+<p>网络安全公司 Sophos 披露：接入 OpenAI Daybreak 前沿模型后，其 MDR 业务中由 AI 智能体处理的案件平均响应时间从约 38 分钟降至 89 秒，威胁调查整体缩短 96%，部分案件实现「计划—执行—复核」全流程自动化闭环，分析师只需审阅智能体产出的摘要与响应建议。Sophos 称目前为超过 62.5 万家组织提供防护。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L8QUNCMO05527PMU.html" target="_blank" rel="noopener">IT时代网（网易）· Sophos借OpenAI模型将威胁调查时间缩至89秒</a>
+<span class="sep">·</span>
+<a href="https://www.youtube.com/watch?v=MUHjyljBPHI" target="_blank" rel="noopener">YouTube · How Sophos cuts threat response time by 96% with OpenAI Daybreak</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>丘成桐数学与人工智能实验室联盟在清华成立：超 1000 名科学家集结</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日 10:41（北京时间；北京日报客户端发稿时刻；成立仪式于当日举行）</p>
+<p>联盟由清华大学讲席教授、求真书院院长丘成桐牵头，联合清华大学求真书院、丘成桐数学科学中心、北京雁栖湖应用数学研究院、中科院晨兴数学中心、上海数学与交叉学科研究院、香港中文大学致真交叉数学科学院等机构组建，已集结超 1000 名数学家与科研工作者。方向聚焦数学科学专用大模型研发、AI 辅助数学形式化证明与猜想发现、可解释人工智能及交叉领域智能计算。丘成桐表示「必须在浪潮中冲浪，而不是躲起来」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xinwen.bjd.com.cn/content/s6acaf776e4b039a8e2f227c3.html" target="_blank" rel="noopener">北京日报客户端 · 推动AI+数学深度融合，丘成桐数学与人工智能实验室联盟成立</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-10-11/doc-iniuvtkm7314643.shtml" target="_blank" rel="noopener">新浪财经（中国青年报）· 丘成桐数学与人工智能实验室联盟成立，推动数学与人工智能深度融合</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>全球首个矿山行业垂域大模型「云鼎」：服务 150 余家能源企业</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间；齐鲁网·闪电新闻发稿日，原文未注具体时刻）</p>
+<p>在2026人工智能产业大会相关报道中，基于华为盘古 380 亿参数底座的云鼎矿山行业大模型披露落地进展：覆盖安全生产问答、设备全生命周期运维、安全监察视频分析与工艺参数优化四类业务；已在山东能源集团 60 家单位深度应用，落地全国 15 个省份 130 余家生产单位，服务 150 余家大中型能源企业。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://k.sina.com.cn/article_5328858693_13d9fee4502002jyts.html" target="_blank" rel="noopener">新浪（齐鲁网·闪电新闻）· 2026人工智能产业大会｜已服务150余家大中型能源企业，云鼎矿山行业大模型跑出产业加速度</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>Gemini 4 新版本「Carbon」内测曝光：员工称编程体验「感觉像 Opus 5.5」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日前后（美东时间；Business Insider 报道，原文未注具体时刻）；10月10日（智东西编译发稿，北京时间）</p>
+<p>据 Business Insider 获取的内部文件与聊天记录，谷歌正内部测试 Gemini 4 新 checkpoint「Carbon」，已上线内部编程平台 Jetski，有员工称其编程体验「感觉像 Opus 5.5」。内部同时流转 Argon、Barium、Carbon 等多个代号，且内部代号与公开名称并不一一对应（如 Barium-B 最终以 Argon 之名发布）。外界解读 Carbon 意在补齐 Argon 在部分编程评测上的短板，谷歌拒绝置评。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://36kr.com/p/4019400286621831" target="_blank" rel="noopener">36氪 · 谷歌Gemini 4新模型大泄露，内测评价：这不Opus 5.5吗？</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_5213469505_136bf3b41020016gt0.html?from=tech" target="_blank" rel="noopener">新浪（智东西）· 编程体验接近Opus 5.5？谷歌Gemini 4新版本曝光</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>量子位：硅谷算力争夺白热化，「谁有算力谁是爹」</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日 13:22（北京时间；量子位发布时刻）</p>
+<p>量子位梳理硅谷算力现状：Amodei 向 Meta 求租算力被婉拒后，SpaceX 以「英伟达 GPU 二道贩子」身份给 Anthropic 倒卖算力——其 8 月首份财报显示季度 AI 业务收入 25.61 亿美元、同比增 247%；谷歌因算力被内部重新分配，明星研究员 Noam Shazeer 转投 OpenAI；部分云厂商开始要求创业公司签多年合约、预付款高达合同额 30%。SemiAnalysis 数据显示 H100 一年期租赁价自 2025 年 10 月低点上涨近 40%，顶级 VC 已开始亲自囤 GPU。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.qbitai.com/2026/10/502585.html" target="_blank" rel="noopener">量子位 · 硅谷AI现状：谁有算力谁是爹</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_5953740931_162dee083067041ili.html" target="_blank" rel="noopener">新浪科技转载 · 硅谷AI现状：谁有算力谁是爹</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Axios：AI 公司私下推演「灾难次日」，业内预计重大事件或在 6–12 个月内发生</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（美东时间；Axios 独家报道日，原文未注具体时刻）；10月10日（机器之心等中文编译）</p>
+<p>Axios 报道称，Anthropic、OpenAI 等公司高管正私下做情景推演：一旦 AI 首次造成重大现实伤害（最可能是导致金融、互联网乃至水电设施瘫痪的大规模网络攻击），公众与政界将如何反弹、监管将如何收紧；多名业内人士认为此类事件可能在未来 6–12 个月内发生，企业已在提前与国会议员沟通。据《华盛顿邮报》报道，FTC 已对 Anthropic 与 OpenAI 的 AI 安全实践展开行业级调查。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wallstreetcn.com/articles/3783284" target="_blank" rel="noopener">华尔街见闻 · AI灾难将在一年内发生？Anthropic、OpenAI私下推演最坏情景</a>
+<span class="sep">·</span>
+<a href="https://www.secrss.com/articles/94562" target="_blank" rel="noopener">机器之心（安全内参转载）· AI灾难恐在一年内发生！OpenAI和Anthropic已在推演应对方案</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>伯克利研究：让 AI 帮 10 分钟，之后放弃难题的概率明显上升</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月9日（伯克利新闻发布；原文未注具体时刻）；论文于本周 COLM 会议报告</p>
+<p>UC Berkeley 团队开展三项随机试验（共 1222 名参与者）：借助 ChatGPT 的组在「有 AI 时」表现更好，但 AI 被撤走后解题率与坚持度显著下降、跳题更多，对照组则保持或提升；把 AI 当「直接给答案」工具的参与者（占 61%）受损最大，仅用 AI 求提示者未见显著损伤。研究者称这一结果印证了许多人「隐隐担忧」的直觉。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.berkeley.edu/2026/10/09/using-ai-for-just-10-minutes-erodes-your-ability-to-persist-at-hard-things" target="_blank" rel="noopener">Berkeley News · Using AI for just 10 minutes erodes your ability to persist at hard things</a>
+<span class="sep">·</span>
+<a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence" target="_blank" rel="noopener">项目主页 · AI Assistance Reduces Persistence</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-11-早间版.html">← 2026-10-11-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-11 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-11</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 11 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：国际社会密集谴责利雅得机场袭击、胡塞武装警告沙特将&quot;对等回应&quot;、特朗普称美国&quot;可能&quot;加入打击行动，中东风险持续紧绷；国内监管与官媒同向发力——四部门就汽车创新设计管理征求意见（禁止全隐藏式门把手等）、人民日报客户端评论&quot;对&#x27;速成车&#x27;说不&quot;；市场目光转向下周美国CPI与美股财报季。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>国际社会谴责利雅得机场袭击、胡塞武装警告沙特；特朗普称美国"可能"加入打击行动</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，新华社综合稿18时27分发布；胡塞武装声明为也门当地时间11日中午；特朗普表态为美东时间10月10日）</p>
+<p>摘要：沙特主导的多国联军称此次袭击"构成战争罪"并将予"坚决回击"；联合国秘书长古特雷斯、阿拉伯国家联盟、海合会、伊斯兰合作组织及约旦等相继发声谴责。胡塞武装军事发言人11日再次警告航空公司与旅客不要使用沙特空域和机场，并称若沙特继续军事行动将依据"对等原则"回应。美国总统特朗普10日表示，美国"可能"加入沙特对胡塞武装的打击行动、将"尽快做出决定"，并称此次袭击"不可接受"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://app.xinhuanet.com/news/article.html?articleId=202610114e0ca5165c8a4df0b525efc25581cce8" target="_blank" rel="noopener">新华网（客户端）· 综合消息｜国际社会谴责针对沙特利雅得机场的袭击</a>
+<span class="sep">·</span>
+<a href="https://xnews.jin10.com/details/flash/102914791" target="_blank" rel="noopener">金十数据 · 胡塞要求沙特停止对胡塞军事行动</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>四部门就汽车创新设计管理征求意见：禁止配备全隐藏式门把手、不得采用折叠显示屏</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日（北京时间，工信部等四部门发布；原文未注具体时刻）</p>
+<p>摘要：工信部等四部门联合发布《关于进一步加强汽车产品创新设计和研发测试验证有关管理工作的通知（征求意见稿）》，公示期至11月10日。文件明确禁止配备全隐藏式门把手，不得采用折叠显示屏、柔性显示屏；"零重力"座椅、旋转座椅等须限制使用场景、行车时不可启用；关键驾驶安全功能以虚拟操纵件替代物理按键的，须同时具备实体操纵件。自2027年1月1日起，涉创新设计的新申报产品须填报技术参数，可靠性验证不低于3万公里、环境适应性验证不少于1年。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/fortune/20261010/7f5fc9a7b3f145ca9e9da6c802c93b5e/c.html" target="_blank" rel="noopener">新华网 · 四部门征求意见 进一步加强汽车产品创新设计等管理</a>
+<span class="sep">·</span>
+<a href="https://www.stdaily.com/web/gdxw/2026-10/10/content_594070.html" target="_blank" rel="noopener">科技日报 · 四部门就加强汽车创新设计管理征求意见 禁止配备全隐藏式门把手</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>上交所就收购资产事项向东百集团下发监管工作函：公司拟3.16亿元跨界收购光探测器芯片公司</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间；上交所函件于18时22分经财联社电报报道）</p>
+<p>摘要：东百集团10月11日公告，全资子公司东百创智拟收购杭州快灵光电科技有限公司52.6667%股权、暂定转让对价3.16亿元，标的公司从事光探测芯片的研发、生产与销售。同日，上交所向东百集团下发关于收购资产事项的监管工作函，涉及对象包括上市公司、董事、高级管理人员、控股股东及实际控制人。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610113892073953.html" target="_blank" rel="noopener">东方财富 · 东百集团：拟3.16亿元收购光探测芯片公司快灵光电52.67%股权</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8x8lGj6EXg9" target="_blank" rel="noopener">凤凰财经 · 上交所向东百集团下发监管工作函</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>新式浮动费率基金扩大参与范围：中型管理人纳入，头部申报比例不低于60%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，财联社报道；监管通报为"近日"发布）</p>
+<p>摘要：财联社记者从业内获悉，监管部门近日发布机构监管通报，优化新模式浮动费率产品注册安排：参与机构范围拓展至主动权益类基金管理规模居前的中型基金管理人。头部管理人发行新模式浮动费率产品数量原则上不低于其主动管理权益类基金发行数量的60%，新纳入的中型管理人不低于30%，并支持中小管理人结合自身实际主动布局。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2501472" target="_blank" rel="noopener">财联社 · 周末要闻汇总：事关人工智能等新质生产力，国务院发布重磅文件</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202610113892046685.html" target="_blank" rel="noopener">东方财富（财联社）· 同文</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>韩股遭外资加速撤离：三星电子外资持股比例创2008年以来新低，成交额较5月峰值暴跌70%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，中新经纬、新浪财经当日报道；韩联社持股数据截至10月8日）</p>
+<p>摘要：韩联社数据显示，截至10月8日外资持有三星电子股票比率为46.38%，为2008年1月以来最低，较今年年初的52.40%大幅回落；SK海力士外资持有率降至49.59%。彭博报道称，KOSPI成交额较5月底峰值暴跌70%，外资与散户同步退场、企业回购接近尾声；KOSPI自上半年高点已回落约22%，成为下半年表现最差的主要指数之一。元大证券分析师称"仅凭亮眼业绩难以扭转外资流向"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/usstock/c/2026-10-11/doc-iniuvtkp8876978.shtml" target="_blank" rel="noopener">新浪财经 · 外资大规模撤离、散户交易降温、企业回购逐步结束：人去楼空的韩国股市</a>
+<span class="sep">·</span>
+<a href="https://cj.sina.cn/articles/view/5993531560/1653e08a802001pkv8" target="_blank" rel="noopener">新浪财经头条（中新经纬）· 韩国股市失宠，超8700亿外资年内撤离</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>黄金全周上涨1.33%修复至4200美元附近，下周美国CPI成关键考验</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，金十数据"一周展望"当日发布；原文未注具体时刻）</p>
+<p>摘要：金十数据称，美元与美债收益率居高不下曾推动现货黄金本周刷新两个月低位，此后油价回落与逢低买盘支撑金价重新触及4200美元关口，全周上涨1.33%，现货白银亦抹去周内全部跌幅。市场预计美联储10月28日加息概率仅19%（此前曾达70%），但已完全预期12月加息25个基点，周三将公布美国9月CPI。盛宝银行预计下周金价区间震荡、黄金ETF连续数周保持资金流入；FXTM提示4200美元关键位的得失。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xnews.jin10.com/details/232105" target="_blank" rel="noopener">金十数据 · 一周展望：CPI考验美联储暂停加息预期，黄金&quot;原地打转&quot;方向仍不明朗？</a>
+<span class="sep">·</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/GlobalArticle?ContentId=C26101000360&Category=all" target="_blank" rel="noopener">群益期货 · 同文转载</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>美股三季度财报季下周打响：银行股率先披露，阿斯麦、台积电检验AI景气</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，金十数据当日发布；原文未注具体时刻）</p>
+<p>摘要：摩根大通、高盛、花旗、富国银行将于周二公布业绩，美国银行、摩根士丹利、贝莱德周三披露；阿斯麦周三、台积电周四发布财报，其订单与指引被视为芯片行业与AI投资景气度的重要线索。FactSet预计标普500成分股三季度利润同比增长约29.5%、营收增长约12.3%，若兑现将是连续第三个季度利润增幅超25%。周五10年期美债收益率稳定在5.25%附近、30年期维持在5.6%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://xnews.jin10.com/details/232105" target="_blank" rel="noopener">金十数据 · 一周展望：CPI考验美联储暂停加息预期，黄金&quot;原地打转&quot;方向仍不明朗？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>能源专家：国际油价"被严重低估"，部分实物原油应接近每桶150美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日午后（北京时间，期货日报经东方财富、金融界等平台发布）</p>
+<p>摘要：期货日报报道，能源研究与咨询公司Energy Aspects创始人Amrita Sen认为，原油期货价格与中东地区现实状况"严重脱节"，部分实物原油价格应接近每桶150美元；市场反应平淡部分因本轮行情与美国中期选举因素相关。报道指出，胡塞武装正持续袭击沙特能源及其他基础设施，"（原油）期货价格很难反映出真实的基本面"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202610113892017074.html" target="_blank" rel="noopener">东方财富（期货日报）· 突发！沙特首都机场遭袭，超300人死伤！特朗普称或加入打击胡塞武装行动！专家：国际油价被严重低估</a>
+<span class="sep">·</span>
+<a href="https://usstock.jrj.com.cn/2026/10/11131558672072.shtml" target="_blank" rel="noopener">金融界 · 同题</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>人民日报评论"对'速成车'说不"：刹车踏板绝不应出现"断裂"；尊界V800升级方案11月起启动</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间，人民日报客户端当日发文；尊界客服确认时间为11日下午）</p>
+<p>摘要：人民日报客户端发文《四部门联手，对"速成车"说不！》指出，尊界V800刹车踏板支架断裂事件仍有待权威调查结论，但"一辆汽车的刹车踏板，绝不应该在驾驶中出现'断裂'"；文章批评部分车企过度压缩研发周期、删减实车验证流程。尊界客服11日下午确认，V800制动踏板支架底座升级方案预计10月底确认、11月起陆续启动，未发运车辆将直接升级后交付，已提车用户可通过全国任一服务中心预约免费升级。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.voc.com.cn/xhn/news/202610/33957848.html" target="_blank" rel="noopener">人民日报客户端（新湖南转载）· 人民日报：一辆汽车的刹车踏板，绝不应该在驾驶中出现&quot;断裂&quot;</a>
+<span class="sep">·</span>
+<a href="https://m.cls.cn/telegraph" target="_blank" rel="noopener">财联社电报 · 尊界：制动踏板升级方案预计10月底确认，11月起陆续启动升级</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>下周A股看点：37只个股解禁市值约414.62亿元，陕西能源238.56亿元居首</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间；数据宝统计11日午间经多平台转发，原文未注具体时刻）</p>
+<p>摘要：数据显示，下周（10月12日至16日）A股共37只个股限售股解禁，合计解禁股份数量约48.07亿股，解禁市值合计约414.62亿元；其中陕西能源解禁市值达238.56亿元居首，首药控股-U（30.08亿元）、大普微-UW、金科股份、杰理科技、长江能科居前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stcn.com/article/detail/4211181.html" target="_blank" rel="noopener">证券时报（数据宝）· 下周将有37股解禁 合计解禁市值超400亿元</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1086272545_222256" target="_blank" rel="noopener">搜狐财经 · 下周37只个股解禁 解禁股的市值合计约414.62亿元</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-11-早间版.html">← 2026-10-11-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-11 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
