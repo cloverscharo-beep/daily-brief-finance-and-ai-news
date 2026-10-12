@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-12</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 12 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：财政部下调新能源汽车出口退税率至9%并取消电子烟等产品出口退税；A股缩量普跌、影视传媒逆势大涨，港股微涨；中东局势推升布伦特原油升破105美元/桶、超大型油轮运费创60年来最高。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>财政部：自2027年4月1日起将新能源汽车增值税出口退税率由13%下调至9%，并取消电子烟设备等产品出口退税</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 17:17（北京时间；财联社发布该公告消息）</p>
+<p>摘要：财政部发布《关于调整部分产品出口退税政策的公告》：自2027年4月1日起，新能源汽车的增值税出口退税率由13%下调至9%；同日取消电子烟设备装置等产品增值税出口退税；对上述产品中征收消费税的产品，出口消费税政策不作调整。公告明确，出口退税率以出口货物报关单注明的出口日期界定。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502325" target="_blank" rel="noopener">财联社 · 两部门：自2027年4月1日起，将新能源汽车的增值税出口退税率由13%下调至9%</a>
+<span class="sep">·</span>
+<a href="https://m.cngold.org/kuaixun/kx2558944.html" target="_blank" rel="noopener">金投网快讯 · 财政部：将新能源汽车的增值税出口退税率由13%下调至9%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>央行开展500亿元7天期逆回购操作；人民币对美元中间价上调17点报6.7313，升至2022年以来最高</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（北京时间；金融界09:20、中宏网09:44先后发布两项消息）</p>
+<p>摘要：央行公告称，10月12日以固定利率、数量招标方式开展了500亿元7天期逆回购操作，全额满足了一级交易商需求。同日，人民币对美元中间价报6.7313，较上一交易日上调17个基点，财联社称其升至2022年以来最高水平；据上证报，10月9日CFETS人民币汇率指数为103.61，较9月30日上涨0.41。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.zhonghongwang.com/show-257-474546-1.html" target="_blank" rel="noopener">中宏网 · 10月12日中国人民银行开展500亿元7天期逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://www.chinanews.com.cn/cj/2026/10-12/10711815.shtml" target="_blank" rel="noopener">中新网 · 10月12日人民币对美元中间价报6.7313 上调17个基点</a>
+<span class="sep">·</span>
+<a href="https://m.cls.cn/detail/2501753" target="_blank" rel="noopener">财联社 · 人民币兑美元中间价报6.7313，上调17点</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>IMF与世行年会在曼谷开幕：格奥尔基耶娃称AI基建投资正将全球增长维持在约3%，AI或影响40%岗位</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（曼谷时间；年会开幕当天，新浪财经17:07发稿，原文未注讲话具体时刻）</p>
+<p>摘要：2026年IMF与世界银行集团年会10月12日在泰国曼谷开幕。IMF总裁格奥尔基耶娃表示，AI基础设施的大规模投资正将全球增长维持在3%左右，这一“需求冲击、投资冲击”或使发达亚洲经济体增速提升0.5至1.0个百分点、新兴亚洲经济体提升0.2至0.8个百分点；她同时称AI就像一场“缓慢推进的海啸”，预计随着时间推移可能使40%的工作岗位被增加、降级或取消。据会议安排，IMF将于周二发布最新《世界经济展望》报告。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/stock/bxjj/2026-10-12/doc-iniuyhwz5261097.shtml" target="_blank" rel="noopener">新浪财经（格隆汇）· AI基建撑起全球3%增速？IMF总裁最新揭秘</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L92D08VN0552C2FY.html" target="_blank" rel="noopener">网易 · 国际货币基金组织（IMF）和世界银行年会本周在曼谷举行</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>泽连斯基视频连线华沙安全会议：能源停火“尚未达成”、乌将继续对俄远程打击，同时称支持美方倡议</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：当地时间10月12日（泽连斯基在华沙安全会议发表视频讲话；金投网快讯17:06、17:12发布）</p>
+<p>摘要：泽连斯基表示，除非俄罗斯同意“尚未达成”的能源停火协议，乌克兰将继续对俄实施远程打击；他称自己是“通过媒体”得知特朗普周日宣布的停火消息，并称“如果俄罗斯不同意能源停火，我们就会予以回应”。他同时表示对美方提出的俄乌“能源停火”倡议“表示认可与支持”，认为该提议为实现能源领域停火创造了可行性；若俄今冬拒绝该倡议并持续冲击能源设施，乌方将采取对应举措予以回应。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cngold.org/kuaixun/kx2558937.html" target="_blank" rel="noopener">金投网快讯 · 泽连斯基：能源停火尚未达成 乌克兰不会停止对俄远程打击</a>
+<span class="sep">·</span>
+<a href="https://hk.finance.yahoo.com/news/%E6%BE%A4%E9%80%A3%E6%96%AF%E5%9F%BA%E7%A8%B1%E8%8B%A5%E6%99%AE%E4%B8%81%E6%8B%92%E7%B5%95%E8%83%BD%E6%BA%90%E5%81%9C%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E5%B0%87%E7%B9%BC%E7%BA%8C%E5%B0%8D%E4%BF%84%E9%81%A0%E7%A8%8B%E6%89%93%E6%93%8A-091012300.html" target="_blank" rel="noopener">Yahoo財經（香港）· 澤連斯基稱若普丁拒絕能源停火 烏克蘭將繼續對俄遠程打擊</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股缩量普跌：沪指跌0.43%、创业板指跌2.61%，影视传媒逆势大涨、银行股续创新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 15:00 收盘（北京时间；东方财富15:03、新京报15:16发布收评）</p>
+<p>摘要：A股三大指数集体收跌：上证指数跌0.43%，深证成指跌2.03%，创业板指跌2.61%，北证50跌2.46%，科创50跌2.1%。沪深两市成交额约1.54万亿元、较前一交易日缩量逾3600亿元，全市场超4300只个股下跌；AI语料、短剧、影视院线、文化传媒等涨幅居前，铜箔/覆铜板、CPO、贵金属跌幅居前；银行股走强（多只大行盘中续创新高），新华传媒10连板。资金面看，截至10月9日深沪北两融余额25596.56亿元、连续第3周减少。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610123892642594.html" target="_blank" rel="noopener">东方财富（界面新闻）· A股收评：沪指跌0.43%，创业板指跌2.61%</a>
+<span class="sep">·</span>
+<a href="https://www.bjnews.com.cn/detail/1791789127129956.html" target="_blank" rel="noopener">新京报贝壳财经 · A股收评：创业板指缩量调整跌2.61%</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4211737.html" target="_blank" rel="noopener">证券时报（数据宝）· 深沪北两融余额连续3周减少</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收盘：恒指涨0.25%报24271.2点、恒生科技指数跌0.67%，光通信与PCB重挫、赛力斯涨15%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 16:00 收盘（北京时间；财联社16:09、东方财富16:10发布）</p>
+<p>摘要：恒生指数收报24271.2点，涨59.85点、涨幅0.25%；恒生科技指数收报4169.57点，跌0.67%。光通信、PCB、存储概念跌幅居前：剑桥科技跌超11%，广合科技跌超8%，长飞光纤光缆、中际旭创跌超7%；赛力斯大涨15%，零跑汽车、腾讯音乐、网易等涨幅居前，小米集团-W跌幅靠前。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610123892679662.html" target="_blank" rel="noopener">东方财富 · 10月12日港股收盘：恒指涨0.25% 恒生科技指数跌0.67%</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-10-12/doc-iniuyarm8504442.shtml" target="_blank" rel="noopener">新浪财经（证券时报·人民财讯）· 港股收评：恒指涨0.25% 恒生科技指数跌0.67%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>欧洲主要股指开盘上涨；高盛将全球股票三个月评级上调至“超配”、美银上调标普500年底目标至7400点</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（北京时间下午·欧股开盘时段，原文未注具体时刻；高盛观点为金投网17:05快讯转发）</p>
+<p>摘要：欧股开盘上涨：欧洲斯托克50指数、德国DAX指数、英国富时100指数开盘均涨0.4%，法国CAC40指数涨0.3%。同日高盛策略团队将全球股票未来三个月评级由“中性”上调至“超配”，称油价与债券收益率上行令估值压力有所缓解、企业盈利前景依然稳健；美国银行将标普500指数年底目标上调至7400点，巴克莱亦因企业盈利韧性上调目标。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.jwview.com/jingwei/kb/m/10-12/239116.shtml" target="_blank" rel="noopener">中新经纬 · 欧洲主要股指开盘上涨</a>
+<span class="sep">·</span>
+<a href="https://m.cngold.org/kuaixun/kx2558935.html" target="_blank" rel="noopener">金投网快讯 · 高盛：强劲盈利有望推动全球股市进一步上涨</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>宁德时代H股重上500港元大关：恒生科技指数编算修订在即，大摩、花旗齐声看多电池产业链</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 10:27（北京时间；财联社发稿）</p>
+<p>摘要：今日港股电池股多数反弹，宁德时代H股自月初低位458港元反弹、重上500港元大关，截至发稿涨3.38%。消息面上，中信证券指出恒生指数公司10月7日已发布恒生科技指数编算方法修订的市场咨询总结，按新规测算宁德时代预计成为权重上限最高的单一个股，指数再平衡或带来被动资金调仓；摩根士丹利称中国商用车电动化、欧洲渗透率回升等“三大成长极”被市场低估，花旗判断全球电池材料已进入“第二轮产能周期”。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2501834" target="_blank" rel="noopener">财联社 · 双重利好提振港股电池股 宁德时代H股重上500港元大关</a>
+<span class="sep">·</span>
+<a href="https://www.sohu.com/a/1086589801_222256" target="_blank" rel="noopener">搜狐 · 双重利好提振港股电池股宁德时代H股重上500港元大关</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>中东局势推升油价与运价：布伦特原油升破105美元/桶，超大型油轮运费升至60年来最高，IEA将于10月15日开会</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 16:52（北京时间；金投网快讯报布伦特原油突破105美元关口；油轮运费消息发布于当日10:50）</p>
+<p>摘要：布伦特原油期货主力突破105美元/桶关口，最新报105.01美元/桶、日内涨0.59%，周一交投升至逾两周高位，沙特机场与霍尔木兹海峡油轮接连遇袭加剧对供应的担忧。受冲突重塑中东原油贸易格局与运力短缺影响，超大型油轮运费已飙升至60年来最高水平，中东至东亚航线日运费攀升至约120万美元，部分二手超大型油轮成交价较新船造价出现“倒挂”。国际能源署敦促各国政府加快兑现柴油释放承诺，警告当前市场状况需立即关注，该机构将于10月15日召开会议。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cngold.org/kuaixun/kx2558922.html" target="_blank" rel="noopener">金投网快讯 · 布伦特原油期货主力突破105.00美元/桶关口</a>
+<span class="sep">·</span>
+<a href="https://m.cngold.org/kuaixun/kx2558943.html" target="_blank" rel="noopener">金投网快讯 · 布伦特原油升至逾两周高位 中东局势推升供应担忧</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2501877" target="_blank" rel="noopener">财联社 · 超大型油轮运费升至60年来最高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>“央行圆桌汇”：美联储静默期前官员密集发声、市场押注10月按兵不动，印度央行近四年来首次加息</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（北京时间；经济观察网、21经济网当日发稿，原文未注时刻）</p>
+<p>摘要：多国央行动态汇总显示，美联储9月会议纪要证实19名高级官员均支持加息至3.75%-4.00%，因9月就业数据偏弱且多名官员释放“无需急于加息”信号，市场目前预计美联储更可能在10月会议按兵不动、并于12月再次加息（施密德、戴利、沃勒、穆萨莱姆等官员近日密集发声）。印度央行将基准回购利率上调25个基点至5.5%，为近四年来首次加息；欧洲央行管委内格尔称通胀前景面临上行风险，日本央行或在10月释放核心通胀已接近2%目标的信号。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.eeo.com.cn/2026/1012/1061345.shtml" target="_blank" rel="noopener">经济观察网 · 【央行圆桌汇】美联储官员静默期前密集发声（2026年10月12日）</a>
+<span class="sep">·</span>
+<a href="https://www.21jingji.com/article/20261012/herald/0822f70cb2d1f70bc0e24b4b30942264.html" target="_blank" rel="noopener">21经济网 · 【央行圆桌汇】美联储官员静默期前密集发声（2026年10月12日）</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-12-早间版.html">← 2026-10-12-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-12 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
