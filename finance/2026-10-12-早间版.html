@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-12</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 12 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：特朗普宣布俄乌即刻进入&quot;能源停火&quot;、乌方称事先不知情并以&quot;60天全面停火换选举&quot;回应；中东风险继续发酵——沙特达曼机场再遭袭、伊朗称美方对其七项条件的回应&quot;不够充分&quot;；IMF与世界银行年会今日起在曼谷举行，本周中国9月CPI与美股财报季接踵而至。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>特朗普宣布俄乌即刻进入"能源停火"：泽连斯基称"这是个新闻"，提出"60天停火就组织选举"</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月11日（周日；特朗普在其社媒平台发文，原文未注具体时刻）</p>
+<p>摘要：特朗普在Truth Social称"即刻起，俄乌战争实施'能源停火'。双方均已同意。切勿破坏！"。泽连斯基对Axios表示此事对他也是"新闻"，但若俄方同意能源停火、乌方愿对等停止打击俄炼油设施；他随后接受ABC采访时喊话："请转告普京，给我们两个月、即60天全面停火，我们就会组织选举"，并强调乌领导人应由乌克兰人民决定。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/world/20261012/b436a228f74f4887b16ad40d749053e7/c.html" target="_blank" rel="noopener">新华网 · 特朗普称俄乌进入&quot;能源停火&quot; 泽连斯基回应说&quot;这是个新闻&quot;</a>
+<span class="sep">·</span>
+<a href="https://www.zaobao.com.sg/news/world/story20261011-9820377" target="_blank" rel="noopener">联合早报 · 特朗普：俄乌同意&quot;能源停火&quot; 乌克兰否认</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美财长贝森特：将动用一切法律授权落实与俄柴油供应协议</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月11日（周日；贝森特接受福克斯新闻《福克斯与朋友们》采访，原文未注具体时刻）</p>
+<p>摘要：贝森特表示"我们将动用我们拥有的一切法律授权来推进此事"，落实美俄柴油供应安排。该安排由特朗普10月9日与普京通话后宣布：美方临时放宽对俄柴油制裁（授权至2027年4月），俄方将立即供应超30万吨柴油、11月再供50万吨；此举在美欧遭遇批评，泽连斯基称其"是在投资战争"。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.voachinese.com/a/bessent-says-trump-administration-has-legal-authority-for-russian-diesel-deal-20261011/8210067.html" target="_blank" rel="noopener">美国之音 · 美国财长贝森特：特朗普政府拥有法律授权落实与俄罗斯达成的柴油供应协议</a>
+<span class="sep">·</span>
+<a href="https://www.news.cn/20261010/c6413f67d0a9493bbe3d03d7b0a0a4c6/c.html" target="_blank" rel="noopener">新华网 · 美放松对俄柴油贸易制裁 特朗普称俄将对美供油</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>沙特民航总局：达曼法赫德国王国际机场11日晚再遭袭击；胡塞武装称24小时内实施4次行动</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日晚间（沙特当地时间；沙特民航总局发布声明，原文未注具体时刻）</p>
+<p>摘要：沙特民航总局称，东部城市达曼的法赫德国王国际机场当晚遭到袭击，针对沙特民航设施的袭击"仍在继续"，相关部门正评估损失。此前一晚，多国联军发言人称一枚投射物落在该机场附近；胡塞武装11日称，过去24小时用导弹和无人机对沙特境内机场和能源设施实施4次行动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinanews.com.cn/gj/2026/10-12/10711159.shtml" target="_blank" rel="noopener">中国新闻网 · 沙特民航总局：达曼法赫德国王国际机场遭袭</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/2026-10-12/detail-iniuwuvx7261825.d.html" target="_blank" rel="noopener">新浪财经（央视新闻）· 沙特民航总局：达曼法赫德国王国际机场遭袭</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>IMF与世界银行年会今日在曼谷开幕：会期至10月18日，注册人数约1.8万</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（曼谷时间；年会首日，原文未注具体时刻）</p>
+<p>摘要：2026年IMF与世界银行集团年会10月12日至18日在曼谷诗丽吉王后国家会议中心举行，注册人数已达约1.8万，泰国时隔35年再次承办。会议将讨论全球经济展望、通胀与金融稳定等议题；据媒体前瞻，美联储主席沃什等央行官员本周将亮相年会，曼谷多个政府机构在会期居家办公并设置特别假日。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202610113892131726.html" target="_blank" rel="noopener">东方财富（中国新闻网）· IMF和世行年会将在曼谷举行 泰国加强安保和城市保障</a>
+<span class="sep">·</span>
+<a href="https://www.worldbank.org/en/meetings/splash/annual" target="_blank" rel="noopener">世界银行 · 2026年年会日程</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>伊朗高层：美方接受伊方部分条件但回应"不够充分"，霍尔木兹海峡开放仍无时间表</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（德黑兰时间；伊朗最高国家安全委员会秘书雷扎伊接受伊朗新闻电视台采访）</p>
+<p>摘要：雷扎伊称，美方已通过巴基斯坦、卡塔尔、伊拉克三个渠道就伊方"七项条件"作出回应、"接受了我们的部分条件"，但其他条件仍有模糊之处；他重申在条件落实前不会开放霍尔木兹海峡，并称伊朗已准备在战火重燃时"投入新的作战能力"，同时驳斥美方关于海峡"开放"的说法。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610123892155065.html" target="_blank" rel="noopener">东方财富（中国新闻网）· 伊朗：美国接受伊方所提部分条件，但其回应&quot;不够充分&quot;</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/wm/2026-10-12/doc-iniuxfms0443918.shtml" target="_blank" rel="noopener">新浪财经 · 霍尔木兹海峡，有新消息！伊朗称美已接受伊方所提部分条件</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>十大券商一周策略：积极信号逐渐累积，把握好四季度做多窗口期</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 00:20（北京时间；21世纪经济报道/e公司发布，券商中国07:42转发）</p>
+<p>摘要：中信证券强调"应对全球高利率常态"、密切跟踪AI投资周期拐点，建议围绕北美AI、中国"六张网"建设与反内卷供给出清品种布局；华泰证券称支撑因素逐渐积累；中信建投、方正证券等判断四季度做多窗口期、关注科技超跌反弹；财信证券认为证监会座谈会释放积极信号、A股中长期向好趋势未变。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.21jingji.com/article/20261012/herald/4af02ccb611e77f51cf071e4dc3f4090.html" target="_blank" rel="noopener">21经济网 · 【十大券商一周策略】市场积极信号逐渐累积，把握好四季度做多窗口期</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2501541" target="_blank" rel="noopener">财联社 · 科技股能否回稳？四季度哪些机会值得布局？十大券商策略来了</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>金价一周先抑后扬：逢低买盘推动重返4195美元附近，本周聚焦美国CPI与美联储主席讲话</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 07:39（北京时间；汇通财经"黄金交易提醒"发布）</p>
+<p>摘要：汇通财经称，上周现货金一度跌至4066美元附近的两月低点，随后受逢低买盘推动反弹至4195美元附近、全周上涨约1.3%，美联储加息预期、强美元与美债收益率仍压制金价，霍尔木兹风险提供避险支撑；本周美国CPI、PPI及美联储主席讲话将决定金价能否守住4000美元。另据环球市场播报周一晨间汇总，纳指期货走高、原油小幅上涨。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://oil.fx678.com/news/202610120739422064" target="_blank" rel="noopener">汇通财经 · 黄金交易提醒：美联储加息阴影下，多头绝地反攻！本周美国CPI和美联储主席讲话成关键</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L915OAI405568W0A.html" target="_blank" rel="noopener">网易（环球市场播报）· 10月12日隔夜要闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>沪市主板10月以来披露120余份回购公告：对应金额约247亿至464亿元，已实施超176亿元</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（北京时间；上海证券报等媒体11日深夜发布，原文未注具体时刻）</p>
+<p>摘要：统计显示，10月以来沪市主板已发布超120份回购类公告，对应回购金额约247亿元至464亿元，累计已实施超176亿元；进展类公告对应最新回购金额166亿元、已锁定整体下限的七成。40家公司回购超亿元，海尔智家（22.9亿元）、东鹏饮料（10.4亿元）居前；东阳光等同期披露新增回购及股东增持计划。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202610113892130537.html" target="_blank" rel="noopener">上海证券报（东方财富）· 回购刷屏！</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-12/doc-iniuwqpy0504120.shtml" target="_blank" rel="noopener">新浪财经（中国证券报）· 10月以来沪市主板120余份回购公告集中披露：已累计实施回购超170亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>红利基金密集限购：10月9日一天约10只产品"闭门谢客"，泛红利ETF下半年净流出超300亿元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日 06:46（北京时间；证券时报官网/电子版发布）</p>
+<p>摘要：证券时报报道，10月以来红利资产市场分歧显现：富国、天弘、银河等多家公司对红利产品密集限购（10月9日当天约10只红利基金发布限购公告），同时泛红利主题ETF资金持续净流出、下半年以来合计超300亿元。华泰证券认为红利整体配置性价比有所回落、内部分化加剧，10月仍可维持银行、公用事业等稳定型红利底仓。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stcn.com/article/detail/4211522.html" target="_blank" rel="noopener">证券时报 · 红利基金密集限购稳收益 有资金趁指数走强套现离场</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/jjxw/2026-10-12/doc-iniuwuvz8619953.shtml" target="_blank" rel="noopener">新浪财经 · 同题</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>本周前瞻：中国9月CPI与进出口数据周三公布，美股财报季开启、苹果周二发新品</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（北京时间；东方财富·哈富证券"一周前瞻"发布，原文未注具体时刻）</p>
+<p>摘要：国家统计局将于10月14日09:30公布9月CPI、PPI（8月分别为同比+0.8%、+3.8%），海关总署同日中午公布9月进出口数据（公布日恰逢美国对华船舶港口费生效）。美股三季度财报季由摩根大通、高盛、花旗、富国银行（周二）与阿斯麦（周三）、台积电（周四）率先交卷；苹果将于周二21:00举行智能家居新品发布会。美国现券债市今日因假日休市、日本股市因体育日休市一日。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://emwap.eastmoney.com/a/202610123892159170.html" target="_blank" rel="noopener">东方财富（哈富证券）· 一周前瞻丨美联储官员静默期前密集发声，沃什周五亮相IMF；中美CPI周三出炉；新一轮财报季开启</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-11-晚间版.html">← 2026-10-11-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-12 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

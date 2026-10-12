@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-10-12</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 12 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：算力军备再加码——Anthropic 被曝悄然与 IREN 签下云协议、数据中心租赁盘子约 5300 亿美元，亚马逊则洽谈约 70 亿美元收购「让芯片跑得更快」的 Decart；另一边，乌克兰无人机四天内第三次击中 Yandex 数据中心，AI 基础设施在战争中的脆弱性暴露无遗。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Anthropic 被曝与 IREN 签下未公开云协议：数据中心租赁盘子约 5300 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（美东时间；The Information 发布、Techmeme 当日收录；原文未注具体时刻）</p>
+<p>The Information 报道，Anthropic 已悄然与矿企转型的 AI 云厂商 IREN 签下多年期云协议，金额与期限未披露；报道称分析师测算其一年内签下的数据中心租赁协议总额已约 5300 亿美元。测算还显示，一座 245 兆瓦站点满负荷运行的月收入可达约 13 亿美元——这正是 Anthropic 施压合作方加速施工的原因，其算力版图愈发依赖 Hut 8、TeraWulf、IREN 等「挖矿转云」企业。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theinformation.com/articles/attractive-economics-behind-anthropic-data-center-sprint" target="_blank" rel="noopener">The Information · The Attractive Economics Behind Anthropic Data Center Sprint</a>
+<span class="sep">·</span>
+<a href="https://www.techmeme.com/261011/p9" target="_blank" rel="noopener">Techmeme · 同日收录</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>亚马逊洽谈约 70 亿美元收购 Decart，Anthropic 尽调后曾放弃</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（美东时间；《华尔街日报》当日独家报道，路透社等跟进；原文未注具体时刻）</p>
+<p>《华尔街日报》报道，亚马逊正洽谈收购旧金山 AI 初创公司 Decart，交易估值约 70 亿美元；若谈判不破裂且无新竞购方，交易可能很快达成。Decart 的软件可让开发者在不同 AI 芯片之间无缝切换调度，5 月融资时估值约 40 亿美元、英伟达亦参投；此前 Anthropic 曾洽购约 60 亿美元、9 月尽调后放弃。亚马逊与 Decart 均未置评。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad" target="_blank" rel="noopener">WSJ · Amazon in Talks to Buy AI Startup Decart for Around $7 Billion</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L917OGDD0511B8LM.html" target="_blank" rel="noopener">IT之家（网易转载）· Anthropic放弃后，消息称亚马逊洽谈收购AI初创公司Decart</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>乌克兰无人机四天内第三次击中 Yandex 数据中心，80 多项云服务中断</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（俄罗斯当地时间凌晨遭袭、Yandex 当日声明确认；路透社等当日报道，原文未注具体时刻）</p>
+<p>Yandex 表示，其位于弗拉基米尔州的数据中心遭无人机袭击、运营完全停止，80 多项云服务受影响（含 YandexGPT API），多地用户报告 YandexPay、音乐与打车等应用异常。这是四天内第三座遇袭的 Yandex 大型数据中心：此前萨索沃站点放置着其 3 台 AI 训练超算中的 2 台。据 Tom’s Hardware 援引 Cloudflare 数据，俄方机器人流量一度近乎清零。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.aljazeera.com/news/2026/10/11/russias-yandex-says-data-centre-in-vladimir-shut-down-after-drone-attack" target="_blank" rel="noopener">路透社（经半岛电视台转载）· Russia’s Yandex says data centre in Vladimir shut down after drone attack</a>
+<span class="sep">·</span>
+<a href="https://def.ltn.com.tw/article/breakingnews/5602785" target="_blank" rel="noopener">自由时报 · 俄羅斯Yandex又遭烏克蘭無人機攻擊 資料中心停擺</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>彭博：苹果 10 月 13 日发布智能家居中枢 HomeView，11 月中旬上市</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月11日 10:02 前后（古尔曼 X 帖与彭博 Power On 发布时间戳；对应北京时间 22:02）</p>
+<p>彭博社古尔曼披露：苹果将在 10 月 13 日「欢迎回家」发布会上推出 6 英寸屏、A18 芯片的智能家居中枢 HomeView——以 Siri 语音交互为核心、不设 App Store、仅运行少量苹果自家应用，预计 11 月中旬出货；新一代 Apple TV 4K 与 HomePod mini 将于 10 月 30 日发货、本周开启预售。此前消息称该中枢将搭配 LG 制造配件、或由 ADT 提供安装服务。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bloomberg.com/news/newsletters/2026-10-11/apple-smart-home-launch-oct-13-plans-homeview-has-mid-november-release" target="_blank" rel="noopener">彭博社 · A look at Apple’s smart home strategy, centered on a HomeView display hub（Power On 专栏）</a>
+<span class="sep">·</span>
+<a href="https://www.macrumors.com/2026/10/11/apple-homeview-smart-home-hub-ship-next-month/" target="_blank" rel="noopener">MacRumors · Apple HomeView Smart Hub to Ship in Mid-November in Four Colors</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>英国 AI 大臣将发表演讲：不能完全依赖科技公司自查模型安全</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（英国时间；《卫报》当日发布报道、演讲定于当日举行；原文未注具体时刻）</p>
+<p>据《卫报》，英国 AI 大臣 Kanishka Narayan 将在伦敦西部发表演讲：政府不能完全依赖科技公司监管其自有模型，呼吁前沿 AI 公司加大安全投入，并主张建设英国本土 AI 基础设施。这被视为英国将 AI 列为内阁级职责后的首场政策讲话，正值多国讨论国际 AI 安全标准之际（涉及芬兰、法国、德国、澳大利亚、新加坡、阿联酋、爱尔兰等）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theguardian.com/technology/2026/oct/12/uk-strengthen-cyber-defences-minister-ai-firms-safety" target="_blank" rel="noopener">卫报 · UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>英伟达被曝停产 RTX 5090：GB202 产能全面转向 AI 专业卡</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日（曝料帖最早出现，美东时间）；10月11日（VideoCardz、HotHardware 等媒体跟进报道）</p>
+<p>硬件博主 MEGAsizeGPU 与 hongxing2020 曝出工厂通知：英伟达将停售全部 RTX 5090（含中国特供 D 版本），GB202 芯片今后仅供 RTX Pro 专业卡，最高端 GeForce 将让位 24GB 版 RTX 5080、16GB 版停售。媒体分析称此举意在把晶圆产能让给利润更高的数据中心与专业加速器；英伟达未确认该传闻。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://videocardz.com/newz/nvidia-reportedly-discontinuing-rtx-5090-gb202-gpus-to-be-reserved-for-rtx-pro-series" target="_blank" rel="noopener">VideoCardz · NVIDIA reportedly discontinuing RTX 5090, GB202 GPUs to be reserved for RTX PRO series</a>
+<span class="sep">·</span>
+<a href="https://hothardware.com/news/nvidia-may-scrap-rtx-5090-production-feed-surging-ai-demand" target="_blank" rel="noopener">HotHardware · NVIDIA May Scrap RTX 5090 Production To Feed Surging AI Demand</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>FT：机器人与物理 AI 融资约 480 亿美元，「机器人健身房」成数据新基建</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（英国时间；FT 发布、Techmeme 当日收录；原文未注具体时刻）</p>
+<p>《金融时报》援引 PitchBook 数据：机器人与物理 AI 初创公司今年累计融资约 480 亿美元，行业瓶颈正从硬件转向「真实人类干活」的训练视频。Physical Intelligence、Skild AI、NEURA Robotics 等实验室一边在工厂、办公室与家庭拍摄人类日常动作，一边搭建受控采集的「机器人健身房」，以训练通用机器人模型。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ft.com/content/e5fd2655-f95f-4183-9dd9-b3c1ebe67a6b" target="_blank" rel="noopener">FT · Inside the ‘robot gyms’ training machines for the real world</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/alerts/ft-robotics-and-physical-ai-labs-raise-48b-ytd-on-data-hunt" target="_blank" rel="noopener">AI Weekly · FT: Robotics and Physical AI Labs Raise ~$48B YTD on Data Hunt</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>美国两党法案拟为 AI 数据中心能源开辟审批「快车道」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（美东时间；《财富》报道；原文未注具体时刻）</p>
+<p>《财富》报道，美国参议院两党小组推动《两党美国可负担性与就业法案》（BAAJA）：为太阳能电站、输电线路与油气管道等 AI 数据中心所需能源基建加速审批，收窄环境审查、把诉讼限制在联邦法院并增加许可撤销难度。化石能源与可再生能源行业罕见地共同支持，环保组织批评其「掏空基础保护」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://fortune.com/2026/10/11/energy-permitting-ai-fossil-fuels-clean-power-environmentalists" target="_blank" rel="noopener">Fortune · Bipartisan energy bill fast-tracks permits for AI data centers</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/alerts/senate-four-corners-push-permit-bill-to-power-ai-data-centers" target="_blank" rel="noopener">AI Weekly · Senate four corners push permit bill to power AI data centers</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Sakana AI 评测「AI 审稿系统」：抓住 73% 核心论断错误，真论文仍是硬骨头</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月10日（MarkTechPost 报道日；论文与评测数据发布于此前，原文未注具体时刻）</p>
+<p>Sakana AI 公布多层级评审系统 MLR：由附录、文献综述与三轮评审等多个 Claude Agent 组成，在 257 篇论文、1164 处植入错误的基准中抓住 73.43% 的核心论断错误，远超最佳基线（14.81%）；但对真实撤稿论文中的问题，检出率降至 16.11%。研究者承认，让 AI 可靠「把关」科学仍不现实（据论文，单篇评审成本约 0.47 美元）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors" target="_blank" rel="noopener">MarkTechPost · Sakana AI’s LLM Peer Review System Catches 73% of Core-Claim Errors</a>
+<span class="sep">·</span>
+<a href="https://www.techaimag.com/ai-news/sakana-ais-review-system-achieves-73-error-detection-rate" target="_blank" rel="noopener">TechAIMag · Sakana AI peer-review bot catches 73% of planted paper errors</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>The Verge：「超级智能」改名潮席卷硅谷</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月11日（美东时间；The Verge 发布；原文未注具体时刻）</p>
+<p>The Verge 综述：自特朗普政府 9 月底推动官方改称「超级智能」（SI）后，马斯克把 SpaceXAI 改名 SpaceXSI、Salesforce 把 AIForce 改为 SIForce；黄仁勋与纳德拉也相继在官方表述中采用 SI（纳德拉在「紧急刹车」帖中反复使用该词）。文章称这让外界担心硅谷为迎合白宫在关键命名上「改口」，评论者嘲讽其为表演性讨好。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai" target="_blank" rel="noopener">The Verge · Silicon Valley is falling in line with Trump’s attempt to rename AI</a>
+<span class="sep">·</span>
+<a href="https://www.businessinsider.com/trump-ai-rebrand-elon-musk-marc-benioff-2026-10" target="_blank" rel="noopener">Business Insider · Trump’s AI rebrand is catching on with Elon Musk and Marc Benioff</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-11-晚间版.html">← 2026-10-11-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-12 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
