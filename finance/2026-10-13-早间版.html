@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 13 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：美联储票委哈玛克称利率需“进一步上调”、倾向更小步更频繁加息；胡塞再称导弹袭击利雅得机场、卡塔尔航空停飞相关航班，布伦特原油收创近一个月新高；美股涨跌互现，能源与航运ETF创历史新高，金价冲高回落、美元指数升至逾三个月高点。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美联储票委哈玛克：利率需要进一步上调，倾向于幅度更小、频率更高的加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（美东时间，讲话于全美商业经济学家协会NABE年会；财联社北京时间10月13日 00:44 发快讯，原文未注讲话具体时刻）</p>
+<p>摘要：2026年FOMC票委、克利夫兰联储主席哈玛克表示，“利率需要进一步上调”，当前政策的限制性还不够，通胀回归速度过慢、高通胀风险仍在上升；她倾向以更频繁、幅度更小的方式调整利率，以降低通胀心态固化的风险。据华尔街见闻，哈玛克认为通胀压力已从能源扩散至关税成本与AI基建需求，但未明确支持10月加息。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502769" target="_blank" rel="noopener">财联社 · 美联储哈玛克：利率需要进一步上调</a>
+<span class="sep">·</span>
+<a href="https://wallstreetcn.com/articles/3783474" target="_blank" rel="noopener">华尔街见闻 · 美联储今年票委哈玛克：抗通胀需更快、更频繁小幅调整利率，警惕通胀预期固化</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>俄副总理诺瓦克：俄美企业已开始就柴油供应交易谈判，或恢复每月供应350万吨</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（当地时间；财联社10月13日 06:07 收录于隔夜要闻，原文未注具体时刻）</p>
+<p>摘要：俄罗斯副总理诺瓦克表示，俄罗斯和美国的企业已开始就柴油供应交易进行谈判，俄未来可能向全球市场每月供应350万吨柴油、恢复到此前的供应水平。背景是俄政府已宣布部分解除柴油出口禁令、首阶段允许向国际市场供应50万吨（10月10日生效），作为俄美元首协议的一部分。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502817" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/world/2026-10-13/doc-iniuzqsm5016031.shtml" target="_blank" rel="noopener">新浪财经 · 10月13日隔夜要闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>胡塞武装称再以弹道导弹袭击利雅得机场，卡塔尔航空暂停往返利雅得、达曼航班</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日晚间（当地时间；财联社10月13日 06:07 收录于隔夜要闻）</p>
+<p>摘要：也门胡塞武装军事发言人萨雷亚12日晚发表声明称，当天晚间使用一枚弹道导弹袭击沙特首都利雅得的哈立德国王国际机场，并声称“精准命中目标”。卡塔尔航空公司发布旅行警示，宣布暂时停飞往返沙特利雅得和达曼的航班。此前该机场10日、11日连续遇袭，两次袭击共造成14人死亡、300余人受伤。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502817" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://tidenews.com.cn/news.html?id=3583362" target="_blank" rel="noopener">潮新闻 · 胡塞武装称再次袭击沙特机场和空军基地</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>中国物流与采购联合会：9月中国电商物流指数111.9点，环比回升0.4点</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（北京时间；财联社06:16快讯，央视新闻当日早晨发布）</p>
+<p>摘要：中国物流与采购联合会10月13日发布9月份中国电商物流指数：指数为111.9点，环比回升0.4点。分项中总业务量指数、农村业务量指数、库存周转率指数、物流时效指数、履约率指数、满意率指数等多个指数有所回升，线上消费需求集中释放，电商物流运行保持向好态势。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/7x24/2026-10-13/doc-iniuzkkt7212244.shtml" target="_blank" rel="noopener">新浪财经7x24 · 消费订单回暖 9月份中国电商物流指数小幅上行</a>
+<span class="sep">·</span>
+<a href="http://www.eeo.com.cn/2026/1013/1061863.shtml" target="_blank" rel="noopener">经济观察网 · 消费订单回暖 9月份中国电商物流指数小幅上行</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>国恩股份：拟15.04亿元收购中氟能80%股权，切入高纯电子特气领域</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（北京时间晚间；上海证券报22:11发稿）</p>
+<p>摘要：国恩股份（002768）公告，以现金15.04亿元收购四川中氟能新材料科技有限公司80%股权，交易完成后中氟能将成为其控股子公司。中氟能主营六氟化硫（SF6）、四氟化碳（CF4）、三氟化氮（NF3）等电子特气，应用于高压电力设施、先进制造、显示面板等；公司称此举将切入高壁垒、高附加值的高纯电子特气领域，与现有家电、汽车等业务形成周期互补。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.sohu.com/a/1086872972_120988576" target="_blank" rel="noopener">上海证券报（搜狐）· 国恩股份：拟15.04亿元收购中氟能80%股权</a>
+<span class="sep">·</span>
+<a href="https://finance.ifeng.com/c/8xAXbNJpHuX" target="_blank" rel="noopener">凤凰网（证券时报·人民财讯）· 国恩股份：拟15.04亿元收购中氟能80%股权，助力公司切入高纯电子特气领域</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>美股周一收盘涨跌不一：道指涨0.38%报51850.55点，能源与航运ETF创历史新高、存储光通信回吐</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月12日 16:00 收盘（北京时间10月13日 04:00；财联社10月13日 06:32 发稿）</p>
+<p>摘要：道指涨0.38%报51,850.55点；标普500指数跌0.06%报7,807.24点；纳指跌0.44%报27,245.90点。受中东、俄乌局势刺激，能源ETF（XLE）与全球航运ETF（BOAT）续创历史新高、油运股集体大涨；存储、光通信板块回吐（Ciena跌9.95%、康宁跌6%）。纳斯达克中国金龙指数跌0.38%，当日美股成交量创2026年新低，市场等待新一轮财报季揭幕。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502814" target="_blank" rel="noopener">财联社 · 美股收盘：本轮牛市平淡度过四周年节点 能源、航运ETF创历史新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>国际油价收涨：布油涨1.84%报106.65美元创近一个月新高；霍尔木兹海峡一油轮被不明弹丸击中</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（美东收盘，北京时间10月13日凌晨；汇通网快讯10月13日 02:32—03:42 发布）</p>
+<p>摘要：WTI 11月原油期货收涨1.89美元、涨幅2.06%，报93.74美元/桶；布伦特12月期货收涨1.93美元、涨幅1.84%，报106.65美元/桶、创近一个月新高，针对沙特的袭击影响盖过了供应增加预期。另据英国海军10月13日凌晨消息，霍尔木兹海峡内一艘原油运输船被来历不明的弹丸击中，具体起因与损失尚待披露。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://quote.fx678.com/symbol/OILC" target="_blank" rel="noopener">汇通网 · 布伦特原油行情与7x24快讯（10月13日）</a>
+<span class="sep">·</span>
+<a href="https://news.futunn.com/post/1000924910/october-13-financial-morning-brief-gold-prices-face-a-decisive" target="_blank" rel="noopener">富途牛牛（汇通财经）· 10月13日财经早餐：金价多空决战4200关口，地缘风险外溢担忧，布油创近一个月新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Meta发布Muse Wonder系列AI模型，称已跻身AI前沿，股价逆势涨3.38%</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（美东时间，周一；财联社10月13日 06:07 收录于隔夜要闻）</p>
+<p>摘要：Meta当地时间周一发布Muse Wonder和Muse Wonder Full两款人工智能模型，公司称新模型在部分智能体、编程和知识工作基准测试中达到或超过主要竞争对手的水平、已具备“前沿级能力”（称历经14个月攻坚）。受此带动，Meta股价周一逆势上涨3.38%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502817" target="_blank" rel="noopener">财联社 · 周二你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/world/2026-10-13/doc-iniuzqsm5016031.shtml" target="_blank" rel="noopener">新浪财经 · 10月13日隔夜要闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>微软宣布自2027年起多吉瓦部署自研AI芯片、市值重上4万亿美元；英伟达与思科合作开发USFP光模块</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（美东时间，周一；财联社10月13日 06:32 收盘报道收录）</p>
+<p>摘要：微软宣布计划从2027年起将自研Azure Maia芯片系统扩展至多吉瓦部署规模、作为其产品和服务的主要AI推理系统，新一代Maia 300芯片将于明年开始部署；微软股价周一小幅走高，市值自去年10月以来首次重新站上4万亿美元。同日英伟达与思科宣布合作开发USFP超高密度小型可插拔光模块规格，以提高网络连接密度与能效。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2502814" target="_blank" rel="noopener">财联社 · 美股收盘：本轮牛市平淡度过四周年节点 能源、航运ETF创历史新高</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>金价冲高回落退守4200美元下方、美元指数升至逾三个月高点；市场聚焦美国通胀数据与议息前景</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（美东交易时段）至10月13日亚市早盘（北京时间；汇通财经早餐10月13日 07:31 发布）</p>
+<p>摘要：现货黄金周一触及一周高位4217.17美元/盎司后回落，10月13日亚市早盘交投于4174美元/盎司附近，美元走强与油价走高构成压制。彭博美元指数升至逾三个月高点（因油价上涨加剧通胀担忧），欧元跌至1.1156美元、逼近17个月低点。汇通财经称，市场预计美联储10月按兵不动概率约78%，焦点转向本周美国通胀数据与财报季。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.futunn.com/post/1000924910/october-13-financial-morning-brief-gold-prices-face-a-decisive" target="_blank" rel="noopener">富途牛牛（汇通财经）· 10月13日财经早餐：金价多空决战4200关口，地缘风险外溢担忧，布油创近一个月新高</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/world/2026-10-13/doc-iniuzqsm5016031.shtml" target="_blank" rel="noopener">新浪财经 · 10月13日隔夜要闻：纽约汇市：彭博美元指数升至逾三个月高点 因油价上涨加剧通胀担忧</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-12-晚间版.html">← 2026-10-12-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-13 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

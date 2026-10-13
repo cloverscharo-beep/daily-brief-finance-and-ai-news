@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-10-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 13 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Meta 携 Muse Wonder 双模型冲入前沿第一梯队，微软第三代自研芯片 Maia 300 定档 2027，英伟达在 OCP 峰会开源 Vera Rubin 机架设计；DeepSeek 领投前腾讯科学家创立的机器人创企 Winverse AI，把棋子摆向具身智能。安全侧，Anthropic 红队警告：小模型或已临近可在智能家电上「自我复制」的门槛。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">7 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Meta 发布 Muse Wonder / Muse Wonder Full：14 个月后重回前沿，直逼 Claude Opus 5.5</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日下午（扎克伯格当日发帖官宣；财联社北京时间 10月13日 01:01 电）</p>
+<p>Meta 官宣两款新模型 Muse Wonder 与 Muse Wonder Full，主打「主动记忆」（跨对话延续上下文）与「主动聚焦」（长任务持续推进），均支持 100 万 token，已上线 Meta 模型 API 与编程 Agent Muse Code（Full 仅限 Muse Code 订阅）。据 Artificial Analysis 智能指数，Full 版得 56 分、仅次于 Claude Opus 5.5（58 分）、高于 OpenAI 与谷歌最强模型（均 53 分），标准版 52 分；标准版 API 定价每百万输入/输出 token 4 / 20 美元。首日 Muse Code 额度消耗异常，Meta 首席 AI 官 Alexandr Wang 承认「算错了」并将重置额度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://about.fb.com/news/2026/10/introducing-muse-wonder-models" target="_blank" rel="noopener">Meta Newsroom · Introducing Muse Wonder and Muse Wonder Full</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.com.cn/tech/roll/2026-10-13/doc-iniuzkks0452829.shtml" target="_blank" rel="noopener">新浪科技 · 刚刚，Meta 发布 Muse Wonder！性能直逼 Claude，反超 OpenAI、谷歌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>微软官宣 Azure Maia 300：第三代自研芯片 2027 年投产，主攻推理</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日（微软官方博客发布、CNBC 当日报道；原文未注具体时刻）</p>
+<p>微软发布第三代自研 AI 加速器 Maia 300：台积电 N2P 工艺、多芯粒设计，单颗集成 8 组 HBM4、288GB 显存与 18TB/s 带宽（约为 Maia 200 的 2.5 倍）；每机架可装 96 颗、功耗 167kW，机架级 token 吞吐最高为 Maia 200 的 7 倍，微软称每兆瓦有效算力较「领先的 GPU 系统」高约 40%（未点名对比对象）。Maia 300 将于 2027 年起生产部署、扩展至多吉瓦规模，并将成为微软自有产品与 API 服务背后的主要推理系统。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments" target="_blank" rel="noopener">The Official Microsoft Blog · Microsoft to expand Azure Maia system to multi-gigawatt deployments</a>
+<span class="sep">·</span>
+<a href="https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html" target="_blank" rel="noopener">CNBC · Microsoft will mainly use its Maia chips for AI inference</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>英伟达在 OCP 峰会开源 Vera Rubin 机架设计，Meta 站台 Spectrum-6</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日（OCP 全球峰会，圣何塞；原文未注具体时刻）</p>
+<p>英伟达在 OCP 全球峰会上通过 MGX 1.2 架构向开放计算项目贡献 Vera Rubin 机架与计算托盘设计，支持 250kW 机架与盲插液冷；并联合 AMD、谷歌、Meta 发布《开放数据中心规范 v0.7》，开源 4 个 DSX 组件（配置、集群就绪、机架管理、裸金属供给）。Meta 同日承诺采用英伟达 Spectrum-6 以太网交换机建设 10 万+ GPU 级 AI 工厂；英伟达还与思科联合推出 400Gb/s 每通道的 USFP 可插拔光模块规格。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/" target="_blank" rel="noopener">NVIDIA 官方博客 · OCP Global Summit：开源 Vera Rubin 机架设计（MGX 1.2）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Anthropic 红队研究：小模型「或已临近」在智能家电上自我复制</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日（Anthropic 研究博客发布日；原文未注具体时刻）</p>
+<p>Anthropic Frontier 红队发文称，小型 AI 模型可能「数月内」就具备在商用 IoT 设备（如智能烤箱、杂牌 Android 电视盒子）上自我复制的能力，且因没有中心节点而难以关停。实验显示：9B 模型已在 9 类硬件中的 8 类跑通推理；团队用 15 台约 55 美元的电视盒分布式运行 26B 模型（0.39 tokens/秒）；唯一完成端到端复制的是开源模型 GLM-5.2（5 次试验有 4 次扩散至全部 8 个节点）。研究强调测试中攻击步骤被刻意简化，结果为现实成功率的「上界」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/research/self-replicating-ai" target="_blank" rel="noopener">Anthropic · AI models may be capable of self-replicating without access to a datacenter</a>
+<span class="sep">·</span>
+<a href="https://www.unite.ai/anthropic-red-team-says-small-ai-models-may-soon-replicate-on-iot-devices" target="_blank" rel="noopener">Unite.AI · Anthropic Red Team Says Small AI Models May Soon Replicate on IoT Devices</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>智谱发布并灰度 GLM-Legal：瞄准真实律所工作流</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（Z.ai 官方博客标注日期；原文未注具体时刻）</p>
+<p>智谱（Z.ai）发布法律领域模型 GLM-Legal，基于 GLM-5.3-Flash 构建，覆盖合同审查、证据分析、合规等场景。官方称其在 Harvey LAB 覆盖 24 个法律业务领域的真实律所工作流评测中，端到端任务全部通过率达 19.2%、较基座模型提升 12.5 个百分点并超越 Claude Fable 5，在 LegalBench、PLawBench 上比肩前沿闭源模型。目前以设计合作方式开放 API 申请，后续将进入 AutoClaw 桌面端。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://z.ai/blog/glm-legal" target="_blank" rel="noopener">Z.ai · GLM-Legal: Advancing Agentic Legal Intelligence</a>
+<span class="sep">·</span>
+<a href="https://iaipie.com/2026%e5%b9%b410%e6%9c%8813%e6%97%a5ai%e8%a1%8c%e4%b8%9a%e8%b5%84%e8%ae%af%e9%80%9f%e8%a7%88" target="_blank" rel="noopener">无矩AI · 2026年10月13日AI行业资讯速览</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>谷歌：Skills 今日起登陆 Gemini App，将逐步取代 Gems</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（谷歌公告的推送起始日期；原文未注具体时刻）</p>
+<p>据谷歌 Workspace 更新公告，可复用的自定义指令「Skills」自 10 月 13 日起开始向 Gemini App 全量推送（预计 11 月中旬完成；Workspace 端已于 10 月 5 日起推送）。11 月 17 日起 Gems 移入设置面板、仍可使用；2027 年 3 月 1 日之后企业版将无法再创建或使用 Gems，残留 Gems 会自动迁移为草稿 Skills。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html" target="_blank" rel="noopener">Google Workspace Updates · Introducing skills in the Gemini app and Workspace, plus what&#x27;s next for Gems</a>
+<span class="sep">·</span>
+<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills" target="_blank" rel="noopener">Google Workspace Help · About the transition from Gems to skills</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>模思智能完成超 10 亿元 Pre-A 轮：复旦邱锡鹏押注「全模态实时交互」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（公司官宣；原文未注具体时刻）</p>
+<p>模思智能（MOSI）宣布完成超 10 亿元 Pre-A 轮融资，由华控基金领投，国开科创、上海科创基金、新微资本、徐汇资本、追光硬科技创投、临港策源基金等参与，元禾控股、上海科创集团、星连资本等老股东跟投；资金将用于全模态实时交互智能研发与全球商业化。公司孵化于复旦大学教授、MOSS 团队负责人邱锡鹏带领的 OpenMOSS 团队，距其数亿元天使轮披露仅半年；其方向对标「下一代 GPT」式的持续交互能力。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chinaventure.com.cn/news/80-20261012-393569.html" target="_blank" rel="noopener">投中网 · 独家｜复旦邱锡鹏终于出山，又融10个亿</a>
+<span class="sep">·</span>
+<a href="https://k.sina.com.cn/article_5953466437_162dab0450670bepws.html" target="_blank" rel="noopener">上观新闻（新浪转载）· 模思智能完成超10亿元Pre-A轮融资</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">3 条</span></h2>
+<article class="item"><div class="row1"><span class="num">8</span><h3>彭博：DeepSeek 领投机器人创企 Winverse AI，投后估值约 4 亿美元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月12日19:42（彭博原文标注 UTC 时间 11:42）</p>
+<p>彭博报道，DeepSeek 已同意领投杭州机器人 AI 初创公司 Winverse AI 的种子轮（规模数千万美元），投后估值约 4 亿美元；美团旗下龙珠资本亦承诺出资。创始人胡晗为清华大学博士，曾任腾讯科学家、主导视觉-语言与具身基座模型团队，今年离职创业。这是 DeepSeek 继 2.31% 入股宇树科技后的第二笔机器人押注；其新一轮融资接近完成、规模或超 800 亿元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.bloomberg.com/news/articles/2026-10-12/deepseek-backs-ex-tencent-ai-scientist-s-400-million-robot-lab" target="_blank" rel="noopener">Bloomberg · DeepSeek Backs Ex-Tencent AI Scientist&#x27;s $400 Million Robot Lab</a>
+<span class="sep">·</span>
+<a href="https://www.investing.com/news/stock-market-news/deepseek-to-lead-funding-round-for-robotics-ai-startup-winverse-at-400-mln--report-93CH-4944293" target="_blank" rel="noopener">Investing.com · DeepSeek to lead funding round for robotics AI startup Winverse at $400 mln</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>Linus Torvalds 用 Claude Code 写内核补丁：小读吞吐近 3 倍</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日（Phoronix 报道；补丁分支经 Linux 邮件列表披露；原文未注具体时刻）</p>
+<p>Linus Torvalds 推送实验分支 noref-filemap-read-with-llm，重写页缓存小读路径以消除 folio 引用计数争用（改用 RCU）；其笔记本 8 线程基准下，小读吞吐从约 1000 万次/秒提升至 3300 万次/秒，单次读内核周期从约 2950 降至 725。他在补丁信中明确：代码、测试程序、问题清单评审与信初稿均由 Claude Code 在其指导下完成，测量由本人执行。分支基于 7.3-rc6，尚未合并。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.phoronix.com/news/Linus-Torvalds-Claude-Code" target="_blank" rel="noopener">Phoronix · Linus Torvalds Working On A Hefty Linux Kernel Improvement With Claude Code</a>
+<span class="sep">·</span>
+<a href="https://hwbusters.com/news/linus-torvalds-uses-claude-code-to-rework-the-linux-page-cache-tripling-small-read-throughput/" target="_blank" rel="noopener">Hardware Busters · Linus Torvalds Uses Claude Code to Rework the Linux Page Cache</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>腾讯被曝开发 Personal Agent 独立 App「元宝助手」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月12日（据《读佳》独家报道、PANews 转引；原文未注具体时刻）</p>
+<p>据《读佳》报道，腾讯元宝正在开发 Personal Agent 产品「元宝助手」，并计划推出独立 App，给予其独立于元宝主 App 的运行空间与权限，用于承载长周期任务、个人长期记忆等 Agent 核心能力；腾讯内部含社交在内的多个业务部门也在研发相关产品或功能。国内「个人智能体」竞争正密集升温：字节「小豆」、蚂蚁灵光新功能、千问 Personal Agent 计划接连曝光。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L92RC1H20511D2LM.html" target="_blank" rel="noopener">网易（读佳转载）· 腾讯Personal Agent产品「元宝助手」曝光</a>
+<span class="sep">·</span>
+<a href="https://tw.tradingview.com/news/panews:23d884cb1acdf:0" target="_blank" rel="noopener">PANews（TradingView）· 腾讯将推出「元宝助手」App</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-12-晚间版.html">← 2026-10-12-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-13 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
