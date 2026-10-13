@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-10-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 13 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：阶跃终端 19 时在上海发布首款大模型原生智能体手机 STEPX Neo，「智能体手机」从概念走向真机；资本面上，DeepSeek 二轮融资据报翻倍至约 1000 亿元、投前估值约 5000 亿元，Anthropic 首座日本数据中心（大阪、500MW）也接近敲定。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>阶跃终端 STEPX Neo 上海发布：首款大模型原生智能体手机正式推出</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月13日19:00（发布会预定时间；定档信息于10月8日官宣）</p>
+<p>阶跃终端当日晚在上海举办「Ready Builder One」发布会，推出首款大模型原生智能体手机 STEPX Neo。该机运行智能体原生系统 Step AOS、内置个人智能体 Amoo，可读取飞书等应用的日历与群消息、经用户授权后按个人风格生成汇报 PPT 并同步修改日程；已通过网信备案（9月23日）、工信部入网许可（9月底），并获首批《人工智能终端智能化分级》国标 L3 级认证，生态伙伴包括支付宝、美团、滴滴、WPS、携程、百度、京东等。官方此前预告本次将公布最终售价、版本配置与开售时间；截至本版发稿，发布会细节与售价信息尚待公开报道。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/tech/mobile/n/n/2026-10-08/doc-iniunmim4467070.shtml" target="_blank" rel="noopener">新浪科技 · 大模型原生智能体手机STEPX Neo将于10月13日正式发布</a>
+<span class="sep">·</span>
+<a href="https://www.chinaz.com/feed/1008/1780648.shtml" target="_blank" rel="noopener">站长之家 · 阶跃大模型原生智能体手机STEPX Neo官宣10月13日发布</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>Anthropic 首座日本数据中心将落地大阪：与 NTT DATA 谈妥在即，规模 500MW</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：日本时间 10月13日（《日经亚洲》当地时间当日报道；原文未注具体时刻；IT之家 14:18 编发）</p>
+<p>《日经亚洲》报道，Anthropic 与 NTT DATA 围绕其首座日本本土数据中心的谈判已进入最后阶段。设施将落户大阪、预计规模达 500MW，仅建设成本即超 1 万亿日元（约合 423 亿元人民币），后续还将配置大量高价值芯片；双方预计在本财年内达成最终协议，最早 2028 年部分投运。报道称该数据中心初期将采用表后供电（如燃料电池等现场发电方式），为配套电力基础设施的就位留出更多时间。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/012/333.htm" target="_blank" rel="noopener">IT之家 · 消息称 Anthropic 即将谈妥其首座日本数据中心：500MW 规模，落地大阪</a>
+<span class="sep">·</span>
+<a href="https://news.aibase.com/zh/news/31605" target="_blank" rel="noopener">aibase · 落子大阪：Anthropic 首座日本数据中心谈妥在即</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>DeepSeek 二轮融资规模翻倍至约 1000 亿元，投前估值约 5000 亿元</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月13日（凤凰网科技援引《财经》报道；原文未注具体时刻）</p>
+<p>据《财经》援引多位参与交易人士，DeepSeek 最新一轮融资已临近完成，融资金额从此前计划的 500 亿元增至约 1000 亿元、不到半个月拟募资翻倍；投前估值仍约 5000 亿元。新进投资方以产业资本为主，包括石溪资本、中芯聚源、CPE 源峰、君联资本、吉利等；宁德时代拟加码至约 100 亿元，腾讯、IDG 资本等首轮股东继续参与。融资之外，DeepSeek 也在筹备科创板上市：已聘请中信证券，计划最快 2026 年末递表、2027 年挂牌。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_1704103183_65928d0f0200bes2o.html?from=finance" target="_blank" rel="noopener">新浪（凤凰网科技）· 消息称 DeepSeek 二轮融资增至 1000 亿元，投前估值约 5000 亿元</a>
+<span class="sep">·</span>
+<a href="https://m.36kr.com/p/4015344253210761" target="_blank" rel="noopener">36氪 · 梁文锋一出手，DeepSeek 就融了上千亿？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>OpenAI 拟「复活」Sora：移交卡岑伯格等创办的影视 AI 初创</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日（《The Information》报道；原文未注具体时刻；中文媒体于10月13日上午跟进，IT之家 9:38 编发）</p>
+<p>《The Information》报道，OpenAI 正与一家专注影视制作 AI 视频技术的隐身初创公司谈判，计划将已停运的视频生成模型 Sora 移交该公司，以专业影视工具的形式重返市场。该公司由好莱坞制片人、梦工厂联合创始人杰弗里·卡岑伯格、Sora 前研究负责人比尔·皮布尔斯与 Dropbox 前首席财务官苏杰·贾斯瓦创办，名称尚未公开；双方合作条款未敲定，尚不清楚初创公司能否获得 Sora 的模型权重，若交易达成 OpenAI 将获得新公司部分股权。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/012/168.htm" target="_blank" rel="noopener">IT之家 · 消息称 OpenAI 计划「复活」Sora：换赛道进军 AI 专业影视工具</a>
+<span class="sep">·</span>
+<a href="https://news.qq.com/rain/a/20261013A04KWD00" target="_blank" rel="noopener">机器之心（腾讯新闻）· 关停半年后，OpenAI 要复活 Sora？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>微软市值重返 4 万亿美元：Maia 300 提振股价，芯片股集体承压</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月12日美股交易时段（中国证券报 10月13日 07:07 报道；原文未注具体时刻）</p>
+<p>美东10月12日美股三大指数收盘涨跌不一，科技板块内部分化：微软收涨 1.14%、总市值重返 4 万亿美元上方，消息面上公司当日公布第三代自研 AI 芯片 Maia 300 及数吉瓦级部署计划（详见早间版）；同日费城半导体指数下跌 2.67%，美光科技跌 3.88%、AMD 跌 2.28%、博通跌 1.88%、英伟达跌 1.29%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.sina.com.cn/roll/2026-10-13/doc-iniuzqsq0373857.shtml" target="_blank" rel="noopener">中国证券报（新浪财经）· 一则利好，微软市值重返 4 万亿美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>应用材料揭幕 50 亿美元 EPIC 中心：营收要翻倍、员工不翻倍</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（IT之家当日消息；揭幕活动与采访的具体时刻原文未注）</p>
+<p>半导体设备商应用材料（Applied Materials）在硅谷桑尼维尔揭幕投资约 50 亿美元、占地 60 万平方英尺的 EPIC 研发中心，聚焦设备与工艺创新及成果商业化，以加速面向 AI 时代的半导体工艺开发。公司首席执行官加里·迪克森在采访中表示，公司未来数年计划实现营收翻倍，但不会同步扩招员工，原因是正更多借助 AI 工具开展产品研发、质量管控等工作。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908qtrc.html?from=tech" target="_blank" rel="noopener">新浪AI热点小时报 10月13日08时（转 IT之家）· 应用材料营收翻倍不加人</a>
+<span class="sep">·</span>
+<a href="https://www.bihainews.com/bhn-bulletin/ckcj/748472.html" target="_blank" rel="noopener">币海NEWS · 应用材料在美国硅谷揭幕 50 亿美元 EPIC 中心</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">7</span><h3>IDC：英伟达在华数据中心 AI 芯片份额降至 34%，华为升至 28%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月13日上午（路透社北京电；原文未注具体时刻）</p>
+<p>路透社援引 IDC 报告：2026 年上半年英伟达在中国数据中心 AI 加速器市场份额降至 34%（出货 67.8 万颗、同比降 44%），华为以 57.2 万颗、28% 份额位居第二，其后为平头哥 7%、寒武纪 5%、百度昆仑芯 4%、海光 3%。上半年中国 AI 加速器总出货 200.8 万颗，其中 GPU 出货降 26% 至 99.1 万颗，非 GPU 加速器出货增近 80% 至 101.6 万颗、出货量首次超过 GPU；IDC 预计全年总出货增长 19%，而 GPU 出货下降 9%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.yahoo.com/technology/ai/articles/nvidias-china-ai-chip-share-023259440.html" target="_blank" rel="noopener">Reuters（经雅虎财经）· Nvidia&#x27;s China AI-chip share falls as Huawei closes gap, report finds</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>Codex CLI 被指默认常驻后台守护进程，冲上 HN 首页</h3></div>
+<span class="tag">🏷 博主解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月13日傍晚（Hacker News 讨论冲上首页，检索时 367 points、205 条评论；议题源自 GitHub 上 9月25日提交的 issue #48195；原文未注具体时刻）</p>
+<p>GitHub 上 openai/codex 仓库的 issue 指出：自 Codex CLI 0.157.0 起，打开交互式会话会默认启动常驻后台守护进程（codex app-server --managed-daemon）——它会把约 374MB 的平台包复制到 ~/.codex 目录、随会话关闭继续运行，启动每小时检查一次的自动更新循环（可能强制中断进行中的对话），还会固定首个会话的环境变量（如代理配置）。发起者建议将 daemon_auto_start 改为显式「选择加入」，相关讨论随后登上 Hacker News 首页。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://github.com/openai/codex/issues/48195" target="_blank" rel="noopener">GitHub · openai/codex Issue #48195</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=50060694" target="_blank" rel="noopener">Hacker News 讨论</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>QGIS 通过 QEP428：正式禁止 AI 生成/辅助贡献</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（Hacker News 首页讨论；提案投票于本周通过——原文未注具体时刻）</p>
+<p>开源地理信息系统 QGIS 的官方提案 QEP428「No ai contributions permitted」通过核心维护者投票（多名成员投出 +1），取代此前要求披露 AI 使用、保持「human in the loop」的 QEP408，即刻生效：不接受 LLM/AI/智能体辅助的代码贡献，事后发现将对相关代码回滚并限制贡献者权限。背景是此前约 50 个带「AI Assisted」标签的 PR 中约 40 个未获合并，维护者称 AI 生成补丁带来难以承受的评审负担；据社区整理，IDE 自动补全在开发者自行控制每一行的前提下仍被允许，政策细节或在 QGIS 用户大会上再作调整。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387" target="_blank" rel="noopener">GitHub · QEP428: No AI contributions permitted（PR #387）</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=50054751" target="_blank" rel="noopener">Hacker News 讨论</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>哈佛研究：AI 编程智能体产出更多代码，软件产出却未见增长</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（Ars Technica 报道，当日在 Hacker News 引发讨论；原文未注具体时刻）</p>
+<p>Ars Technica 报道，哈佛研究者 Fiona Chen 与 James Stratton 基于 Jellyfish 数据（3 亿条工程活动记录、700+ 家公司、70 万+ 员工，2021 年至 2026 年 3 月）发现：引入 AI 编程智能体后，代码总行数平均增加 30%、提交数增加 20%、PR 增加 23%，但 Jira 中 Issue/Epic 的解决率无显著变化；平均评审时间拉长 49%，要求修改的 PR 占比近乎翻倍、每条 PR 的评论数增加 35%，参与评审的员工占比上升 14%，且研究未发现显著就业变化。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/" target="_blank" rel="noopener">Ars Technica · AI coding agents generate more code, but not more software</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=50059523" target="_blank" rel="noopener">Hacker News 讨论</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-13-早间版.html">← 2026-10-13-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-13 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>

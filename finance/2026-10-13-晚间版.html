@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-13</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 13 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：全球存储芯片抛售席卷亚太——韩股KOSPI收跌5.46%、盘中一度重挫7%并紧急启动SIDECAR机制，日经225失守68000点；A股、港股则探底回升走出“V型”修复，沪指收复3800点。政策监管面上，央行批准威士（Visa）筹备银行卡清算机构、黄奇帆被通报接受审查调查、香港证监会因IPO操纵暂停茶百道股份交易；美股财报季开锣，摩根大通三季度营收与每股收益双双不及预期。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>央行批准威士公司筹备银行卡清算机构，维萨（Visa）入华再进一步</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 11:36（北京时间；央行当日公布，新华社、新华网同期发稿）</p>
+<p>摘要：中国人民银行10月13日对外公布，向维萨（Visa）在境内的企业法人——威士信息技术（北京）有限公司下发准予行政许可决定，批准其筹备银行卡清算机构。威士公司需在一年内完成筹备工作，之后可提交开业申请，经央行会同金融监管总局审批同意后颁发银行卡清算业务许可证。财联社援引权威专家称，这是落实中美经贸磋商成果、金融业对外开放的又一实质性举措；目前境内已有中国银联、运通、万事网联三家持牌银行卡清算机构。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.xinhuanet.com/20261013/55c125e985a44cfcb4d66f22be6bf377/c.html" target="_blank" rel="noopener">新华网 · 中国人民银行批准威士公司筹备银行卡清算机构</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2503146" target="_blank" rel="noopener">财联社 · 重磅！威士获批筹备银行卡清算机构</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>中央纪委国家监委通报：重庆市委原副书记、原市长黄奇帆接受审查调查</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 18:07（北京时间；中央纪委国家监委网站当日发布，新华网18:07转发）</p>
+<p>摘要：据中央纪委国家监委网站10月13日消息，重庆市委原副书记、市政府原市长黄奇帆涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。黄奇帆长期在上海、重庆任职，2001年任重庆市副市长，2010年至2016年任重庆市市长，因推动国资重组与金融改革被外界称为“金融市长”；卸任后曾任第十二届全国人大财政经济委员会副主任委员，并多次在经济论坛公开发声。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/20261013/7fba81a3e9a940cca80f09986a53a069/c.html" target="_blank" rel="noopener">新华网 · 重庆市委原副书记、市政府原市长黄奇帆接受审查调查</a>
+<span class="sep">·</span>
+<a href="https://news.sina.cn/gn/2026-10-13/detail-inivasec7242697.d.html" target="_blank" rel="noopener">新浪新闻 · 重磅打虎！黄奇帆被查</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>香港证监会暂停茶百道股份交易：涉嫌IPO被操纵，冻结资产逾46.6亿港元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 09:00起（香港时间；联交所暂停交易起始时点，证监会同日宣布，原文未注宣布时刻）</p>
+<p>摘要：香港证监会10月13日宣布，已对两个涉嫌在首次公开招股中“营造虚假股份需求”的集团采取执法行动，并依《证券及期货（在证券市场上市）规则》第8(1)条指示联交所自当日上午9时起暂停茶百道（02555.HK）股份交易，调查仍在进行。证监会向31家经纪行发出限制通知书，冻结相关个人及公司资产合计逾46.6亿港元（其中第一集团约43.79亿港元，为历来同类案件最高限制金额）；茶百道停牌前收报4.035港元、总市值约60亿港元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://stcn.com/article/detail/4214865.html" target="_blank" rel="noopener">证券时报 · 突发！涉嫌IPO操纵，茶百道被暂停交易</a>
+<span class="sep">·</span>
+<a href="https://m.jiemian.com/article/15185159.html" target="_blank" rel="noopener">界面新闻 · 香港证监会对涉嫌操纵首次公开招股的集团采取行动并暂停茶百道的股份交易</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>央行开展650亿元7天期逆回购，操作利率1.40%持平</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 09:26（北京时间；央行公告，人民财讯当日09:26发稿）</p>
+<p>摘要：央行公告，10月13日以固定利率、数量招标方式开展650亿元7天期逆回购操作，操作利率1.40%、与此前持平，全额满足了一级交易商需求。财联社债市早参指出，长假结束以来央行通过公开市场持续净回笼流动性（累计回收超1.26万亿元），资金面整体偏紧但短端资金利率平稳偏宽，机构配置需求仍对债市形成支撑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stcn.com/article/detail/4213737.html" target="_blank" rel="noopener">证券时报 · 央行今日开展650亿元7天期逆回购操作</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2502879" target="_blank" rel="noopener">财联社 · 债市早参10月13日｜2026金融街论坛年会下周开幕</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>A股收评：沪指探底回升收复3800点、收涨0.10%，宽基ETF放量显资金介入</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 15:00 收盘（北京时间）</p>
+<p>摘要：A股三大指数早盘低开下探（创业板指盘中跌超3%），午后探底回升、沪指率先翻红并收复3800点。截至收盘，沪指涨0.10%报3800.86点，深证成指跌0.25%报12353.70点，创业板指跌0.18%报2958.34点，全市场2909只个股上涨；沪深两市成交额16759.08亿元、较上一交易日放量约1381亿元。多只宽基ETF明显放量、显示有资金介入（易方达创业板ETF半日成交超57亿元、超过其上一日全天成交）；板块方面，元件、地面兵装、航空装备、冰雪产业、互联网电商等涨幅居前，保险、电池、风电设备走弱。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.cnfin.com/yw-lb//zixun/20261013/4480064_1.html" target="_blank" rel="noopener">新华财经 · 收评：沪指探底回升收复3800点 PCB概念股集体反弹</a>
+<span class="sep">·</span>
+<a href="http://news.10jqka.com.cn/20261013/c680627346.shtml" target="_blank" rel="noopener">券商中国（同花顺）· 临近午盘，A股突然全线拉升！发生了什么？</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>港股收评：恒指V型反转收涨0.30%，恒生科技指数跌0.79%、中际旭创H股破发</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日 16:00 收盘（北京时间）</p>
+<p>摘要：港股早盘快速回落后走出“V”型反转。截至收盘，恒生指数涨0.30%报24345.22点，恒生科技指数跌0.79%报4136.63点（早盘一度跌超2.8%、创本轮调整新低）；南向资金净卖出港股超4.5亿港元。中际旭创H股收跌1.44%报890港元、处于破发状态；航运股集体走强、中远海能涨超4%；中金公司认为恒生科技在快速回调后已再度具备短期底部特征。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.mrjjxw.com/articles/2026-10-13/4603097.html" target="_blank" rel="noopener">每日经济新闻 · V型反转、恒指终于红了！恒科“DeepSeek时刻”何时到来？</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4214486.html" target="_blank" rel="noopener">证券时报 · 港股收评：恒指收涨0.3% 恒生科技指数跌0.79%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>亚太股市重挫：韩股KOSPI收跌5.46%创逾两月新低、盘中启动SIDECAR机制，日经失守68000点</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（当地时间全天；KOSPI 15:30收盘、日经225 15:00收盘，均对应北京时间当日下午）</p>
+<p>摘要：韩国综合股价指数（KOSPI）13日盘中跌幅一度扩大至7%报5927点，韩国交易所启动SIDECAR机制、暂停KOSPI程序化卖盘；收盘下跌348.89点、跌幅5.46%报6035.35点，创7月31日以来新低，SK海力士跌10.09%、三星电子跌逾7%。日经225指数盘中一度跌逾1900点，收盘跌1253.40点（1.82%）报67777.52点、时隔约两周失守68000点；东证指数（TOPIX）微涨0.14%报4110.67点，跌势集中于半导体权重股、PRIME市场超七成个股收涨。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sohu.com/a/1087212922_655634" target="_blank" rel="noopener">观点网（搜狐）· 韩股10月13日续跌 盘中一度暂停程序化卖盘</a>
+<span class="sep">·</span>
+<a href="https://china.kyodonews.net/articles/-/16835" target="_blank" rel="noopener">共同社 · 日经指数收跌1.82% 科技股拖累大盘</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202610133893518414.html" target="_blank" rel="noopener">东方财富网（证券时报）· 韩国股市，暴跌熔断！</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>长鑫存储披露下一代DRAM技术进展，全球存储芯片股遭遇抛售潮</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（北京时间；凤凰国际财闻汇等当日报道，原文未注具体时刻；马斯克同日发文）</p>
+<p>摘要：市场将隔夜美股及日韩存储股大跌的“导火索”指向中国DRAM厂商长鑫存储（CXMT）——其披露在新一代存储芯片架构上取得关键进展、并计划年底前推出相关技术产品，彭博社报道后投资者集中减持存储芯片股：隔夜美股闪迪跌5.97%、SK海力士ADR跌超4%、美光科技跌3.88%；10月13日美股盘前，美光、闪迪、西部数据等继续走低。特斯拉CEO马斯克同日发文谈及中国制造业的规模化能力及全球存储芯片竞争格局。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://original.ifeng.com/c/8xBEyteZ7hf" target="_blank" rel="noopener">凤凰网·国际财闻汇 · 全球存储巨头集体跳水，中国芯片新进展搅动股市</a>
+<span class="sep">·</span>
+<a href="https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262211317-us-memory-stocks-premarket-micron-sandisk-wd-drop-cxmt-competition-tradingkey" target="_blank" rel="noopener">TradingKey · 美股存储板块盘前走低，美光、闪迪、西部数据集体跌超2%，长鑫存储技术进展引发竞争担忧</a>
+<span class="sep">·</span>
+<a href="https://www.moomoo.com/hans/news/post/1001010218" target="_blank" rel="noopener">moomoo（转自TechWeb）· 马斯克评中国存储芯片突破：规模化优势显著</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>大宗商品：欧盘时段现货黄金反弹至4183.5美元，油价自高位回落</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（北京时间；金价为欧盘时段18:10前后，油价为亚市早盘09:06快讯）</p>
+<p>摘要：10月13日欧盘时段，现货黄金扭转周一跌势、盘中报4183.51美元/盎司、涨0.28%，受美债收益率自高位回落及油价回调支撑；美元指数盘中下跌0.21%，投资者等待周三美国CPI及周四PPI数据。原油自前一交易日高位回落：亚市早盘布伦特原油期货跌约1%报105.58美元/桶，WTI原油期货跌0.94%报92.86美元/桶，市场继续权衡美债收益率高企与中东供应风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://oil.fx678.com/news/202610131810288815" target="_blank" rel="noopener">汇通网 · 黄金价格预测：随着美国收益率及油价回落，金价有所反弹</a>
+<span class="sep">·</span>
+<a href="https://news.caijingmobile.com/flash/detail/865171" target="_blank" rel="noopener">财经网 · 布伦特原油期货跌幅扩大至1%</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>美股财报季开锣：摩根大通三季度营收、每股收益双双不及预期</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（美东时间盘前发布，对应北京时间傍晚至晚间；原文未注具体发布时刻）</p>
+<p>摘要：美股三季度财报季揭幕，摩根大通13日盘前发布业绩：当季营收509.07亿美元、同比增长8%但低于市场预期，调整后每股收益5.75美元、同样不及预期，净利润153.05亿美元、同比增长6%；固定收益交易收入同比下降4%至53.66亿美元构成主要拖累（股票交易收入大增49%）。财报公布后其股价盘前一度下跌约2.4%；同日花旗、高盛、富国银行亦于盘前放榜，市场聚焦周三美国CPI数据与10月28日结束的美联储议息会议。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L952TMEU05198UNI.html" target="_blank" rel="noopener">智通财经（网易号）· 摩根大通(JPM.US)Q3营收、EPS不及预期 固收交易下滑拖累业绩</a>
+<span class="sep">·</span>
+<a href="https://stock.jrj.com.cn/2026/10/12155458682379.shtml" target="_blank" rel="noopener">金融界 · 摩根大通、高盛领衔六大行财报周：利润仍在涨，高利率开始真正考验银行业！</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-13-早间版.html">← 2026-10-13-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-13 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
