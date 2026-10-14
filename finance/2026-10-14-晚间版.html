@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 晚间版 · 2026-10-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 14 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;中国9月物价数据出炉——CPI同比+0.9%、PPI同比+5.0%,前三季度外贸+18.8%、9月进出口首次突破5万亿元;A股缩量普跌、创业板指再创年内收盘新低,港股科网股逆势领涨;阿斯麦财报引发全球半导体市场震荡,美国9月CPI于今晚20:30公布,为美联储10月议息会议前最后一份通胀报告。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>中国9月CPI同比+0.9%、PPI同比+5.0%,PPI涨幅继续扩大</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日9:30(北京时间,国家统计局发布;新华网9:40播发解读稿)</p>
+<p>摘要:国家统计局公布,9月CPI环比上涨0.2%、同比上涨0.9%,扣除食品和能源的核心CPI同比上涨1.0%;PPI环比上涨1.2%、同比上涨5.0%,同比涨幅较上月扩大1.2个百分点。解读称,国际原油、有色金属价格上行及冬季供暖备煤需求等带动相关行业价格上涨,其中煤炭开采和洗选业同比上涨35.3%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/fortune/20261014/2ca7672b7f7741e29a1421cbc3dcf9b8/c.html" target="_blank" rel="noopener">新华网 · 国家统计局城市司首席统计师董莉娟解读2026年9月份CPI和PPI数据</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>前三季度外贸增长18.8%,9月进出口首次突破5万亿元</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日10:00(北京时间,国新办发布会;新华社当日播发)</p>
+<p>摘要:据海关统计,前三季度货物贸易进出口39.94万亿元、同比增长18.8%(出口23.2万亿元+16.4%、进口16.74万亿元+22.3%);9月进出口5.16万亿元、增长27.5%,单月规模历史上首次突破5万亿元(其中出口3.03万亿元+29.6%)。集成电路出口增长99.1%,电动汽车、锂电池出口分别增长72.3%、36.4%;对东盟、欧盟进出口分别增长22.7%、8.4%。海关总署称前三季度外贸增速为近五年同期最快,四季度持续增长有基础、有支撑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.yidaiyilu.gov.cn/p/0MMCRU1J.html" target="_blank" rel="noopener">新华社(中国一带一路网) · 前三季度我国外贸增势强劲 同比增长18.8%</a>
+<span class="sep">·</span>
+<a href="http://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261014_3257777.shtml" target="_blank" rel="noopener">央视网(中国经济网) · 海关总署:前三季度我国货物贸易进出口39.94万亿元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>美国9月CPI今晚20:30公布,为美联储10月会议前最后一份通胀报告</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日20:30(北京时间公布时点;截至本刊20:40成稿,结果尚未见公开报道)</p>
+<p>摘要:市场预计9月整体CPI同比由8月的3.4%升至3.6%—3.7%、环比上涨0.6%(能源为主要推手,布伦特原油9月累计涨逾14%),核心CPI同比约2.5%、环比+0.2%。芝商所数据显示,市场对美联储10月27日—28日会议加息定价约17%—22%;若核心CPI环比升至0.3%,10月加息预期可能重燃,若持平0.2%,则大概率按兵不动、决策推迟至12月。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/GlobalArticle?ContentId=C26101400484&Category=all" target="_blank" rel="noopener">群益期货 · 美国9月CPI数据今夜来袭!美联储10月会议预期会否再被推翻</a>
+<span class="sep">·</span>
+<a href="https://www.theblockbeats.info/flash/371664" target="_blank" rel="noopener">BlockBeats · 美国9月CPI今晚公布,通胀预期升温或令美联储重启加息</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>人民币对美元中间价调升至6.7249,离岸汇率处于2022年7月以来最强水平附近</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日9:36(北京时间,新华网播发中国外汇交易中心数据)</p>
+<p>摘要:中国外汇交易中心10月14日公布人民币对美元汇率中间价报6.7249,较13日(6.7298)调升49个基点;离岸人民币当日维持在6.69附近交易,接近2022年7月以来的最强水平。据TradingEconomics,9月中国贸易顺差升至1335.3亿美元,出口高景气为人民币提供支撑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="http://www.xinhuanet.com/20261014/63a2be49c6d445a4a9059c4ce0a9b9a5/c.html" target="_blank" rel="noopener">新华网 · 人民币市场汇价(10月14日)</a>
+<span class="sep">·</span>
+<a href="https://zh.tradingeconomics.com/china/currency" target="_blank" rel="noopener">TradingEconomics · 人民币价格·图表·历史数据·新闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>财联社C50风向指数:10月资金面预计“前松后稳”,MLF及买断式逆回购超额续作可期</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日10:09(北京时间,财联社发布)</p>
+<p>摘要:财联社对21家机构的调查显示,超九成机构认为10月流动性压力集中于下旬税期与跨月叠加窗口;节后央行公开市场操作“先收后放”,7天期逆回购操作量由10月12日的500亿元回升至13日的650亿元。市场预期月内MLF(10月27日到期9000亿元)及6个月买断式逆回购有望等量或超额续作,隔夜逆回购或在税期、跨月阶段重启。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2504143" target="_blank" rel="noopener">财联社 · 财联社C50风向指数:10月流动性压力集中下旬,MLF及买断式逆回购超额续作可期</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>A股缩量普跌:沪指跌0.88%失守3800点,创业板指跌3.1%再创年内收盘新低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日15:00收盘(北京时间)</p>
+<p>摘要:沪指收跌0.88%报3767.23点,深成指跌1.97%,创业板指跌3.1%、创年内收盘新低;沪深两市成交额1.41万亿元、较上一交易日缩量2615亿元,全市场超4400只个股下跌。AI漫剧、传媒方向(慈文传媒、新经典4连板)与油气、煤炭(中国神华创2007年11月以来新高)逆势走强,风电、汽车、半导体领跌。复盘观点认为,市场处于“地量地价”阶段,宜等待量能与指数企稳信号明确。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610143895445529.html" target="_blank" rel="noopener">央广财经(东方财富) · 10月14日A股收评:双创指数跌幅均超3% 两市全天成交额缩至1.41万亿元</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2504650" target="_blank" rel="noopener">财联社 · 【焦点复盘】科技权重股持续低迷,创业板指再创年内收盘新低</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L97A55KP0556NOBY.html" target="_blank" rel="noopener">博客·网易号(A股复盘) · 10月14日A股收评:沪指跌0.88%失守3800点,AI漫剧逆势爆发</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>港股收盘:恒指跌0.13%,恒生科技指数涨0.91%,美团、小米、阿里领涨</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日16:00收盘(香港时间)</p>
+<p>摘要:恒生指数收报24314.17点、跌0.13%,恒生科技指数涨0.91%;明星科网股普涨,美团涨超6%、小米集团涨超5%、阿里巴巴涨超3%。生物医药与芯片股走弱,歌礼制药跌超12%、药明康德跌超2%,海光芯正跌超8%、中际旭创跌超4%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.ifeng.com/c/8xDa3JRIGGh" target="_blank" rel="noopener">证券时报(凤凰网) · 港股收评:恒指跌0.13% 恒生科技指数涨0.91%</a>
+<span class="sep">·</span>
+<a href="https://www.tmtpost.com/nictation/8168380.html" target="_blank" rel="noopener">钛媒体 · 港股收评:恒指跌0.13%,恒生科技指数涨0.91%,芯片股续跌</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>日韩股市收盘涨跌互现:日经微跌0.05%,韩国KOSPI跌0.44%,午后受阿斯麦财报扰动跳水</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日(当地时间收盘;原文未注具体时刻)</p>
+<p>摘要:日经225指数收跌0.05%报67744.29点,韩国KOSPI指数收跌0.44%报6008.81点(盘中一度涨超2%后转跌,SK海力士跌1.66%)。当日午后阿斯麦财报公布后纳指期货一度直线跳水,日韩股市随之回落;此前两地股市受隔夜美股企稳提振高开。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.finet.com.cn/news/6acf232423082982128504a7.html" target="_blank" rel="noopener">财华社 · 日韩股市收盘双双下挫</a>
+<span class="sep">·</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/BreakingNewsArticle?ContentId=C26101400718" target="_blank" rel="noopener">群益期货 · 【韩国股市高开低收 收跌0.44%】</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>阿斯麦三季度净利49.6亿欧元远超预期、上调全年指引:客户订单已谈到2029—2030年</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日盘前(荷兰当地时间;北京时间14:31起媒体报道)</p>
+<p>摘要:阿斯麦第三季度净销售额116.62亿欧元(同比+55%,略低于市场预期的117亿欧元),净利润49.6亿欧元(远超预估的41.65亿欧元),毛利率57.5%;全年净销售额指引上调至440亿—450亿欧元、系连续第三个季度上调,公司称2027—2028年产能或无法满足需求、拟进一步扩产,部分客户已在洽谈2029年甚至2030年的设备订单。财报后公司股价剧烈震荡,美股夜盘一度大幅跳水、随后直线拉升,并带动全球半导体板块波动。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chnfund.com/article/ARc68b39a4-0dee-93bf-cbb2-3a244b4e13bf" target="_blank" rel="noopener">中国基金报 · 阿斯麦的财报,竟然也成了利空</a>
+<span class="sep">·</span>
+<a href="https://wap.eastmoney.com/a/202610143895509781.html" target="_blank" rel="noopener">澎湃新闻(东方财富) · 阿斯麦三季度营收破百亿欧元创新高:客户订单延伸至2029年,连续三个季度上调全年展望</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>美股盘前:三大期指齐涨、存储与光通信板块承压,油价小涨、金银小幅下跌</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>:10月14日盘前(美东时间;北京时间16:39中新经纬发稿)</p>
+<p>摘要:截至北京时间16:39,道指期货涨0.16%、纳指期货涨0.03%、标普500指数期货涨0.11%,大型科技股盘前普涨(英伟达涨0.20%、苹果涨0.60%);存储板块普跌(闪迪-2.46%、SK海力士美股-2.81%、西部数据-1.51%),光通信股普跌(Lumentum-1.02%)。国际油价小幅上涨,WTI原油期货报94.42美元/桶、布伦特报105.97美元/桶;伦敦金现跌0.21%报4151.905美元/盎司,伦敦银现跌0.63%报58.779美元/盎司,市场等待美国CPI指引。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.eastmoney.com/a/202610143895508234.html" target="_blank" rel="noopener">中新经纬(东方财富) · 美股盘前速递:存储板块普跌,闪迪、SK海力士跌超2%;三大股指期货齐涨</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-14-早间版.html">← 2026-10-14-早间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-14 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
