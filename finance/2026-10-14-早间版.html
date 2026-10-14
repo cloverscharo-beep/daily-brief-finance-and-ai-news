@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日财经 · 早间版 · 2026-10-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#1F6E5C"></span>📊 每日财经 · 财经要闻 · 政策披露 + 市场解读</div><h1>2026 年 10 月 14 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：美股财报季开门不利，三大指数小幅收跌、银行股普跌而苹果、微软齐创收盘新高；美联储「三把手」威廉姆斯称年内或再加息一次、目前认为2027年没有必要加息。中东局势再度升温——利雅得、达曼传出爆炸声，沙特阿美宰赫兰办公楼遇袭；国内今日将公布9月CPI、PPI与前三季度进出口数据。</div></header>
+<section class="group"><h2>🏢 官方与政策披露 <span class="cnt">4 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>美联储「三把手」威廉姆斯：年内或再加息一次，目前认为2027年无需加息</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日（北京时间10月14日2:09、4:38经中国基金报、财联社等转述报道）</p>
+<p>摘要：纽约联储主席威廉姆斯表示，仍认为今年再加息一次是合适的，但目前没有理由认为2027年还需要进一步加息；他指出除AI与能源行业外未见普遍价格压力，劳动力市场并未助推通胀，随着关税与能源价格冲击消退，通胀明年有望接近2%目标。同日波士顿联储主席柯林斯称年底前有必要「进一步」小幅加息；里士满联储主席巴尔金则强调通胀正被证明具有持久性。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.chnfund.com/article/7dc00622-e574-3c95-44dc-3a2448a1d872" target="_blank" rel="noopener">中国基金报 · 美联储威廉姆斯：今年或再加息一次，预计2027年无需加息</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L96A9DUU05566WVY.html" target="_blank" rel="noopener">格隆汇（网易号） · 美联储威廉姆斯：今年可能再加息一次 明年无需进一步加息</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>美军中央司令部：霍尔木兹海峡目前由美军及地区伙伴掌控，已协助运出超1900万桶原油</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日（北京时间10月14日凌晨；财联社6:14汇总发布）</p>
+<p>摘要：美国中央司令部表示，目前霍尔木兹海峡由美军及地区伙伴掌控；美方还称，美国军队前一天协助海湾地区伙伴将超过1900万桶原油经该海峡运出，以此回应伊朗方面「海峡已关闭」的说法。同日伊朗革命卫队海军司令阿兹玛伊称，伊朗正在等待美国军舰靠近海峡入口「然后将其击沉」。海峡通航话题继续牵动全球能源运输与航运风险溢价。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2503946" target="_blank" rel="noopener">财联社 · 周三你需要知道的隔夜全球要闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>习近平出席全国卫生与健康大会并发表重要讲话：「十五五」确保健康中国建设取得决定性进展</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日14:33（北京时间；新华社当日播发通稿；大会于10月12日至13日召开）</p>
+<p>摘要：全国卫生与健康大会12日至13日在北京召开，习近平出席会议并强调，「十五五」是到2035年建成健康中国的关键时期，要坚定实施健康优先发展战略，深化医疗、医保、医药协同发展和治理，实施医疗卫生强基工程、优化药品耗材集采与医保支付和资金使用政策，做大做强健康产业。李强作总结讲话。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.news.cn/politics/leaders/20261013/460054a36ae44f399b0dc6c2fa6ba010/c.html" target="_blank" rel="noopener">新华网 · 习近平出席全国卫生与健康大会并发表重要讲话</a>
+<span class="sep">·</span>
+<a href="https://www.nhc.gov.cn/wjw/mtbd/202610/43de38f0a9c0401799c2ba8195f1cc40.shtml" target="_blank" rel="noopener">国家卫健委 · 转载新华社通稿</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>香港证监会公布上市规则修订咨询总结：引入独立复核机制、IPO可「有条件放行」</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：10月13日（香港时间；原文未注具体时刻）</p>
+<p>摘要：香港证监会公布《证券及期货（在证券市场上市）规则》修订咨询总结，四大看点：引入上诉审裁处对证监会决定的独立复核；允许对上市申请人施加上市后继续适用的条件，IPO监管从「要么放行、要么否决」转向有条件放行；新增「上市后条件」作为停牌以外的替代方案；简化复牌程序并允许撤回「反对上市」通知。证监会企业融资部执行董事蔡凤仪称，相关优化措施将使其有更具针对性及相称的工具应对新兴风险。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2503100" target="_blank" rel="noopener">财联社 · 港证监修订上市规则，四大亮点重塑IPO监管</a>
+<span class="sep">·</span>
+<a href="https://finance.eastmoney.com/a/202610133893957915.html" target="_blank" rel="noopener">东方财富网 · 港证监修订上市规则 四大亮点重塑IPO监管</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 市场与解读 <span class="cnt">6 条</span></h2>
+<article class="item"><div class="row1"><span class="num">5</span><h3>美股收盘：三大指数小幅收跌，苹果、微软逆势齐创收盘新高</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日16:00收盘（北京时间10月14日4:00）</p>
+<p>摘要：道指跌180.45点、跌幅0.35%报51670.10点，纳指跌0.15%报27204.38点，标普500指数跌0.02%报7805.45点；能源板块涨1.74%领涨、医疗保健板块跌1.33%，Meta涨2.63%，苹果、微软齐创收盘新高。纳斯达克中国金龙指数涨0.14%，拼多多涨1.29%、京东涨0.22%；10年期美债收益率下行2.7个基点至5.216%；美国9月成屋销售年化399万套、环比增1.5%，高于市场预期。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202610143894567060.html" target="_blank" rel="noopener">财联社（东方财富） · 美股收盘：三大指数震荡走弱 苹果、微软齐创新高</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L96D8DPG0519DDQ2.html" target="_blank" rel="noopener">第一财经（网易号） · 财报季惨淡开幕，道指跌近200点，芯片股五连阴，苹果创新高，白银失守60美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">6</span><h3>银行三季报开门不利：三大行净利息收入连续五季创新高，但股价集体走低</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日（北京时间10月13日晚至10月14日凌晨的完整交易时段）</p>
+<p>摘要：摩根大通营收与利润均不及预期、收跌0.86%；高盛EPS与营收大幅超预期但盘中一度涨超4%、最终收跌0.23%；花旗业绩超预期却因交易收入环比下降、信用卡利润承压跌约5.6%；富国银行因营收与净利息收入不及预期跌超3%。汇总数据显示，三家银行三季度净利息收入合计约565亿美元、连续第五个季度刷新纪录；美国银行、摩根士丹利将于周三披露财报。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://news.futunn.com/hk/post/1001041821/net-interest-income-at-the-three-largest-us-banks-hit" target="_blank" rel="noopener">富途资讯 · 美国三大银行净利息收入连续五季创新高，但息差承压、交易与承销业务降温</a>
+<span class="sep">·</span>
+<a href="https://www.capitalfutures.com.tw/zh-tw/Financial/BreakingNewsArticle?ContentId=C26101301087" target="_blank" rel="noopener">群益期货 · 高利率未阻挡借贷需求 美国三大银行净利息收入再创历史纪录</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>存储与半导体设备续跌：费半五连阴，应用材料重挫6.69%</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日（北京时间10月13日22:02起盘中快讯，至10月14日凌晨收盘）</p>
+<p>摘要：费城半导体指数收跌0.2%、连续第五个交易日下跌，较6月创下的历史高点已回落近18%；应用材料跌6.69%领跌，美光科技、SK海力士在美上市股票均跌超3%，科磊、科休半导体跌超3%。此前博通CEO称流入芯片板块的部分资金如同「赌场投机」；长鑫存储技术进展相关消息与韩国市场暴跌继续压制存储链情绪，光通信个股分化。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L95DH1G905198CJN.html" target="_blank" rel="noopener">财联社（网易号） · 纳指低开0.36% 存储板块延续跌势 美光科技、海力士跌超5%</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L96D8DPG0519DDQ2.html" target="_blank" rel="noopener">第一财经（网易号） · 财报季惨淡开幕，道指跌近200点，芯片股五连阴，苹果创新高，白银失守60美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>中东局势再升温：利雅得、达曼传出爆炸声，沙特阿美办公楼遇袭</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：当地时间10月13日晚（北京时间10月14日凌晨）</p>
+<p>摘要：据央视新闻与财联社汇总，当地时间13日晚沙特首都利雅得和东部城市达曼传出爆炸声；沙特能源部称沙特阿美位于宰赫兰的一栋行政办公楼遭到袭击、未造成人员受伤；沙特主导的多国联军称拦截并摧毁胡塞武装射向宰赫兰、哈拉德方向的弹道导弹。另有以媒报道称，内塔尼亚胡近期与特朗普多次通话，商讨在11月美国中期选举前对伊朗发动联合军事打击的可能性。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2503946" target="_blank" rel="noopener">财联社 · 周三你需要知道的隔夜全球要闻</a>
+<span class="sep">·</span>
+<a href="https://www.163.com/dy/article/L96D8DPG0519DDQ2.html" target="_blank" rel="noopener">第一财经（网易号） · 财报季惨淡开幕，道指跌近200点，芯片股五连阴，苹果创新高，白银失守60美元</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>大宗商品：现货黄金失守4160美元、白银跌穿60关口，油价窄幅波动</h3></div>
+<span class="tag">🏷 市场数据</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间10月13日纽约尾盘（北京时间10月14日凌晨；金价失守4160为10月13日23:39快讯）</p>
+<p>摘要：纽约尾盘贵金属集体收跌：现货黄金跌0.25%报4160.99美元/盎司，现货白银跌1.81%报59.16美元/盎司、失守60美元关口。原油窄幅波动：WTI 11月合约涨0.43%、结算价94.14美元/桶，布伦特12月合约跌0.9%、结算价105.69美元/桶；美元指数下跌约0.2%，仍处于2025年5月以来高位区间。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L966EPF20512B07B.html" target="_blank" rel="noopener">每日经济新闻（网易号） · 国际贵金属价格集体收跌，现货黄金跌0.25%</a>
+<span class="sep">·</span>
+<a href="https://www.cls.cn/detail/2503946" target="_blank" rel="noopener">财联社 · 周三你需要知道的隔夜全球要闻</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>韩资逆势加仓中国硬科技，创业板ETF、中际旭创等获净买入</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：10月14日6:04（北京时间；每日经济新闻早间盘点，数据截至10月12日）</p>
+<p>摘要：在港股、A股震荡加剧之际，韩国投资者对多个硬科技标的维持净买入：港股方面，过去一个月净买入南方东英创业板ETF（买入1245.79万美元、卖出仅1.18万美元）、中芯国际、华虹宏力等；A股方面，逆势加仓奥士康、德明利、中际旭创，净买入额分别约134.05万、99.56万、58.81万美元。据中国基金报统计，韩资年内对中国内地股票成交额同比增长逾三成，前三季度净买入前15名A股合计约7987万美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.163.com/dy/article/L9693A0T0512B07B.html" target="_blank" rel="noopener">每日经济新闻（网易号） · 影响市场重大事件：韩资逆势加仓中国硬科技，创业板ETF等获净买入</a>
+<span class="sep">·</span>
+<a href="https://www.stcn.com/article/detail/4211303.html" target="_blank" rel="noopener">证券时报网（中国基金报） · 长鑫科技登顶！ETF成加仓主渠道，前三季度韩国投资者A股、港股「扫货」名单来了</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-13-晚间版.html">← 2026-10-13-晚间版</a></span><span></span></nav>
+<footer><span>每日财经 · 每日期次</span><span>2026-10-14 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
