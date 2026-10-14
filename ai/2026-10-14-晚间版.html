@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 晚间版 · 2026-10-14</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 14 日<span class="badge pm">晚间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Anthropic 一天之内双线冲刺——新加坡办公室与政府 AI 安全备忘录落地，同日又向机构投资者做最高 2 万亿美元估值的 IPO 路演；另一边，OpenAI 被曝为下一代旗舰模型紧急修复安全隐患、GPT-5.5 于今日正式退役，「模型迭代的代价」成为今日开发者讨论的关键词。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>Anthropic 开设新加坡办公室，与新加坡政府签署 AI 安全合作备忘录</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：新加坡时间 10月14日（官方公告发布当日；《海峡时报》16:30、商业时报17:19 报道）</p>
+<p>Anthropic 宣布在新加坡设立办公室——其亚太第五个据点（继东京、首尔、班加罗尔、悉尼之后），并与新加坡数码发展及新闻部（MDDI）签署谅解备忘录，合作覆盖 AI 安全、安保与模型评测，以及 AI 应用影响研究和公共部门负责任采用；签约在新加坡国际网络周场边进行，由联创 Ben Mann 与部常务秘书 Kai Fong Chng 签署、部长杨莉明到场见证。公司称新加坡是其全球最活跃市场之一（按人口的 Claude 使用率在 121 国中排名第二），并「正尽快把前沿模型带上新加坡本地」。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/news/singapore-office-opening" target="_blank" rel="noopener">Anthropic 官方 · Singapore office and government MOU</a>
+<span class="sep">·</span>
+<a href="https://www.straitstimes.com/singapore/anthropic-signs-mou-with-singapore-to-evaluate-ai-models-for-safety-and-security" target="_blank" rel="noopener">The Straits Times · Anthropic signs MOU with Singapore to evaluate AI models for safety and security</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>英伟达公布 DLSS 5 新模型：10 月 16 日推送，性能翻倍、4K 显存占用降 20%</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月13日（英伟达 GeForce 官方博客署名发布；北京时间当日 20:57 起 IT之家等跟进；新模型 10月16日 正式推送）</p>
+<p>英伟达宣布 DLSS 5 的 3D 引导神经渲染模型将在 10 月 16 日迎来重大更新：性能提升至 9 月版 2 倍、GPU 开销减半，4K 显存占用降低 20%，模型体积缩小 24% 至约 1.18 亿参数；较 3 月首次演示累计提速 10 倍。新模型率先用于《NBA 2K27》（4K 帧率最高升至 1.4 倍），并将成为后续 DLSS 5 游戏默认模型；11月5日支持《霍格沃茨之遗》、11月下旬登陆《燕云十六声》，10月23日还将更新 RTX Remix。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.nvidia.com/en-us/geforce/news/dlss-5-faster-ai-model-hogwarts-legacy-rtx-spark-laptops" target="_blank" rel="noopener">NVIDIA GeForce 官方博客 · DLSS 5 Comes To Hogwarts Legacy and RTX Spark</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/012/564.htm" target="_blank" rel="noopener">IT之家 · 英伟达 DLSS 5 最新模型 10 月 16 日推送：性能相比 9 月翻倍</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>微软成立 Xbox Labs：探索 AI 游戏反编译、移植与重制</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美西时间 10月13日（Xbox CEO 致员工内部信，IT之家称「当地时间 13 日」；北京时间 10月14日 中文媒体集中报道）</p>
+<p>Xbox CEO 阿莎·夏尔马发内部信宣布成立实验团队 Xbox Labs，由 Xbox CTO Scott Van Vliet 牵头，研究 AI 在游戏反编译、重新编译与跨平台移植中的应用——近期已有 Mod 作者用 Claude Opus 5.5 等模型把游戏移植进浏览器（WebAssembly/WebGPU）与苹果芯片，甚至混合不同游戏的素材。夏尔马称 Xbox 玩家年游戏时长超 720 亿小时、约为全球编程总时长的 5 倍，团队将公开运作并把工具分享给全行业开发者。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://m.sohu.com/a/1087431053_114760" target="_blank" rel="noopener">IT之家（搜狐转载）· AI重新编译、修改游戏获夏尔马「点赞」，微软成立XBOX Labs新团队</a>
+<span class="sep">·</span>
+<a href="https://ccc.technews.tw/2026/10/14/xbox-labs" target="_blank" rel="noopener">TechNews 科技新报 · Xbox 成立 Xbox Labs，用 AI 探索遊戲重混、跨平台與瀏覽器遊玩新可能</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Liquid AI 开源 LFM2.5-24B-A2B：2.45B 激活参数的端侧推理 MoE</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月14日（Hugging Face 开源页当日上线；原文未注具体时刻）</p>
+<p>Liquid AI 发布并开源 LFM2.5-24B-A2B——24B 总参数 MoE 推理模型，每 token 仅激活 2.45B 参数，36T tokens 训练、131K 上下文；开放权重提供 FP8、GGUF、ONNX 与 MLX-4bit 版本。基准测试显示其 8 项工具使用评测中 5 项超过 Qwen3.6-35B-A3B；实测在苹果 M5 Max 上达 184 token/s、单卡 B300 吞吐 21K token/s，API 定价为每百万 token 输入/输出 0.10/1.00 美元。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://huggingface.co/LiquidAI/LFM2.5-24B-A2B" target="_blank" rel="noopener">Hugging Face · LiquidAI/LFM2.5-24B-A2B</a>
+<span class="sep">·</span>
+<a href="https://aiweekly.co/alerts/liquid-ai-ships-lfm25-24b-a2b-at-184-toks-on-m5-max" target="_blank" rel="noopener">AI Weekly · Liquid AI opens LFM2.5-24B-A2B, 2B-active MoE for on-device</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>GPT-5.5 今日正式下线：ChatGPT、ChatGPT Work 与 Codex 全套餐移除</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（停用生效日；OpenAI 于 9月16日 发布下线公告，原文未注具体时刻）</p>
+<p>按 OpenAI 此前公告，GPT-5.5 自今日起从 ChatGPT、ChatGPT Work 和 Codex 全订阅方案中下线，无保留通道，官方建议 Codex 用户迁移至 GPT-5.6 Sol 或 GPT-6 Astra。该模型今年 4 月上线、生命周期不足半年；新智元等媒体指出，对把 5.5 写入生产环境 Agent 回路与降级策略的开发者而言，强制迁移可能带来成本上升与「提示词漂移」问题。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/002/858.htm" target="_blank" rel="noopener">IT之家 · OpenAI GPT-5.5 将于 10 月 14 日下线：覆盖 ChatGPT 与 Codex</a>
+<span class="sep">·</span>
+<a href="https://hub.baai.ac.cn/view/58468" target="_blank" rel="noopener">智源社区（新智元）· 永别了，GPT-5.5！</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>Anthropic 举行 IPO 投资者日：最高 2 万亿美元估值目标，路演最快 11 月 9 日当周启动</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（投资者会议当日于旧金山总部举行；彭博社 10月1日 最早报道该安排，原文未注具体时刻）</p>
+<p>Anthropic 在旧金山总部接待受邀机构投资者、为潜在 IPO 预热：投资者给出的估值区间为 1.8–2 万亿美元，约为其 5 月 H 轮 9650 亿美元投后估值两倍，有望对标甚至超过 SpaceX 的纪录级 IPO。据报道，正式路演最早于 11 月 9 日当周启动、目标感恩节（11月26日）前挂牌；此前曝光的申报数据显示其 2025 年营收约 46 亿美元、经营亏损约 80 亿美元，并背负约 5180 亿美元云与算力承诺（据称「几乎均不可取消」）。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://finance.yahoo.com/technology/ai/articles/two-exit-doors-anthropic-2-051103937.html" target="_blank" rel="noopener">Yahoo Finance · Two Exit Doors: Anthropic&#x27;s $2 Trillion Pitch Starts Oct. 14</a>
+<span class="sep">·</span>
+<a href="https://financefeeds.com/anthropics-14-october-investor-day-nears-but-its-s-1-still-isnt-public-the-ipo-timeline-explained" target="_blank" rel="noopener">FinanceFeeds · Anthropic&#x27;s 14 October Investor Day Nears, but Its S-1 Still Isn&#x27;t Public</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>The Information：OpenAI 赶在下一代旗舰模型发布前紧急修复安全问题</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月14日 04:37（财联社电报发布时间；报道源自 The Information，原文未注具体时刻）</p>
+<p>据报道，OpenAI 正为未发布的下一代旗舰模型做安全加固，焦点是「循环 Transformer（循环深度）」设计带来的监控难题——该机制让模型多次迭代思考同一问题、推理过程更难被追踪；微软此前在博客中一度披露 GPT-6.1 Sol 已采用该技术，随后删去相关段落。公司同时抬高安全团队地位（CISO 直报总裁布罗克曼）、要求训练前撰写安全案例文档，并修补了 FFmpeg 等开源软件漏洞；三名被解雇安全研究员与公司公开对峙一事仍在发酵。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cls.cn/detail/2503930" target="_blank" rel="noopener">财联社 · OpenAI正赶在推出下一代旗舰模型之前，紧急修复各类安全问题</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1087734376_122014422" target="_blank" rel="noopener">新浪财经/搜狐 · OpenAI 赶在下一代旗舰模型上线前紧急修复安全隐患</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>微软 Azure 据悉讨论削减至少 20% 成本：AI 豪赌下的「降本信号」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月13日（彭博社报道；财联社北京时间 10月14日 08:43 转引）</p>
+<p>据报道，Azure 部门总裁吉里什·巴布拉尼（Girish Bablani）近几周要求约 11,500 人的团队高管设法将成本至少降低 20%，具体措施尚未敲定；本周初 Azure 负责人 Scott Guthrie 才刚宣布围绕 AI 重组云业务管理层。分析认为，此举凸显微软为 AI 基础设施大举投入之后的回报与成本压力，也呼应了行业对「算力账单」的普遍焦虑。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://k.sina.com.cn/article_5953466437_162dab0450670bev1w.html" target="_blank" rel="noopener">新浪科技 · 微软云业务总裁要求各负责人削减20%成本</a>
+<span class="sep">·</span>
+<a href="https://m.sohu.com/a/1087432859_122014422" target="_blank" rel="noopener">搜狐 · 微软据悉讨论在Azure云业务部门削减至少20%成本</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>美国银行退出月之暗面港股 IPO 筹备：美资投行的谨慎权衡</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月14日（联合早报当日报道，援引彭博社「星期三」报道；原文未注具体时刻）</p>
+<p>知情人士称，美国银行不再参与月之暗面香港 IPO 的潜在承销名单——双方此前商谈由其担任整体协调人，最终未达成正式委任，凸显美资银行在争夺敏感 AI 融资业务时的谨慎。报道称美国指控包括月之暗面在内的六家中国 AI 公司大规模抽取美国模型信息训练自身产品；目前唯一获委任的美资银行是高盛，与中金公司及德意志银行共同担任保荐人。月之暗面预计赴港筹资最多 50 亿美元，上市时间或在 2027 年一季度。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.zaobao.com.sg/news/china/story20261014-9834963" target="_blank" rel="noopener">联合早报 · 中美AI竞争升温 美国银行据悉退出月之暗面IPO筹备</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>ASML 三季度营收创单季新高：客户订单兴趣延伸至 2030 年</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：中欧时间 10月14日（ASML 发布 2026 年三季度财报；IT之家北京时间 13:12 报道；原文未注具体发布时刻）</p>
+<p>ASML 三季度净销售额 116.6 亿欧元、毛利率 57.5%、净利润约 50 亿欧元，均创新高；全年净销售额指引上调至 440–450 亿欧元。CEO 富凯表示，客户短中期设备需求预测持续因 AI 投资而上调，部分客户已对 2029 甚至 2030 年订单表达兴趣，「按当前规划，2027、2028 年供应将无法完全满足客户需求」，公司正研究将 2028 年产能增幅提升至超过此前公布的 30%。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/012/809.htm" target="_blank" rel="noopener">IT之家 · 光刻机巨头 ASML 阿斯麦第三季度营收 116.6 亿欧元创新高：净利润 50 亿欧元，需求排到 2030 年</a>
+<span class="sep">·</span>
+<a href="https://www.caiwennews.com/article/1650515.shtml" target="_blank" rel="noopener">财闻网 · AI算力拉动光刻机需求：阿斯麦Q3业绩亮眼，产能瓶颈持续</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-14-早间版.html">← 2026-10-14-早间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-14 晚间版 · 21:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
