@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日资讯 · 早间版 · 2026-10-15</title>
+<style>
+:root{
+  --paper:#f6f2e9; --ink:#23201a; --mut:#6f675a; --line:#ded6c4;
+  --card:#fffdf7; --chip:#efe9da; --code:#8a8172;
+  --ai:#B4443C; --fin:#1F6E5C;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,"Times New Roman",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16150f; --ink:#e9e2d2; --mut:#9c927f; --line:#34301f;
+    --card:#1e1c13; --chip:#2b2818; --code:#b9ad93;
+    --ai:#d97c70; --fin:#5fae92;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px 90px}
+.mast{border-bottom:3px double var(--ink);padding:34px 0 20px;margin-bottom:26px}
+.mast .rule{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mast h1{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);font-weight:700;letter-spacing:.02em}
+.mast h1 .dot{color:var(--ai)}
+.mast .date{font-family:var(--serif);color:var(--mut);font-size:14px;letter-spacing:.14em}
+.mast .sub{color:var(--mut);font-size:13px;margin-top:6px;letter-spacing:.06em}
+h2.sec{font-family:var(--serif);font-size:19px;margin:44px 0 6px;letter-spacing:.1em}
+.sec-note{color:var(--mut);font-size:12.5px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.issue{background:var(--card);border:1px solid var(--line);padding:22px 24px}
+.issue:hover{border-color:var(--code)}
+.issue .lbl{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em}
+.issue .lbl .sw{width:9px;height:9px;border-radius:50%}
+.issue h3{font-family:var(--serif);font-size:24px;margin:12px 0 2px;line-height:1.3}
+.issue .date{color:var(--mut);font-size:13px;letter-spacing:.1em;font-family:var(--serif)}
+.issue .foc{color:var(--mut);font-size:13.5px;margin:14px 0;padding:10px 14px;background:var(--paper);
+  border:1px dashed var(--line)}
+.issue .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:12.5px}
+.issue .go{font-family:var(--serif);letter-spacing:.1em}
+.issue:hover .go{text-decoration:underline;text-underline-offset:3px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.14em;border:1px solid var(--line);
+  border-radius:99px;padding:0 10px;margin-left:8px;vertical-align:2px;color:var(--mut);
+  background:var(--paper);font-family:var(--sans)}
+.badge.am{color:#8a5a13;border-color:#c9a45c}
+.badge.pm{color:#3f4d63;border-color:#8fa3bd}
+@media (prefers-color-scheme:dark){.badge.am{color:#d9b26a}.badge.pm{color:#9db4d4}}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 30px}
+.arch .col h3{font-size:13px;letter-spacing:.16em;color:var(--mut);border-bottom:1px solid var(--line);
+  padding-bottom:6px;margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.arch ul{list-style:none}
+.arch li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line);
+  font-size:14px}
+.arch li a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:3px}
+.arch .n{color:var(--code);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.arch .badge{font-size:10px;margin-left:6px;padding:0 7px}
+.arch details.more{margin-top:2px}
+.arch details.more summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  list-style:none;cursor:pointer;padding:6px 0;border-bottom:1px dashed var(--line);
+  font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.arch details.more summary:hover{color:var(--ink)}
+.arch details.more summary::-webkit-details-marker{display:none}
+.arch details.more .lbl-open{display:none}
+.arch details.more[open] .lbl-open{display:inline}
+.arch details.more[open] .lbl-closed{display:none}
+.arch details.more .ar{font-size:10px;color:var(--code);transition:transform .18s ease}
+.arch details.more[open] .ar{transform:rotate(180deg)}
+.back{display:inline-block;color:var(--mut);font-size:13px;letter-spacing:.1em;margin:22px 0 0}
+.back:hover{color:var(--ink);text-decoration:underline}
+.phead{margin:14px 0 8px}
+.phead .kicker{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:var(--mut)}
+.phead h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);margin-top:10px;line-height:1.25}
+.phead .foc{margin:20px 0 26px;padding:14px 18px;background:var(--card);border:1px dashed var(--line);
+  color:var(--mut);font-size:14px}
+.phead .foc b{color:var(--ink)}
+.group{margin:38px 0 0}
+.group h2{font-family:var(--serif);font-size:17px;letter-spacing:.14em;display:flex;align-items:baseline;gap:12px;
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.group h2 .cnt{color:var(--code);font-size:12px;letter-spacing:.06em}
+.item{padding:26px 0 6px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item .row1{display:flex;align-items:baseline;gap:14px}
+.item .num{font-family:var(--serif);font-size:15px;color:var(--code)}
+.item h3{font-size:17.5px;font-weight:650;line-height:1.5}
+.item .tag{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:12px 0 8px;background:var(--card)}
+.item p{font-size:14.5px;color:var(--ink);margin:8px 0}
+.item p.note{color:var(--mut);font-size:12.5px;background:var(--paper);padding:6px 12px;border-radius:4px}
+.item p.time{color:var(--mut);font-size:12.5px;margin:2px 0 10px;padding-left:12px;border-left:2px solid var(--line);letter-spacing:.02em}
+.item .srcs{margin:12px 0 4px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 0}
+.item .srcs .sl{color:var(--code);font-size:12px;letter-spacing:.1em;margin-right:6px}
+.item .srcs a{color:var(--mut);border-bottom:1px dotted var(--code);padding-bottom:1px}
+.item .srcs a:hover{color:var(--ai);border-bottom-style:solid}
+.item .srcs .sep{color:var(--code);margin:0 8px}
+.pfoot{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.pfoot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--code);
+  font-size:12px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media (max-width:560px){.wrap{padding:0 16px 70px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<a class="back" href="../index.html">← 返回全部期次</a>
+<header class="phead"><div class="kicker"><span class="sw" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#B4443C"></span>📰 AI 每日资讯 · AI 要闻 · 官方披露 + 博主解读</div><h1>2026 年 10 月 15 日<span class="badge am">早间版</span></h1><div class="foc"><b>今日焦点</b>&nbsp;&nbsp;：Anthropic 在 IPO 投资者日亮出三季度 168 亿美元营收（环比 +45%）与「调整后盈利」，冲刺有望刷新纪录的上市；国内阶跃星辰按约开源 6000 亿参数 Step 5 Preview 完整权重；Anthropic 自研 Git 替代品 Scion 的工程实录与黄仁勋伦敦「断供」表态，让「AI 规模化的工程与安全账单」成为今日讨论中心。</div></header>
+<section class="group"><h2>🏢 官方与公司动态 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">1</span><h3>英伟达宣布五年向英国捐赠 2.5 亿美元算力，加码 Agentic 安全与安保研究</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月13日（官方新闻稿标注日期；英国及行业媒体 10月14日集中报道；原文未注具体时刻）</p>
+<p>英伟达宣布未来五年向英国捐赠价值 2.5 亿美元的算力（每年 5000 万美元），用于加强英国 Agentic AI 安全与安保研究能力：大部分投向更广泛的英国研究社区，另有一部分定向支持牛津主导的 BOLD 实验室、UCL 主导的 SOFAIR 实验室与帝国理工学院，覆盖开放式学习、开源 AI 架构与机器人安全工程。算力将通过英国本土的 NVIDIA 云合作伙伴交付、基础设施托管于英国境内，服务于安全沙箱、可复现研究与安全评估基准等工作。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years" target="_blank" rel="noopener">NVIDIA Newsroom · NVIDIA Commits $250 Million to Advance UK Agentic Safety and Security Research Over the Next Five Years</a>
+<span class="sep">·</span>
+<a href="https://www.hpcwire.com/aiwire/2026/10/14/nvidia-commits-250m-to-advance-uk-agentic-safety-and-security-research/" target="_blank" rel="noopener">HPCwire · NVIDIA Commits $250M to Advance UK Agentic Safety and Security Research</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">2</span><h3>阶跃星辰正式开源 Step 5 Preview 完整权重：6000 亿参数、AA 智能指数居全球开源前三</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月15日（官方按此前公告当日释放权重，技术博客同步上线；第一财经等当日报道；原文未注具体时刻）</p>
+<p>阶跃星辰按约正式开源旗舰基座模型 Step 5 Preview 的完整模型权重，权重已开放至 Hugging Face 与魔搭社区。模型采用稀疏 MoE 架构：总参数 6000 亿、每 token 激活约 270 亿，支持 100 万 token 上下文与视觉输入；Artificial Analysis 智能指数 44 分、位居全球开源模型前三，单任务成本约 0.71 美元、官方测算约为 Claude Opus 5 的八分之一。官方称其面向 AI 编程、软件工程、专业知识工作与金融场景。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.stepfun.com/step-5-preview" target="_blank" rel="noopener">阶跃星辰官网 · Step 5 Preview</a>
+<span class="sep">·</span>
+<a href="https://www.yicai.com/news/103394563.html" target="_blank" rel="noopener">第一财经 · 阶跃 Step 5 Preview 权重开放，技术博客同步上线</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">3</span><h3>豆包手机助手结束 SAEP 公示期：逐步放开第三方应用屏幕操作，151 款应用明确拒绝</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月14日（豆包手机助手公众号发布公告，媒体当日上午起跟进；原文未注具体时刻）</p>
+<p>豆包手机助手宣布《屏幕自动化操作声明协议》（SAEP）30 天公示期结束，将逐步放开第三方应用的屏幕自动化操作权限；已明确声明拒绝的应用不会被智能体操作，公示期结束后开发者仍可随时提交拒绝声明、平台在 3 个工作日内反馈。公布的最新拒绝清单共 151 款应用：腾讯系 65 款（微信、QQ、王者荣耀等）、阿里系 23 款（淘宝、支付宝、千问等），还包括拼多多、Kimi、美团系、小红书、DeepSeek 等。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://i.ifeng.com/c/8xDCKCwdsiI" target="_blank" rel="noopener">凤凰网（快科技）· 豆包手机助手宣布陆续放开第三方应用操作权限：腾讯、阿里系等App拒绝开放</a>
+<span class="sep">·</span>
+<a href="https://feng.ifeng.com/c/8xDX6jgirov" target="_blank" rel="noopener">凤凰网 · 151款第三方应用拒绝接入豆包手机助手</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">4</span><h3>Anthropic 工程博客自述：7 人 5 个月自研版本控制系统 Scion，全面替换 Git</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月13日（Anthropic 工程博客发布；Simon Willison 同日收录，Hacker News 讨论延烧至 10月14—15日；原文未注具体时刻）</p>
+<p>Anthropic 工程博客披露：其日均代码合并量从 5 月的约 2500 次增至 9 月的逾 3 万次，Git 成为开发瓶颈，遂以 7 名工程师、约 5 个月自研版本控制系统 Scion（连同代码审查工具 Antique 等配套系统）并完成对近 100GB 历史的单体仓库迁移。Scion 按「客户端永远在线」的中心化设计，基础设施占用较旧 Git 镜像方案小约 200 倍，CI 与研究任务检出从分钟级降至秒级、CI 单独释放 25% 的 CPU 容量；官方强调它并非 Git 的通用替代品、不会开源。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener">Anthropic Engineering · Redesigning source control at Anthropic</a>
+<span class="sep">·</span>
+<a href="https://news.ycombinator.com/item?id=50073633" target="_blank" rel="noopener">Hacker News · Redesigning source control at Anthropic（讨论帖）</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">5</span><h3>OpenAI 官网发布 Daybreak 安全案例：SentinelOne 恶意软件分析从数周压缩至约 8 小时</h3></div>
+<span class="tag">🏷 官方披露</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（OpenAI 官网案例页发布；原文未注具体时刻）</p>
+<p>OpenAI 官网刊登 SentinelOne 使用 Daybreak（其安全防御产品线）的案例：以往顶尖研究员逆向分析复杂恶意软件需要四到六周，借助 Daybreak 现已能产出「人类专家级」逆向输出、耗时约 8 小时。SentinelOne 首席 AI 官 Gregor Stewart 称，这为团队腾出精力调查更多恶意软件，并跨样本关联线索、发现孤立调查容易错过的关系。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://openai.com/index/sentinelone/" target="_blank" rel="noopener">OpenAI · SentinelOne cuts malware analysis from weeks to hours</a>
+</div>
+</article>
+</section>
+<section class="group"><h2>💬 解读与社区 <span class="cnt">5 条</span></h2>
+<article class="item"><div class="row1"><span class="num">6</span><h3>WSJ：Anthropic 三季度营收达 168 亿美元、环比增 45%，IPO 最早下月启动</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（投资者日在旧金山举行；《华尔街日报》其后披露营收数据，中文版 10月15日刊发；原文未注具体时刻）</p>
+<p>据《华尔街日报》援引知情人士，Anthropic 第三季度营收达 168 亿美元、较二季度的 116 亿美元环比增长 45%（一季度为 57 亿美元）；公司周三在旧金山办公室面向公开市场投资者举行了全天推介活动，IPO 最早可能在下个月进行。另据 IT之家，其该季已实现调整后盈利、毛利率 85%，路演预计最早 11 月 9 日当周启动、目标感恩节前挂牌；竞争与 AI 安全审视被视为潜在变数。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://cn.wsj.com/articles/anthropic%E5%AD%A3%E5%BA%A6%E6%94%B6%E5%85%A5%E5%A2%9E%E9%95%BF45-%E8%BE%BE%E5%88%B0%E8%BF%91170%E4%BA%BF%E7%BE%8E%E5%85%83-0ca47f18" target="_blank" rel="noopener">华尔街日报中文网 · Anthropic季度收入增长45%，接近170亿美元</a>
+<span class="sep">·</span>
+<a href="https://www.ithome.com/1/013/153.htm" target="_blank" rel="noopener">IT之家 · 消息称 Anthropic 第三季度营收达 168 亿美元，已实现调整后盈利</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">7</span><h3>苹果诉 OpenAI 窃密案风向：法官称「极大概率」批准苹果禁令，OpenAI 连发反击</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：北京时间 10月15日 03:02（财联社电报；当日 07:49 前后继续跟进相关快讯）</p>
+<p>据财联社，苹果起诉 OpenAI 窃取商业秘密案的主审法官表示，他「极有可能」批准苹果的禁令申请——禁止现供职于 OpenAI 的苹果前员工使用苹果专有信息，禁令将要求 OpenAI 立即停止使用被指窃取的商业秘密；苹果指控 OpenAI 借此推进与其形成竞争的未来设备研发。OpenAI 否认指控、称诉讼意在限制员工流动；据钛媒体快讯，其另反指一名前员工在跳槽苹果前转移逾百份未发布产品文件，并承诺不使用苹果所称被窃商业机密、14 名员工设备将接受取证。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://wap.eastmoney.com/a/202610153895876030.html" target="_blank" rel="noopener">东方财富网（转财联社）· 苹果诉OpenAI案法官称「大概率」将作出有利于苹果的裁决</a>
+<span class="sep">·</span>
+<a href="https://finance.sina.cn/stock/jdts/2026-10-15/detail-inivfshx8277561.d.html" target="_blank" rel="noopener">新浪财经 · 苹果诉OpenAI案法官称「大概率」将作出有利于苹果的裁决</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">8</span><h3>OpenAI 算力组织换帅：Sachin Katti 下月离任转任顾问，Uday Ruddarraju 接掌算力业务</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（CNBC 报道；其晋升消息由彭博社率先披露；原文未注具体时刻）</p>
+<p>据 CNBC，OpenAI 基础设施与算力负责人 Sachin Katti 宣布离任：11 月 15 日为最后一天，之后留任顾问；现任算力 CTO、前 xAI 基础设施工程负责人 Uday Ruddarraju 将接掌公司整体算力组织，负责基础设施路线图与训练/服务资源保障。CNBC 称 OpenAI 到 2030 年的总算力支出目标约 6000 亿美元，正推进俄亥俄、得州、佐治亚等地的数十亿美元级数据中心项目；这是其今年第二次调整数据中心领导层。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.cnbc.com/2026/10/14/openais-sachin-katti-to-leave-infrastructure-role-stay-on-as-advisor.html" target="_blank" rel="noopener">CNBC · OpenAI&#x27;s Sachin Katti to leave infrastructure role, stay on as advisor</a>
+<span class="sep">·</span>
+<a href="https://www.datacenterdynamics.com/en/news/openai-again-shakes-up-compute-leadership-with-xai-exec-uday-ruddarraju-to-lead-and-sachin-katti-to-leave/" target="_blank" rel="noopener">DataCenterDynamics · OpenAI again shakes up data center leadership</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">9</span><h3>黄仁勋伦敦表态：会对「开发不安全 AI」的客户停止供货，称 AI 末日论者「应该停止从事这项技术」</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日 14:03（Fortune 报道发布；黄仁勋当日在伦敦受访，伦敦为其欧洲行第二站）</p>
+<p>黄仁勋在伦敦受访时表示：若客户在开发「不安全」的 AI，他愿意停止向其供应芯片——但会先对话、必要时才断供；他认为当前对 AI 的许多担忧属于「成长的烦恼」、部分系「自我施加」，并直言行业解释技术益处的工作「做得很糟」。多家外媒记录其另一表述：AI 末日论者「应该停止从事这项技术」；此行还包括英伟达面向英国的 2.5 亿美元算力捐赠（见第 1 条），其 GTC 大会本月晚些时候将在柏林举行。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://fortune.com/2026/10/14/nvidia-ceo-huang-says-society-shouldnt-tolerate-ai-cyber-incidents-says-ai-doomers-ought-to-stop-working-on-the-technology" target="_blank" rel="noopener">Fortune · Nvidia CEO Huang says society shouldn&#x27;t tolerate AI cyber incidents, says AI doomers &quot;ought to stop working on&quot; the technology</a>
+<span class="sep">·</span>
+<a href="https://qz.com/nvidia-huang-cut-off-unsafe-ai-developers-chips-101426" target="_blank" rel="noopener">Quartz · Jensen Huang said Nvidia would stop supplying chips to unsafe AI developers</a>
+</div>
+</article>
+<article class="item"><div class="row1"><span class="num">10</span><h3>苹果收盘市值首次突破 5 万亿美元，成为继英伟达后全球第二家</h3></div>
+<span class="tag">🏷 媒体解读</span>
+<p class="time">🕐 <strong>时间</strong>：美东时间 10月14日（美股收盘首次达成；IT之家北京时间 10月15日晨报道）</p>
+<p>苹果公司 10 月 14 日收盘市值首次站上 5 万亿美元（IT之家注：现汇率约合 33.53 万亿元人民币），成为继英伟达之后全球第二家市值达到该里程碑的公司；苹果此前于 10 月 13 日发布 HomeView 等三款智能家居新品、以新版 Siri AI 为核心。</p>
+<div class="srcs"><span class="sl">出处</span>
+<a href="https://www.ithome.com/1/013/142.htm" target="_blank" rel="noopener">IT之家 · 苹果市值里程碑：收盘首次超 5 万亿美元</a>
+</div>
+</article>
+</section>
+<nav class="pfoot"><span><a href="2026-10-14-晚间版.html">← 2026-10-14-晚间版</a></span><span></span></nav>
+<footer><span>AI 每日资讯 · 每日期次</span><span>2026-10-15 早间版 · 09:00 发布 · 摘要与数据以原文出处为准</span></footer>
+</div></body></html>
